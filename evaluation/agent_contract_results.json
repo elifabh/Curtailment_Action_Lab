@@ -1,0 +1,9 @@
+{
+  "scope": "Application contracts and real-engine integration; no live AI performance measurement.",
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "all_passed": true,
+  "log": "evaluation/agent_test_results.txt"
+}

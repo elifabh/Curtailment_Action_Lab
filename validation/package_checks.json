@@ -1,0 +1,141 @@
+{
+  "version": "5.0",
+  "status": "completed_with_declared_unverified_live_integrations",
+  "software_tests": {
+    "run": 70,
+    "passed": 70,
+    "failed": 0,
+    "scope": "Application, reference numerics, decision gates and scripted-provider contracts",
+    "log": "validation/clean_extraction_tests_v5.txt"
+  },
+  "irish_numerical_tests": {
+    "run": 6,
+    "passed": 6,
+    "failed": 0,
+    "scope": "Prepared state against RAW equations and deliberate corruption",
+    "log": "validation/clean_extraction_irish_tests_v5.txt"
+  },
+  "reference_confirmation": {
+    "source_passed": true,
+    "cases": 21,
+    "passed": 21,
+    "checks_per_case": 13,
+    "scope": "Declared steady-state reference-network checks"
+  },
+  "azure_live": {
+    "status": "not_run",
+    "reason": "No Azure credentials available. Scripted provider tests do not establish live model quality."
+  },
+  "browser_visual": {
+    "status": "not_run",
+    "reason": "Chromium cannot launch in this sandbox. DOM/HTTP checks reported separately."
+  },
+  "presentation": {
+    "status": "updated_v5",
+    "slides": 8,
+    "editable_pptx": true,
+    "native_chart_slide": 3,
+    "final_slides_reimported_rendered_reviewed": true,
+    "pdf_handoff_tested_in_DOM": true,
+    "powerpoint_desktop_test": false
+  },
+  "physical_actions_executed": false,
+  "ui_behaviour": {
+    "status": "passed",
+    "existing_flows": 40,
+    "new_decision_flows": 30,
+    "errors": 0,
+    "method": "jsdom + actual HTTP API and standalone file",
+    "visual_browser_validation": false,
+    "reports": [
+      "validation/ui_checks.json",
+      "validation/decision_dom_report.json"
+    ]
+  },
+  "installation": {
+    "status": "pinned_dependencies_installed_for_this_run",
+    "python": "3.12.14",
+    "requirements": [
+      "requirements.txt",
+      "irish_audit/requirements.txt"
+    ],
+    "windows_macos_launchers_executed": false
+  },
+  "package_portability": {
+    "preflight_manifest_files": 338,
+    "crc_passed": true,
+    "all_hashes_passed": true,
+    "status": "passed_clean_extraction",
+    "archive_root": "Curtailment_Action_Lab/",
+    "application_tests": 70,
+    "irish_numerical_checks": 6,
+    "standard_library_demo": {
+      "python_without_site_packages": true,
+      "dependencies_required": false,
+      "decision": "retain",
+      "minimum_tested_gain_MW": 9.5703125,
+      "rule_record_reads": 4,
+      "azure_enabled": false
+    },
+    "logs": [
+      "validation/clean_extraction_tests_v5.txt",
+      "validation/clean_extraction_irish_tests_v5.txt"
+    ],
+    "note": "Clean preflight extraction tested with pinned dependencies and separately without site packages. Final metadata and standalone bundle are rebuilt afterward; final CRC and every final manifest entry are checked before delivery."
+  },
+  "generated_at_utc": "2026-09-28T07:54:18.096053+00:00",
+  "extended_study": {
+    "status": "completed",
+    "paired_conditions": 60,
+    "positive": 38,
+    "neutral": 20,
+    "negative": 0,
+    "blocked": 2,
+    "total_pairs": 60,
+    "comparable_pairs": 58,
+    "candidate_connections": 8,
+    "actual_power_flows": 457,
+    "passing_power_flows": 141,
+    "all_failed_points_retained": true,
+    "result_scope": "Conditional prepared planning model; no operational or field claim.",
+    "report": "evidence_v4/FINDINGS_EN.md",
+    "new_best_tested_connection": 1701,
+    "extra_wind_vs_existing_MW": 20.703125,
+    "gap_vs_nearest_rule_MW": 6.640625
+  },
+  "python_javascript_parity": {
+    "cases": 288,
+    "passed": 288,
+    "report": "evaluation/decision_parity_fixtures.json"
+  },
+  "new_challenge_study": {
+    "status": "conditional_model_study",
+    "site_condition_cells": 64,
+    "comparable_cells": 56,
+    "blocked_cells": 8,
+    "new_power_flows": 288,
+    "physical_rebuild_elapsed_seconds": 411.018988627,
+    "new_passing_points": 84,
+    "policy_cases": 288,
+    "policy_outcomes": {
+      "retain": 48,
+      "switch": 13,
+      "withdraw": 67,
+      "no_nominal_offer": 160
+    },
+    "nominal_failures": 74,
+    "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+    "protocol_sha256": "4b789f61bbdaf7b3ab2142c5e29c5eab508f54e572dc58d89758ac9ae04d04d1",
+    "live_azure": "not_run",
+    "field_savings": false
+  },
+  "physical_record_integrity": {
+    "passed": true,
+    "paired_cells_checked": 56,
+    "blocked_cells_preserved": 8,
+    "qualified_physical_references_checked": 113,
+    "protocol_hash_matches": true,
+    "raw_source_hash_matches": true,
+    "meaning": "Record mapping and declared physical-check integrity; not operating approval."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "passed_with_declared_unverified_integrations",
+  "installation": {
+    "status": "passed",
+    "environment": "Fresh isolated Python 3.12 virtual environment, pinned requirements installed from downloaded PyPI wheels",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "PYPOWER": "5.1.19"
+    },
+    "system_site_packages": false
+  },
+  "software_tests": {
+    "run": 38,
+    "passed": 38,
+    "failed": 0,
+    "skipped": 0,
+    "groups": {
+      "reference_engine": 11,
+      "agent_contract_and_integration": 23,
+      "http_api": 4
+    },
+    "log": "validation/package_test_results.txt",
+    "meaning": "Checks software and model behavior; not 38 field trials."
+  },
+  "reference_confirmation": {
+    "source_passed": true,
+    "cases": 21,
+    "passed": 21,
+    "checks_per_case": 13,
+    "scope": "Declared steady-state reference-network checks"
+  },
+  "azure_live": {
+    "status": "not_run",
+    "reason": "No Azure credentials available. Scripted provider tests do not establish live model quality."
+  },
+  "browser_visual": {
+    "status": "not_run",
+    "reason": "Chromium cannot launch in this sandbox. DOM/HTTP checks reported separately."
+  },
+  "physical_actions_executed": false,
+  "ui_behaviour": {
+    "status": "passed",
+    "checks": 16,
+    "errors": 0,
+    "method": "DOM execution with real HTTP API; offline file replay",
+    "visual_browser_validation": false,
+    "report": "validation/ui_checks.json"
+  },
+  "presentation": {
+    "status": "passed",
+    "slides_rendered_and_inspected": 8,
+    "report": "validation/presentation_checks.json"
+  },
+  "package_portability": {
+    "archive_crc": "passed",
+    "extracted_manifest": "passed",
+    "fresh_extraction_live_solver": "passed",
+    "fresh_extraction_without_site_packages_recorded_mode": "passed",
+    "azure_absent_behavior": "disabled_no_fake_trace",
+    "archive_root": "Curtailment_Action_Lab/",
+    "note": "Installation was tested in an isolated Python virtual environment. Windows and macOS launchers were provided but not executed on those operating systems."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Curtailment Action Lab",
+  "subtitle": "Find wind opportunities. Expose the constraints. Compare a public Irish network case before committing to a plan.",
+  "mode": "recorded_ac_planning_scenarios_with_optional_live_solver",
+  "scenarios": [
+    {
+      "id": "keep_line_in_service",
+      "name": "Keep the line in service",
+      "description": "Compare 163.28 MW during a hypothetical outage with 200 MW while the line remains in service. Same 200 MW wind availability; same demand; fixed redispatch rule.",
+      "evidence_file": "keep_line_in_service.json",
+      "status": "Engineering review required",
+      "assumptions": [
+        "Additional unity-power-factor wind at Binbane 110 kV (bus 1341), balanced by equal active-power reduction at generator bus 10470 (Aghada); the slack accounts for losses.",
+        "Compare circuit 1341\u20131701\u20131 in service against its hypothetical outage. No real maintenance permission or weather forecast is implied."
+      ],
+      "limitations": [
+        "Planning screen only: existing and changed voltage violations below 100 kV remain unresolved. Neither case is approved for operation.",
+        "The original strict source-reconstruction residual gate failed. Solved voltages closely match the source, but this is an approximate reconstruction, not independently validated operational data.",
+        "HVDC boundary injections are calibrated from the source solution; transformer/shunt settings and remote voltage controls are held fixed. Generator Q boundaries use local PV-to-PQ switching.",
+        "No complete N-1, dynamic, protection, market or outage-scheduling feasibility assessment. No measured national avoided curtailment, savings or annual benefit is claimed.",
+        "This is a snapshot in MW. It is not an energy result in MWh. The wind increment and line outage are hypothetical."
+      ],
+      "provenance": [
+        {
+          "label": "EirGrid TYTFS2024 planning case",
+          "url": "https://cms.eirgrid.ie/all-island-ten-year-transmission-forecast-statement-2024"
+        }
+      ]
+    },
+    {
+      "id": "full_wind_during_outage",
+      "name": "Try full wind during the outage",
+      "description": "Challenge the limit: inject the full 200 MW while the line is out. Inspect the resulting overloads and rejection.",
+      "evidence_file": "full_wind_during_outage.json",
+      "status": "Engineering review required",
+      "assumptions": [
+        "Additional unity-power-factor wind at Binbane 110 kV (bus 1341), balanced by equal active-power reduction at generator bus 10470 (Aghada); the slack accounts for losses.",
+        "Compare circuit 1341\u20131701\u20131 in service against its hypothetical outage. No real maintenance permission or weather forecast is implied."
+      ],
+      "limitations": [
+        "Planning screen only: existing and changed voltage violations below 100 kV remain unresolved. Neither case is approved for operation.",
+        "The original strict source-reconstruction residual gate failed. Solved voltages closely match the source, but this is an approximate reconstruction, not independently validated operational data.",
+        "HVDC boundary injections are calibrated from the source solution; transformer/shunt settings and remote voltage controls are held fixed. Generator Q boundaries use local PV-to-PQ switching.",
+        "No complete N-1, dynamic, protection, market or outage-scheduling feasibility assessment. No measured national avoided curtailment, savings or annual benefit is claimed.",
+        "This is a snapshot in MW. It is not an energy result in MWh. The wind increment and line outage are hypothetical."
+      ],
+      "provenance": [
+        {
+          "label": "EirGrid TYTFS2024 planning case",
+          "url": "https://cms.eirgrid.ie/all-island-ten-year-transmission-forecast-statement-2024"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "EirGrid: TYTFS2024 public planning models",
+      "url": "https://cms.eirgrid.ie/all-island-ten-year-transmission-forecast-statement-2024",
+      "description": "Reference planning data; not live system conditions."
+    },
+    {
+      "label": "Network study files",
+      "url": "https://cms.eirgrid.ie/sites/default/files/publications/TYTFS2024_studyfiles.zip",
+      "description": "Winter Peak 2024 V33 source, SHA-256 006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24"
+    }
+  ],
+  "overall_status": "engineering_review_required"
+}

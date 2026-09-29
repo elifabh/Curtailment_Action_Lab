@@ -1,0 +1,1732 @@
+{
+  "source_file": "TYTFS2024_WP2024_V33.raw",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "status": "EXPLORATORY_NOT_VALIDATED_FOR_OPERATIONAL_ADVICE",
+  "zero_tie_diagnosis": {
+    "threshold_assumption_pu": 0.0001,
+    "active_nontransformer_ties": 148,
+    "all_tie_endpoints_saved_equal_voltage": true,
+    "original_internal_bus_count": 2132,
+    "reduced_bus_count": 1986,
+    "old_max_nodal_P_MW": 334.8118058304074,
+    "merged_max_nodal_P_MW": 4.312455378715553,
+    "merged_max_nodal_Q_Mvar_effective_PQ": 4.922443817799717
+  },
+  "source_rounding_diagnostic": {
+    "assumed_Vm_half_step_pu": 5e-06,
+    "assumed_Va_half_step_deg": 5e-05,
+    "meaning": "Necessary envelope only. Being inside this bound does not prove a jointly feasible solution exists inside all rounding intervals. No physical limit is changed.",
+    "P_rows_above_bound": 0,
+    "Q_rows_above_bound": 0,
+    "Q_rows_exceeding_envelope": [],
+    "worst_P": [
+      {
+        "buses": [
+          27361
+        ],
+        "residual": 4.312455378715553,
+        "voltage_rounding_modulus_bound_MVA": 8.860489118754208,
+        "ratio_to_bound": 0.48670624396883044
+      },
+      {
+        "buses": [
+          27302
+        ],
+        "residual": -4.312373155789787,
+        "voltage_rounding_modulus_bound_MVA": 8.86821780977368,
+        "ratio_to_bound": 0.486272805685615
+      },
+      {
+        "buses": [
+          5022
+        ],
+        "residual": 3.1849723841904822,
+        "voltage_rounding_modulus_bound_MVA": 9.123472832802875,
+        "ratio_to_bound": 0.3490964945649987
+      },
+      {
+        "buses": [
+          4462,
+          44661
+        ],
+        "residual": -3.1214069399523736,
+        "voltage_rounding_modulus_bound_MVA": 9.803437431488106,
+        "ratio_to_bound": 0.3183992310622175
+      },
+      {
+        "buses": [
+          5464
+        ],
+        "residual": -3.0578741209659146,
+        "voltage_rounding_modulus_bound_MVA": 8.91150235493975,
+        "ratio_to_bound": 0.34313789069144995
+      },
+      {
+        "buses": [
+          54640
+        ],
+        "residual": 3.040946730761923,
+        "voltage_rounding_modulus_bound_MVA": 8.9372783721314,
+        "ratio_to_bound": 0.3402542255195196
+      },
+      {
+        "buses": [
+          4651
+        ],
+        "residual": -2.546862495159143,
+        "voltage_rounding_modulus_bound_MVA": 6.66653766182984,
+        "ratio_to_bound": 0.382036766962489
+      },
+      {
+        "buses": [
+          6371
+        ],
+        "residual": 2.399397116551185,
+        "voltage_rounding_modulus_bound_MVA": 4.085028137507834,
+        "ratio_to_bound": 0.5873636694250515
+      },
+      {
+        "buses": [
+          3471
+        ],
+        "residual": -2.1329569751056083,
+        "voltage_rounding_modulus_bound_MVA": 16.722831510586257,
+        "ratio_to_bound": 0.12754759705348684
+      },
+      {
+        "buses": [
+          13271
+        ],
+        "residual": -1.939324852934496,
+        "voltage_rounding_modulus_bound_MVA": 9.140539096000634,
+        "ratio_to_bound": 0.2121674479553434
+      },
+      {
+        "buses": [
+          13204
+        ],
+        "residual": 1.9391145306011075,
+        "voltage_rounding_modulus_bound_MVA": 9.143487388766024,
+        "ratio_to_bound": 0.2120760327163096
+      },
+      {
+        "buses": [
+          88539
+        ],
+        "residual": -1.2364282269727516,
+        "voltage_rounding_modulus_bound_MVA": 9.06348510066572,
+        "ratio_to_bound": 0.13641863071876567
+      }
+    ],
+    "worst_Q": [
+      {
+        "buses": [
+          27302
+        ],
+        "residual": -4.922443817799717,
+        "voltage_rounding_modulus_bound_MVA": 8.86821780977368,
+        "ratio_to_bound": 0.5550657328662679
+      },
+      {
+        "buses": [
+          5022
+        ],
+        "residual": 4.350995984285867,
+        "voltage_rounding_modulus_bound_MVA": 9.123472832802875,
+        "ratio_to_bound": 0.4769012923063829
+      },
+      {
+        "buses": [
+          4462,
+          44661
+        ],
+        "residual": -4.2924905696500835,
+        "voltage_rounding_modulus_bound_MVA": 9.803437431488106,
+        "ratio_to_bound": 0.4378556602873639
+      },
+      {
+        "buses": [
+          88530
+        ],
+        "residual": 2.995252880026209,
+        "voltage_rounding_modulus_bound_MVA": 9.072392702160192,
+        "ratio_to_bound": 0.33015026778029805
+      },
+      {
+        "buses": [
+          5464
+        ],
+        "residual": -2.771970453057946,
+        "voltage_rounding_modulus_bound_MVA": 8.91150235493975,
+        "ratio_to_bound": 0.3110553465231831
+      },
+      {
+        "buses": [
+          54640
+        ],
+        "residual": 2.743831379348551,
+        "voltage_rounding_modulus_bound_MVA": 8.9372783721314,
+        "ratio_to_bound": 0.3070097254556244
+      },
+      {
+        "buses": [
+          75520
+        ],
+        "residual": 2.6316575735363896,
+        "voltage_rounding_modulus_bound_MVA": 8.226606822609945,
+        "ratio_to_bound": 0.3198958732661881
+      },
+      {
+        "buses": [
+          4651
+        ],
+        "residual": -2.4086296693472007,
+        "voltage_rounding_modulus_bound_MVA": 6.66653766182984,
+        "ratio_to_bound": 0.3613014418471127
+      },
+      {
+        "buses": [
+          3471
+        ],
+        "residual": -1.6480107484773312,
+        "voltage_rounding_modulus_bound_MVA": 16.722831510586257,
+        "ratio_to_bound": 0.09854854708271568
+      },
+      {
+        "buses": [
+          6371
+        ],
+        "residual": 1.6106535323344773,
+        "voltage_rounding_modulus_bound_MVA": 4.085028137507834,
+        "ratio_to_bound": 0.3942821146189445
+      },
+      {
+        "buses": [
+          51319
+        ],
+        "residual": -1.548366185331049,
+        "voltage_rounding_modulus_bound_MVA": 3.116612903926321,
+        "ratio_to_bound": 0.4968105546185769
+      },
+      {
+        "buses": [
+          1741
+        ],
+        "residual": 1.5263708469053485,
+        "voltage_rounding_modulus_bound_MVA": 3.598393800205404,
+        "ratio_to_bound": 0.4241811573870042
+      }
+    ]
+  },
+  "algorithms": {
+    "newton": {
+      "converged": true,
+      "max_abs_vm_error_pu": 2.4614003867107215e-05,
+      "max_abs_angle_error_deg": 0.031183183805666204,
+      "Vm_error_percentiles_pu": [
+        3.1457190245998135e-06,
+        1.251551093617298e-05,
+        1.8444334884293312e-05,
+        2.4614003867107215e-05
+      ],
+      "Va_error_percentiles_deg": [
+        0.018857454110719707,
+        0.02946664003595645,
+        0.03025475629399277,
+        0.031183183805666204
+      ],
+      "vm_within_half_last_digit_count": 1425,
+      "original_bus_group_count": 1876
+    },
+    "fast_decoupled_XB": {
+      "converged": true,
+      "max_abs_vm_error_pu": 2.4614005260659155e-05,
+      "max_abs_angle_error_deg": 0.03118316382774111,
+      "Vm_error_percentiles_pu": [
+        3.1457202418483377e-06,
+        1.2515515133537658e-05,
+        1.8444338925283077e-05,
+        2.4614005260659155e-05
+      ],
+      "Va_error_percentiles_deg": [
+        0.018857442169573968,
+        0.029466621875256394,
+        0.030254737135500642,
+        0.03118316382774111
+      ],
+      "vm_within_half_last_digit_count": 1425,
+      "original_bus_group_count": 1876
+    },
+    "fast_decoupled_BX": {
+      "converged": true,
+      "max_abs_vm_error_pu": 2.461400524977897e-05,
+      "max_abs_angle_error_deg": 0.031183166153123665,
+      "Vm_error_percentiles_pu": [
+        3.1457200726503487e-06,
+        1.2515514664745986e-05,
+        1.844433877939977e-05,
+        2.461400524977897e-05
+      ],
+      "Va_error_percentiles_deg": [
+        0.018857443477577118,
+        0.02946662389312138,
+        0.030254739266413422,
+        0.031183166153123665
+      ],
+      "vm_within_half_last_digit_count": 1425,
+      "original_bus_group_count": 1876
+    }
+  },
+  "same_network_algorithm_crosscheck": {
+    "fast_decoupled_XB": {
+      "max_Vm_difference_pu": 1.5190515512131242e-11,
+      "max_angle_difference_deg": 2.0850301041264174e-08,
+      "max_branch_PQ_difference_MVA_component": 1.8558058201278982e-07
+    },
+    "fast_decoupled_BX": {
+      "max_Vm_difference_pu": 1.2848833108591862e-11,
+      "max_angle_difference_deg": 1.8653896205478304e-08,
+      "max_branch_PQ_difference_MVA_component": 1.6475599373677596e-07
+    }
+  },
+  "crosscheck_scope": "Different numerical solvers using the same imported model; not an independent importer or PSS/E replication.",
+  "independent_text_bus_check": {
+    "bus_count": 2025,
+    "source_voltage_violations": 173,
+    "violation_ids_agree_with_parser": true
+  },
+  "equipment_inventory": {
+    "two_terminal_DC": 2,
+    "HVDC_boundary_calibrations": [
+      {
+        "bus": 86220,
+        "P_MW": 80.3302242528081,
+        "Q_Mvar": -29.83583061802363,
+        "basis": "inferred from source voltages; not independently validated"
+      },
+      {
+        "bus": 86221,
+        "P_MW": 0.0,
+        "Q_Mvar": 0.0,
+        "basis": "inferred from source voltages; not independently validated"
+      }
+    ],
+    "three_winding_star_buses": 109,
+    "active_correction_applications": 97,
+    "multi_section_line_groups": 32,
+    "FACTS_modes": [
+      0,
+      0,
+      0
+    ],
+    "constant_current_or_impedance_active_loads": 0
+  },
+  "unchanged_limit_checks": {
+    "source_original_bus_voltage_violations": 173,
+    "source_violations_at_or_above_100kV": 0,
+    "solved_reduced_original_bus_voltage_violations": 164,
+    "thermal_violations_positive_rateA": 0,
+    "max_loading_positive_rateA": 0.9550053410800027,
+    "P_limit_violations": 0,
+    "Q_limit_violations": 22,
+    "max_Q_limit_excess_Mvar": 0.012587534135759193,
+    "Q_limit_violations_above_0_02_Mvar": 0,
+    "Q_limit_enforcement": false,
+    "zero_tie_internal_thermal_check": "not implemented"
+  },
+  "source_voltage_violations": [
+    {
+      "id": 10602,
+      "name": "ARIGNA",
+      "base_kV": 20.0,
+      "Vm": 1.10593,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 10671,
+      "name": "W_CORRIEM",
+      "base_kV": 0.69,
+      "Vm": 1.10593,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 10672,
+      "name": "W_KILRONAN",
+      "base_kV": 0.69,
+      "Vm": 1.10593,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 10673,
+      "name": "W_SPIONKO",
+      "base_kV": 0.69,
+      "Vm": 1.10593,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 10674,
+      "name": "W_SELTANAV",
+      "base_kV": 0.4,
+      "Vm": 1.10593,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 12574,
+      "name": "W_LISSYCASEY",
+      "base_kV": 0.69,
+      "Vm": 1.11841,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 12582,
+      "name": "BOOLT 1 20",
+      "base_kV": 20.0,
+      "Vm": 1.11839,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 12592,
+      "name": "LISSYWF 20",
+      "base_kV": 20.0,
+      "Vm": 1.11841,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13102,
+      "name": "SCARTAGLEN",
+      "base_kV": 20.0,
+      "Vm": 1.10213,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13112,
+      "name": "COOLEGREAN 2",
+      "base_kV": 20.0,
+      "Vm": 1.10161,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13114,
+      "name": "CORDAL",
+      "base_kV": 38.0,
+      "Vm": 1.10161,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13124,
+      "name": "CORDAL",
+      "base_kV": 38.0,
+      "Vm": 1.10268,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13134,
+      "name": "CORDAL",
+      "base_kV": 38.0,
+      "Vm": 1.10213,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13170,
+      "name": "W_SCARTAGLEN",
+      "base_kV": 0.4,
+      "Vm": 1.10213,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13171,
+      "name": "W_COOLEGREAN",
+      "base_kV": 0.69,
+      "Vm": 1.10161,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 13172,
+      "name": "W_SCARTAGLEN",
+      "base_kV": 0.69,
+      "Vm": 1.10213,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 14602,
+      "name": "BARRANAF",
+      "base_kV": 20.0,
+      "Vm": 1.19139,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21802,
+      "name": "SLANE",
+      "base_kV": 20.0,
+      "Vm": 1.11505,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21804,
+      "name": "DRYBRIDGE",
+      "base_kV": 38.0,
+      "Vm": 1.12284,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21812,
+      "name": "DUNMORE",
+      "base_kV": 20.0,
+      "Vm": 1.11509,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21814,
+      "name": "RATHMULLEN",
+      "base_kV": 38.0,
+      "Vm": 1.12322,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21821,
+      "name": "SLANE",
+      "base_kV": 10.0,
+      "Vm": 1.12324,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21822,
+      "name": "DULEEK",
+      "base_kV": 20.0,
+      "Vm": 1.12407,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21824,
+      "name": "SLANE",
+      "base_kV": 38.0,
+      "Vm": 1.12323,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21831,
+      "name": "GRANGEGEETH",
+      "base_kV": 10.0,
+      "Vm": 1.12325,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21834,
+      "name": "J21",
+      "base_kV": 38.0,
+      "Vm": 1.12293,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21842,
+      "name": "RATHDRINAGH",
+      "base_kV": 20.0,
+      "Vm": 1.12437,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21844,
+      "name": "DULEEK",
+      "base_kV": 38.0,
+      "Vm": 1.12312,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21854,
+      "name": "MEATH WASTE",
+      "base_kV": 38.0,
+      "Vm": 1.12335,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21864,
+      "name": "DUNLEER",
+      "base_kV": 38.0,
+      "Vm": 1.12298,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21871,
+      "name": "W_DUNMORE",
+      "base_kV": 0.69,
+      "Vm": 1.11509,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21872,
+      "name": "W_DUNMORE",
+      "base_kV": 0.4,
+      "Vm": 1.11509,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 21874,
+      "name": "W_BURTONSTOW",
+      "base_kV": 0.69,
+      "Vm": 1.12413,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 22231,
+      "name": "DUNMANWAY",
+      "base_kV": 10.0,
+      "Vm": 1.18203,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 22279,
+      "name": "W_KNOCKEENBU",
+      "base_kV": 20.0,
+      "Vm": 1.18231,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23604,
+      "name": "ENNIS",
+      "base_kV": 38.0,
+      "Vm": 1.17879,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23611,
+      "name": "ENNIS NRTH",
+      "base_kV": 10.0,
+      "Vm": 1.12884,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23612,
+      "name": "COROFIN",
+      "base_kV": 20.0,
+      "Vm": 1.12884,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23614,
+      "name": "ENNIS NRTH",
+      "base_kV": 38.0,
+      "Vm": 1.17884,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23621,
+      "name": "COROFIN",
+      "base_kV": 10.0,
+      "Vm": 1.12884,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 23685,
+      "name": "LISSANE WEST",
+      "base_kV": 20.0,
+      "Vm": 1.17879,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 32404,
+      "name": "KILTEEL",
+      "base_kV": 38.0,
+      "Vm": 1.15481,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 32405,
+      "name": "KILTEEL",
+      "base_kV": 38.0,
+      "Vm": 1.15481,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35802,
+      "name": "MEENANILTA S",
+      "base_kV": 20.0,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35804,
+      "name": "LETTERKENNY",
+      "base_kV": 38.0,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35813,
+      "name": "LETTERKENNY",
+      "base_kV": 20.0,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35814,
+      "name": "MILFORD",
+      "base_kV": 38.0,
+      "Vm": 1.13325,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35815,
+      "name": "LETTERKENNY",
+      "base_kV": 20.0,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35822,
+      "name": "MILFORD",
+      "base_kV": 20.0,
+      "Vm": 1.13325,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35832,
+      "name": "CULLIAGH",
+      "base_kV": 20.0,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35871,
+      "name": "W_MEENANIL",
+      "base_kV": 0.69,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35872,
+      "name": "W_MEENANIL",
+      "base_kV": 0.69,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35873,
+      "name": "W_MEENANIL",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35875,
+      "name": "W_CARK(1)",
+      "base_kV": 0.69,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35876,
+      "name": "W_CULLIAGH",
+      "base_kV": 0.69,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35877,
+      "name": "W_LURGANBO",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35878,
+      "name": "MEENBANEWF",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35879,
+      "name": "MEENBANEWP",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 35880,
+      "name": "W_FINNRENEW",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 40004,
+      "name": "MULLINGAR",
+      "base_kV": 38.0,
+      "Vm": 1.1656,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 40014,
+      "name": "PV_TULLYNALL",
+      "base_kV": 38.0,
+      "Vm": 1.16576,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42001,
+      "name": "ATHGARVAN",
+      "base_kV": 10.0,
+      "Vm": 1.16655,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42004,
+      "name": "BIO_NEWBRIDG",
+      "base_kV": 38.0,
+      "Vm": 1.16655,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42011,
+      "name": "MORRISTOWN",
+      "base_kV": 10.0,
+      "Vm": 1.16661,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42014,
+      "name": "MORRISTOWN",
+      "base_kV": 38.0,
+      "Vm": 1.16657,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42021,
+      "name": "POLLARDSTOWN",
+      "base_kV": 10.0,
+      "Vm": 1.16664,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42201,
+      "name": "ATHBOY",
+      "base_kV": 10.0,
+      "Vm": 1.14123,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42204,
+      "name": "HY_NAVAN",
+      "base_kV": 38.0,
+      "Vm": 1.14096,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42214,
+      "name": "ATHBOY",
+      "base_kV": 38.0,
+      "Vm": 1.14123,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42224,
+      "name": "J28",
+      "base_kV": 38.0,
+      "Vm": 1.14107,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42234,
+      "name": "KELLS",
+      "base_kV": 38.0,
+      "Vm": 1.14119,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42244,
+      "name": "KELLS",
+      "base_kV": 38.0,
+      "Vm": 1.14124,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 42272,
+      "name": "PV_FRIARSPAR",
+      "base_kV": 0.4,
+      "Vm": 1.14096,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44804,
+      "name": "PORTLAOISE",
+      "base_kV": 38.0,
+      "Vm": 1.11715,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44805,
+      "name": "BIO_PORTLAO",
+      "base_kV": 38.0,
+      "Vm": 1.11715,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44811,
+      "name": "PORTARLINGTO",
+      "base_kV": 10.0,
+      "Vm": 1.11758,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44812,
+      "name": "LISDOWNEY",
+      "base_kV": 20.0,
+      "Vm": 1.11738,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44814,
+      "name": "BALLYCONRA",
+      "base_kV": 38.0,
+      "Vm": 1.11717,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44821,
+      "name": "SHANDERRY",
+      "base_kV": 10.0,
+      "Vm": 1.11759,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 44834,
+      "name": "PORTARLINGTO",
+      "base_kV": 38.0,
+      "Vm": 1.11754,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47002,
+      "name": "CLEGGILL",
+      "base_kV": 20.0,
+      "Vm": 1.13709,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47004,
+      "name": "RICHMOND",
+      "base_kV": 38.0,
+      "Vm": 1.13702,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47014,
+      "name": "LONGFORD",
+      "base_kV": 38.0,
+      "Vm": 1.13709,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47024,
+      "name": "EDGEWORTHSTO",
+      "base_kV": 38.0,
+      "Vm": 1.13713,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47034,
+      "name": "LISNAGEERAGH",
+      "base_kV": 38.0,
+      "Vm": 1.13713,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 47072,
+      "name": "PV_CLEGGILL",
+      "base_kV": 0.4,
+      "Vm": 1.13709,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49602,
+      "name": "CARRICKALLEN",
+      "base_kV": 20.0,
+      "Vm": 1.16344,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49604,
+      "name": "SHANKILL",
+      "base_kV": 38.0,
+      "Vm": 1.16307,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49605,
+      "name": "W_HY_SHANKIL",
+      "base_kV": 38.0,
+      "Vm": 1.16307,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49608,
+      "name": "W_CARRICKALL",
+      "base_kV": 0.69,
+      "Vm": 1.16344,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49613,
+      "name": "MOUNTAIN",
+      "base_kV": 20.0,
+      "Vm": 1.16307,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49614,
+      "name": "CARRICKALLEN",
+      "base_kV": 38.0,
+      "Vm": 1.16344,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49672,
+      "name": "W_MOUNTAIN",
+      "base_kV": 0.69,
+      "Vm": 1.16307,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49683,
+      "name": "DRUMMAN",
+      "base_kV": 20.0,
+      "Vm": 1.21844,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49802,
+      "name": "MANORHAMILTO",
+      "base_kV": 20.0,
+      "Vm": 1.14146,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49804,
+      "name": "HY_SLIGO",
+      "base_kV": 38.0,
+      "Vm": 1.14895,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49812,
+      "name": "FAUGHARY",
+      "base_kV": 20.0,
+      "Vm": 1.14162,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49814,
+      "name": "SLIGO38B",
+      "base_kV": 38.0,
+      "Vm": 1.14976,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49832,
+      "name": "MANORHAMILTO",
+      "base_kV": 20.0,
+      "Vm": 1.14155,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 49842,
+      "name": "CARRIC PH1",
+      "base_kV": 20.0,
+      "Vm": 1.14157,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50004,
+      "name": "SOMERSET",
+      "base_kV": 38.0,
+      "Vm": 1.11614,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50012,
+      "name": "SOMERSET 20",
+      "base_kV": 20.0,
+      "Vm": 1.12113,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50014,
+      "name": "SONNAGHOLD",
+      "base_kV": 38.0,
+      "Vm": 1.12113,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50022,
+      "name": "SOMERSET",
+      "base_kV": 20.0,
+      "Vm": 1.12544,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50032,
+      "name": "LISBEG",
+      "base_kV": 20.0,
+      "Vm": 1.12651,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 50071,
+      "name": "W_SONNAGH",
+      "base_kV": 0.69,
+      "Vm": 1.12113,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52201,
+      "name": "KILKEE 10",
+      "base_kV": 10.0,
+      "Vm": 1.21873,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52202,
+      "name": "TULLAWF 20",
+      "base_kV": 20.0,
+      "Vm": 1.22651,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52204,
+      "name": "TULABRACK",
+      "base_kV": 38.0,
+      "Vm": 1.15782,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52211,
+      "name": "CARROWNA 10",
+      "base_kV": 10.0,
+      "Vm": 1.2188,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52212,
+      "name": "MOANMORE",
+      "base_kV": 20.0,
+      "Vm": 1.15782,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52214,
+      "name": "TULLAWF 38",
+      "base_kV": 38.0,
+      "Vm": 1.15782,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52224,
+      "name": "KILRUSH 38",
+      "base_kV": 38.0,
+      "Vm": 1.15837,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52232,
+      "name": "WESTWAVE KIL",
+      "base_kV": 20.0,
+      "Vm": 1.15782,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52234,
+      "name": "KILKEE 38",
+      "base_kV": 38.0,
+      "Vm": 1.15947,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52271,
+      "name": "W_MOANMORE",
+      "base_kV": 0.4,
+      "Vm": 1.15782,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52614,
+      "name": "TRIEN",
+      "base_kV": 38.0,
+      "Vm": 1.10646,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52624,
+      "name": "TRIEN",
+      "base_kV": 38.0,
+      "Vm": 1.11016,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52632,
+      "name": "TOURNAFULLA",
+      "base_kV": 20.0,
+      "Vm": 1.10194,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52634,
+      "name": "TOURNAFULLA",
+      "base_kV": 38.0,
+      "Vm": 1.11025,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52642,
+      "name": "KNOCKAWARRIG",
+      "base_kV": 20.0,
+      "Vm": 1.10194,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52644,
+      "name": "KNOCKAWARRIG",
+      "base_kV": 38.0,
+      "Vm": 1.11025,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52675,
+      "name": "W_KNOCKAWA",
+      "base_kV": 0.66,
+      "Vm": 1.10194,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 52676,
+      "name": "W_TOURNAFU",
+      "base_kV": 0.69,
+      "Vm": 1.10194,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53032,
+      "name": "TULLAROAN",
+      "base_kV": 20.0,
+      "Vm": 1.16419,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53042,
+      "name": "TULLAROAN",
+      "base_kV": 20.0,
+      "Vm": 1.18923,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53052,
+      "name": "TULLAROAN",
+      "base_kV": 20.0,
+      "Vm": 1.16423,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53062,
+      "name": "HOMESHILL",
+      "base_kV": 20.0,
+      "Vm": 1.18946,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53072,
+      "name": "ANCNOC",
+      "base_kV": 20.0,
+      "Vm": 1.16424,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53604,
+      "name": "TRILLICK",
+      "base_kV": 38.0,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53612,
+      "name": "DRUMLOUG",
+      "base_kV": 20.0,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53615,
+      "name": "CROCKAHENNY",
+      "base_kV": 20.0,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53616,
+      "name": "DRUMLOUG",
+      "base_kV": 20.0,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53671,
+      "name": "W_CROCKAHE",
+      "base_kV": 0.4,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53672,
+      "name": "W_DRUMLOUG",
+      "base_kV": 0.69,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 53674,
+      "name": "W_DRUMLOUG",
+      "base_kV": 0.69,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 64813,
+      "name": "W_LISKERAN",
+      "base_kV": 0.4,
+      "Vm": 1.13156,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 67213,
+      "name": "W_AN_CNOC",
+      "base_kV": 0.69,
+      "Vm": 1.16424,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68087,
+      "name": "W_CARRICKEEN",
+      "base_kV": 0.4,
+      "Vm": 1.14157,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68101,
+      "name": "W_FAUGHA_PH1",
+      "base_kV": 0.4,
+      "Vm": 1.14162,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68125,
+      "name": "COOMLEAGH",
+      "base_kV": 10.0,
+      "Vm": 1.18231,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68128,
+      "name": "W_CARROWNA_P",
+      "base_kV": 20.0,
+      "Vm": 1.2188,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68131,
+      "name": "W_BALLYBEAGH",
+      "base_kV": 0.69,
+      "Vm": 1.16419,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68134,
+      "name": "W_BARRANAF_P",
+      "base_kV": 0.69,
+      "Vm": 1.19139,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68157,
+      "name": "W_HOLMES_H_P",
+      "base_kV": 0.69,
+      "Vm": 1.18946,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68195,
+      "name": "W_COOLY_PH1",
+      "base_kV": 38.0,
+      "Vm": 1.12313,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68230,
+      "name": "MEATH_WASTE",
+      "base_kV": 10.0,
+      "Vm": 1.12376,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68241,
+      "name": "W_DUNMORE_PH",
+      "base_kV": 0.4,
+      "Vm": 1.11509,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68285,
+      "name": "W_LISDOWNE_P",
+      "base_kV": 20.0,
+      "Vm": 1.11743,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68311,
+      "name": "W_TULLABRA_P",
+      "base_kV": 20.0,
+      "Vm": 1.22651,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68313,
+      "name": "KNOCKHARLEY_",
+      "base_kV": 20.0,
+      "Vm": 1.12413,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68314,
+      "name": "KNOCKHARLEY_",
+      "base_kV": 20.0,
+      "Vm": 1.12413,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 68554,
+      "name": "BIO_FARRELLY",
+      "base_kV": 38.0,
+      "Vm": 1.14124,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 74561,
+      "name": "CAST6P",
+      "base_kV": 22.0,
+      "Vm": 1.10087,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 74564,
+      "name": "CAST6S",
+      "base_kV": 22.0,
+      "Vm": 1.10946,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75030,
+      "name": "COLE3-",
+      "base_kV": 33.0,
+      "Vm": 1.12628,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75031,
+      "name": "BMNY3-",
+      "base_kV": 33.0,
+      "Vm": 1.12704,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75032,
+      "name": "GRVN3-",
+      "base_kV": 33.0,
+      "Vm": 1.12699,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75080,
+      "name": "COLE3_DU",
+      "base_kV": 33.0,
+      "Vm": 1.12683,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75090,
+      "name": "RENEW_CO",
+      "base_kV": 33.0,
+      "Vm": 1.12628,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75091,
+      "name": "WIND_RIG",
+      "base_kV": 33.0,
+      "Vm": 1.12688,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75092,
+      "name": "WIND_GRU",
+      "base_kV": 33.0,
+      "Vm": 1.12753,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75093,
+      "name": "WIND_GAR",
+      "base_kV": 33.0,
+      "Vm": 1.12724,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75094,
+      "name": "WIND_DNM",
+      "base_kV": 33.0,
+      "Vm": 1.12692,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 75095,
+      "name": "WIND_DUN",
+      "base_kV": 33.0,
+      "Vm": 1.12682,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77030,
+      "name": "DRUM3-",
+      "base_kV": 33.0,
+      "Vm": 1.10049,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77090,
+      "name": "RENEW_DR",
+      "base_kV": 33.0,
+      "Vm": 1.10049,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77530,
+      "name": "DUNG3-",
+      "base_kV": 33.0,
+      "Vm": 1.12042,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77531,
+      "name": "TULY3-",
+      "base_kV": 33.0,
+      "Vm": 1.12074,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77590,
+      "name": "PV_RENEW_DU",
+      "base_kV": 33.0,
+      "Vm": 1.12042,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 77591,
+      "name": "WIND_CRO",
+      "base_kV": 33.0,
+      "Vm": 1.1212,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 84530,
+      "name": "LOGE3-",
+      "base_kV": 33.0,
+      "Vm": 1.11595,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    },
+    {
+      "id": 84590,
+      "name": "RENEW_LO",
+      "base_kV": 33.0,
+      "Vm": 1.11681,
+      "Vmin": 0.9,
+      "Vmax": 1.1
+    }
+  ],
+  "limitations": [
+    "Source THRSHZ is not recorded in RAW; 1e-4 assumed and saved-equal voltages verified.",
+    "HVDC P/Q inferred from saved voltages, not independently reproduced.",
+    "Tap positions, switched-shunt states and local generator voltage targets held fixed; remote regulation not reproduced.",
+    "Generator reactive limits not enforced by these power flow solves.",
+    "Internal flows within merged zero-impedance ties not recovered or thermally checked.",
+    "No N-1, short-circuit, stability, frequency, outage permission or operational-control validation.",
+    "Static hypothetical injections cannot establish historical curtailed MWh or an Ireland-wide reduction percentage."
+  ]
+}

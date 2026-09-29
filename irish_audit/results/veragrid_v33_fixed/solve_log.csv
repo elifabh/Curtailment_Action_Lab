@@ -1,0 +1,14 @@
+Severity,Message,Class,Property,Device,Value,Expected value
+Information,Elapsed total (s),,Started,,,
+Information,Using the limited support power flow method,,,,,
+Information,Using the limited support power flow method,,,,,
+Error,Not solving power flow because there is no slack bus,,,,,
+Information,Elapsed total (s),,Ended (s),,20.8043,
+Information,Method Newton Raphson,,Converged,,True,True
+Information,Method Newton Raphson,,Elapsed (s),,11.3422,
+Information,Method Newton Raphson,,Error (p.u.),,1.1778e-11,<1e-08
+Information,Method Newton Raphson,,Iterations,,5,<50
+Information,Method No Solver,,Converged,,True,True
+Information,Method No Solver,,Elapsed (s),,0.0000,
+Information,Method No Solver,,Error (p.u.),,0.0000e+00,<1e-08
+Information,Method No Solver,,Iterations,,0,<50

@@ -1,0 +1,86 @@
+{
+  "version": "4.0",
+  "status": "passed_with_declared_unverified_integrations",
+  "software_tests": {
+    "run": 50,
+    "passed": 50,
+    "failed": 0,
+    "skipped": 0,
+    "log": "validation/v4_test_results.txt",
+    "meaning": "Software and model checks, not field trials."
+  },
+  "irish_numerical_tests": {
+    "run": 6,
+    "passed": 6,
+    "failed": 0,
+    "log": "irish_audit/results/verification_tests_v4.txt",
+    "scope": "Conditional mathematical states and deliberate corruption tests."
+  },
+  "reference_confirmation": {
+    "source_passed": true,
+    "cases": 21,
+    "passed": 21,
+    "checks_per_case": 13,
+    "scope": "Declared steady-state reference-network checks"
+  },
+  "azure_live": {
+    "status": "not_run",
+    "reason": "No Azure credentials available. Scripted provider tests do not establish live model quality."
+  },
+  "browser_visual": {
+    "status": "not_run",
+    "reason": "Chromium cannot launch in this sandbox. DOM/HTTP checks reported separately."
+  },
+  "presentation": {
+    "status": "unchanged_from_v2",
+    "revised_for_irish_study": false,
+    "note": "Presentation preparation deferred by request."
+  },
+  "physical_actions_executed": false,
+  "ui_behaviour": {
+    "status": "passed",
+    "checks": 40,
+    "errors": 0,
+    "method": "jsdom + actual local HTTP API",
+    "visual_browser_validation": false,
+    "report": "validation/ui_checks.json"
+  },
+  "installation": {
+    "status": "same_pinned_dependencies_as_v2",
+    "prior_isolated_installation_report": "validation/package_checks_v2_archive.json",
+    "current_clean_extraction_tests": "50 application tests passed after clean ZIP extraction in the isolated Python 3.12 environment with pinned simulator dependencies.",
+    "recorded_mode": "Verified using Python -S without site packages; no scientific dependencies needed for the Irish stored study, candidate lookup or value arithmetic."
+  },
+  "package_portability": {
+    "status": "passed_preflight",
+    "archive_crc": "passed",
+    "clean_extraction_manifest": "passed",
+    "manifest_files_checked": 259,
+    "application_tests": 50,
+    "clean_extraction_log": "validation/clean_extraction_tests_v4.txt",
+    "bare_python_recorded_and_value_mode": "passed",
+    "azure_absent_behavior": "disabled",
+    "archive_root": "Curtailment_Action_Lab/",
+    "note": "Preflight archive was extracted and every manifest entry verified. Application tests passed in the isolated pinned environment; stored study and value arithmetic also ran with Python -S. Windows/macOS launchers were supplied but not executed on those operating systems. Final archive CRC and manifest are checked separately after final metadata is bundled."
+  },
+  "generated_at_utc": "2026-09-27T06:13:17.188948+00:00",
+  "extended_study": {
+    "status": "completed",
+    "paired_conditions": 60,
+    "positive": 38,
+    "neutral": 20,
+    "negative": 0,
+    "blocked": 2,
+    "total_pairs": 60,
+    "comparable_pairs": 58,
+    "candidate_connections": 8,
+    "actual_power_flows": 457,
+    "passing_power_flows": 141,
+    "all_failed_points_retained": true,
+    "result_scope": "Conditional prepared planning model; no operational or field claim.",
+    "report": "evidence_v4/FINDINGS_EN.md",
+    "new_best_tested_connection": 1701,
+    "extra_wind_vs_existing_MW": 20.703125,
+    "gap_vs_nearest_rule_MW": 6.640625
+  }
+}

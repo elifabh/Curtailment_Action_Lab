@@ -1,0 +1,70 @@
+{
+  "created_at_utc": "2026-09-27T05:31:11.902548+00:00",
+  "purpose": "Conditional locational-flexibility robustness and baseline study, declared before new scenario outcomes.",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "preparation": "Reuse the v3 prepared state: 60 source-bounded taps, capacitor 74564 disconnected, fixed local generator targets and calibrated HVDC boundary. No limits increased.",
+  "flex_capacities_MW": [
+    0,
+    5,
+    10,
+    20,
+    30
+  ],
+  "wind_availability_MW": [
+    25,
+    50,
+    75,
+    100,
+    150,
+    200
+  ],
+  "line_states": [
+    "in_service",
+    "outage_1341_1701"
+  ],
+  "paired_locations": [
+    2072,
+    1341
+  ],
+  "coarse_tested_wind_MW": [
+    0,
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200
+  ],
+  "refinement_width_MW": 0.25,
+  "material_difference_MW": 0.5,
+  "additional_stress_load_factors": [
+    0.99,
+    1.01
+  ],
+  "stress_flex_MW": 20,
+  "portfolio_selection": "Wind bus, Dublin comparator, and the six closest other live >=100 kV original buses in the prepared in-service unweighted branch graph; choose ties by source bus ID before any candidate outcome.",
+  "portfolio_flex_MW": 20,
+  "portfolio_line_state": "outage_1341_1701",
+  "portfolio_baselines": [
+    "existing_Dublin_location",
+    "nearest_connection_to_wind",
+    "equal_allocation_among_candidates",
+    "price_blind_uniform_choice_summary"
+  ],
+  "price_scope": "No observed site tariffs supplied. Do not manufacture price-only advantage; a common wholesale price cannot distinguish these simultaneous locations.",
+  "search_scope": "Best tested points only. Coarse grid plus local refinement above the highest passing coarse point; no global/monotone optimum certificate.",
+  "acceptance_checks": [
+    "AC convergence",
+    "original numerical voltage, P/Q generator and available branch limits",
+    "separate direct RAW equations",
+    "original bound/status preservation",
+    "explicit ideal-tie flow recovery under stated allocation"
+  ],
+  "infeasible_policy": "Retain and display no-eligible-point and failed checks. Never replace failed physical results with a score or widened limits.",
+  "analysis": "Report valid paired comparisons, positive/neutral/negative differences using the predeclared 0.5 MW threshold; deterministic scenario grid, not a statistical population sample.",
+  "scale_measurement": "Record solver calls and end-to-end elapsed time, including checked-point verification; descriptive single-machine timings, no cross-system speed claim.",
+  "value_bridge": "Conditional duration * MW; incremental value and activation premium entered as scenario assumptions. No annual/field MWh, observed tariffs, profit or CO2 claims without supplied evidence.",
+  "ai_scope": "No live Azure calls; all physical comparisons deterministic. AI remains a bounded investigation interface."
+}

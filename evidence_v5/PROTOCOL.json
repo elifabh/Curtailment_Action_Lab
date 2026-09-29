@@ -1,0 +1,118 @@
+{
+  "created_at_utc": "2026-09-28T07:20:55.166053+00:00",
+  "scope": "Conditional offer selection and counterexample audit; no physical operations or market bids.",
+  "physical_preparation": "Exactly the v4 prepared model. Do not widen limits or change control assumptions.",
+  "candidate_buses": [
+    1341,
+    2072,
+    1701,
+    5191,
+    1571,
+    1761,
+    1981,
+    2870
+  ],
+  "new_curve_families": [
+    {
+      "id": "delivery_half",
+      "flex_MW": 10,
+      "source_load_factor": 1.0,
+      "line_outage": true
+    },
+    {
+      "id": "demand_lower",
+      "flex_MW": 20,
+      "source_load_factor": 0.99,
+      "line_outage": true
+    },
+    {
+      "id": "line_in_service",
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": false
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "nominal",
+      "name": "Declared 20 MW offer",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "reference"
+    },
+    {
+      "id": "wind_50",
+      "name": "Wind availability 50 MW",
+      "wind_available_MW": 50,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "wind"
+    },
+    {
+      "id": "wind_25",
+      "name": "Wind availability 25 MW",
+      "wind_available_MW": 25,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "wind"
+    },
+    {
+      "id": "delivery_half",
+      "name": "Only 10 of 20 MW delivered",
+      "wind_available_MW": 200,
+      "flex_MW": 10,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "delivery"
+    },
+    {
+      "id": "delivery_zero",
+      "name": "No flexible load delivered",
+      "wind_available_MW": 200,
+      "flex_MW": 0,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "delivery"
+    },
+    {
+      "id": "demand_lower",
+      "name": "Source demand 1% lower",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 0.99,
+      "line_outage": true,
+      "dimension": "demand"
+    },
+    {
+      "id": "demand_higher",
+      "name": "Source demand 1% higher",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.01,
+      "line_outage": true,
+      "dimension": "demand"
+    },
+    {
+      "id": "line_in_service",
+      "name": "Declared line is in service",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": false,
+      "dimension": "network"
+    }
+  ],
+  "reuse": "Reuse only full curves with exactly identical physical inputs. Qualify every record by its source file. All new evaluations retained.",
+  "baseline_gate": "If the equal-demand Cruiserath baseline has no checked point under the wind ceiling, block the pair. No need to run unused candidate curves for that condition.",
+  "search": "Same coarse grid and 0.25 MW refinement as v4, best tested points only; no interpolation between load levels.",
+  "comparison": "Same wind ceiling, demand amount, line and controls within each pair. Less delivered flexibility lowers both counterfactual loads. It is not a chronological unmet-work simulation.",
+  "cost": "Illustrative reservation cost: full quoted 20 MW times assumed duration times site premium, even if delivery is lower. No rebate, penalty, market settlement or customer profit inferred.",
+  "decision": "Nominal maximum added wind subject to budget and site availability. Guarded choice maximizes minimum tested added wind across user-required scenarios, with valid physical pairs, budget, user benefit floor and optional nonnegative scenario surplus.",
+  "data_priority": "Rank dimensions by tested counterexamples and recommendation changes, not a probabilistic information-value estimate.",
+  "measurement": "Physical record coverage, nominal/guarded case-grid outcomes, retained benefit, abstention, lookup count and timing. No AI accuracy before actual Azure access.",
+  "ai": "Bounded counterexample selection using a dedicated tool. Compare against fixed and seeded-random orders at the same record-read budget. All Azure results remain not_run until credentials."
+}

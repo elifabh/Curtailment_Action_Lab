@@ -1,0 +1,115 @@
+{
+  "status": "completed",
+  "generated_at_utc": "2026-09-27T05:05:48.766191+00:00",
+  "summary": "The four-call deterministic baseline matches the best eligible result in the seven-candidate reference set at the selected default conditions. Live Microsoft AI performance is unmeasured.",
+  "live_ai_status": "not_run",
+  "ai_improvement_measured": false,
+  "ai_accuracy": null,
+  "profile_id": "reference_9bus",
+  "fixed_conditions": {
+    "wind_mw": 200.0,
+    "load_scale": 1.0
+  },
+  "baseline_metrics": {
+    "status": "completed",
+    "best_valid_accepted_wind_mw": 199.9999999949641,
+    "regret_to_declared_candidate_oracle_mw": 2.893557393690571e-09,
+    "fraction_of_declared_candidate_oracle": 0.9999999999855322,
+    "candidate_calls": 4,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": 1.544823,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "agent_metrics": {
+    "status": "not_run",
+    "best_valid_accepted_wind_mw": null,
+    "regret_to_declared_candidate_oracle_mw": null,
+    "fraction_of_declared_candidate_oracle": null,
+    "candidate_calls": 0,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": null,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "oracle": {
+    "definition": "Best eligible result in the finite declared candidate set only.",
+    "complete": true,
+    "best_valid_accepted_wind_mw": 199.99999999785766,
+    "separate_candidate_calls": 7
+  },
+  "baseline_matches_reference_within_tolerance": true,
+  "comparison_tolerance_mw": 1e-06,
+  "contract_tests": {
+    "scope": "Application contracts and real-engine integration; no live AI performance measurement.",
+    "tests_run": 23,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "all_passed": true,
+    "log": "evaluation/agent_test_results.txt"
+  },
+  "metrics": [
+    {
+      "label": "Baseline accepted wind",
+      "value": 199.9999999949641,
+      "unit": "MW"
+    },
+    {
+      "label": "Declared-candidate reference",
+      "value": 199.99999999785766,
+      "unit": "MW"
+    },
+    {
+      "label": "Baseline candidate calls",
+      "value": 4,
+      "unit": "calls"
+    },
+    {
+      "label": "Separate reference calls",
+      "value": 7,
+      "unit": "calls"
+    },
+    {
+      "label": "Live AI improvement",
+      "value": null,
+      "unit": "not measured"
+    }
+  ],
+  "sources": [
+    {
+      "path": "data/deterministic_search_evaluation.json",
+      "sha256": "34e975a23ff7c57338b01d7945f1298239a4038f23aeca8c4e6ed4c36f9c5351"
+    },
+    {
+      "path": "data/agent_evaluation.json",
+      "sha256": "31a5ae074c0aa5b6248bbbf3b54b9cc68a03057108f273fbda8e71d984ff1d30"
+    },
+    {
+      "path": "evaluation/agent_contract_results.json",
+      "sha256": "db400e418aafd295b347c100604e51a1419f0228addf70cc88e00e83009df3fe"
+    },
+    {
+      "path": "ai/agent_runner.py",
+      "sha256": "cbf629f02f8459a5ef8fcd4a1aa562474e8bafce9957c4cfebe9522b8d4f95e7"
+    },
+    {
+      "path": "ai/evaluate_agent.py",
+      "sha256": "c6ca608ff990e452f32eeac18491afc0b0336fe2700d0e6e69b83065b3f603f0"
+    }
+  ],
+  "limitations": [
+    "Model snapshot comparisons, not measured field curtailment or Ireland-wide percentages.",
+    "Both search methods have the same maximum candidate-call budget; early stops are reported.",
+    "The oracle's extra calls are for evaluation only and are not part of either search budget.",
+    "Accepted wind is compared only under fixed available wind and load conditions.",
+    "Wall times include provider latency and may be affected by engine caching; no speed superiority claim.",
+    "The deterministic baseline can match exhaustive search when the budget covers the action set.",
+    "Passing authored provider tests does not establish AI reasoning quality or grounding accuracy.",
+    "The original Irish source profile remains blocked. The separate conditional Irish study inspects two verified stored alternatives; these are not approved operating actions."
+  ]
+}

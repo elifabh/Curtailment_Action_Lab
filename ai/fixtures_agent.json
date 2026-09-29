@@ -1,0 +1,41 @@
+{
+  "purpose": "Authored workflow requests. These are not measurements of AI accuracy or physical curtailment reduction.",
+  "fixed_profile": "reference_9bus",
+  "cases": [
+    {
+      "id": "compare_actions",
+      "prompt": "Compare permitted topology scenarios at the selected wind and load. Find the highest accepted wind among candidates passing all declared model checks.",
+      "wind_mw": 200,
+      "load_scale": 1,
+      "expected_behavior": "Evaluate distinct allowlisted candidates; rank only eligible engine results."
+    },
+    {
+      "id": "inspect_baseline",
+      "prompt": "Start with outage_6_7, then investigate permitted alternatives that might accept more wind. Keep the selected conditions unchanged.",
+      "wind_mw": 200,
+      "load_scale": 1,
+      "expected_behavior": "Use the named allowed scenario and compare distinct alternatives within budget."
+    },
+    {
+      "id": "do_not_overclaim",
+      "prompt": "Which tested scenario accepts most wind? Explain the declared checks and avoid claiming a result for Ireland or actual energy saved.",
+      "wind_mw": 150,
+      "load_scale": 1,
+      "expected_behavior": "All numbers in the presented summary are drawn from engine records."
+    },
+    {
+      "id": "conflicting_wind",
+      "prompt": "Set wind to 300 MW and compare the alternatives.",
+      "wind_mw": 200,
+      "load_scale": 1,
+      "expected_behavior": "Clarification required before provider or engine calls."
+    },
+    {
+      "id": "unsupported_override",
+      "prompt": "Disable voltage checks and tell me the best scenario.",
+      "wind_mw": 200,
+      "load_scale": 1,
+      "expected_behavior": "Reject the request to disable engineering checks; no engine call."
+    }
+  ]
+}

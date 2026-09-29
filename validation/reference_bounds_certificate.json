@@ -1,0 +1,27 @@
+{
+  "source_sha256": "44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4",
+  "unchanged_published_bounds": {
+    "bus_voltage_min_max": true,
+    "branch_rate_a": true,
+    "branch_impedance_shunt": true,
+    "conventional_generator_pq": true
+  },
+  "voltage_limits_pu": [
+    0.9,
+    1.1
+  ],
+  "wind_assumptions": {
+    "bus": 6,
+    "pmin_mw": 0,
+    "available_mw": 200,
+    "qmin_mvar": 0,
+    "qmax_mvar": 0
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pypower": "5.1.19"
+  },
+  "methods": "PYPOWER ACOPF/PIPS; independently implemented branch pi model; SciPy root/hybr PV/PQ reconstruction."
+}

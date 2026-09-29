@@ -1,0 +1,5648 @@
+{
+  "scope": "Conditional Irish planning-model comparison, with identical prepared controls.\n\nThe additional wind and optional geographically movable 20 MW load are synthetic.\nThis estimates tested snapshot acceptance, not historical curtailed MWh, a global\noptimum, security-certified capacity, or an approved operational action.\n",
+  "source": "TYTFS2024_WP2024_V33.raw",
+  "available_hypothetical_wind_MW": 200,
+  "wind_bus": 1341,
+  "balance_bus": 10470,
+  "preparation": {
+    "tap_changes": {
+      "trafo:1061:10602:1": 1.04,
+      "trafo:1311:13114:1": 1.0130666666666668,
+      "trafo:2181:21804:1": 1.0130666666666668,
+      "trafo:2181:21804:2": 1.0130666666666668,
+      "trafo:2361:23604:1": 0.972,
+      "trafo:2361:23604:2": 0.972,
+      "trafo:3241:32404:1": 0.9929999999999999,
+      "trafo:3241:32404:2": 0.9824999999999999,
+      "trafo:3581:35804:1": 0.95022,
+      "trafo:3581:35804:2": 0.9481133333333333,
+      "trafo:4001:40004:1": 0.9929999999999999,
+      "trafo:4001:40004:2": 0.9929999999999999,
+      "trafo:4201:42004:1": 0.972,
+      "trafo:4201:42004:2": 0.972,
+      "trafo:4221:42204:1": 0.9502666666666667,
+      "trafo:4221:42204:2": 0.9502666666666667,
+      "trafo:4481:44804:1": 1.035,
+      "trafo:4481:44804:2": 1.035,
+      "trafo:4701:47004:1": 0.972,
+      "trafo:4701:47004:2": 0.972,
+      "trafo:4961:49604:1": 1.034,
+      "trafo:4961:49604:2": 1.034,
+      "trafo:4981:49804:1": 1.034,
+      "trafo:4981:49804:2": 1.034,
+      "trafo:5001:50004:1": 1.035,
+      "trafo:5221:52204:2": 1.035,
+      "trafo:5361:53604:1": 0.951,
+      "trafo:12504:12582:1": 1.1,
+      "trafo:14614:14602:1": 1.08155,
+      "trafo:21824:21802:1": 1.1,
+      "trafo:21844:21822:1": 1.1,
+      "trafo:21854:68230:1": 1.099,
+      "trafo:22204:22231:1": 1.06,
+      "trafo:23604:23685:1": 1.1,
+      "trafo:23614:23611:1": 1.1,
+      "trafo:23614:23611:2": 1.1,
+      "trafo:35804:35832:1": 1.1,
+      "trafo:42004:42001:1": 1.1,
+      "trafo:42214:42201:1": 1.1,
+      "trafo:42204:42272:1": 1.1,
+      "trafo:49614:49602:1": 0.9857142857142858,
+      "trafo:49604:49613:1": 0.9875,
+      "trafo:49604:49683:1": 0.990909090909091,
+      "trafo:49814:49802:1": 1.1,
+      "trafo:50014:50012:1": 1.1,
+      "trafo:52234:52201:1": 1.1,
+      "trafo:52610:52614:3": 1.034,
+      "trafo:52634:52632:1": 1.1,
+      "trafo:52644:52642:1": 1.1,
+      "trafo:53034:53032:1": 1.0630142857142857,
+      "trafo:53034:53042:1": 1.0630142857142857,
+      "trafo:53034:53052:1": 1.0630142857142857,
+      "trafo:75010:75030:1": 1.0166666666666668,
+      "trafo:75010:75030:2": 1.0166666666666668,
+      "trafo:77010:77030:1": 1.0333333333333334,
+      "trafo:77010:77030:2": 1.0333333333333334,
+      "trafo:77511:77530:1": 1.0166666666666668,
+      "trafo:77511:77530:2": 1.0166666666666668,
+      "trafo:84511:84530:1": 1.0,
+      "trafo:84512:84530:1": 1.0
+    },
+    "disconnected_shunt_buses": [
+      74564
+    ]
+  },
+  "interpretation": "Best tested passing point in [0,200] MW with a fixed coarse grid and local bisection; no global or monotonicity certificate.",
+  "best_tested": {
+    "outage": {
+      "wind_MW": 41.796875,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.999985970555034e-10,
+        "direct_branch_flow_difference_MVA": 3.59387283520346e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809724415355092,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.5938728352021104e-10,
+        "max_grouped_KCL_residual_MVA": 9.99998597053733e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.293630263000523,
+      "scenario": "outage",
+      "state_sha256": "32af78a46d4fad626a81fcb183e8a4080d49d701ec5b269bde258f5e2f622797",
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 2.3198864504410422e-10,
+        "max_group_residual_MVA": 2.3198864504410422e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      }
+    },
+    "line_available": {
+      "wind_MW": 42.1875,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.759041243905267e-10,
+        "direct_branch_flow_difference_MVA": 3.0451495551936625e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809382032434652,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.045149555193662e-10,
+        "max_grouped_KCL_residual_MVA": 6.759099615689371e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.958229636002216,
+      "scenario": "line_available",
+      "state_sha256": "bc15eb898350fc17969d7bda4bd849f3870b498dd6a1e9179ed0e37b6f1419c7",
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 5.104546058913856e-10,
+        "max_group_residual_MVA": 5.104546058913856e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      }
+    },
+    "outage_flex_at_1341": {
+      "wind_MW": 61.71875,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.2403636155650176e-10,
+        "direct_branch_flow_difference_MVA": 3.1966281363369816e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809714797419281,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.1966281363287894e-10,
+        "max_grouped_KCL_residual_MVA": 4.240363388955399e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 5.054417813000327,
+      "scenario": "outage_flex_at_1341",
+      "state_sha256": "134a3fb9e1b7354f16b383f2e7f827dc8a823484d431f72bc3ada05f7a330a45",
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 2.141020633306477e-10,
+        "max_group_residual_MVA": 2.14087926141103e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      }
+    },
+    "outage_flex_at_2072": {
+      "wind_MW": 47.65625,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.166753294584815e-10,
+        "direct_branch_flow_difference_MVA": 2.847923650797654e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880958050465113,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.8479753061487855e-10,
+        "max_grouped_KCL_residual_MVA": 7.167187075800671e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.6287699789972976,
+      "scenario": "outage_flex_at_2072",
+      "state_sha256": "59fbe4e02664829e3df4de534ada7636871cab72c3f4e37fec5ed99f2a67c34e",
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 1.7231824600553003e-10,
+        "max_group_residual_MVA": 1.723040372822643e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      }
+    }
+  },
+  "evaluations": [
+    {
+      "wind_MW": 0.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 1,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": []
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.237036685010341e-10,
+        "direct_branch_flow_difference_MVA": 3.156453378285454e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 1,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8802804123453156,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 2.5697747689991957,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 25.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.175771213290201e-10,
+        "direct_branch_flow_difference_MVA": 3.2688676749257897e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8807364167369478,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.2688676749203153e-10,
+        "max_grouped_KCL_residual_MVA": 5.175771213201813e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.6418281869991915,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 50.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.002075082218622e-09,
+        "direct_branch_flow_difference_MVA": 3.973834016962586e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8810654041152106,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.3633799179988273,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 75.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.724528251542746e-10,
+        "direct_branch_flow_difference_MVA": 3.7047593978061077e-10,
+        "violations": {
+          "original_bus_groups_voltage": 9,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8812546539077232,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.068507779000356,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 100.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.499651356440984e-10,
+        "direct_branch_flow_difference_MVA": 2.989566432773751e-10,
+        "violations": {
+          "original_bus_groups_voltage": 40,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.881308724192864,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.4781623519993445,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 125.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.351293402776529e-10,
+        "direct_branch_flow_difference_MVA": 3.687330850272976e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8812291608509476,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.479665942999418,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 150.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 8.467676337706198e-10,
+        "direct_branch_flow_difference_MVA": 3.658394911146991e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8881649770787469,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.65047179999965,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 175.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.431154688560472e-10,
+        "direct_branch_flow_difference_MVA": 2.882584121200822e-10,
+        "violations": {
+          "original_bus_groups_voltage": 15,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 1,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 1.0190431638404243,
+        "voltage_violation_group_indices": [
+          437,
+          443,
+          447,
+          452,
+          468,
+          480,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.575009938998846,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 200.0,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 3.800526858445772e-10,
+        "direct_branch_flow_difference_MVA": 2.4439682548935025e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 4,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 1.156600621886245,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.175302266998187,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 37.5,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.891143937827435e-10,
+        "direct_branch_flow_difference_MVA": 3.6977168959914764e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880917954603228,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.697688397603656e-10,
+        "max_grouped_KCL_residual_MVA": 6.891149550749171e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.5146736150018114,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 43.75,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.3546775439484734e-09,
+        "direct_branch_flow_difference_MVA": 2.586919526837202e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809960132230379,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.424915384999622,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 40.625,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 8.821059295462365e-10,
+        "direct_branch_flow_difference_MVA": 5.15497175249976e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880957861004788,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 5.154971750337545e-10,
+        "max_grouped_KCL_residual_MVA": 8.821230851134341e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.9299852209987876,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 42.1875,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.907879600253257e-10,
+        "direct_branch_flow_difference_MVA": 2.464807714926953e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809772286114749,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.572633425999811,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 41.40625,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.447706659503959e-10,
+        "direct_branch_flow_difference_MVA": 3.3012272028026566e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880967617955023,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.3012299292771776e-10,
+        "max_grouped_KCL_residual_MVA": 5.447691742953984e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.863362480999058,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 41.796875,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.999985970555034e-10,
+        "direct_branch_flow_difference_MVA": 3.59387283520346e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809724415355092,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.5938728352021104e-10,
+        "max_grouped_KCL_residual_MVA": 9.99998597053733e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.293630263000523,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 41.9921875,
+      "line_outage": true,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 8.332254584234347e-10,
+        "direct_branch_flow_difference_MVA": 3.022031812604951e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809748396322967,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.267387557996699,
+      "scenario": "outage"
+    },
+    {
+      "wind_MW": 0.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 1,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": []
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.403762518925787e-10,
+        "direct_branch_flow_difference_MVA": 3.7193057619887733e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8804123709501712,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.7193465797865446e-10,
+        "max_grouped_KCL_residual_MVA": 7.403873853075081e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 1.5692788820015267,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 25.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 3.075747818215882e-10,
+        "direct_branch_flow_difference_MVA": 1.4974641109217173e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8807326748837465,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 1.497464110921717e-10,
+        "max_grouped_KCL_residual_MVA": 3.075745610940452e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.861521150000044,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 50.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.199562878573725e-09,
+        "direct_branch_flow_difference_MVA": 4.1510434143521786e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8810245980716558,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.167023435002193,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 75.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 8.92889688808647e-10,
+        "direct_branch_flow_difference_MVA": 3.719040433750567e-10,
+        "violations": {
+          "original_bus_groups_voltage": 9,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8812613715526331,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.705959372000507,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 100.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.17784710798258e-10,
+        "direct_branch_flow_difference_MVA": 3.8842696282514964e-10,
+        "violations": {
+          "original_bus_groups_voltage": 11,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8814398222001516,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.529023302002315,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 125.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          614,
+          615,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.58038137987455e-10,
+        "direct_branch_flow_difference_MVA": 2.2052968093140003e-10,
+        "violations": {
+          "original_bus_groups_voltage": 18,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8815739698049002,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          550,
+          552,
+          556,
+          558,
+          563,
+          565,
+          566,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.741491093998775,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 150.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          614,
+          615,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.274275641324513e-10,
+        "direct_branch_flow_difference_MVA": 3.137440853920055e-10,
+        "violations": {
+          "original_bus_groups_voltage": 24,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8816533095038703,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          548,
+          550,
+          552,
+          553,
+          556,
+          558,
+          559,
+          560,
+          563,
+          565,
+          566,
+          706,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1577
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.706560230999457,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 175.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          614,
+          615,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.496288430631666e-10,
+        "direct_branch_flow_difference_MVA": 3.82604012358039e-10,
+        "violations": {
+          "original_bus_groups_voltage": 27,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8816748256718332,
+        "voltage_violation_group_indices": [
+          362,
+          369,
+          468,
+          480,
+          548,
+          550,
+          552,
+          553,
+          556,
+          558,
+          559,
+          560,
+          563,
+          565,
+          566,
+          706,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1543,
+          1577
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.695124350000697,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 200.0,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          614,
+          615,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 8.9275004606207e-10,
+        "direct_branch_flow_difference_MVA": 4.593117165213343e-10,
+        "violations": {
+          "original_bus_groups_voltage": 28,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.9067789807741576,
+        "voltage_violation_group_indices": [
+          362,
+          369,
+          468,
+          480,
+          548,
+          550,
+          552,
+          553,
+          556,
+          558,
+          559,
+          560,
+          563,
+          565,
+          566,
+          706,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1497,
+          1543,
+          1577
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.567007835001277,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 37.5,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.75790759318264e-10,
+        "direct_branch_flow_difference_MVA": 4.1107594703792485e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8808840911347647,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 4.1107594703792485e-10,
+        "max_grouped_KCL_residual_MVA": 7.75792608259142e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.1608516220003366,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 43.75,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.3222403882737355e-09,
+        "direct_branch_flow_difference_MVA": 5.207954021546471e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809559651806865,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.06140535799932,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 40.625,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.1921856672834538e-09,
+        "direct_branch_flow_difference_MVA": 4.1429375815801914e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809201981138615,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 4.142937581600513e-10,
+        "max_grouped_KCL_residual_MVA": 1.1921856670666705e-09,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 5.171189909000532,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 42.1875,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.759041243905267e-10,
+        "direct_branch_flow_difference_MVA": 3.0451495551936625e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809382032434652,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.045149555193662e-10,
+        "max_grouped_KCL_residual_MVA": 6.759099615689371e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.958229636002216,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 42.96875,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.1164612158308785e-09,
+        "direct_branch_flow_difference_MVA": 4.444606092679965e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809471145569311,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.074434332997043,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 42.578125,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.2047859167012607e-09,
+        "direct_branch_flow_difference_MVA": 2.959820904584319e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809426664931167,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.538471258001664,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 42.3828125,
+      "line_outage": false,
+      "extra_load_MW": {},
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.964950433334848e-10,
+        "direct_branch_flow_difference_MVA": 3.0765014361183133e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809404367673571,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2458,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.71344295399831,
+      "scenario": "line_available"
+    },
+    {
+      "wind_MW": 0.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 1,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": []
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.788401571255112e-10,
+        "direct_branch_flow_difference_MVA": 2.9029248478931497e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 1,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8797797955312325,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 2.4977986049998435,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 25.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 1,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": []
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.236501206198845e-10,
+        "direct_branch_flow_difference_MVA": 3.95506005794689e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8803851807860089,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.955060057388065e-10,
+        "max_grouped_KCL_residual_MVA": 6.236501206198845e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 2.9266827939973155,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 50.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.373627895533937e-10,
+        "direct_branch_flow_difference_MVA": 3.2955061696676306e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8808134571028906,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.2955061675187384e-10,
+        "max_grouped_KCL_residual_MVA": 5.373678260405296e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 2.977586672997859,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 75.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.827497534797855e-09,
+        "direct_branch_flow_difference_MVA": 3.5756944302050644e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8811144133273885,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.3224888389995613,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 100.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.125273857024827e-10,
+        "direct_branch_flow_difference_MVA": 3.8967900118641604e-10,
+        "violations": {
+          "original_bus_groups_voltage": 9,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8812761178839426,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.718955748001463,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 125.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.5343285471747123e-09,
+        "direct_branch_flow_difference_MVA": 4.076732424703266e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8813035949287077,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.321488191999379,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 150.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.816685772939866e-10,
+        "direct_branch_flow_difference_MVA": 3.851476175335169e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8811967599034182,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.9097922750006546,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 175.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.150368436513514e-10,
+        "direct_branch_flow_difference_MVA": 2.7996312513473743e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.9140221073539317,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.005360120001569,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 200.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.583131529505622e-10,
+        "direct_branch_flow_difference_MVA": 3.7391177095539855e-10,
+        "violations": {
+          "original_bus_groups_voltage": 5,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 1,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 1.0458471352352106,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          839,
+          841,
+          845
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.246107659997506,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 62.5,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.610578121969515e-10,
+        "direct_branch_flow_difference_MVA": 2.927785526754036e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809810320348771,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.431477100999473,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 56.25,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.330425898473409e-10,
+        "direct_branch_flow_difference_MVA": 2.533050452167942e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809014983600921,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.533050452167942e-10,
+        "max_grouped_KCL_residual_MVA": 4.330425900671815e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.483722580000176,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 59.375,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.663509630531913e-10,
+        "direct_branch_flow_difference_MVA": 3.7362285624154986e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809419441935987,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.736228562415498e-10,
+        "max_grouped_KCL_residual_MVA": 5.663509630531913e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 4.489013278998755,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 60.9375,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 9.961216858392351e-10,
+        "direct_branch_flow_difference_MVA": 2.874144155376907e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809617813756859,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.874142188102062e-10,
+        "max_grouped_KCL_residual_MVA": 9.961219583129977e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 5.223044056998333,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 61.71875,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.2403636155650176e-10,
+        "direct_branch_flow_difference_MVA": 3.1966281363369816e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809714797419281,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.1966281363287894e-10,
+        "max_grouped_KCL_residual_MVA": 4.240363388955399e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 5.054417813000327,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 62.109375,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.086741634388966e-09,
+        "direct_branch_flow_difference_MVA": 2.7438889910382335e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809762741134097,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.578617699000461,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 61.9140625,
+      "line_outage": true,
+      "extra_load_MW": {
+        "1341": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 3,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315,
+          698
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 2.535367572629182e-10,
+        "direct_branch_flow_difference_MVA": 2.564455694381029e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809738814881576,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.272191560998181,
+      "scenario": "outage_flex_at_1341"
+    },
+    {
+      "wind_MW": 0.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 1,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": []
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.860637178485313e-10,
+        "direct_branch_flow_difference_MVA": 2.9461703515910596e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 1,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8802124136656903,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 2.411638123998273,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 25.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.800506413299258e-10,
+        "direct_branch_flow_difference_MVA": 2.4651376647675477e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.88066836504787,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.4651376647675477e-10,
+        "max_grouped_KCL_residual_MVA": 6.800506411211171e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.3890741460018035,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 50.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.384100048701228e-09,
+        "direct_branch_flow_difference_MVA": 2.63703832242486e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880982582600943,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.469023277000815,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 75.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.274369030233366e-10,
+        "direct_branch_flow_difference_MVA": 3.7872253922053737e-10,
+        "violations": {
+          "original_bus_groups_voltage": 4,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8811726847161466,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          839,
+          841
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.816048099000909,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 100.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.243662888881572e-10,
+        "direct_branch_flow_difference_MVA": 2.2996863865147252e-10,
+        "violations": {
+          "original_bus_groups_voltage": 39,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8812293969477228,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.130611136999505,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 125.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 3.1229064969730976e-10,
+        "direct_branch_flow_difference_MVA": 2.61458655727457e-10,
+        "violations": {
+          "original_bus_groups_voltage": 41,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8811521673319983,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          835,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.380257030999928,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 150.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.306044038178688e-10,
+        "direct_branch_flow_difference_MVA": 2.963990931262803e-10,
+        "violations": {
+          "original_bus_groups_voltage": 40,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8899820527403238,
+        "voltage_violation_group_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          468,
+          480,
+          599,
+          600,
+          603,
+          604,
+          834,
+          837,
+          838,
+          839,
+          841,
+          843,
+          844,
+          845,
+          1546,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.5948942830000306,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 175.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.293593377529233e-10,
+        "direct_branch_flow_difference_MVA": 4.270163827201934e-10,
+        "violations": {
+          "original_bus_groups_voltage": 5,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 1,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 1.020924547231135,
+        "voltage_violation_group_indices": [
+          468,
+          480,
+          839,
+          841,
+          1558
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 4.645507217999693,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 200.0,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          698,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.015549621405406e-10,
+        "direct_branch_flow_difference_MVA": 2.5508650342199063e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 4,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 1.158560606220957,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 5.0649312309978995,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 37.5,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 3.9428968476219274e-10,
+        "direct_branch_flow_difference_MVA": 4.1591258374404236e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8808374288758973,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 4.159125837470788e-10,
+        "max_grouped_KCL_residual_MVA": 3.9428968476219274e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.4631946599984076,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 43.75,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.1227315635683362e-09,
+        "direct_branch_flow_difference_MVA": 2.3090293228639731e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809143353134866,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.3090293228639731e-10,
+        "max_grouped_KCL_residual_MVA": 1.1227315635717473e-09,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.3783113899989985,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 46.875,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 4.1333375740788765e-10,
+        "direct_branch_flow_difference_MVA": 2.2653344449910172e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809495915165135,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.2653344449910172e-10,
+        "max_grouped_KCL_residual_MVA": 4.1340145474860147e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.7881878610023705,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 48.4375,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 6.749475682216719e-10,
+        "direct_branch_flow_difference_MVA": 3.124345348137265e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809663683248381,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.3255861809993803,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 47.65625,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": true,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 7.166753294584815e-10,
+        "direct_branch_flow_difference_MVA": 2.847923650797654e-10,
+        "violations": {
+          "original_bus_groups_voltage": 0,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.880958050465113,
+        "voltage_violation_group_indices": [],
+        "passes_implemented_checks": true,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": {
+        "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.8479753061487855e-10,
+        "max_grouped_KCL_residual_MVA": 7.167187075800671e-10,
+        "max_source_rating_difference": 0.0,
+        "passed": true,
+        "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+      },
+      "elapsed_s": 3.6287699789972976,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 48.046875,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 1.3491856668191739e-09,
+        "direct_branch_flow_difference_MVA": 3.8114865586695464e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809622270021988,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.258647224000015,
+      "scenario": "outage_flex_at_2072"
+    },
+    {
+      "wind_MW": 47.8515625,
+      "line_outage": true,
+      "extra_load_MW": {
+        "2072": 20.0
+      },
+      "passes_declared_snapshot_checks": false,
+      "solver": {
+        "converged": true,
+        "iterations": 2,
+        "fixed_Q_buses": [
+          429,
+          443,
+          670,
+          857,
+          946,
+          1099,
+          1168,
+          1169,
+          1488,
+          1600,
+          1614,
+          1668,
+          1770,
+          1771,
+          1772,
+          1817,
+          1821,
+          1828,
+          1876
+        ],
+        "limited_buses": [
+          596,
+          913,
+          1252,
+          1253,
+          1254,
+          1255,
+          1314,
+          1315
+        ]
+      },
+      "checks": {
+        "direct_balance_max_MVA": 5.705715840064533e-10,
+        "direct_branch_flow_difference_MVA": 2.7780720065157253e-10,
+        "violations": {
+          "original_bus_groups_voltage": 2,
+          "voltage_ge_100kv": 0,
+          "rated_branch_thermal": 0,
+          "generator_P": 0,
+          "generator_Q": 0
+        },
+        "max_rated_branch_loading": 0.8809601431390213,
+        "voltage_violation_group_indices": [
+          468,
+          480
+        ],
+        "passes_implemented_checks": false,
+        "operationally_validated": false,
+        "ideal_tie_internal_flows_checked": false,
+        "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+        "rating_coverage": {
+          "active_branches": 2457,
+          "rateA_zero": 92,
+          "rateA_ge_9999": 1186,
+          "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+        }
+      },
+      "raw_equations": null,
+      "elapsed_s": 3.433388900000864,
+      "scenario": "outage_flex_at_2072"
+    }
+  ],
+  "operationally_validated": false,
+  "field_curtailment_reduction": null
+}

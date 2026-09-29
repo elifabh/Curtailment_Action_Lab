@@ -1,0 +1,215 @@
+{
+  "scenario": {
+    "id": "full_wind_during_outage",
+    "name": "Try full wind during the outage"
+  },
+  "baseline": {
+    "added_wind_MW": 163.28125,
+    "outage": true,
+    "converged": true,
+    "screen_pass": true,
+    "max_loading_pct": 99.99643652928721,
+    "limiting_branch": "line:3581:89516:1",
+    "max_transmission_voltage_pu": 1.0956143349899263,
+    "min_transmission_voltage_pu": 1.0243249258510503,
+    "thermal_violations": 0,
+    "transmission_voltage_violations": 0,
+    "collector_voltage_violations": 221,
+    "generator_P_violations": 0,
+    "generator_Q_violations": 0,
+    "Q_clamped_generator_count": 32,
+    "AC_balance_residual_MVA": 1.8558782388864108e-09,
+    "balancing_generator_MW": 292.71875,
+    "total_served_demand_MW": 7324.51,
+    "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+    "losses_MW": 150.57467567328175,
+    "max_collector_voltage_pu": 1.2327192466482229,
+    "max_collector_voltage_limit_exceedance_pu": 0.13271924664822277,
+    "collector_total_voltage_exceedance_pu": 7.474651238241847,
+    "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+    "audit_file": "scenario_audit/wind_163.28125_outage_1.npz",
+    "wind_withheld_under_tested_policy_MW": 36.71875
+  },
+  "selected": {
+    "added_wind_MW": 200,
+    "outage": true,
+    "converged": true,
+    "screen_pass": false,
+    "max_loading_pct": 118.71956759297251,
+    "limiting_branch": "line:3581:89516:1",
+    "max_transmission_voltage_pu": 1.0910423457749445,
+    "min_transmission_voltage_pu": 1.0168094196498252,
+    "thermal_violations": 4,
+    "transmission_voltage_violations": 0,
+    "collector_voltage_violations": 189,
+    "generator_P_violations": 0,
+    "generator_Q_violations": 0,
+    "Q_clamped_generator_count": 32,
+    "AC_balance_residual_MVA": 1.5138126619620737e-09,
+    "balancing_generator_MW": 256.0,
+    "total_served_demand_MW": 7324.51,
+    "losses_MW": 156.27364252931392,
+    "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+    "max_collector_voltage_pu": 1.2333588764280505,
+    "max_collector_voltage_limit_exceedance_pu": 0.13335887642805044,
+    "collector_total_voltage_exceedance_pu": 6.705948683496083,
+    "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+    "audit_file": "scenario_audit/wind_200_outage_1.npz",
+    "wind_withheld_under_tested_policy_MW": 0
+  },
+  "comparison": {
+    "metrics": [
+      {
+        "label": "Requested additional wind",
+        "baseline": 163.28125,
+        "selected": 200,
+        "unit": "MW"
+      },
+      {
+        "label": "Maximum branch loading",
+        "baseline": 99.99643652928721,
+        "selected": 118.71956759297251,
+        "unit": "%"
+      },
+      {
+        "label": "Thermal violations",
+        "baseline": 0,
+        "selected": 4,
+        "unit": "branches"
+      },
+      {
+        "label": "Unresolved lower-voltage violations",
+        "baseline": 221,
+        "selected": 189,
+        "unit": "buses"
+      }
+    ],
+    "message": "Rejected by the transmission screen: 200 MW during the outage overloads four branches. Requested injection is not accepted generation."
+  },
+  "decision_status": "engineering_review_required_not_operationally_approved",
+  "checks": [
+    {
+      "label": "AC solution converged",
+      "passed": true,
+      "detail": "Numerical convergence does not establish operational feasibility."
+    },
+    {
+      "label": "AC nodal balance",
+      "passed": true,
+      "detail": "Maximum residual: 1.5138126619620737e-09 MVA."
+    },
+    {
+      "label": "Rated branch thermal limits",
+      "passed": false,
+      "detail": "Violations: 4; maximum loading: 118.71956759297251%."
+    },
+    {
+      "label": "Transmission voltages (>=100 kV)",
+      "passed": true,
+      "detail": "Only the specified transmission-voltage subset is screened here."
+    },
+    {
+      "label": "Generator active-power bounds",
+      "passed": true,
+      "detail": "Includes the balancing generator and solved slack output."
+    },
+    {
+      "label": "Generator reactive-power bounds",
+      "passed": true,
+      "detail": "0.02 Mvar tolerance; local PV-to-PQ conversion at violated Q limits."
+    },
+    {
+      "label": "Voltages below 100 kV",
+      "passed": false,
+      "detail": "Unresolved violations: 189. These prevent an all-network feasibility claim."
+    },
+    {
+      "label": "Original strict source residual gate",
+      "passed": false,
+      "detail": "Failed. Close voltage matching supports an exploratory approximation, not a passed independent validation."
+    },
+    {
+      "label": "Full N-1 and dynamic security",
+      "passed": null,
+      "detail": "Not evaluated. A single hypothetical outage comparison is not full N-1 security."
+    },
+    {
+      "label": "Operator approval",
+      "passed": null,
+      "detail": "No real switching, dispatch or maintenance approval has been obtained."
+    }
+  ],
+  "assumptions": [
+    "EirGrid TYTFS2024 Winter Peak 2024 reference case; unchanged original constant-power demand of 7,324.51 MW.",
+    "Additional unity-power-factor wind at Binbane 110 kV (bus 1341), balanced by equal active-power reduction at generator bus 10470 (Aghada); the slack accounts for losses.",
+    "Compare circuit 1341\u20131701\u20131 in service against its hypothetical outage. No real maintenance permission or weather forecast is implied.",
+    "Screen all rated branch thermal limits, voltage limits at buses >=100 kV, generator active/reactive bounds and AC balance. Reactive-power tolerance: 0.02 Mvar."
+  ],
+  "limitations": [
+    "Planning screen only: existing and changed voltage violations below 100 kV remain unresolved. Neither case is approved for operation.",
+    "The original strict source-reconstruction residual gate failed. Solved voltages closely match the source, but this is an approximate reconstruction, not independently validated operational data.",
+    "HVDC boundary injections are calibrated from the source solution; transformer/shunt settings and remote voltage controls are held fixed. Generator Q boundaries use local PV-to-PQ switching.",
+    "No complete N-1, dynamic, protection, market or outage-scheduling feasibility assessment. No measured national avoided curtailment, savings or annual benefit is claimed.",
+    "This is a snapshot in MW. It is not an energy result in MWh. The wind increment and line outage are hypothetical."
+  ],
+  "evidence": {
+    "hypothetical_available_wind_MW": 200,
+    "baseline": {
+      "added_wind_MW": 163.28125,
+      "outage": true,
+      "converged": true,
+      "screen_pass": true,
+      "max_loading_pct": 99.99643652928721,
+      "limiting_branch": "line:3581:89516:1",
+      "max_transmission_voltage_pu": 1.0956143349899263,
+      "min_transmission_voltage_pu": 1.0243249258510503,
+      "thermal_violations": 0,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 221,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 32,
+      "AC_balance_residual_MVA": 1.8558782388864108e-09,
+      "balancing_generator_MW": 292.71875,
+      "total_served_demand_MW": 7324.51,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "losses_MW": 150.57467567328175,
+      "max_collector_voltage_pu": 1.2327192466482229,
+      "max_collector_voltage_limit_exceedance_pu": 0.13271924664822277,
+      "collector_total_voltage_exceedance_pu": 7.474651238241847,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_163.28125_outage_1.npz",
+      "wind_withheld_under_tested_policy_MW": 36.71875
+    },
+    "selected": {
+      "added_wind_MW": 200,
+      "outage": true,
+      "converged": true,
+      "screen_pass": false,
+      "max_loading_pct": 118.71956759297251,
+      "limiting_branch": "line:3581:89516:1",
+      "max_transmission_voltage_pu": 1.0910423457749445,
+      "min_transmission_voltage_pu": 1.0168094196498252,
+      "thermal_violations": 4,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 189,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 32,
+      "AC_balance_residual_MVA": 1.5138126619620737e-09,
+      "balancing_generator_MW": 256.0,
+      "total_served_demand_MW": 7324.51,
+      "losses_MW": 156.27364252931392,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "max_collector_voltage_pu": 1.2333588764280505,
+      "max_collector_voltage_limit_exceedance_pu": 0.13335887642805044,
+      "collector_total_voltage_exceedance_pu": 6.705948683496083,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_200_outage_1.npz",
+      "wind_withheld_under_tested_policy_MW": 0
+    },
+    "source_case": "TYTFS2024_WP2024_V33.raw",
+    "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24"
+  },
+  "physical_actions_executed": false
+}

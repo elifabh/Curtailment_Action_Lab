@@ -1,0 +1,69 @@
+{
+  "zero_impedance_tie_count": 148,
+  "source_grouped_max_P_MW": 4.312455378715553,
+  "source_grouped_max_PQ_Q_Mvar": 4.922443817799717,
+  "excluded_isolated_buses": [
+    {
+      "bus_index": 1929,
+      "bus_id": 86221,
+      "P_load": 0.0,
+      "Q_load": 0.0
+    }
+  ],
+  "source": "TYTFS2024_WP2024_V33.raw",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "original_buses": 2025,
+  "included_original_buses": 2023,
+  "star_buses": 109,
+  "active_lines_and_transformer_windings": 2606,
+  "fixed_tap_correction_count": 97,
+  "hvdc_terminal_boundary_injections": [
+    {
+      "bus": 86220,
+      "P_MW": 80.3302242528081,
+      "Q_Mvar": -29.83583061802363,
+      "basis": "inferred from source voltages; not independently validated"
+    },
+    {
+      "bus": 86221,
+      "P_MW": 0.0,
+      "Q_Mvar": 0.0,
+      "basis": "inferred from source voltages; not independently validated"
+    }
+  ],
+  "remote_voltage_control": "held at source local bus Vm, not reproduced",
+  "switch_shunt_control": "held at Binit",
+  "tap_control": "held at source ratio/phase",
+  "FACTS_modes": [
+    0,
+    0,
+    0
+  ],
+  "source_residual_nonHVDC_max_P_MW": 334.8118058304074,
+  "source_residual_nonHVDC_max_PQ_Q_Mvar": 90.28766788277437,
+  "worst_P_bus": {
+    "id": 3082,
+    "name": "INCHICORE",
+    "mismatch_MW": -334.8118058304074
+  },
+  "source_residual_nonHVDC_P_MW_percentiles": [
+    0.00025545338488836,
+    0.6945366560388643,
+    76.35159190217146,
+    334.8118058304074
+  ],
+  "power_flow_converged": true,
+  "Vm_abs_error_pu_percentiles": [
+    8.543203894539886e-06,
+    2.4238149955302343e-05,
+    3.9307674331230396e-05,
+    9.865703913414237e-05
+  ],
+  "Va_abs_error_deg_percentiles": [
+    0.020350003684613593,
+    0.028001183793307415,
+    0.02902215745621988,
+    0.03682284946561398
+  ],
+  "validation_gate": "FAIL"
+}

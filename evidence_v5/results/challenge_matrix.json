@@ -1,0 +1,1433 @@
+{
+  "status": "completed",
+  "protocol_sha256": "4b789f61bbdaf7b3ab2142c5e29c5eab508f54e572dc58d89758ac9ae04d04d1",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "scenarios": [
+    {
+      "id": "nominal",
+      "name": "Declared 20 MW offer",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "reference"
+    },
+    {
+      "id": "wind_50",
+      "name": "Wind availability 50 MW",
+      "wind_available_MW": 50,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "wind"
+    },
+    {
+      "id": "wind_25",
+      "name": "Wind availability 25 MW",
+      "wind_available_MW": 25,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "wind"
+    },
+    {
+      "id": "delivery_half",
+      "name": "Only 10 of 20 MW delivered",
+      "wind_available_MW": 200,
+      "flex_MW": 10,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "delivery"
+    },
+    {
+      "id": "delivery_zero",
+      "name": "No flexible load delivered",
+      "wind_available_MW": 200,
+      "flex_MW": 0,
+      "source_load_factor": 1.0,
+      "line_outage": true,
+      "dimension": "delivery"
+    },
+    {
+      "id": "demand_lower",
+      "name": "Source demand 1% lower",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 0.99,
+      "line_outage": true,
+      "dimension": "demand"
+    },
+    {
+      "id": "demand_higher",
+      "name": "Source demand 1% higher",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.01,
+      "line_outage": true,
+      "dimension": "demand"
+    },
+    {
+      "id": "line_in_service",
+      "name": "Declared line is in service",
+      "wind_available_MW": 200,
+      "flex_MW": 20,
+      "source_load_factor": 1.0,
+      "line_outage": false,
+      "dimension": "network"
+    }
+  ],
+  "candidates": [
+    {
+      "bus": 1341,
+      "name": "BINBANE",
+      "graph_hops_to_wind": 0
+    },
+    {
+      "bus": 2072,
+      "name": "CRUISERATH",
+      "graph_hops_to_wind": 9
+    },
+    {
+      "bus": 1701,
+      "name": "CATH_FALL",
+      "graph_hops_to_wind": 1
+    },
+    {
+      "bus": 5191,
+      "name": "TIEVEBRACK",
+      "graph_hops_to_wind": 1
+    },
+    {
+      "bus": 1571,
+      "name": "ARDNAGAPPARY",
+      "graph_hops_to_wind": 2
+    },
+    {
+      "bus": 1761,
+      "name": "CLIFF",
+      "graph_hops_to_wind": 2
+    },
+    {
+      "bus": 1981,
+      "name": "CORRACLASSY",
+      "graph_hops_to_wind": 2
+    },
+    {
+      "bus": 2870,
+      "name": "CLOGHER",
+      "graph_hops_to_wind": 2
+    }
+  ],
+  "cells": [
+    {
+      "id": "nominal__1341",
+      "scenario_id": "nominal",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 14.0625,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 61.71875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_near.json",
+        "record_id": "pf_0110"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__2072",
+      "scenario_id": "nominal",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 47.65625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__1701",
+      "scenario_id": "nominal",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 20.703125,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 68.359375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1701.json",
+        "record_id": "pf_0360"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__5191",
+      "scenario_id": "nominal",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 15.625,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 63.28125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_5191.json",
+        "record_id": "pf_0375"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__1571",
+      "scenario_id": "nominal",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 17.1875,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 64.84375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1571.json",
+        "record_id": "pf_0391"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__1761",
+      "scenario_id": "nominal",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 19.921875,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 67.578125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1761.json",
+        "record_id": "pf_0408"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__1981",
+      "scenario_id": "nominal",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 17.1875,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 64.84375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1981.json",
+        "record_id": "pf_0423"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "nominal__2870",
+      "scenario_id": "nominal",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 20.3125,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 67.96875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_2870.json",
+        "record_id": "pf_0439"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__1341",
+      "scenario_id": "wind_50",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_near.json",
+        "record_id": "pf_0099"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__2072",
+      "scenario_id": "wind_50",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 47.65625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__1701",
+      "scenario_id": "wind_50",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1701.json",
+        "record_id": "pf_0348"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__5191",
+      "scenario_id": "wind_50",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_5191.json",
+        "record_id": "pf_0364"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__1571",
+      "scenario_id": "wind_50",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1571.json",
+        "record_id": "pf_0380"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__1761",
+      "scenario_id": "wind_50",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1761.json",
+        "record_id": "pf_0396"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__1981",
+      "scenario_id": "wind_50",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1981.json",
+        "record_id": "pf_0412"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_50__2870",
+      "scenario_id": "wind_50",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 2.34375,
+      "baseline_wind_MW": 47.65625,
+      "selected_wind_MW": 50.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0094"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_2870.json",
+        "record_id": "pf_0428"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__1341",
+      "scenario_id": "wind_25",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_near.json",
+        "record_id": "pf_0098"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__2072",
+      "scenario_id": "wind_25",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__1701",
+      "scenario_id": "wind_25",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1701.json",
+        "record_id": "pf_0347"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__5191",
+      "scenario_id": "wind_25",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_5191.json",
+        "record_id": "pf_0363"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__1571",
+      "scenario_id": "wind_25",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1571.json",
+        "record_id": "pf_0379"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__1761",
+      "scenario_id": "wind_25",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1761.json",
+        "record_id": "pf_0395"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__1981",
+      "scenario_id": "wind_25",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_1981.json",
+        "record_id": "pf_0411"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "wind_25__2870",
+      "scenario_id": "wind_25",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 25.0,
+      "selected_wind_MW": 25.0,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_20_far.json",
+        "record_id": "pf_0082"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/portfolio_2870.json",
+        "record_id": "pf_0427"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__1341",
+      "scenario_id": "delivery_half",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 7.03125,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 51.7578125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_10_near.json",
+        "record_id": "pf_0080"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__2072",
+      "scenario_id": "delivery_half",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 44.7265625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__1701",
+      "scenario_id": "delivery_half",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 9.5703125,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 54.296875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_1701.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__5191",
+      "scenario_id": "delivery_half",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 7.6171875,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 52.34375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_5191.json",
+        "record_id": "pf_0030"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__1571",
+      "scenario_id": "delivery_half",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 8.203125,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 52.9296875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_1571.json",
+        "record_id": "pf_0048"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__1761",
+      "scenario_id": "delivery_half",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 9.1796875,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 53.90625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_1761.json",
+        "record_id": "pf_0062"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__1981",
+      "scenario_id": "delivery_half",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 8.0078125,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 52.734375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_1981.json",
+        "record_id": "pf_0079"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_half__2870",
+      "scenario_id": "delivery_half",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 9.5703125,
+      "baseline_wind_MW": 44.7265625,
+      "selected_wind_MW": 54.296875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_10_far.json",
+        "record_id": "pf_0064"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/delivery_half_2870.json",
+        "record_id": "pf_0095"
+      },
+      "total_demand_MW": 7334.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__1341",
+      "scenario_id": "delivery_zero",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__2072",
+      "scenario_id": "delivery_zero",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__1701",
+      "scenario_id": "delivery_zero",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__5191",
+      "scenario_id": "delivery_zero",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__1571",
+      "scenario_id": "delivery_zero",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__1761",
+      "scenario_id": "delivery_zero",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__1981",
+      "scenario_id": "delivery_zero",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "delivery_zero__2870",
+      "scenario_id": "delivery_zero",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 41.796875,
+      "selected_wind_MW": 41.796875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_1_0_far.json",
+        "record_id": "pf_0015"
+      },
+      "total_demand_MW": 7324.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__1341",
+      "scenario_id": "demand_lower",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 15.8203125,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 19.7265625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/stress_0.99_near.json",
+        "record_id": "pf_0320"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__2072",
+      "scenario_id": "demand_lower",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 3.90625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__1701",
+      "scenario_id": "demand_lower",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 15.4296875,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 19.3359375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_1701.json",
+        "record_id": "pf_0112"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__5191",
+      "scenario_id": "demand_lower",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 15.625,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 19.53125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_5191.json",
+        "record_id": "pf_0126"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__1571",
+      "scenario_id": "demand_lower",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 16.796875,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 20.703125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_1571.json",
+        "record_id": "pf_0143"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__1761",
+      "scenario_id": "demand_lower",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 15.0390625,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 18.9453125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_1761.json",
+        "record_id": "pf_0160"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__1981",
+      "scenario_id": "demand_lower",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 12.3046875,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 16.2109375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_1981.json",
+        "record_id": "pf_0176"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_lower__2870",
+      "scenario_id": "demand_lower",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 15.625,
+      "baseline_wind_MW": 3.90625,
+      "selected_wind_MW": 19.53125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/stress_0.99_far.json",
+        "record_id": "pf_0302"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/demand_lower_2870.json",
+        "record_id": "pf_0190"
+      },
+      "total_demand_MW": 7271.2649,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__1341",
+      "scenario_id": "demand_higher",
+      "bus": 1341,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": 116.2109375,
+      "baseline_ref": null,
+      "selected_ref": {
+        "file": "evidence_v4/results/stress_1.01_near.json",
+        "record_id": "pf_0345"
+      },
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__2072",
+      "scenario_id": "demand_higher",
+      "bus": 2072,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__1701",
+      "scenario_id": "demand_higher",
+      "bus": 1701,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__5191",
+      "scenario_id": "demand_higher",
+      "bus": 5191,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__1571",
+      "scenario_id": "demand_higher",
+      "bus": 1571,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__1761",
+      "scenario_id": "demand_higher",
+      "bus": 1761,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__1981",
+      "scenario_id": "demand_higher",
+      "bus": 1981,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "demand_higher__2870",
+      "scenario_id": "demand_higher",
+      "bus": 2870,
+      "comparable": false,
+      "additional_wind_MW": null,
+      "baseline_wind_MW": null,
+      "selected_wind_MW": null,
+      "baseline_ref": null,
+      "selected_ref": null,
+      "total_demand_MW": null,
+      "block_reason": "equal_demand_baseline_unverified",
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__1341",
+      "scenario_id": "line_in_service",
+      "bus": 1341,
+      "comparable": true,
+      "additional_wind_MW": 14.84375,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 62.109375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_0_20_near.json",
+        "record_id": "pf_0255"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__2072",
+      "scenario_id": "line_in_service",
+      "bus": 2072,
+      "comparable": true,
+      "additional_wind_MW": 0.0,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 47.265625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__1701",
+      "scenario_id": "line_in_service",
+      "bus": 1701,
+      "comparable": true,
+      "additional_wind_MW": 16.2109375,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 63.4765625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_1701.json",
+        "record_id": "pf_0208"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__5191",
+      "scenario_id": "line_in_service",
+      "bus": 5191,
+      "comparable": true,
+      "additional_wind_MW": 15.625,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 62.890625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_5191.json",
+        "record_id": "pf_0223"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__1571",
+      "scenario_id": "line_in_service",
+      "bus": 1571,
+      "comparable": true,
+      "additional_wind_MW": 17.1875,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 64.453125,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_1571.json",
+        "record_id": "pf_0239"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__1761",
+      "scenario_id": "line_in_service",
+      "bus": 1761,
+      "comparable": true,
+      "additional_wind_MW": 15.625,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 62.890625,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_1761.json",
+        "record_id": "pf_0255"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__1981",
+      "scenario_id": "line_in_service",
+      "bus": 1981,
+      "comparable": true,
+      "additional_wind_MW": 13.671875,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 60.9375,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_1981.json",
+        "record_id": "pf_0269"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    },
+    {
+      "id": "line_in_service__2870",
+      "scenario_id": "line_in_service",
+      "bus": 2870,
+      "comparable": true,
+      "additional_wind_MW": 16.40625,
+      "baseline_wind_MW": 47.265625,
+      "selected_wind_MW": 63.671875,
+      "baseline_ref": {
+        "file": "evidence_v4/results/pair_0_20_far.json",
+        "record_id": "pf_0239"
+      },
+      "selected_ref": {
+        "file": "evidence_v5/results/line_in_service_2870.json",
+        "record_id": "pf_0287"
+      },
+      "total_demand_MW": 7344.51,
+      "block_reason": null,
+      "source": "actual_calculation_records",
+      "operationally_validated": false
+    }
+  ],
+  "new_power_flows": 288,
+  "new_passing_points": 84,
+  "elapsed_seconds": 411.018988627,
+  "all_new_evaluations": "evidence_v5/results/evaluations.jsonl",
+  "limitations": [
+    "Prepared public planning model with v4 control/rating limitations.",
+    "Finite tested conditions; no probability or operational safety guarantee.",
+    "Costs and duration are user assumptions.",
+    "No chronological task, battery, rebound or SLA verification.",
+    "A blocked baseline is an unresolved comparison, not proof that the real grid cannot operate."
+  ]
+}

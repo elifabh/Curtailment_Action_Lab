@@ -1,0 +1,125 @@
+{
+  "checked_at_utc": "2026-09-29T13:42:54.419351+00:00",
+  "scope": "Demo program reliability; presentations unchanged.",
+  "passed": true,
+  "python_tests": 97,
+  "clean_extraction_python_tests": 97,
+  "legacy_ai_tests": 11,
+  "successful_browser_checks": 45,
+  "resolved_browser_regressions": 1,
+  "remaining_browser_errors": [],
+  "dom_checks": {
+    "validation/decision_dom_report.json": 38,
+    "validation/readable_reports.json": 16,
+    "dom-qa-results/dom_report.json": 40
+  },
+  "python_javascript_decision_parity_cases": 288,
+  "record_integrity": {
+    "comparable_cells": 56,
+    "blocked_cells": 8,
+    "physical_references": 113,
+    "source_and_protocol_hashes_match": true
+  },
+  "fresh_calculations": {
+    "fresh-default": {
+      "inputs": {
+        "kind": "snapshot",
+        "candidate_bus": 1701,
+        "flex_MW": 20,
+        "line_outage": true,
+        "wind_available_MW": 200,
+        "load_factor": 1
+      },
+      "new_power_flows_run": 32,
+      "elapsed_seconds": 45.96685669499857,
+      "physical_actions_executed": false,
+      "additional_hypothetical_wind_MW": 20.703125
+    },
+    "fresh-pilot-fixed": {
+      "inputs": {
+        "kind": "pilot",
+        "candidate_bus": 1701,
+        "flex_MW": 20,
+        "line_outage": true,
+        "profile_mode": "wind_shape_fixed_demand"
+      },
+      "new_power_flows_run": 50,
+      "elapsed_seconds": 74.04186228799517,
+      "physical_actions_executed": false,
+      "summary": {
+        "intervals": 12,
+        "comparable_intervals": 12,
+        "blocked_intervals": 0,
+        "period_hours": 6,
+        "covered_hours": 6,
+        "coverage_fraction": 1,
+        "comparable_intervals_subtotal_MWh": 124.21875,
+        "full_period_change_MWh": 124.21875,
+        "full_period_result_available": true,
+        "adverse_intervals": 0,
+        "change_other_generation_MWh": -134.11225107509017,
+        "change_network_losses_MWh": -9.893501075090171,
+        "annual_avoided_curtailment_MWh": null,
+        "national_reduction_percent": null
+      }
+    },
+    "fresh-pilot-observed": {
+      "inputs": {
+        "kind": "pilot",
+        "candidate_bus": 1701,
+        "flex_MW": 20,
+        "line_outage": true,
+        "profile_mode": "observed_demand_assumed_redispatch"
+      },
+      "new_power_flows_run": 146,
+      "elapsed_seconds": 1113.4653758299974,
+      "physical_actions_executed": false,
+      "summary": {
+        "intervals": 12,
+        "comparable_intervals": 0,
+        "blocked_intervals": 12,
+        "period_hours": 6,
+        "covered_hours": 0,
+        "coverage_fraction": 0,
+        "comparable_intervals_subtotal_MWh": null,
+        "full_period_change_MWh": null,
+        "full_period_result_available": false,
+        "adverse_intervals": 0,
+        "change_other_generation_MWh": null,
+        "change_network_losses_MWh": null,
+        "annual_avoided_curtailment_MWh": null,
+        "national_reduction_percent": null
+      }
+    }
+  },
+  "azure_live_tested": false,
+  "azure_reason": "No Azure credentials were supplied. Transport tests use mocks; AI UI paths use fixtures. CHECK_DEMO.bat tests the user-configured live connection.",
+  "original_azure_failure": "Exact cause cannot be recovered from the old generic error. The new version reports a safe error code and retains completed checks.",
+  "fixed": [
+    "Failed Azure calls are counted; transient failures receive bounded retries.",
+    "Azure errors expose safe HTTP/connection diagnostics.",
+    "Exhausted invalid or duplicate tool requests cannot be reported as completed.",
+    "Partial checks and both rule/AI results remain available in the UI and exports.",
+    "Fresh-job polling retries dropped connections and permits status recovery.",
+    "A stopped worker or missing result receives a terminal error instead of indefinite polling.",
+    "Pilot progress retains completed interval counts and displays elapsed time.",
+    "Git Bash scripts recognise Windows virtual environments.",
+    "Fresh-calculation layout fits narrow viewports."
+  ],
+  "source_sha256": {
+    "ai/agent_runner.py": "1a09093d952fb413861aafe5ca694ffe53cb76d1807117a9570f4c1d17142ed4",
+    "ai/challenge_agent.py": "e6064a561c4c770aa9df34959f11100c6490e8d4a53fccd2d25e0c174e77a62b",
+    "server.py": "7e33f8e4b4ba63a0f54fac0b267eff7894fd8eb2774ec6492bac538fd363a77e",
+    "extension_engine.py": "d199b54a0513bb3802028a7b584c99f177012ec39b7951fb39ad888da65d7a29",
+    "extension_service.py": "abc413e09c53c8dc8b6fdd8e6597ac62c994e53fac019c07d0e7823a749de6f5",
+    "web/decision.js": "14ed772cb3996f6c631a5b779386e505921469088c3d4eb900e98722cb6efd74",
+    "web/reporting.js": "3aa86ba4153e9f5f0fe0db63b599439bd61a6ab802372b0baaa70d79e1637e9c",
+    "web/extension.js": "2fd99a4f614bab0b5acf844c16f98ec563a8ced706da43708a16350d14970676",
+    "web/extension.css": "f47ec8224952a99147ed2edee7ebcbb06ad520205897568ff44a60edf762953a",
+    "START_LOCAL.sh": "b4ae12828130120db535111d5627a7ad1dcca489721d640e35ce0fa768b1227f",
+    "INSTALL_SIMULATOR.sh": "bc6016c95088bef1751ce7ea05ae9d13cbcff8d92b49d9c9c2baf25b7c5ca3ba",
+    "INSTALL_IRISH_EXTENSION.sh": "250f2e490d5330c16851502588e718d474e68b07eabc334362567b8ae1d2e583",
+    "scripts/check_demo.py": "38ac532caf24c792b8c7560a71b42f15d81c7452f6f5e43201bf94bf96c080de",
+    "CHECK_DEMO.bat": "3f66f12cb010b0faa8eb80a63bd488efef2e694127620fe31b97605f669f9188"
+  }
+}

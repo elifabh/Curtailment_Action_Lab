@@ -1,0 +1,40 @@
+{
+  "title": "Reference-network validation",
+  "status": "validated_reference",
+  "validated": true,
+  "summary": "Public 9-bus benchmark; synthetic wind at bus 6. Original voltage, branch and generator limits preserved. All declared checks passed in both default cases and 21 confirmation cases.",
+  "scope": "Steady-state N0 snapshot; no field validation or full N-1 security.",
+  "source_sha256": "44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4",
+  "source_passed": true,
+  "confirmed_cases": 21,
+  "passed_cases": 21,
+  "checks_per_case": 13,
+  "baseline_accepted_wind_mw": 139.99998382241796,
+  "selected_accepted_wind_mw": 199.99999999034893,
+  "additional_wind_mw": 60.000016167930966,
+  "low_wind_null_additional_wind_mw": 9.161148284420051e-09,
+  "independent_method": "Flat-start SciPy root with independently coded direct branch-current equations.",
+  "report": "validation/reference_validation_report.md",
+  "details": "validation/reference_validation_results.json",
+  "bounds_certificate": "validation/reference_bounds_certificate.json",
+  "checks": [
+    {
+      "label": "Original source case",
+      "passed": true
+    },
+    {
+      "label": "21 confirmatory scenarios",
+      "passed": true
+    },
+    {
+      "label": "All reference limits unchanged",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "This is a synthetic benchmark scenario, not an Irish reduction measurement.",
+    "Topology availability is assumed; real outage permission is not established.",
+    "Local AC OPF solution; no proof of global optimality.",
+    "No EUR cost or annual MWh claim."
+  ]
+}

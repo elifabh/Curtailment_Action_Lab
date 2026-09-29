@@ -1,0 +1,21 @@
+{
+  "status": "conditional_model_study",
+  "site_condition_cells": 64,
+  "comparable_cells": 56,
+  "blocked_cells": 8,
+  "new_power_flows": 288,
+  "physical_rebuild_elapsed_seconds": 411.018988627,
+  "new_passing_points": 84,
+  "policy_cases": 288,
+  "policy_outcomes": {
+    "retain": 48,
+    "switch": 13,
+    "withdraw": 67,
+    "no_nominal_offer": 160
+  },
+  "nominal_failures": 74,
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "protocol_sha256": "4b789f61bbdaf7b3ab2142c5e29c5eab508f54e572dc58d89758ac9ae04d04d1",
+  "live_azure": "not_run",
+  "field_savings": false
+}

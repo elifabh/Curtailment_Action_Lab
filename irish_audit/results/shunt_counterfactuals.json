@@ -1,0 +1,262 @@
+[
+  {
+    "disconnected_shunt_buses": [],
+    "scope": "Enumerate explicit hypothetical capacitor disconnections after tap adjustment.\n\nThe two named devices are locked in the source. Changing their state is a new\nplanning scenario with an assumed permission, NOT a reconstruction fix.\nSelect the passing alternative with the fewest disconnections, then bus ID.\n",
+    "solver": {
+      "converged": true,
+      "iterations": 1,
+      "fixed_Q_buses": [
+        429,
+        443,
+        670,
+        857,
+        946,
+        1099,
+        1168,
+        1169,
+        1488,
+        1600,
+        1614,
+        1668,
+        1770,
+        1771,
+        1772,
+        1817,
+        1821,
+        1828,
+        1876
+      ],
+      "limited_buses": []
+    },
+    "checks": {
+      "direct_balance_max_MVA": 1.0883077275147776e-09,
+      "direct_branch_flow_difference_MVA": 2.925506486391607e-10,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8914759061420473,
+      "voltage_violation_group_indices": [
+        1644,
+        1647
+      ],
+      "passes_implemented_checks": false,
+      "operationally_validated": false,
+      "ideal_tie_internal_flows_checked": false,
+      "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+      "rating_coverage": {
+        "active_branches": 2458,
+        "rateA_zero": 92,
+        "rateA_ge_9999": 1186,
+        "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+      }
+    },
+    "tie_recovery": {
+      "max_nodal_balance_residual_MVA": 8.512152109233285e-10,
+      "max_group_residual_MVA": 8.512152109233285e-10,
+      "tree_edges": 144,
+      "cyclic_group_edges": 4,
+      "tree_overloads": 0,
+      "cyclic_allocation_overloads": 0,
+      "all_internal_tie_limits_certified": false
+    }
+  },
+  {
+    "disconnected_shunt_buses": [
+      74561
+    ],
+    "scope": "Enumerate explicit hypothetical capacitor disconnections after tap adjustment.\n\nThe two named devices are locked in the source. Changing their state is a new\nplanning scenario with an assumed permission, NOT a reconstruction fix.\nSelect the passing alternative with the fewest disconnections, then bus ID.\n",
+    "solver": {
+      "converged": true,
+      "iterations": 1,
+      "fixed_Q_buses": [
+        429,
+        443,
+        670,
+        857,
+        946,
+        1099,
+        1168,
+        1169,
+        1488,
+        1600,
+        1614,
+        1668,
+        1770,
+        1771,
+        1772,
+        1817,
+        1821,
+        1828,
+        1876
+      ],
+      "limited_buses": []
+    },
+    "checks": {
+      "direct_balance_max_MVA": 8.119484937968442e-10,
+      "direct_branch_flow_difference_MVA": 4.2931514274757815e-10,
+      "violations": {
+        "original_bus_groups_voltage": 1,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8879802184994227,
+      "voltage_violation_group_indices": [
+        1647
+      ],
+      "passes_implemented_checks": false,
+      "operationally_validated": false,
+      "ideal_tie_internal_flows_checked": false,
+      "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+      "rating_coverage": {
+        "active_branches": 2458,
+        "rateA_zero": 92,
+        "rateA_ge_9999": 1186,
+        "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+      }
+    },
+    "tie_recovery": {
+      "max_nodal_balance_residual_MVA": 1.8591880708888232e-10,
+      "max_group_residual_MVA": 1.859188070888823e-10,
+      "tree_edges": 144,
+      "cyclic_group_edges": 4,
+      "tree_overloads": 0,
+      "cyclic_allocation_overloads": 0,
+      "all_internal_tie_limits_certified": false
+    }
+  },
+  {
+    "disconnected_shunt_buses": [
+      74564
+    ],
+    "scope": "Enumerate explicit hypothetical capacitor disconnections after tap adjustment.\n\nThe two named devices are locked in the source. Changing their state is a new\nplanning scenario with an assumed permission, NOT a reconstruction fix.\nSelect the passing alternative with the fewest disconnections, then bus ID.\n",
+    "solver": {
+      "converged": true,
+      "iterations": 1,
+      "fixed_Q_buses": [
+        429,
+        443,
+        670,
+        857,
+        946,
+        1099,
+        1168,
+        1169,
+        1488,
+        1600,
+        1614,
+        1668,
+        1770,
+        1771,
+        1772,
+        1817,
+        1821,
+        1828,
+        1876
+      ],
+      "limited_buses": []
+    },
+    "checks": {
+      "direct_balance_max_MVA": 7.354398768482404e-09,
+      "direct_branch_flow_difference_MVA": 2.4243529033574827e-10,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8804248102909816,
+      "voltage_violation_group_indices": [],
+      "passes_implemented_checks": true,
+      "operationally_validated": false,
+      "ideal_tie_internal_flows_checked": false,
+      "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+      "rating_coverage": {
+        "active_branches": 2458,
+        "rateA_zero": 92,
+        "rateA_ge_9999": 1186,
+        "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+      }
+    },
+    "tie_recovery": {
+      "max_nodal_balance_residual_MVA": 3.777109325407588e-10,
+      "max_group_residual_MVA": 3.7771093254075886e-10,
+      "tree_edges": 144,
+      "cyclic_group_edges": 4,
+      "tree_overloads": 0,
+      "cyclic_allocation_overloads": 0,
+      "all_internal_tie_limits_certified": false
+    }
+  },
+  {
+    "disconnected_shunt_buses": [
+      74561,
+      74564
+    ],
+    "scope": "Enumerate explicit hypothetical capacitor disconnections after tap adjustment.\n\nThe two named devices are locked in the source. Changing their state is a new\nplanning scenario with an assumed permission, NOT a reconstruction fix.\nSelect the passing alternative with the fewest disconnections, then bus ID.\n",
+    "solver": {
+      "converged": true,
+      "iterations": 1,
+      "fixed_Q_buses": [
+        429,
+        443,
+        670,
+        857,
+        946,
+        1099,
+        1168,
+        1169,
+        1488,
+        1600,
+        1614,
+        1668,
+        1770,
+        1771,
+        1772,
+        1817,
+        1821,
+        1828,
+        1876
+      ],
+      "limited_buses": []
+    },
+    "checks": {
+      "direct_balance_max_MVA": 7.927306829376236e-10,
+      "direct_branch_flow_difference_MVA": 2.0924720031718537e-10,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8769778520754643,
+      "voltage_violation_group_indices": [],
+      "passes_implemented_checks": true,
+      "operationally_validated": false,
+      "ideal_tie_internal_flows_checked": false,
+      "rating_units": "Current expressed as MVA at nominal bus voltage; first winding for each transformer branch.",
+      "rating_coverage": {
+        "active_branches": 2458,
+        "rateA_zero": 92,
+        "rateA_ge_9999": 1186,
+        "warning": "Large placeholder-like limits are preserved; they do not certify actual asset ratings."
+      }
+    },
+    "tie_recovery": {
+      "max_nodal_balance_residual_MVA": 1.19559103887805e-10,
+      "max_group_residual_MVA": 1.1955910388780497e-10,
+      "tree_edges": 144,
+      "cyclic_group_edges": 4,
+      "tree_overloads": 0,
+      "cyclic_allocation_overloads": 0,
+      "all_internal_tie_limits_certified": false
+    }
+  }
+]

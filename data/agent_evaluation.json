@@ -1,0 +1,9 @@
+{
+  "live_ai_benchmark_status": "not_run",
+  "status": "not_run",
+  "reason": "This reproduction runs local tests and numerical comparisons only; no Azure request was made.",
+  "generated_at_utc": "2026-09-27T05:05:48.764579+00:00",
+  "accuracy": null,
+  "ai_gain": null,
+  "next_step": "Configure Azure and explicitly opt in with python ai/evaluate_agent.py --run-live."
+}

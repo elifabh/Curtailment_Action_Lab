@@ -1,0 +1,13 @@
+{
+  "method": "Separate direct-text RAW electrical check using winding-side voltages.\n\nDoes not use the legacy transformer's converted R/X/tap fields or PYPOWER Ybus.\nChecks the electrical transformation, not the omitted PSS/E control dynamics.\n",
+  "direct_raw_branch_count": 2507,
+  "compared_branch_count": 2507,
+  "two_winding_transformers": 1201,
+  "three_winding_transformers": 109,
+  "merged_ideal_ties": 148,
+  "max_branch_flow_difference_MVA": 2.4243458189984485e-10,
+  "max_grouped_KCL_residual_MVA": 7.354398768482404e-09,
+  "max_source_rating_difference": 0.0,
+  "passed": true,
+  "fixed_boundary_caveat": "HVDC injection is explicitly calibrated; this test does not independently validate that boundary or remote-control behavior."
+}

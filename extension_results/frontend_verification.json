@@ -1,0 +1,24 @@
+{
+  "method": "jsdom component checks with mocked transport; not visual browser testing",
+  "checks": [
+    "eight_candidates_and_default_loaded",
+    "saved_result_is_labelled_and_matches_calculation",
+    "both_comparison_values_are_visible",
+    "json_export_contains_exact_result",
+    "readable_report_has_result_scope_and_no_dead_controls",
+    "print_action_calls_browser_print",
+    "changed_inputs_mark_result_stale",
+    "fresh_request_reaches_api_and_completion_unblocks_controls",
+    "pilot_form_disables_irrelevant_snapshot_validation",
+    "pilot_shows_twelve_rows_and_signed_energy_result",
+    "blocked_intervals_do_not_display_zero_or_prior_benefit",
+    "report_strings_are_escaped",
+    "api_failure_visible_and_controls_recover",
+    "no_dom_script_errors"
+  ],
+  "passed": 14,
+  "downloads": [
+    "fresh_99ef64ad9523d78a.json",
+    "fresh_99ef64ad9523d78a_report.html"
+  ]
+}

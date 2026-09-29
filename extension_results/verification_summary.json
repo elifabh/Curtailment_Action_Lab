@@ -1,0 +1,66 @@
+{
+  "headline_reproduced_MW": 20.703125,
+  "headline_new_solve_count": 32,
+  "novel_snapshot": {
+    "inputs": {
+      "kind": "snapshot",
+      "candidate_bus": 1701,
+      "flex_MW": 12.5,
+      "line_outage": true,
+      "wind_available_MW": 55.125,
+      "load_factor": 1.0
+    },
+    "change_hypothetical_wind_MW": 9.6171875,
+    "new_solve_count": 15
+  },
+  "fixed_demand_pilot": {
+    "intervals": 12,
+    "comparable_intervals": 12,
+    "blocked_intervals": 0,
+    "period_hours": 6.0,
+    "covered_hours": 6.0,
+    "coverage_fraction": 1.0,
+    "comparable_intervals_subtotal_MWh": 124.21875,
+    "full_period_change_MWh": 124.21875,
+    "full_period_result_available": true,
+    "adverse_intervals": 0,
+    "change_other_generation_MWh": -134.11225107509017,
+    "change_network_losses_MWh": -9.893501075090171,
+    "annual_avoided_curtailment_MWh": null,
+    "national_reduction_percent": null
+  },
+  "observed_demand_pilot": {
+    "intervals": 12,
+    "comparable_intervals": 0,
+    "blocked_intervals": 12,
+    "period_hours": 6.0,
+    "covered_hours": 0,
+    "coverage_fraction": 0.0,
+    "comparable_intervals_subtotal_MWh": null,
+    "full_period_change_MWh": null,
+    "full_period_result_available": false,
+    "adverse_intervals": 0,
+    "change_other_generation_MWh": null,
+    "change_network_losses_MWh": null,
+    "annual_avoided_curtailment_MWh": null,
+    "national_reduction_percent": null
+  },
+  "observed_demand_failed_point_counts_by_check": {
+    "original_bus_groups_voltage": 146,
+    "voltage_ge_100kv": 146,
+    "generator_P": 143,
+    "rated_branch_thermal": 41,
+    "generator_Q": 41
+  },
+  "checks": {
+    "existing_python_regression_tests": 70,
+    "extension_unit_and_route_tests": 13,
+    "real_worker_service_checks": 9,
+    "dom_component_checks": 14
+  },
+  "new_live_Azure_test": false,
+  "Windows_execution_test": false,
+  "visual_browser_test": false,
+  "annual_reduction_established": false,
+  "interpretation": "Fresh bounded Irish computations work. The observed-demand six-hour profile remains blocked under the declared fixed-control/redispatch assumptions. Fixed-demand wind-profile energy is conditional model evidence."
+}

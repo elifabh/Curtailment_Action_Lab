@@ -1,0 +1,30 @@
+{
+  "title": "Irish conditional flexibility study",
+  "status": "conditional_snapshot_checked",
+  "summary": "Same 20 MW load and line outage: the near-wind location admits 14.06 MW more hypothetical wind than the distant location in the checked prepared model.",
+  "scope": "Public Irish planning network, hypothetical wind and flexible load, declared preparatory tap and shunt changes. Snapshot MW only.",
+  "independent_method": "Separate RAW text parser and winding-side electrical equations; original numerical ratings and voltage/generator bounds retained.",
+  "claim_not_allowed": "Measured avoided Irish curtailment, national percentages, profit, operating approval or demonstrated AI optimisation advantage.",
+  "findings": [
+    {
+      "label": "Original source status",
+      "status": "blocked",
+      "detail": "The unmodified V33 file has 173 voltage violations; V35 has a different stored operating point. Neither is silently replaced or declared a passed source."
+    },
+    {
+      "label": "Prepared numerical scenario",
+      "status": "passed_scoped",
+      "detail": "Source-bounded tap changes and one explicitly hypothetical capacitor disconnection produce a starting state passing the implemented static checks."
+    },
+    {
+      "label": "Equal-demand location comparison",
+      "status": "passed_scoped",
+      "detail": "Bus 2072: 47.66 MW; bus 1341: 61.72 MW best tested wind acceptance. Both serve 7,344.51 MW consumer demand."
+    },
+    {
+      "label": "Real asset access and operational scope",
+      "status": "blocked",
+      "detail": "Site flexibility, actual ratings, tariffs, control permissions and security studies remain unverified."
+    }
+  ]
+}

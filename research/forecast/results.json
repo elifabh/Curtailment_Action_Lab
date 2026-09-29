@@ -1,0 +1,399 @@
+{
+  "protocol_sha256": "2cf31e8ff2a52cfacc3d437cfd95c8a24e2dd6d5f1786b8d060c8b99d7e0f2e7",
+  "source_weather_documentation": "https://open-meteo.com/en/docs/previous-runs-api",
+  "august_weather_url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=54.5%2C53.8%2C53%2C52%2C51.8%2C52.7%2C53.5%2C53.5&longitude=-8%2C-9%2C-9%2C-9.5%2C-8.5%2C-7.5%2C-7%2C-6.5&start_date=2026-08-01&end_date=2026-08-31&hourly=wind_speed_100m_previous_day2%2Cwind_direction_100m_previous_day2&models=ecmwf_ifs025&wind_speed_unit=ms&timezone=GMT",
+  "source_files_sha256": {
+    "tmp/forecast_candidate/august_previous_runs.json": "0fd72c3b05eb743bf3dcd94e84e9e546c64b31ed84aa9722df68abba9fdba9b1",
+    "flex_product/weather/hourly.csv": "cfe654815d43040c835178d5c2978d16f5108f2aef958babc7f0ae4366707377",
+    "tmp/data_feasibility/system2026_v8.xlsx": "a6ce5403e382cdcc02710d73b442c5ba231ef395faba5043c3975bce5ab921ee",
+    "irish_aligned_data/raw/eirgrid_dispatch_2026_v9.xlsx": "b641876ea690ca5c4ffc180b8ba99cac80518ee164caa0191bacd6b5b528c1bb"
+  },
+  "n_train": 8592,
+  "n_test": 1486,
+  "features": 78,
+  "minimum_assumed_weather_delivery_buffer_hours": 13.0,
+  "test_independent": false,
+  "operational_backtest": false,
+  "microsoft_ai_tested": false,
+  "targets": {
+    "transmission": {
+      "metrics": {
+        "zero": {
+          "MAE_MW": 16.448185733512787,
+          "RMSE_MW": 54.26575859431948,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "mean": {
+          "MAE_MW": 126.313829787514,
+          "RMSE_MW": 128.38890217251236,
+          "50MW_alert_precision": 0.0847913862718708,
+          "50MW_alert_recall": 1.0,
+          "50MW_alert_F1": 0.15632754342431762
+        },
+        "calendar": {
+          "MAE_MW": 121.31018071064332,
+          "RMSE_MW": 127.61631918593292,
+          "50MW_alert_precision": 0.0847913862718708,
+          "50MW_alert_recall": 1.0,
+          "50MW_alert_F1": 0.15632754342431762
+        },
+        "no_weather": {
+          "MAE_MW": 89.83174483252397,
+          "RMSE_MW": 110.56477808994677,
+          "50MW_alert_precision": 0.11069767441860465,
+          "50MW_alert_recall": 0.9444444444444444,
+          "50MW_alert_F1": 0.19816819317235637
+        },
+        "weather_ridge": {
+          "MAE_MW": 36.87150056464208,
+          "RMSE_MW": 58.80899314152647,
+          "50MW_alert_precision": 0.23809523809523808,
+          "50MW_alert_recall": 0.9523809523809523,
+          "50MW_alert_F1": 0.38095238095238093
+        },
+        "weather_hgb": {
+          "MAE_MW": 27.214857576985835,
+          "RMSE_MW": 67.27745692551088,
+          "50MW_alert_precision": 0.40350877192982454,
+          "50MW_alert_recall": 0.7301587301587301,
+          "50MW_alert_F1": 0.519774011299435
+        }
+      },
+      "passes_primary_gate": false,
+      "weather_HGB_minus_baseline_MAE_CI95_MW": {
+        "zero": [
+          1.277033986277931,
+          21.13838550134056
+        ],
+        "mean": [
+          -116.09354711334359,
+          -79.11692255446147
+        ],
+        "calendar": [
+          -114.57807201755226,
+          -71.74215528763308
+        ],
+        "no_weather": [
+          -84.7719590445746,
+          -41.13355857015413
+        ],
+        "weather_ridge": [
+          -21.39401824217166,
+          4.445682071148293
+        ]
+      }
+    },
+    "high_frequency_min_generation": {
+      "metrics": {
+        "zero": {
+          "MAE_MW": 28.430343203230148,
+          "RMSE_MW": 148.2413572548376,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "mean": {
+          "MAE_MW": 81.83977988319285,
+          "RMSE_MW": 149.6241655273449,
+          "50MW_alert_precision": 0.0740242261103634,
+          "50MW_alert_recall": 1.0,
+          "50MW_alert_F1": 0.13784461152882205
+        },
+        "calendar": {
+          "MAE_MW": 79.46012442600589,
+          "RMSE_MW": 154.15698370835662,
+          "50MW_alert_precision": 0.11033681765389082,
+          "50MW_alert_recall": 0.8636363636363636,
+          "50MW_alert_F1": 0.1956745623069001
+        },
+        "no_weather": {
+          "MAE_MW": 80.2477714837767,
+          "RMSE_MW": 158.97881588968914,
+          "50MW_alert_precision": 0.13253012048192772,
+          "50MW_alert_recall": 0.9,
+          "50MW_alert_F1": 0.2310385064177363
+        },
+        "weather_ridge": {
+          "MAE_MW": 46.49763742020854,
+          "RMSE_MW": 133.63439657142604,
+          "50MW_alert_precision": 0.2089041095890411,
+          "50MW_alert_recall": 0.5545454545454546,
+          "50MW_alert_F1": 0.3034825870646766
+        },
+        "weather_hgb": {
+          "MAE_MW": 31.60301559793751,
+          "RMSE_MW": 130.3254319627505,
+          "50MW_alert_precision": 0.3974358974358974,
+          "50MW_alert_recall": 0.2818181818181818,
+          "50MW_alert_F1": 0.32978723404255317
+        }
+      },
+      "passes_primary_gate": false,
+      "weather_HGB_minus_baseline_MAE_CI95_MW": {
+        "zero": [
+          -3.9371762628518305,
+          9.135325787887506
+        ],
+        "mean": [
+          -56.00233711732854,
+          -44.18656401526088
+        ],
+        "calendar": [
+          -58.705258904183296,
+          -37.811772621624556
+        ],
+        "no_weather": [
+          -56.49459133480954,
+          -39.722550462553905
+        ],
+        "weather_ridge": [
+          -23.528242752732847,
+          -7.6375442827905
+        ]
+      }
+    },
+    "snsp": {
+      "metrics": {
+        "zero": {
+          "MAE_MW": 3.7422624495289365,
+          "RMSE_MW": 37.660979375951634,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "mean": {
+          "MAE_MW": 30.417375038534722,
+          "RMSE_MW": 44.29977259638539,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "calendar": {
+          "MAE_MW": 29.719120104844908,
+          "RMSE_MW": 47.25128373359804,
+          "50MW_alert_precision": 0.0391304347826087,
+          "50MW_alert_recall": 0.5625,
+          "50MW_alert_F1": 0.07317073170731707
+        },
+        "no_weather": {
+          "MAE_MW": 8.134648468680837,
+          "RMSE_MW": 36.744689840000625,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "weather_ridge": {
+          "MAE_MW": 14.708736884834787,
+          "RMSE_MW": 39.76073149245682,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "weather_hgb": {
+          "MAE_MW": 7.634426830484732,
+          "RMSE_MW": 40.893753595890956,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        }
+      },
+      "passes_primary_gate": false,
+      "weather_HGB_minus_baseline_MAE_CI95_MW": {
+        "zero": [
+          1.0001830989394713,
+          7.8282625351222
+        ],
+        "mean": [
+          -26.13789345027766,
+          -18.54950672286766
+        ],
+        "calendar": [
+          -26.038117603747622,
+          -17.23123646735757
+        ],
+        "no_weather": [
+          -2.1878813627596045,
+          1.2467908416524944
+        ],
+        "weather_ridge": [
+          -11.119773690541088,
+          -3.1591906625320902
+        ]
+      }
+    },
+    "rocof_inertia": {
+      "metrics": {
+        "zero": {
+          "MAE_MW": 0.06294885598923282,
+          "RMSE_MW": 1.0779786015550112,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "mean": {
+          "MAE_MW": 0.14203317117428704,
+          "RMSE_MW": 1.0762725553973087,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "calendar": {
+          "MAE_MW": 0.14115630830218495,
+          "RMSE_MW": 1.0887173773126742,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "no_weather": {
+          "MAE_MW": 0.0869837181849598,
+          "RMSE_MW": 1.0811812555580995,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "weather_ridge": {
+          "MAE_MW": 0.19005027941247854,
+          "RMSE_MW": 1.1014908188946255,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "weather_hgb": {
+          "MAE_MW": 0.0966183126364498,
+          "RMSE_MW": 1.0938578736361049,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        }
+      },
+      "passes_primary_gate": false,
+      "weather_HGB_minus_baseline_MAE_CI95_MW": {
+        "zero": [
+          0.01607225204423472,
+          0.05402424707332327
+        ],
+        "mean": [
+          -0.06241096603220927,
+          -0.025432076095449476
+        ],
+        "calendar": [
+          -0.06492577117471766,
+          -0.02101764208178739
+        ],
+        "no_weather": [
+          -0.01083371669935735,
+          0.029463803930216838
+        ],
+        "weather_ridge": [
+          -0.1303937374728399,
+          -0.06424702896999936
+        ]
+      }
+    },
+    "total_dispatch_down": {
+      "metrics": {
+        "zero": {
+          "MAE_MW": 48.68355720053836,
+          "RMSE_MW": 189.18405278675314,
+          "50MW_alert_precision": 0.0,
+          "50MW_alert_recall": 0.0,
+          "50MW_alert_F1": 0.0
+        },
+        "mean": {
+          "MAE_MW": 220.96783751387872,
+          "RMSE_MW": 253.8237078469839,
+          "50MW_alert_precision": 0.14468371467025573,
+          "50MW_alert_recall": 1.0,
+          "50MW_alert_F1": 0.25279247501469726
+        },
+        "calendar": {
+          "MAE_MW": 212.0716784695881,
+          "RMSE_MW": 251.0423605411629,
+          "50MW_alert_precision": 0.14468371467025573,
+          "50MW_alert_recall": 1.0,
+          "50MW_alert_F1": 0.25279247501469726
+        },
+        "no_weather": {
+          "MAE_MW": 121.36147556380729,
+          "RMSE_MW": 195.99631356697353,
+          "50MW_alert_precision": 0.18181818181818182,
+          "50MW_alert_recall": 0.9116279069767442,
+          "50MW_alert_F1": 0.3031709203402939
+        },
+        "weather_ridge": {
+          "MAE_MW": 78.11064303165823,
+          "RMSE_MW": 146.28657552749846,
+          "50MW_alert_precision": 0.25335120643431636,
+          "50MW_alert_recall": 0.8790697674418605,
+          "50MW_alert_F1": 0.39334027055150883
+        },
+        "weather_hgb": {
+          "MAE_MW": 42.04430857444408,
+          "RMSE_MW": 99.0036756540231,
+          "50MW_alert_precision": 0.5069444444444444,
+          "50MW_alert_recall": 0.6790697674418604,
+          "50MW_alert_F1": 0.5805168986083499
+        }
+      },
+      "passes_primary_gate": true,
+      "weather_HGB_minus_baseline_MAE_CI95_MW": {
+        "zero": [
+          -45.37515899055636,
+          19.7552945285986
+        ],
+        "mean": [
+          -203.95727421789988,
+          -152.2384806571317
+        ],
+        "calendar": [
+          -197.53740926130644,
+          -140.85119400999267
+        ],
+        "no_weather": [
+          -120.32813112029075,
+          -47.465888735456474
+        ],
+        "weather_ridge": [
+          -55.81452653434386,
+          -17.17054165865893
+        ]
+      }
+    }
+  },
+  "diagnostic_six_hour_ranking": {
+    "zero": {
+      "matched_historical_DD_MWh": 3054.5359999999996,
+      "complete_days": 30
+    },
+    "mean": {
+      "matched_historical_DD_MWh": 3054.5359999999996,
+      "complete_days": 30
+    },
+    "calendar": {
+      "matched_historical_DD_MWh": 22685.49199999999,
+      "complete_days": 30
+    },
+    "no_weather": {
+      "matched_historical_DD_MWh": 21882.483999999997,
+      "complete_days": 30
+    },
+    "weather_ridge": {
+      "matched_historical_DD_MWh": 21058.874999999996,
+      "complete_days": 30
+    },
+    "weather_hgb": {
+      "matched_historical_DD_MWh": 22130.515000000003,
+      "complete_days": 30
+    },
+    "overnight": {
+      "matched_historical_DD_MWh": 3054.5359999999996,
+      "complete_days": 30
+    },
+    "oracle": {
+      "matched_historical_DD_MWh": 25299.367000000002,
+      "complete_days": 30
+    }
+  }
+}

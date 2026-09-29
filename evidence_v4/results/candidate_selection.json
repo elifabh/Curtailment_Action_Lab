@@ -1,0 +1,71 @@
+{
+  "selection_before_outcomes": true,
+  "method": "Fixed in-service unweighted electrical-graph hops; source ID breaks ties.",
+  "candidates": [
+    {
+      "bus": 1341,
+      "name": "BINBANE",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 0,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 2072,
+      "name": "CRUISERATH",
+      "nominal_kV": 220.0,
+      "graph_hops_to_wind": 9,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 1701,
+      "name": "CATH_FALL",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 1,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 5191,
+      "name": "TIEVEBRACK",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 1,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 1571,
+      "name": "ARDNAGAPPARY",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 2,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 1761,
+      "name": "CLIFF",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 2,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 1981,
+      "name": "CORRACLASSY",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 2,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    },
+    {
+      "bus": 2870,
+      "name": "CLOGHER",
+      "nominal_kV": 110.0,
+      "graph_hops_to_wind": 2,
+      "assumed_flex_MW": 20.0,
+      "real_asset_data": false
+    }
+  ],
+  "actual_site_flexibility_verified": false
+}

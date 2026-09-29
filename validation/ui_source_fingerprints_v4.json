@@ -1,0 +1,14 @@
+{
+  "method": "DOM/HTTP/offline; no rendered browser",
+  "report": "validation/ui_checks.json",
+  "checks_passed": 40,
+  "sources": {
+    "web/index.html": "b2e0334da2c294e13d2138600a56d68f479d4a96b9e27f2968931fce1523fefc",
+    "web/app.js": "02ebee66fcfda25869316efc522aee97dfc3b5c648667e2f7125678e7d0b62a9",
+    "web/study.js": "87ff74835b94b348a6085c31279695c0ba2b16f9b0d673b779ddfc6def269458",
+    "web/style.css": "d56771183a2f642d2bd50a459e13ca61265569257b884e67266818788c9b654f",
+    "study_service.py": "3db34cc78c0c3b3005e0a1d6dc1e5d67fa070eb7b1061b7d26d15fec9cd54c82",
+    "conditional_study.py": "e4142d8987c1b5464b1deb7ae23f9552f9d153fc79f7160582162f4d37ab5894",
+    "tests/dom_smoke.js": "d7c8b8c65cab525f3c3f362963149a870b49c6a0ec28c17777f34e027afe5fe6"
+  }
+}

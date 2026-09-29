@@ -1,0 +1,78 @@
+case data: 0    100.00  33  1  1  50.00     
+record 1: / CASE: 2024/2025;  WINTER 31/12/2024; FORECAST STATEMENT 20
+record 2: / NEXT PLANET;  11:16:41  TUESDAY, SEPTEMBER 30, 2025 RATE 5
+parsed 2025 buses
+parsed 266 loads
+parsed 8 fixed shunts
+parsed 597 generators
+parsed 1129 branches
+parsed 1310 transformers
+parsed 14 areas
+parsed 2 two terminal dc lines
+parsed 0 vsc dc lines
+parsed 10 transformer corrections
+parsed 0 multi-terminal dc lines
+parsed 32 multi-section lines
+parsed 14 zones
+parsed 0 inter-area transfers
+parsed 36 owners
+parsed 3 facts devices
+parsed 68 switched shunts
+parsed 0 induction machines
+un-parsed lines:
+  Q
+
+case data: 0    100.00  33  1  1  50.00     
+record 1: / CASE: 2024/2025;  WINTER 31/12/2024; FORECAST STATEMENT 20
+record 2: / NEXT PLANET;  11:16:41  TUESDAY, SEPTEMBER 30, 2025 RATE 5
+parsed 2025 buses
+parsed 266 loads
+parsed 8 fixed shunts
+parsed 597 generators
+parsed 1129 branches
+parsed 1310 transformers
+parsed 14 areas
+parsed 2 two terminal dc lines
+parsed 0 vsc dc lines
+parsed 10 transformer corrections
+parsed 0 multi-terminal dc lines
+parsed 32 multi-section lines
+parsed 14 zones
+parsed 0 inter-area transfers
+parsed 36 owners
+parsed 3 facts devices
+parsed 68 switched shunts
+parsed 0 induction machines
+un-parsed lines:
+  Q
+
+{"curve": "pair_1_0_far", "best_tested_wind_MW": 41.796875, "new_power_flows": 16, "seconds": 66.41}
+{"curve": "pair_1_5_far", "best_tested_wind_MW": 43.1640625, "new_power_flows": 16, "seconds": 60.17}
+{"curve": "pair_1_5_near", "best_tested_wind_MW": 46.6796875, "new_power_flows": 16, "seconds": 67.93}
+{"curve": "pair_1_10_far", "best_tested_wind_MW": 44.7265625, "new_power_flows": 16, "seconds": 61.08}
+{"curve": "pair_1_10_near", "best_tested_wind_MW": 51.7578125, "new_power_flows": 16, "seconds": 69.86}
+{"curve": "pair_1_20_far", "best_tested_wind_MW": 47.65625, "new_power_flows": 16, "seconds": 62.65}
+{"curve": "pair_1_20_near", "best_tested_wind_MW": 61.71875, "new_power_flows": 16, "seconds": 68.65}
+{"curve": "pair_1_30_far", "best_tested_wind_MW": 50.78125, "new_power_flows": 16, "seconds": 61.13}
+{"curve": "pair_1_30_near", "best_tested_wind_MW": 71.6796875, "new_power_flows": 16, "seconds": 67.92}
+{"curve": "pair_0_0_far", "best_tested_wind_MW": 42.1875, "new_power_flows": 16, "seconds": 65.91}
+{"curve": "pair_0_5_far", "best_tested_wind_MW": 43.359375, "new_power_flows": 16, "seconds": 63.83}
+{"curve": "pair_0_5_near", "best_tested_wind_MW": 47.265625, "new_power_flows": 16, "seconds": 65.54}
+{"curve": "pair_0_10_far", "best_tested_wind_MW": 44.7265625, "new_power_flows": 16, "seconds": 66.28}
+{"curve": "pair_0_10_near", "best_tested_wind_MW": 52.1484375, "new_power_flows": 16, "seconds": 68.09}
+{"curve": "pair_0_20_far", "best_tested_wind_MW": 47.265625, "new_power_flows": 16, "seconds": 64.32}
+{"curve": "pair_0_20_near", "best_tested_wind_MW": 62.109375, "new_power_flows": 16, "seconds": 65.42}
+{"curve": "pair_0_30_far", "best_tested_wind_MW": 50.0, "new_power_flows": 16, "seconds": 64.2}
+{"curve": "pair_0_30_near", "best_tested_wind_MW": 72.265625, "new_power_flows": 16, "seconds": 62.97}
+{"curve": "stress_0.99_far", "best_tested_wind_MW": 3.90625, "new_power_flows": 16, "seconds": 71.86}
+{"curve": "stress_0.99_near", "best_tested_wind_MW": 19.7265625, "new_power_flows": 16, "seconds": 73.61}
+{"curve": "stress_1.01_far", "best_tested_wind_MW": null, "new_power_flows": 9, "seconds": 31.91}
+{"curve": "stress_1.01_near", "best_tested_wind_MW": 116.2109375, "new_power_flows": 16, "seconds": 58.51}
+{"curve": "portfolio_1701", "best_tested_wind_MW": 68.359375, "new_power_flows": 16, "seconds": 65.88}
+{"curve": "portfolio_5191", "best_tested_wind_MW": 63.28125, "new_power_flows": 16, "seconds": 65.28}
+{"curve": "portfolio_1571", "best_tested_wind_MW": 64.84375, "new_power_flows": 16, "seconds": 71.49}
+{"curve": "portfolio_1761", "best_tested_wind_MW": 67.578125, "new_power_flows": 16, "seconds": 65.43}
+{"curve": "portfolio_1981", "best_tested_wind_MW": 64.84375, "new_power_flows": 16, "seconds": 68.56}
+{"curve": "portfolio_2870", "best_tested_wind_MW": 67.96875, "new_power_flows": 16, "seconds": 63.84}
+{"curve": "portfolio_uniform", "best_tested_wind_MW": 62.6953125, "new_power_flows": 16, "seconds": 68.28}
+COMPLETE {"summary": {"positive": 38, "neutral": 20, "negative": 0, "blocked": 2, "total_pairs": 60, "comparable_pairs": 58}, "calls": 457, "seconds": 1879.3968645050008}

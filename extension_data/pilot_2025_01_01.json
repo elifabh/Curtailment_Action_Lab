@@ -1,0 +1,163 @@
+{
+  "selection": "First six UTC hours of 2025, fixed before model outcomes.",
+  "start_utc": "2025-01-01T00:00:00Z",
+  "end_utc_exclusive": "2025-01-01T06:00:00Z",
+  "national_observations": true,
+  "local_wind_observed": false,
+  "asset_observed": false,
+  "local_wind_rule": "200 MW \u00d7 half-hour mean IE wind availability / maximum 2025 quarter-hour IE wind availability. Historical shape assumption, not a forecast.",
+  "normalisation_peak_IE_wind_MW": 4357.87,
+  "half_hour_rule": "Mean of two consecutive quarter-hour MW observations. Reported dispatch-down remains original MWh.",
+  "audit": {
+    "system_quarter_hours": 35040,
+    "dispatch_down_half_hours": 17520,
+    "maximum_AI_minus_IE_minus_NI_demand_MW": 1895.7129999999993,
+    "demand_reconciliation_issues": [
+      {
+        "timestamp_utc": "2025-10-08T09:45:00Z",
+        "AI_demand_MW": 7140.584999999999,
+        "IE_plus_NI_demand_MW": 5244.871999999999,
+        "difference_MW": 1895.7129999999993
+      }
+    ],
+    "pilot_demand_reconciles": true,
+    "source_values_corrected": false,
+    "utc_gaps": 0,
+    "utc_duplicates": 0,
+    "pilot_half_hours": 12
+  },
+  "sources": [
+    {
+      "name": "System-Data-Qtr-Hourly-2025-v12.xlsx",
+      "sha256": "11eec44649426878e850f23949e3cbef9388252313062ab98a719dc405ceb6cc",
+      "url": "https://cms.eirgrid.ie/sites/default/files/publications/System-Data-Qtr-Hourly-2025-v12.xlsx"
+    },
+    {
+      "name": "DD-HH-2025-v10.xlsx",
+      "sha256": "78ea2262da0deff153e49201d0103aeb3ac30b68dbc612ac9096eaf88efc4dbb",
+      "url": "https://cms.eirgrid.ie/sites/default/files/publications/DD-HH-2025-v10.xlsx"
+    }
+  ],
+  "rows": [
+    {
+      "timestamp_utc": "2025-01-01T00:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 4038.7650000000003,
+      "IE_wind_available_MW": 2422.76,
+      "IE_wind_actual_MW": 1905.835,
+      "assumed_local_wind_available_MW": 111.19009975056623,
+      "reported_IE_dispatch_down_MWh": 247.89500000000004,
+      "reported_IE_constraints_MWh": 72.958
+    },
+    {
+      "timestamp_utc": "2025-01-01T00:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3954.1549999999997,
+      "IE_wind_available_MW": 2548.56,
+      "IE_wind_actual_MW": 2049.99,
+      "assumed_local_wind_available_MW": 116.96356247432806,
+      "reported_IE_dispatch_down_MWh": 240.12899999999996,
+      "reported_IE_constraints_MWh": 81.55699999999999
+    },
+    {
+      "timestamp_utc": "2025-01-01T01:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3906.1360000000004,
+      "IE_wind_available_MW": 2585.34,
+      "IE_wind_actual_MW": 1973.225,
+      "assumed_local_wind_available_MW": 118.65154307035318,
+      "reported_IE_dispatch_down_MWh": 279.76900000000006,
+      "reported_IE_constraints_MWh": 78.62100000000001
+    },
+    {
+      "timestamp_utc": "2025-01-01T01:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3818.0245,
+      "IE_wind_available_MW": 2702.1400000000003,
+      "IE_wind_actual_MW": 1890.495,
+      "assumed_local_wind_available_MW": 124.0119599712704,
+      "reported_IE_dispatch_down_MWh": 383.58800000000014,
+      "reported_IE_constraints_MWh": 86.61699999999998
+    },
+    {
+      "timestamp_utc": "2025-01-01T02:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3792.8140000000003,
+      "IE_wind_available_MW": 2798.3,
+      "IE_wind_actual_MW": 1865.02,
+      "assumed_local_wind_available_MW": 128.42512511846385,
+      "reported_IE_dispatch_down_MWh": 437.0120000000002,
+      "reported_IE_constraints_MWh": 91.469
+    },
+    {
+      "timestamp_utc": "2025-01-01T02:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3685.729,
+      "IE_wind_available_MW": 2656.85,
+      "IE_wind_actual_MW": 1793.3200000000002,
+      "assumed_local_wind_available_MW": 121.93342160275547,
+      "reported_IE_dispatch_down_MWh": 408.95600000000013,
+      "reported_IE_constraints_MWh": 81.768
+    },
+    {
+      "timestamp_utc": "2025-01-01T03:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3631.6884999999997,
+      "IE_wind_available_MW": 2446.925,
+      "IE_wind_actual_MW": 1736.1799999999998,
+      "assumed_local_wind_available_MW": 112.29912778490412,
+      "reported_IE_dispatch_down_MWh": 342.19399999999985,
+      "reported_IE_constraints_MWh": 50.01500000000001
+    },
+    {
+      "timestamp_utc": "2025-01-01T03:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3541.1165,
+      "IE_wind_available_MW": 2310.005,
+      "IE_wind_actual_MW": 1636.625,
+      "assumed_local_wind_available_MW": 106.01532400002753,
+      "reported_IE_dispatch_down_MWh": 313.00700000000006,
+      "reported_IE_constraints_MWh": 33.85600000000001
+    },
+    {
+      "timestamp_utc": "2025-01-01T04:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3479.9175,
+      "IE_wind_available_MW": 2418.375,
+      "IE_wind_actual_MW": 1564.0,
+      "assumed_local_wind_available_MW": 110.98885464688024,
+      "reported_IE_dispatch_down_MWh": 426.07,
+      "reported_IE_constraints_MWh": 22.851
+    },
+    {
+      "timestamp_utc": "2025-01-01T04:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3435.3865,
+      "IE_wind_available_MW": 2494.71,
+      "IE_wind_actual_MW": 1488.395,
+      "assumed_local_wind_available_MW": 114.4921716343076,
+      "reported_IE_dispatch_down_MWh": 492.4109999999999,
+      "reported_IE_constraints_MWh": 29.716
+    },
+    {
+      "timestamp_utc": "2025-01-01T05:00:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3432.7929999999997,
+      "IE_wind_available_MW": 2558.75,
+      "IE_wind_actual_MW": 1470.3600000000001,
+      "assumed_local_wind_available_MW": 117.43122213374883,
+      "reported_IE_dispatch_down_MWh": 530.8689999999999,
+      "reported_IE_constraints_MWh": 27.574
+    },
+    {
+      "timestamp_utc": "2025-01-01T05:30:00Z",
+      "duration_hours": 0.5,
+      "all_island_demand_MW": 3425.0735,
+      "IE_wind_available_MW": 2561.7200000000003,
+      "IE_wind_actual_MW": 1560.885,
+      "assumed_local_wind_available_MW": 117.56752725528757,
+      "reported_IE_dispatch_down_MWh": 501.1660000000001,
+      "reported_IE_constraints_MWh": 22.231999999999996
+    }
+  ]
+}

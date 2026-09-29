@@ -1,0 +1,59 @@
+case data: 0    100.00  33  1  1  50.00     
+record 1: / CASE: 2024/2025;  WINTER 31/12/2024; FORECAST STATEMENT 20
+record 2: / NEXT PLANET;  11:16:41  TUESDAY, SEPTEMBER 30, 2025 RATE 5
+parsed 2025 buses
+parsed 266 loads
+parsed 8 fixed shunts
+parsed 597 generators
+parsed 1129 branches
+parsed 1310 transformers
+parsed 14 areas
+parsed 2 two terminal dc lines
+parsed 0 vsc dc lines
+parsed 10 transformer corrections
+parsed 0 multi-terminal dc lines
+parsed 32 multi-section lines
+parsed 14 zones
+parsed 0 inter-area transfers
+parsed 36 owners
+parsed 3 facts devices
+parsed 68 switched shunts
+parsed 0 induction machines
+un-parsed lines:
+  Q
+
+case data: 0    100.00  33  1  1  50.00     
+record 1: / CASE: 2024/2025;  WINTER 31/12/2024; FORECAST STATEMENT 20
+record 2: / NEXT PLANET;  11:16:41  TUESDAY, SEPTEMBER 30, 2025 RATE 5
+parsed 2025 buses
+parsed 266 loads
+parsed 8 fixed shunts
+parsed 597 generators
+parsed 1129 branches
+parsed 1310 transformers
+parsed 14 areas
+parsed 2 two terminal dc lines
+parsed 0 vsc dc lines
+parsed 10 transformer corrections
+parsed 0 multi-terminal dc lines
+parsed 32 multi-section lines
+parsed 14 zones
+parsed 0 inter-area transfers
+parsed 36 owners
+parsed 3 facts devices
+parsed 68 switched shunts
+parsed 0 induction machines
+un-parsed lines:
+  Q
+
+test_numerical_pass_does_not_imply_operational_approval (__main__.VerificationTests.test_numerical_pass_does_not_imply_operational_approval) ... ok
+test_prepared_state_matches_raw_electrical_equations_and_original_bounds (__main__.VerificationTests.test_prepared_state_matches_raw_electrical_equations_and_original_bounds) ... ok
+test_tampered_voltage_is_detected (__main__.VerificationTests.test_tampered_voltage_is_detected) ... ok
+test_unaccounted_energy_injection_is_detected (__main__.VerificationTests.test_unaccounted_energy_injection_is_detected) ... ok
+test_widening_generator_limit_is_detected (__main__.VerificationTests.test_widening_generator_limit_is_detected) ... ok
+test_widening_rating_is_detected (__main__.VerificationTests.test_widening_rating_is_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.385s
+
+OK

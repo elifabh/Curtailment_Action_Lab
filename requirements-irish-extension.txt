@@ -1,0 +1,5 @@
+# Versions used in the extension verification environment.
+numpy==2.3.5
+scipy==1.17.0
+PYPOWER==5.1.19
+grg-pssedata==0.1.4

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "paired_cells_checked": 56,
+  "blocked_cells_preserved": 8,
+  "qualified_physical_references_checked": 113,
+  "protocol_hash_matches": true,
+  "raw_source_hash_matches": true,
+  "meaning": "Record mapping and declared physical-check integrity; not operating approval."
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Original Irish source \u00b7 archived diagnosis",
+  "status": "exploratory",
+  "eligible": false,
+  "operationally_validated": false,
+  "source_case": "TYTFS2024_WP2024_V33.raw",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "headline": "An importer issue was corrected. The Irish case is not yet an independently validated operational model.",
+  "findings": [
+    {
+      "id": "ideal_ties",
+      "label": "Ideal bus-tie treatment corrected",
+      "status": "diagnosed",
+      "detail": "148 active tie branches connect exactly equal saved voltages. Merging them reduces the largest source P residual from 334.812 to 4.312 MW."
+    },
+    {
+      "id": "rounding",
+      "label": "RAW rounding explains large local residual scale",
+      "status": "diagnostic",
+      "detail": "All remaining P/Q residuals fit a conservative voltage-rounding envelope; this does not prove a joint exact reproduction."
+    },
+    {
+      "id": "source_voltage",
+      "label": "Source voltage limits already violated",
+      "status": "blocked",
+      "value": 173,
+      "unit": "buses",
+      "detail": "173 source bus voltages violate their own recorded normal limits. All 173 are below 100 kV; none are at or above 100 kV."
+    },
+    {
+      "id": "independent_algorithms",
+      "label": "Three numerical algorithms agree",
+      "status": "passed_scoped",
+      "detail": "Newton, fast-decoupled XB and BX agree on the same imported network. This is not a separate importer or source-tool validation."
+    },
+    {
+      "id": "source_reproduction",
+      "label": "Exact source reproduction unresolved",
+      "status": "blocked",
+      "detail": "Maximum solved difference: 0.000024614 pu voltage magnitude and 0.031183degrees phase angle."
+    },
+    {
+      "id": "control_scope",
+      "label": "Source control behavior incomplete",
+      "status": "blocked",
+      "detail": "HVDC boundary P/Q calibrated; remote regulation not reproduced; internal ideal-tie flows not checked."
+    }
+  ],
+  "claim_allowed": "Exploratory comparison of declared planning scenarios with unresolved checks shown.",
+  "claim_not_allowed": "Validated 37 MW curtailment reduction, a safe operational action, or an Ireland-wide reduction percentage.",
+  "checks": {
+    "source_voltage_violations": 173,
+    "source_voltage_violations_ge_100kV": 0,
+    "solver_algorithms_agree": true,
+    "independent_importer_validated": false,
+    "full_security_validated": false
+  },
+  "report": "validation/irish_diagnosis.md",
+  "details": "validation/irish_diagnosis.json",
+  "sources": [
+    {
+      "title": "EirGrid planning-model publication",
+      "url": "https://cms.eirgrid.ie/all-island-ten-year-transmission-forecast-statement-2024"
+    },
+    {
+      "title": "Electranix E-TRAN manual, pp79 and128",
+      "url": "https://www.electranix.com/wp-content/uploads/2024/04/E-TRAN.pdf"
+    }
+  ],
+  "summary": "Historical source/conversion diagnosis retained for traceability. Its legacy comparison is retired. The separate Irish conditional-study report below contains the new, explicitly transformed planning experiment."
+}

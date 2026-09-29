@@ -1,0 +1,5146 @@
+{
+  "generated_at_utc": "2026-09-27T05:05:48.749132+00:00",
+  "profile_id": "reference_9bus",
+  "fixed_conditions": {
+    "wind_mw": 200.0,
+    "load_scale": 1.0
+  },
+  "budget_per_search": 4,
+  "live_ai_benchmark_status": "not_run",
+  "benchmark_provider_kind": "none",
+  "performance_claim": "No superiority claim. A live run is a single descriptive comparison, not a statistical guarantee.",
+  "baseline_metrics": {
+    "status": "completed",
+    "best_valid_accepted_wind_mw": 199.9999999949641,
+    "regret_to_declared_candidate_oracle_mw": 2.893557393690571e-09,
+    "fraction_of_declared_candidate_oracle": 0.9999999999855322,
+    "candidate_calls": 4,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": 1.544823,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "agent_metrics": {
+    "status": "not_run",
+    "best_valid_accepted_wind_mw": null,
+    "regret_to_declared_candidate_oracle_mw": null,
+    "fraction_of_declared_candidate_oracle": null,
+    "candidate_calls": 0,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": null,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "oracle": {
+    "definition": "Best eligible result in the finite declared candidate set only.",
+    "complete": true,
+    "best_valid_accepted_wind_mw": 199.99999999785766,
+    "separate_candidate_calls": 7
+  },
+  "limitations": [
+    "Model snapshot comparisons, not measured field curtailment or Ireland-wide percentages.",
+    "Both search methods have the same maximum candidate-call budget; early stops are reported.",
+    "The oracle's extra calls are for evaluation only and are not part of either search budget.",
+    "Accepted wind is compared only under fixed available wind and load conditions.",
+    "Wall times include provider latency and may be affected by engine caching; no speed superiority claim.",
+    "The deterministic baseline can match exhaustive search when the budget covers the action set."
+  ],
+  "agent": {
+    "status": "not_run",
+    "mode": "azure_agent",
+    "budget": 4,
+    "message": "Live Azure benchmark was not requested.",
+    "best_valid": null,
+    "records": [],
+    "solver_calls": 0
+  },
+  "baseline": {
+    "status": "completed",
+    "mode": "deterministic_baseline",
+    "budget": 4,
+    "budget_used": 4,
+    "records": [
+      {
+        "id": "evaluation_1",
+        "candidate": {
+          "action_id": "all_in_service",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "id": "all_in_service",
+          "action_id": "all_in_service",
+          "label": "All lines available",
+          "profile": "reference_9bus",
+          "status": "verified",
+          "eligible": true,
+          "metrics": {
+            "available_wind_mw": 200.0,
+            "accepted_wind_mw": 199.99999999034893,
+            "curtailed_wind_mw": 9.651074606153998e-09,
+            "load_mw": 315.0,
+            "load_mvar": 115.0,
+            "losses_mw": 7.844469874610915,
+            "thermal_generation_mw": 122.84446676605575,
+            "max_branch_loading_pct": 81.91146200258234,
+            "min_voltage_pu": 1.0641052902160706,
+            "max_voltage_pu": 1.099999936485005,
+            "thermal_dispatch_cost_units_per_hour": 1868.9498099840482,
+            "objective_units": 1868.9498196351228
+          },
+          "checks": [
+            {
+              "id": "finite",
+              "label": "Finite solution values",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "converged",
+              "label": "AC solver converged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "connected",
+              "label": "One connected network; no islands",
+              "passed": true,
+              "value": 1,
+              "limit": 1,
+              "unit": null
+            },
+            {
+              "id": "load_unchanged",
+              "label": "Consumer active and reactive demand unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "limits_unchanged",
+              "label": "Declared network and generator limits unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "p_balance",
+              "label": "Independent active-power balance at all buses",
+              "passed": true,
+              "value": 3.8879778685441124e-06,
+              "limit": 0.0001,
+              "unit": "MW"
+            },
+            {
+              "id": "q_balance",
+              "label": "Independent reactive-power balance at all buses",
+              "passed": true,
+              "value": 2.0302041733089027e-05,
+              "limit": 0.0001,
+              "unit": "MVAr"
+            },
+            {
+              "id": "voltage",
+              "label": "All bus voltage bounds",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "p.u. violation"
+            },
+            {
+              "id": "thermal",
+              "label": "Apparent power at both ends of every rated line",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVA violation"
+            },
+            {
+              "id": "generator_p",
+              "label": "Every online generator active-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MW violation"
+            },
+            {
+              "id": "generator_q",
+              "label": "Every online generator reactive-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVAr violation"
+            },
+            {
+              "id": "angle",
+              "label": "Declared branch angle limits",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "degrees violation"
+            },
+            {
+              "id": "independent_pf",
+              "label": "Independent flat-start AC power-flow agreement",
+              "passed": true,
+              "value": 7.884914943190324e-10,
+              "limit": 1e-05,
+              "unit": "p.u. difference"
+            }
+          ],
+          "independent_validation": {
+            "passed": true,
+            "solver_success": true,
+            "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+            "max_solved_equation_residual_mw_mvar": 3.0050131272219005e-09,
+            "max_voltage_difference_pu": 7.884914943190324e-10,
+            "max_angle_difference_deg": 3.1535834312238717e-07,
+            "function_evaluations": 28
+          },
+          "balance_residuals": {
+            "p_mw": [
+              2.365683112515171e-06,
+              4.085547544718793e-08,
+              6.443875832928825e-08,
+              6.274178263933052e-07,
+              -1.7221001655798318e-06,
+              -5.298844030221517e-07,
+              -2.3091629941518477e-08,
+              -5.354741688399471e-08,
+              -3.8879778685441124e-06
+            ],
+            "q_mvar": [
+              -2.0302041733089027e-05,
+              1.5063282088334518e-07,
+              -3.3838077229120245e-06,
+              -3.9002729791115244e-07,
+              -1.7251405992624314e-07,
+              1.0008438092146999e-08,
+              -9.282523194542591e-09,
+              3.8994181362731156e-09,
+              -3.4548965288649924e-07
+            ]
+          },
+          "buses": [
+            {
+              "bus": 1,
+              "voltage_pu": 1.0963497486965028,
+              "angle_deg": 0.0,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 2,
+              "voltage_pu": 1.09999943569725,
+              "angle_deg": 4.854033084751219,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 3,
+              "voltage_pu": 1.086116235900001,
+              "angle_deg": 10.983189744546024,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 4,
+              "voltage_pu": 1.085100018137643,
+              "angle_deg": -0.7845551486378393,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 5,
+              "voltage_pu": 1.0726240120097086,
+              "angle_deg": 0.3329958990048452,
+              "load_mw": 90.0,
+              "load_mvar": 30.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 6,
+              "voltage_pu": 1.099999936485005,
+              "angle_deg": 9.905360560869251,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 7,
+              "voltage_pu": 1.0860439098941694,
+              "angle_deg": 4.001333260518697,
+              "load_mw": 100.0,
+              "load_mvar": 35.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 8,
+              "voltage_pu": 1.0973872432097893,
+              "angle_deg": 3.18620107387356,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 9,
+              "voltage_pu": 1.0641052902160706,
+              "angle_deg": -2.7632694428886886,
+              "load_mw": 125.0,
+              "load_mvar": 50.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            }
+          ],
+          "branches": [
+            {
+              "from": 1,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 35.58934855961896,
+              "to_mva": 35.2241634692433,
+              "loading_pct": 14.235739423847585
+            },
+            {
+              "from": 4,
+              "to": 5,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 23.248013568130432,
+              "to_mva": 34.652795211276384,
+              "loading_pct": 13.861118084510554
+            },
+            {
+              "from": 5,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 111.33566846348296,
+              "to_mva": 117.46892476205515,
+              "loading_pct": 78.31261650803677
+            },
+            {
+              "from": 3,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 300.0,
+              "from_mva": 45.98376886360374,
+              "to_mva": 46.57157416249358,
+              "loading_pct": 15.523858054164528
+            },
+            {
+              "from": 6,
+              "to": 7,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 122.86719300387352,
+              "to_mva": 121.44060665415918,
+              "loading_pct": 81.91146200258234
+            },
+            {
+              "from": 7,
+              "to": 8,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 35.34248879531996,
+              "to_mva": 23.87099930531409,
+              "loading_pct": 14.136995518127984
+            },
+            {
+              "from": 8,
+              "to": 2,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 56.33967276603628,
+              "to_mva": 56.47378228011717,
+              "loading_pct": 22.589512912046867
+            },
+            {
+              "from": 8,
+              "to": 9,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 77.74177422881961,
+              "to_mva": 78.46605407746392,
+              "loading_pct": 31.386421630985566
+            },
+            {
+              "from": 9,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 57.45873468852204,
+              "to_mva": 50.77114499298813,
+              "loading_pct": 22.98349387540882
+            }
+          ],
+          "generators": [
+            {
+              "bus": 1,
+              "kind": "reference conventional generator",
+              "p_mw": 28.280280819423293,
+              "q_mvar": 21.606172825785567,
+              "pmin_mw": 10.0,
+              "pmax_mw": 250.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 2,
+              "kind": "reference conventional generator",
+              "p_mw": 56.213508334399265,
+              "q_mvar": 5.415678349506882,
+              "pmin_mw": 10.0,
+              "pmax_mw": 300.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 3,
+              "kind": "reference conventional generator",
+              "p_mw": 38.35067761223319,
+              "q_mvar": -25.37188803052699,
+              "pmin_mw": 10.0,
+              "pmax_mw": 270.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 6,
+              "kind": "synthetic wind",
+              "p_mw": 199.99999999034893,
+              "q_mvar": 0.0,
+              "pmin_mw": 0.0,
+              "pmax_mw": 200.0,
+              "qmin_mvar": 0.0,
+              "qmax_mvar": 0.0
+            }
+          ],
+          "solver": {
+            "name": "PYPOWER AC OPF / PIPS",
+            "success": true,
+            "elapsed_seconds": 0.4747465939981339,
+            "message": "Converged"
+          },
+          "limitations": [
+            "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+            "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+            "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+            "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+            "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+            "Snapshot MW, not MWh or a share of Irish annual curtailment."
+          ],
+          "request": {
+            "profile": "reference_9bus",
+            "wind_mw": 200.0,
+            "load_scale": 1.0,
+            "action_id": "all_in_service"
+          },
+          "trace": [
+            {
+              "step": "load_source",
+              "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+            },
+            {
+              "step": "declare_scenario",
+              "detail": {
+                "profile": "reference_9bus",
+                "wind_mw": 200.0,
+                "load_scale": 1.0,
+                "action_id": "all_in_service"
+              }
+            },
+            {
+              "step": "solve",
+              "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+            },
+            {
+              "step": "independent_check",
+              "detail": "Direct branch-current equations and flat-start SciPy root"
+            }
+          ],
+          "accepted_wind_mw": 199.99999999034893,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_2",
+        "candidate": {
+          "action_id": "outage_5_6",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "id": "outage_5_6",
+          "action_id": "outage_5_6",
+          "label": "Line 5\u20136 unavailable",
+          "profile": "reference_9bus",
+          "status": "verified",
+          "eligible": true,
+          "metrics": {
+            "available_wind_mw": 200.0,
+            "accepted_wind_mw": 139.99999046505607,
+            "curtailed_wind_mw": 60.00000953494393,
+            "load_mw": 315.0,
+            "load_mvar": 115.0,
+            "losses_mw": 10.191850086941898,
+            "thermal_generation_mw": 185.191859582352,
+            "max_branch_loading_pct": 100.00000027325089,
+            "min_voltage_pu": 1.0365724467214683,
+            "max_voltage_pu": 1.099999074762708,
+            "thermal_dispatch_cost_units_per_hour": 3065.142834408718,
+            "objective_units": 63065.15236935265
+          },
+          "checks": [
+            {
+              "id": "finite",
+              "label": "Finite solution values",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "converged",
+              "label": "AC solver converged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "connected",
+              "label": "One connected network; no islands",
+              "passed": true,
+              "value": 1,
+              "limit": 1,
+              "unit": null
+            },
+            {
+              "id": "load_unchanged",
+              "label": "Consumer active and reactive demand unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "limits_unchanged",
+              "label": "Declared network and generator limits unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "p_balance",
+              "label": "Independent active-power balance at all buses",
+              "passed": true,
+              "value": 2.540506187642677e-07,
+              "limit": 0.0001,
+              "unit": "MW"
+            },
+            {
+              "id": "q_balance",
+              "label": "Independent reactive-power balance at all buses",
+              "passed": true,
+              "value": 6.076360890006072e-07,
+              "limit": 0.0001,
+              "unit": "MVAr"
+            },
+            {
+              "id": "voltage",
+              "label": "All bus voltage bounds",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "p.u. violation"
+            },
+            {
+              "id": "thermal",
+              "label": "Apparent power at both ends of every rated line",
+              "passed": true,
+              "value": 4.098763213278289e-07,
+              "limit": 0.0001,
+              "unit": "MVA violation"
+            },
+            {
+              "id": "generator_p",
+              "label": "Every online generator active-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MW violation"
+            },
+            {
+              "id": "generator_q",
+              "label": "Every online generator reactive-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVAr violation"
+            },
+            {
+              "id": "angle",
+              "label": "Declared branch angle limits",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "degrees violation"
+            },
+            {
+              "id": "independent_pf",
+              "label": "Independent flat-start AC power-flow agreement",
+              "passed": true,
+              "value": 7.196976348211592e-11,
+              "limit": 1e-05,
+              "unit": "p.u. difference"
+            }
+          ],
+          "independent_validation": {
+            "passed": true,
+            "solver_success": true,
+            "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+            "max_solved_equation_residual_mw_mvar": 1.271022551133284e-09,
+            "max_voltage_difference_pu": 7.196976348211592e-11,
+            "max_angle_difference_deg": 1.9584562758207357e-08,
+            "function_evaluations": 29
+          },
+          "balance_residuals": {
+            "p_mw": [
+              4.010173881852097e-08,
+              2.540506187642677e-07,
+              1.5005419129465736e-10,
+              -4.6635231593557384e-09,
+              -4.447795731721271e-08,
+              2.776141627691686e-08,
+              -2.5071472009585705e-08,
+              -6.808878477553163e-08,
+              -2.1929594140601694e-07
+            ],
+            "q_mvar": [
+              7.463886930736408e-08,
+              -6.076360890006072e-07,
+              -4.7746673319075394e-08,
+              -4.0827766649437176e-09,
+              -7.219291831006558e-10,
+              -6.630036415707861e-10,
+              -1.1050097725728847e-08,
+              -3.1657474631948196e-08,
+              1.8858145267586224e-08
+            ]
+          },
+          "buses": [
+            {
+              "bus": 1,
+              "voltage_pu": 1.09999473242418,
+              "angle_deg": 0.0,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 2,
+              "voltage_pu": 1.0998460654592639,
+              "angle_deg": 14.245416750260135,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 3,
+              "voltage_pu": 1.0999833571232218,
+              "angle_deg": 20.411440584754555,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 4,
+              "voltage_pu": 1.0731445324330031,
+              "angle_deg": -1.9947957654720418,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 5,
+              "voltage_pu": 1.0365724467214683,
+              "angle_deg": -6.074648604053728,
+              "load_mw": 90.0,
+              "load_mvar": 30.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 6,
+              "voltage_pu": 1.099999074762708,
+              "angle_deg": 20.13395301882927,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 7,
+              "voltage_pu": 1.080836285805194,
+              "angle_deg": 12.900404348598448,
+              "load_mw": 100.0,
+              "load_mvar": 35.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 8,
+              "voltage_pu": 1.0911637788653568,
+              "angle_deg": 11.145001303271467,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 9,
+              "voltage_pu": 1.0441655204831557,
+              "angle_deg": -0.9244158366714348,
+              "load_mw": 125.0,
+              "load_mvar": 50.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            }
+          ],
+          "branches": [
+            {
+              "from": 1,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 88.58392104769601,
+              "to_mva": 86.42164160578312,
+              "loading_pct": 35.433568419078405
+            },
+            {
+              "from": 4,
+              "to": 5,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 93.4642649803834,
+              "to_mva": 94.8683297626276,
+              "loading_pct": 37.947331905051044
+            },
+            {
+              "from": 5,
+              "to": 6,
+              "in_service": false,
+              "rating_mva": 150.0,
+              "from_mva": 0.0,
+              "to_mva": 0.0,
+              "loading_pct": 0.0
+            },
+            {
+              "from": 3,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 300.0,
+              "from_mva": 10.000001751583905,
+              "to_mva": 10.000144641402532,
+              "loading_pct": 3.3333815471341772
+            },
+            {
+              "from": 6,
+              "to": 7,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 150.00000040987632,
+              "to_mva": 147.89022746557617,
+              "loading_pct": 100.00000027325089
+            },
+            {
+              "from": 7,
+              "to": 8,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 55.925110268850105,
+              "to_mva": 49.36360223996447,
+              "loading_pct": 22.37004410754004
+            },
+            {
+              "from": 8,
+              "to": 2,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 104.58635946888971,
+              "to_mva": 105.41854320180883,
+              "loading_pct": 42.167417280723534
+            },
+            {
+              "from": 8,
+              "to": 9,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 151.43247820919228,
+              "to_mva": 145.21026958575558,
+              "loading_pct": 60.57299128367691
+            },
+            {
+              "from": 9,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 51.462118097331164,
+              "to_mva": 35.26867674635918,
+              "loading_pct": 20.584847238932465
+            }
+          ],
+          "generators": [
+            {
+              "bus": 1,
+              "kind": "reference conventional generator",
+              "p_mw": 71.33692808409347,
+              "q_mvar": 52.518128044234146,
+              "pmin_mw": 10.0,
+              "pmax_mw": 250.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 2,
+              "kind": "reference conventional generator",
+              "p_mw": 103.85493114480306,
+              "q_mvar": 18.0892940294875,
+              "pmin_mw": 10.0,
+              "pmax_mw": 300.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 3,
+              "kind": "reference conventional generator",
+              "p_mw": 10.000000353455471,
+              "q_mvar": -0.005288296296117678,
+              "pmin_mw": 10.0,
+              "pmax_mw": 270.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 6,
+              "kind": "synthetic wind",
+              "p_mw": 139.99999046505607,
+              "q_mvar": 0.0,
+              "pmin_mw": 0.0,
+              "pmax_mw": 200.0,
+              "qmin_mvar": 0.0,
+              "qmax_mvar": 0.0
+            }
+          ],
+          "solver": {
+            "name": "PYPOWER AC OPF / PIPS",
+            "success": true,
+            "elapsed_seconds": 0.5037730330004706,
+            "message": "Converged"
+          },
+          "limitations": [
+            "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+            "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+            "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+            "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+            "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+            "Snapshot MW, not MWh or a share of Irish annual curtailment."
+          ],
+          "request": {
+            "profile": "reference_9bus",
+            "wind_mw": 200.0,
+            "load_scale": 1.0,
+            "action_id": "outage_5_6"
+          },
+          "trace": [
+            {
+              "step": "load_source",
+              "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+            },
+            {
+              "step": "declare_scenario",
+              "detail": {
+                "profile": "reference_9bus",
+                "wind_mw": 200.0,
+                "load_scale": 1.0,
+                "action_id": "outage_5_6"
+              }
+            },
+            {
+              "step": "solve",
+              "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+            },
+            {
+              "step": "independent_check",
+              "detail": "Direct branch-current equations and flat-start SciPy root"
+            }
+          ],
+          "accepted_wind_mw": 139.99999046505607,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_3",
+        "candidate": {
+          "action_id": "outage_7_8",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "id": "outage_7_8",
+          "action_id": "outage_7_8",
+          "label": "Line 7\u20138 unavailable",
+          "profile": "reference_9bus",
+          "status": "verified",
+          "eligible": true,
+          "metrics": {
+            "available_wind_mw": 200.0,
+            "accepted_wind_mw": 199.9999999949641,
+            "curtailed_wind_mw": 5.035900585426134e-09,
+            "load_mw": 315.0,
+            "load_mvar": 115.0,
+            "losses_mw": 8.77643072766547,
+            "thermal_generation_mw": 123.7764306911991,
+            "max_branch_loading_pct": 91.78716280689417,
+            "min_voltage_pu": 1.0629362619027865,
+            "max_voltage_pu": 1.099999976933577,
+            "thermal_dispatch_cost_units_per_hour": 1879.8874271120644,
+            "objective_units": 1879.887432147965
+          },
+          "checks": [
+            {
+              "id": "finite",
+              "label": "Finite solution values",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "converged",
+              "label": "AC solver converged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "connected",
+              "label": "One connected network; no islands",
+              "passed": true,
+              "value": 1,
+              "limit": 1,
+              "unit": null
+            },
+            {
+              "id": "load_unchanged",
+              "label": "Consumer active and reactive demand unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "limits_unchanged",
+              "label": "Declared network and generator limits unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "p_balance",
+              "label": "Independent active-power balance at all buses",
+              "passed": true,
+              "value": 1.4608808385219163e-07,
+              "limit": 0.0001,
+              "unit": "MW"
+            },
+            {
+              "id": "q_balance",
+              "label": "Independent reactive-power balance at all buses",
+              "passed": true,
+              "value": 3.1029724434361583e-07,
+              "limit": 0.0001,
+              "unit": "MVAr"
+            },
+            {
+              "id": "voltage",
+              "label": "All bus voltage bounds",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "p.u. violation"
+            },
+            {
+              "id": "thermal",
+              "label": "Apparent power at both ends of every rated line",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVA violation"
+            },
+            {
+              "id": "generator_p",
+              "label": "Every online generator active-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MW violation"
+            },
+            {
+              "id": "generator_q",
+              "label": "Every online generator reactive-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVAr violation"
+            },
+            {
+              "id": "angle",
+              "label": "Declared branch angle limits",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "degrees violation"
+            },
+            {
+              "id": "independent_pf",
+              "label": "Independent flat-start AC power-flow agreement",
+              "passed": true,
+              "value": 2.3743451649238523e-11,
+              "limit": 1e-05,
+              "unit": "p.u. difference"
+            }
+          ],
+          "independent_validation": {
+            "passed": true,
+            "solver_success": true,
+            "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+            "max_solved_equation_residual_mw_mvar": 7.424901582453459e-09,
+            "max_voltage_difference_pu": 2.3743451649238523e-11,
+            "max_angle_difference_deg": 9.07325076571565e-09,
+            "function_evaluations": 28
+          },
+          "balance_residuals": {
+            "p_mw": [
+              1.121275516879905e-09,
+              1.4608808385219163e-07,
+              1.319477860306506e-10,
+              -3.008406960985035e-09,
+              -1.9310419929752243e-09,
+              -1.0828102858795319e-09,
+              -1.993782916542841e-11,
+              -5.259950025523033e-08,
+              -1.3020191147461446e-07
+            ],
+            "q_mvar": [
+              -9.399240497032224e-09,
+              -3.1029724434361583e-07,
+              -1.1166669811046859e-09,
+              -1.0569886799289178e-11,
+              -1.928235349168972e-10,
+              -7.500052492766791e-11,
+              -1.1297629498585593e-12,
+              -1.8678076660392193e-08,
+              9.475201068198658e-09
+            ]
+          },
+          "buses": [
+            {
+              "bus": 1,
+              "voltage_pu": 1.0999989987674625,
+              "angle_deg": 0.0,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 2,
+              "voltage_pu": 1.0972798536127295,
+              "angle_deg": 2.508495329332321,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 3,
+              "voltage_pu": 1.0999517483671153,
+              "angle_deg": 13.591289606754836,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 4,
+              "voltage_pu": 1.0864978199877056,
+              "angle_deg": -0.7875127881490174,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 5,
+              "voltage_pu": 1.0705382207321468,
+              "angle_deg": 1.2452287128231947,
+              "load_mw": 90.0,
+              "load_mvar": 30.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 6,
+              "voltage_pu": 1.099999976933577,
+              "angle_deg": 12.556892101566449,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 7,
+              "voltage_pu": 1.0629362619027865,
+              "angle_deg": 7.746989510586489,
+              "load_mw": 100.0,
+              "load_mvar": 35.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 8,
+              "voltage_pu": 1.0999987760819898,
+              "angle_deg": 0.7879475549880295,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 9,
+              "voltage_pu": 1.0674001968101872,
+              "angle_deg": -3.5710037250121,
+              "load_mw": 125.0,
+              "load_mvar": 50.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            }
+          ],
+          "branches": [
+            {
+              "from": 1,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 38.57735631292094,
+              "to_mva": 38.1038651688247,
+              "loading_pct": 15.430942525168376
+            },
+            {
+              "from": 4,
+              "to": 5,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 43.60058091599542,
+              "to_mva": 52.806226608914415,
+              "loading_pct": 21.122490643565765
+            },
+            {
+              "from": 5,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 130.25747905148222,
+              "to_mva": 137.68074421034126,
+              "loading_pct": 91.78716280689417
+            },
+            {
+              "from": 3,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 300.0,
+              "from_mva": 37.275149019372726,
+              "to_mva": 37.27678338833892,
+              "loading_pct": 12.42559446277964
+            },
+            {
+              "from": 6,
+              "to": 7,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 103.05934934408015,
+              "to_mva": 105.94810050206625,
+              "loading_pct": 70.63206700137751
+            },
+            {
+              "from": 7,
+              "to": 8,
+              "in_service": false,
+              "rating_mva": 250.0,
+              "from_mva": 0.0,
+              "to_mva": 0.0,
+              "loading_pct": 0.0
+            },
+            {
+              "from": 8,
+              "to": 2,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 58.25923209890009,
+              "to_mva": 58.11522981577051,
+              "loading_pct": 23.303692839560036
+            },
+            {
+              "from": 8,
+              "to": 9,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 58.25923214943781,
+              "to_mva": 62.52965141892513,
+              "loading_pct": 25.01186056757005
+            },
+            {
+              "from": 9,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 72.19855621330333,
+              "to_mva": 68.79210854463746,
+              "loading_pct": 28.87942248532133
+            }
+          ],
+          "generators": [
+            {
+              "bus": 1,
+              "kind": "reference conventional generator",
+              "p_mw": 28.51805970181111,
+              "q_mvar": 25.979466709568484,
+              "pmin_mw": 10.0,
+              "pmax_mw": 250.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 2,
+              "kind": "reference conventional generator",
+              "p_mw": 57.98403339899315,
+              "q_mvar": -3.9027972901338304,
+              "pmin_mw": 10.0,
+              "pmax_mw": 300.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 3,
+              "kind": "reference conventional generator",
+              "p_mw": 37.27433759039483,
+              "q_mvar": 0.24595044828015297,
+              "pmin_mw": 10.0,
+              "pmax_mw": 270.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 6,
+              "kind": "synthetic wind",
+              "p_mw": 199.9999999949641,
+              "q_mvar": 0.0,
+              "pmin_mw": 0.0,
+              "pmax_mw": 200.0,
+              "qmin_mvar": 0.0,
+              "qmax_mvar": 0.0
+            }
+          ],
+          "solver": {
+            "name": "PYPOWER AC OPF / PIPS",
+            "success": true,
+            "elapsed_seconds": 0.5136011469985533,
+            "message": "Converged"
+          },
+          "limitations": [
+            "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+            "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+            "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+            "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+            "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+            "Snapshot MW, not MWh or a share of Irish annual curtailment."
+          ],
+          "request": {
+            "profile": "reference_9bus",
+            "wind_mw": 200.0,
+            "load_scale": 1.0,
+            "action_id": "outage_7_8"
+          },
+          "trace": [
+            {
+              "step": "load_source",
+              "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+            },
+            {
+              "step": "declare_scenario",
+              "detail": {
+                "profile": "reference_9bus",
+                "wind_mw": 200.0,
+                "load_scale": 1.0,
+                "action_id": "outage_7_8"
+              }
+            },
+            {
+              "step": "solve",
+              "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+            },
+            {
+              "step": "independent_check",
+              "detail": "Direct branch-current equations and flat-start SciPy root"
+            }
+          ],
+          "accepted_wind_mw": 199.9999999949641,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_4",
+        "candidate": {
+          "action_id": "outage_9_4",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "id": "outage_9_4",
+          "action_id": "outage_9_4",
+          "label": "Line 9\u20134 unavailable",
+          "profile": "reference_9bus",
+          "status": "verified",
+          "eligible": true,
+          "metrics": {
+            "available_wind_mw": 200.0,
+            "accepted_wind_mw": 199.9999999685901,
+            "curtailed_wind_mw": 3.1409911116497824e-08,
+            "load_mw": 315.0,
+            "load_mvar": 115.0,
+            "losses_mw": 10.61197554997979,
+            "thermal_generation_mw": 125.6119754916354,
+            "max_branch_loading_pct": 99.99999702775018,
+            "min_voltage_pu": 0.9427406625079964,
+            "max_voltage_pu": 1.099999933682203,
+            "thermal_dispatch_cost_units_per_hour": 1997.2204011572248,
+            "objective_units": 1997.220432567136
+          },
+          "checks": [
+            {
+              "id": "finite",
+              "label": "Finite solution values",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "converged",
+              "label": "AC solver converged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "connected",
+              "label": "One connected network; no islands",
+              "passed": true,
+              "value": 1,
+              "limit": 1,
+              "unit": null
+            },
+            {
+              "id": "load_unchanged",
+              "label": "Consumer active and reactive demand unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "limits_unchanged",
+              "label": "Declared network and generator limits unchanged",
+              "passed": true,
+              "value": null,
+              "limit": null,
+              "unit": null
+            },
+            {
+              "id": "p_balance",
+              "label": "Independent active-power balance at all buses",
+              "passed": true,
+              "value": 2.4530812936518487e-07,
+              "limit": 0.0001,
+              "unit": "MW"
+            },
+            {
+              "id": "q_balance",
+              "label": "Independent reactive-power balance at all buses",
+              "passed": true,
+              "value": 5.46057203010264e-07,
+              "limit": 0.0001,
+              "unit": "MVAr"
+            },
+            {
+              "id": "voltage",
+              "label": "All bus voltage bounds",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "p.u. violation"
+            },
+            {
+              "id": "thermal",
+              "label": "Apparent power at both ends of every rated line",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVA violation"
+            },
+            {
+              "id": "generator_p",
+              "label": "Every online generator active-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MW violation"
+            },
+            {
+              "id": "generator_q",
+              "label": "Every online generator reactive-power bound",
+              "passed": true,
+              "value": 0.0,
+              "limit": 0.0001,
+              "unit": "MVAr violation"
+            },
+            {
+              "id": "angle",
+              "label": "Declared branch angle limits",
+              "passed": true,
+              "value": 0.0,
+              "limit": 1e-06,
+              "unit": "degrees violation"
+            },
+            {
+              "id": "independent_pf",
+              "label": "Independent flat-start AC power-flow agreement",
+              "passed": true,
+              "value": 5.019673565698213e-11,
+              "limit": 1e-05,
+              "unit": "p.u. difference"
+            }
+          ],
+          "independent_validation": {
+            "passed": true,
+            "solver_success": true,
+            "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+            "max_solved_equation_residual_mw_mvar": 1.3503680817104917e-09,
+            "max_voltage_difference_pu": 5.019673565698213e-11,
+            "max_angle_difference_deg": 2.2351740834225234e-08,
+            "function_evaluations": 29
+          },
+          "balance_residuals": {
+            "p_mw": [
+              1.1108290109973495e-07,
+              1.0631708846631227e-09,
+              9.656677235625466e-09,
+              3.664108476669856e-08,
+              -2.4530812936518487e-07,
+              6.335753255370946e-08,
+              -5.018013382596109e-08,
+              -5.337176221231686e-09,
+              -1.0730232702371723e-08
+            ],
+            "q_mvar": [
+              -5.46057203010264e-07,
+              3.6711611528517096e-09,
+              7.48210222667467e-08,
+              -2.3924714570793277e-08,
+              -1.0945051087674074e-08,
+              -7.00874171753765e-09,
+              1.576772490352596e-09,
+              -1.567711835089777e-10,
+              -1.1363781027284858e-09
+            ]
+          },
+          "buses": [
+            {
+              "bus": 1,
+              "voltage_pu": 1.070952636441227,
+              "angle_deg": 0.0,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 2,
+              "voltage_pu": 1.099999933682203,
+              "angle_deg": -1.0963013845698153,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 3,
+              "voltage_pu": 1.0840571707800102,
+              "angle_deg": 6.282072479389728,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 4,
+              "voltage_pu": 1.0720174834437572,
+              "angle_deg": -0.4088379868147458,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 5,
+              "voltage_pu": 1.0637728058317197,
+              "angle_deg": -1.0060718164854288,
+              "load_mw": 90.0,
+              "load_mvar": 30.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 6,
+              "voltage_pu": 1.088926764829431,
+              "angle_deg": 5.499383086483655,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 7,
+              "voltage_pu": 1.0612286604074825,
+              "angle_deg": -1.8748480062558717,
+              "load_mw": 100.0,
+              "load_mvar": 35.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 8,
+              "voltage_pu": 1.0664721391080574,
+              "angle_deg": -3.657380573754009,
+              "load_mw": 0.0,
+              "load_mvar": 0.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            },
+            {
+              "bus": 9,
+              "voltage_pu": 0.9427406625079964,
+              "angle_deg": -14.527410223058407,
+              "load_mw": 125.0,
+              "load_mvar": 50.0,
+              "vmin_pu": 0.9,
+              "vmax_pu": 1.1
+            }
+          ],
+          "branches": [
+            {
+              "from": 1,
+              "to": 4,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 14.35269075538627,
+              "to_mva": 14.366961619670152,
+              "loading_pct": 5.74678464786806
+            },
+            {
+              "from": 4,
+              "to": 5,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 14.366961580012848,
+              "to_mva": 21.22180101399529,
+              "loading_pct": 8.488720405598116
+            },
+            {
+              "from": 5,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 77.1360533784579,
+              "to_mva": 79.9949398288031,
+              "loading_pct": 53.329959885868725
+            },
+            {
+              "from": 3,
+              "to": 6,
+              "in_service": true,
+              "rating_mva": 300.0,
+              "from_mva": 28.89644461958145,
+              "to_mva": 29.026247695066566,
+              "loading_pct": 9.67541589835552
+            },
+            {
+              "from": 6,
+              "to": 7,
+              "in_service": true,
+              "rating_mva": 150.0,
+              "from_mva": 149.99999554162528,
+              "to_mva": 148.07986140334586,
+              "loading_pct": 99.99999702775018
+            },
+            {
+              "from": 7,
+              "to": 8,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 51.83682668381329,
+              "to_mva": 47.56510211042883,
+              "loading_pct": 20.734730673525316
+            },
+            {
+              "from": 8,
+              "to": 2,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 100.48164095477534,
+              "to_mva": 103.64058687831572,
+              "loading_pct": 41.456234751326285
+            },
+            {
+              "from": 8,
+              "to": 9,
+              "in_service": true,
+              "rating_mva": 250.0,
+              "from_mva": 140.20922926706731,
+              "to_mva": 134.6291201679778,
+              "loading_pct": 56.08369170682692
+            },
+            {
+              "from": 9,
+              "to": 4,
+              "in_service": false,
+              "rating_mva": 250.0,
+              "from_mva": 0.0,
+              "to_mva": 0.0,
+              "loading_pct": 0.0
+            }
+          ],
+          "generators": [
+            {
+              "bus": 1,
+              "kind": "reference conventional generator",
+              "p_mw": 14.222455244120088,
+              "q_mvar": -1.929120010604365,
+              "pmin_mw": 10.0,
+              "pmax_mw": 250.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 2,
+              "kind": "reference conventional generator",
+              "p_mw": 83.87217380069048,
+              "q_mvar": 60.88373929920737,
+              "pmin_mw": 10.0,
+              "pmax_mw": 300.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 3,
+              "kind": "reference conventional generator",
+              "p_mw": 27.51734644682485,
+              "q_mvar": -8.820439636973736,
+              "pmin_mw": 10.0,
+              "pmax_mw": 270.0,
+              "qmin_mvar": -300.0,
+              "qmax_mvar": 300.0
+            },
+            {
+              "bus": 6,
+              "kind": "synthetic wind",
+              "p_mw": 199.9999999685901,
+              "q_mvar": 0.0,
+              "pmin_mw": 0.0,
+              "pmax_mw": 200.0,
+              "qmin_mvar": 0.0,
+              "qmax_mvar": 0.0
+            }
+          ],
+          "solver": {
+            "name": "PYPOWER AC OPF / PIPS",
+            "success": true,
+            "elapsed_seconds": 0.5195465059987328,
+            "message": "Converged"
+          },
+          "limitations": [
+            "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+            "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+            "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+            "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+            "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+            "Snapshot MW, not MWh or a share of Irish annual curtailment."
+          ],
+          "request": {
+            "profile": "reference_9bus",
+            "wind_mw": 200.0,
+            "load_scale": 1.0,
+            "action_id": "outage_9_4"
+          },
+          "trace": [
+            {
+              "step": "load_source",
+              "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+            },
+            {
+              "step": "declare_scenario",
+              "detail": {
+                "profile": "reference_9bus",
+                "wind_mw": 200.0,
+                "load_scale": 1.0,
+                "action_id": "outage_9_4"
+              }
+            },
+            {
+              "step": "solve",
+              "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+            },
+            {
+              "step": "independent_check",
+              "detail": "Direct branch-current equations and flat-start SciPy root"
+            }
+          ],
+          "accepted_wind_mw": 199.9999999685901,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      }
+    ],
+    "rejected": [],
+    "provider_calls": 0,
+    "usage": {},
+    "live_ai_benchmark": false,
+    "summary_source": "deterministic_engine_records",
+    "elapsed_seconds": 1.544823,
+    "best_valid": {
+      "id": "evaluation_3",
+      "candidate": {
+        "action_id": "outage_7_8",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_7_8",
+        "action_id": "outage_7_8",
+        "label": "Line 7\u20138 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.9999999949641,
+          "curtailed_wind_mw": 5.035900585426134e-09,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 8.77643072766547,
+          "thermal_generation_mw": 123.7764306911991,
+          "max_branch_loading_pct": 91.78716280689417,
+          "min_voltage_pu": 1.0629362619027865,
+          "max_voltage_pu": 1.099999976933577,
+          "thermal_dispatch_cost_units_per_hour": 1879.8874271120644,
+          "objective_units": 1879.887432147965
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 1.4608808385219163e-07,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 3.1029724434361583e-07,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 2.3743451649238523e-11,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 7.424901582453459e-09,
+          "max_voltage_difference_pu": 2.3743451649238523e-11,
+          "max_angle_difference_deg": 9.07325076571565e-09,
+          "function_evaluations": 28
+        },
+        "balance_residuals": {
+          "p_mw": [
+            1.121275516879905e-09,
+            1.4608808385219163e-07,
+            1.319477860306506e-10,
+            -3.008406960985035e-09,
+            -1.9310419929752243e-09,
+            -1.0828102858795319e-09,
+            -1.993782916542841e-11,
+            -5.259950025523033e-08,
+            -1.3020191147461446e-07
+          ],
+          "q_mvar": [
+            -9.399240497032224e-09,
+            -3.1029724434361583e-07,
+            -1.1166669811046859e-09,
+            -1.0569886799289178e-11,
+            -1.928235349168972e-10,
+            -7.500052492766791e-11,
+            -1.1297629498585593e-12,
+            -1.8678076660392193e-08,
+            9.475201068198658e-09
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0999989987674625,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.0972798536127295,
+            "angle_deg": 2.508495329332321,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0999517483671153,
+            "angle_deg": 13.591289606754836,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0864978199877056,
+            "angle_deg": -0.7875127881490174,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0705382207321468,
+            "angle_deg": 1.2452287128231947,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999976933577,
+            "angle_deg": 12.556892101566449,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0629362619027865,
+            "angle_deg": 7.746989510586489,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0999987760819898,
+            "angle_deg": 0.7879475549880295,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.0674001968101872,
+            "angle_deg": -3.5710037250121,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 38.57735631292094,
+            "to_mva": 38.1038651688247,
+            "loading_pct": 15.430942525168376
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 43.60058091599542,
+            "to_mva": 52.806226608914415,
+            "loading_pct": 21.122490643565765
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 130.25747905148222,
+            "to_mva": 137.68074421034126,
+            "loading_pct": 91.78716280689417
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 37.275149019372726,
+            "to_mva": 37.27678338833892,
+            "loading_pct": 12.42559446277964
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 103.05934934408015,
+            "to_mva": 105.94810050206625,
+            "loading_pct": 70.63206700137751
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": false,
+            "rating_mva": 250.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 58.25923209890009,
+            "to_mva": 58.11522981577051,
+            "loading_pct": 23.303692839560036
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 58.25923214943781,
+            "to_mva": 62.52965141892513,
+            "loading_pct": 25.01186056757005
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 72.19855621330333,
+            "to_mva": 68.79210854463746,
+            "loading_pct": 28.87942248532133
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 28.51805970181111,
+            "q_mvar": 25.979466709568484,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 57.98403339899315,
+            "q_mvar": -3.9027972901338304,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 37.27433759039483,
+            "q_mvar": 0.24595044828015297,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.9999999949641,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.5136011469985533,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_7_8"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_7_8"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.9999999949641,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "solver_calls": 4,
+    "physical_actions_executed": false,
+    "summary": "Evaluated 4 scenario(s). Among the evaluated scenarios, outage_7_8 accepted 200.00 MW and passed the declared model checks. This is a model result, not a field result or an operational approval."
+  },
+  "oracle_records": [
+    {
+      "id": "evaluation_1",
+      "candidate": {
+        "action_id": "all_in_service",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "all_in_service",
+        "action_id": "all_in_service",
+        "label": "All lines available",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.99999999034893,
+          "curtailed_wind_mw": 9.651074606153998e-09,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 7.844469874610915,
+          "thermal_generation_mw": 122.84446676605575,
+          "max_branch_loading_pct": 81.91146200258234,
+          "min_voltage_pu": 1.0641052902160706,
+          "max_voltage_pu": 1.099999936485005,
+          "thermal_dispatch_cost_units_per_hour": 1868.9498099840482,
+          "objective_units": 1868.9498196351228
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 3.8879778685441124e-06,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 2.0302041733089027e-05,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 7.884914943190324e-10,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 3.0050131272219005e-09,
+          "max_voltage_difference_pu": 7.884914943190324e-10,
+          "max_angle_difference_deg": 3.1535834312238717e-07,
+          "function_evaluations": 28
+        },
+        "balance_residuals": {
+          "p_mw": [
+            2.365683112515171e-06,
+            4.085547544718793e-08,
+            6.443875832928825e-08,
+            6.274178263933052e-07,
+            -1.7221001655798318e-06,
+            -5.298844030221517e-07,
+            -2.3091629941518477e-08,
+            -5.354741688399471e-08,
+            -3.8879778685441124e-06
+          ],
+          "q_mvar": [
+            -2.0302041733089027e-05,
+            1.5063282088334518e-07,
+            -3.3838077229120245e-06,
+            -3.9002729791115244e-07,
+            -1.7251405992624314e-07,
+            1.0008438092146999e-08,
+            -9.282523194542591e-09,
+            3.8994181362731156e-09,
+            -3.4548965288649924e-07
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0963497486965028,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.09999943569725,
+            "angle_deg": 4.854033084751219,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.086116235900001,
+            "angle_deg": 10.983189744546024,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.085100018137643,
+            "angle_deg": -0.7845551486378393,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0726240120097086,
+            "angle_deg": 0.3329958990048452,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999936485005,
+            "angle_deg": 9.905360560869251,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0860439098941694,
+            "angle_deg": 4.001333260518697,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0973872432097893,
+            "angle_deg": 3.18620107387356,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.0641052902160706,
+            "angle_deg": -2.7632694428886886,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 35.58934855961896,
+            "to_mva": 35.2241634692433,
+            "loading_pct": 14.235739423847585
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 23.248013568130432,
+            "to_mva": 34.652795211276384,
+            "loading_pct": 13.861118084510554
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 111.33566846348296,
+            "to_mva": 117.46892476205515,
+            "loading_pct": 78.31261650803677
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 45.98376886360374,
+            "to_mva": 46.57157416249358,
+            "loading_pct": 15.523858054164528
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 122.86719300387352,
+            "to_mva": 121.44060665415918,
+            "loading_pct": 81.91146200258234
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 35.34248879531996,
+            "to_mva": 23.87099930531409,
+            "loading_pct": 14.136995518127984
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 56.33967276603628,
+            "to_mva": 56.47378228011717,
+            "loading_pct": 22.589512912046867
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 77.74177422881961,
+            "to_mva": 78.46605407746392,
+            "loading_pct": 31.386421630985566
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 57.45873468852204,
+            "to_mva": 50.77114499298813,
+            "loading_pct": 22.98349387540882
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 28.280280819423293,
+            "q_mvar": 21.606172825785567,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 56.213508334399265,
+            "q_mvar": 5.415678349506882,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 38.35067761223319,
+            "q_mvar": -25.37188803052699,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.99999999034893,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.4747465939981339,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "all_in_service"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "all_in_service"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.99999999034893,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_2",
+      "candidate": {
+        "action_id": "outage_4_5",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_4_5",
+        "action_id": "outage_4_5",
+        "label": "Line 4\u20135 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.9999999782733,
+          "curtailed_wind_mw": 2.172669155697804e-08,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 7.991035902011486,
+          "thermal_generation_mw": 122.99103592209914,
+          "max_branch_loading_pct": 96.86037627886384,
+          "min_voltage_pu": 1.0394362868271818,
+          "max_voltage_pu": 1.099999842219282,
+          "thermal_dispatch_cost_units_per_hour": 1870.769933637624,
+          "objective_units": 1870.7699553643156
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 3.5232261552664568e-09,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 1.1758642948223041e-08,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 1.2350120925930241e-12,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 3.5651606734952058e-09,
+          "max_voltage_difference_pu": 1.2350120925930241e-12,
+          "max_angle_difference_deg": 2.576767913703613e-10,
+          "function_evaluations": 29
+        },
+        "balance_residuals": {
+          "p_mw": [
+            1.7989876255342097e-09,
+            1.4025971495357226e-09,
+            1.0610392564558424e-09,
+            -1.454942698421728e-09,
+            -7.488125675081392e-10,
+            2.613916194604826e-09,
+            -4.4279602207097923e-10,
+            -2.3458247402767458e-09,
+            -3.5232261552664568e-09
+          ],
+          "q_mvar": [
+            -4.602519254603976e-09,
+            -1.1758642948223041e-08,
+            1.1770751040529603e-09,
+            -2.4743754013730803e-10,
+            -1.226396761921933e-11,
+            -4.1649882880427043e-10,
+            -3.8683367620251374e-10,
+            -4.4059541317577905e-10,
+            2.6616220338837593e-10
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0999975537385367,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.0999993834893789,
+            "angle_deg": 7.540997153496414,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0991314060217063,
+            "angle_deg": 15.52586868235809,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0901746788537412,
+            "angle_deg": -0.7884915508485287,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0394362868271818,
+            "angle_deg": 6.985053177243483,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999842219282,
+            "angle_deg": 14.464910178263576,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0843649090980825,
+            "angle_deg": 7.465178941930158,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0965787949166765,
+            "angle_deg": 5.87417442392453,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.0652323144245917,
+            "angle_deg": -1.8477066256344972,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 34.35345815904376,
+            "to_mva": 34.04668500285859,
+            "loading_pct": 13.741383263617504
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": false,
+            "rating_mva": 250.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 94.86832980433711,
+            "to_mva": 92.98479373879071,
+            "loading_pct": 63.2455532028914
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 38.2241089787844,
+            "to_mva": 38.254310281081274,
+            "loading_pct": 12.751436760360424
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 145.29056441829576,
+            "to_mva": 143.19598439525774,
+            "loading_pct": 96.86037627886384
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 53.49596929711994,
+            "to_mva": 45.643737706569304,
+            "loading_pct": 21.398387718847978
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 56.37703811698443,
+            "to_mva": 56.55289657169804,
+            "loading_pct": 22.62115862867922
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 99.64198934847279,
+            "to_mva": 97.27541140831445,
+            "loading_pct": 39.85679573938911
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 47.23186264908482,
+            "to_mva": 34.04668500421659,
+            "loading_pct": 18.892745059633928
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 28.650092584787334,
+            "q_mvar": 18.956061887873112,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 56.13811027250437,
+            "q_mvar": 6.836862268468664,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 38.20283306480743,
+            "q_mvar": -1.2751678801276711,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.9999999782733,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.4893750579976768,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_4_5"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_4_5"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.9999999782733,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_3",
+      "candidate": {
+        "action_id": "outage_5_6",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_5_6",
+        "action_id": "outage_5_6",
+        "label": "Line 5\u20136 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 139.99999046505607,
+          "curtailed_wind_mw": 60.00000953494393,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 10.191850086941898,
+          "thermal_generation_mw": 185.191859582352,
+          "max_branch_loading_pct": 100.00000027325089,
+          "min_voltage_pu": 1.0365724467214683,
+          "max_voltage_pu": 1.099999074762708,
+          "thermal_dispatch_cost_units_per_hour": 3065.142834408718,
+          "objective_units": 63065.15236935265
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 2.540506187642677e-07,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 6.076360890006072e-07,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 4.098763213278289e-07,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 7.196976348211592e-11,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 1.271022551133284e-09,
+          "max_voltage_difference_pu": 7.196976348211592e-11,
+          "max_angle_difference_deg": 1.9584562758207357e-08,
+          "function_evaluations": 29
+        },
+        "balance_residuals": {
+          "p_mw": [
+            4.010173881852097e-08,
+            2.540506187642677e-07,
+            1.5005419129465736e-10,
+            -4.6635231593557384e-09,
+            -4.447795731721271e-08,
+            2.776141627691686e-08,
+            -2.5071472009585705e-08,
+            -6.808878477553163e-08,
+            -2.1929594140601694e-07
+          ],
+          "q_mvar": [
+            7.463886930736408e-08,
+            -6.076360890006072e-07,
+            -4.7746673319075394e-08,
+            -4.0827766649437176e-09,
+            -7.219291831006558e-10,
+            -6.630036415707861e-10,
+            -1.1050097725728847e-08,
+            -3.1657474631948196e-08,
+            1.8858145267586224e-08
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.09999473242418,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.0998460654592639,
+            "angle_deg": 14.245416750260135,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0999833571232218,
+            "angle_deg": 20.411440584754555,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0731445324330031,
+            "angle_deg": -1.9947957654720418,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0365724467214683,
+            "angle_deg": -6.074648604053728,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999074762708,
+            "angle_deg": 20.13395301882927,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.080836285805194,
+            "angle_deg": 12.900404348598448,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0911637788653568,
+            "angle_deg": 11.145001303271467,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.0441655204831557,
+            "angle_deg": -0.9244158366714348,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 88.58392104769601,
+            "to_mva": 86.42164160578312,
+            "loading_pct": 35.433568419078405
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 93.4642649803834,
+            "to_mva": 94.8683297626276,
+            "loading_pct": 37.947331905051044
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": false,
+            "rating_mva": 150.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 10.000001751583905,
+            "to_mva": 10.000144641402532,
+            "loading_pct": 3.3333815471341772
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 150.00000040987632,
+            "to_mva": 147.89022746557617,
+            "loading_pct": 100.00000027325089
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 55.925110268850105,
+            "to_mva": 49.36360223996447,
+            "loading_pct": 22.37004410754004
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 104.58635946888971,
+            "to_mva": 105.41854320180883,
+            "loading_pct": 42.167417280723534
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 151.43247820919228,
+            "to_mva": 145.21026958575558,
+            "loading_pct": 60.57299128367691
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 51.462118097331164,
+            "to_mva": 35.26867674635918,
+            "loading_pct": 20.584847238932465
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 71.33692808409347,
+            "q_mvar": 52.518128044234146,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 103.85493114480306,
+            "q_mvar": 18.0892940294875,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 10.000000353455471,
+            "q_mvar": -0.005288296296117678,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 139.99999046505607,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.5037730330004706,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_5_6"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_5_6"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 139.99999046505607,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_4",
+      "candidate": {
+        "action_id": "outage_6_7",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_6_7",
+        "action_id": "outage_6_7",
+        "label": "Line 6\u20137 unavailable \u00b7 baseline",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 139.99998382241796,
+          "curtailed_wind_mw": 60.00001617758204,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 10.165738826769516,
+          "thermal_generation_mw": 185.16575481806063,
+          "max_branch_loading_pct": 100.00000005394779,
+          "min_voltage_pu": 1.0133563006337556,
+          "max_voltage_pu": 1.0999993697839079,
+          "thermal_dispatch_cost_units_per_hour": 3060.4643406918794,
+          "objective_units": 63060.480518273915
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 2.9505599741241895e-07,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 8.474188355478418e-07,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 8.092166581263882e-08,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 9.542788781402578e-11,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 6.050910883459437e-09,
+          "max_voltage_difference_pu": 9.542788781402578e-11,
+          "max_angle_difference_deg": 3.108488456364146e-08,
+          "function_evaluations": 28
+        },
+        "balance_residuals": {
+          "p_mw": [
+            1.3018230049510748e-07,
+            2.9505599741241895e-07,
+            1.0516565396301303e-10,
+            -9.591891311738429e-08,
+            -8.88016415956372e-09,
+            1.4093188838160131e-09,
+            -2.1339396027997282e-07,
+            -9.967969015518744e-08,
+            -1.9517099758559198e-07
+          ],
+          "q_mvar": [
+            -8.474188355478418e-07,
+            -6.509306729185482e-07,
+            -2.80331494163788e-08,
+            -7.785149704933232e-09,
+            -6.128416885076149e-09,
+            -2.021149706155092e-11,
+            -1.272695726584061e-08,
+            -2.13003694156616e-08,
+            1.9127455175294017e-08
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0529025181651896,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.0606430985126918,
+            "angle_deg": -3.251117501448038,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0999752289416576,
+            "angle_deg": 13.454350067713687,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0418906832999608,
+            "angle_deg": -1.9762656354797865,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0379472013753652,
+            "angle_deg": 0.7045103172945173,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.0999993697839079,
+            "angle_deg": 13.176860531513098,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0133563006337556,
+            "angle_deg": -10.574216103712251,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.043444289250013,
+            "angle_deg": -6.796018250083367,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.017376107436467,
+            "angle_deg": -7.280414187124697,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 69.0344835667057,
+            "to_mva": 68.3124828876992,
+            "loading_pct": 27.61379342668228
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 52.57786749415148,
+            "to_mva": 56.781728049474594,
+            "loading_pct": 22.71269121978984
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 142.85721261891928,
+            "to_mva": 150.00000008092167,
+            "loading_pct": 100.00000005394779
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 10.000022402967728,
+            "to_mva": 10.000241870603885,
+            "loading_pct": 3.3334139568679615
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": false,
+            "rating_mva": 150.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 105.94810029646743,
+            "to_mva": 104.38189649766024,
+            "loading_pct": 42.37924011858697
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 112.3779428743182,
+            "to_mva": 114.23023803251662,
+            "loading_pct": 45.69209521300665
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 8.718616523447373,
+            "to_mva": 31.75543614912075,
+            "loading_pct": 12.7021744596483
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 118.0975279134419,
+            "to_mva": 118.42070846408592,
+            "loading_pct": 47.36828338563437
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 65.67867829191208,
+            "q_mvar": 21.261964166419396,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 109.48707638138957,
+            "q_mvar": 32.57495063116354,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 10.000000144758983,
+            "q_mvar": -0.02109900383923021,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 139.99998382241796,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.4098808399976406,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_6_7"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_6_7"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 139.99998382241796,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_5",
+      "candidate": {
+        "action_id": "outage_7_8",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_7_8",
+        "action_id": "outage_7_8",
+        "label": "Line 7\u20138 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.9999999949641,
+          "curtailed_wind_mw": 5.035900585426134e-09,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 8.77643072766547,
+          "thermal_generation_mw": 123.7764306911991,
+          "max_branch_loading_pct": 91.78716280689417,
+          "min_voltage_pu": 1.0629362619027865,
+          "max_voltage_pu": 1.099999976933577,
+          "thermal_dispatch_cost_units_per_hour": 1879.8874271120644,
+          "objective_units": 1879.887432147965
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 1.4608808385219163e-07,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 3.1029724434361583e-07,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 2.3743451649238523e-11,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 7.424901582453459e-09,
+          "max_voltage_difference_pu": 2.3743451649238523e-11,
+          "max_angle_difference_deg": 9.07325076571565e-09,
+          "function_evaluations": 28
+        },
+        "balance_residuals": {
+          "p_mw": [
+            1.121275516879905e-09,
+            1.4608808385219163e-07,
+            1.319477860306506e-10,
+            -3.008406960985035e-09,
+            -1.9310419929752243e-09,
+            -1.0828102858795319e-09,
+            -1.993782916542841e-11,
+            -5.259950025523033e-08,
+            -1.3020191147461446e-07
+          ],
+          "q_mvar": [
+            -9.399240497032224e-09,
+            -3.1029724434361583e-07,
+            -1.1166669811046859e-09,
+            -1.0569886799289178e-11,
+            -1.928235349168972e-10,
+            -7.500052492766791e-11,
+            -1.1297629498585593e-12,
+            -1.8678076660392193e-08,
+            9.475201068198658e-09
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0999989987674625,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.0972798536127295,
+            "angle_deg": 2.508495329332321,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0999517483671153,
+            "angle_deg": 13.591289606754836,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0864978199877056,
+            "angle_deg": -0.7875127881490174,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0705382207321468,
+            "angle_deg": 1.2452287128231947,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999976933577,
+            "angle_deg": 12.556892101566449,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0629362619027865,
+            "angle_deg": 7.746989510586489,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0999987760819898,
+            "angle_deg": 0.7879475549880295,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 1.0674001968101872,
+            "angle_deg": -3.5710037250121,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 38.57735631292094,
+            "to_mva": 38.1038651688247,
+            "loading_pct": 15.430942525168376
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 43.60058091599542,
+            "to_mva": 52.806226608914415,
+            "loading_pct": 21.122490643565765
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 130.25747905148222,
+            "to_mva": 137.68074421034126,
+            "loading_pct": 91.78716280689417
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 37.275149019372726,
+            "to_mva": 37.27678338833892,
+            "loading_pct": 12.42559446277964
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 103.05934934408015,
+            "to_mva": 105.94810050206625,
+            "loading_pct": 70.63206700137751
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": false,
+            "rating_mva": 250.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 58.25923209890009,
+            "to_mva": 58.11522981577051,
+            "loading_pct": 23.303692839560036
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 58.25923214943781,
+            "to_mva": 62.52965141892513,
+            "loading_pct": 25.01186056757005
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 72.19855621330333,
+            "to_mva": 68.79210854463746,
+            "loading_pct": 28.87942248532133
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 28.51805970181111,
+            "q_mvar": 25.979466709568484,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 57.98403339899315,
+            "q_mvar": -3.9027972901338304,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 37.27433759039483,
+            "q_mvar": 0.24595044828015297,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.9999999949641,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.5136011469985533,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_7_8"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_7_8"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.9999999949641,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_6",
+      "candidate": {
+        "action_id": "outage_8_9",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_8_9",
+        "action_id": "outage_8_9",
+        "label": "Line 8\u20139 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.99999999785766,
+          "curtailed_wind_mw": 2.142343191735563e-09,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 10.124550939004049,
+          "thermal_generation_mw": 125.12454473924225,
+          "max_branch_loading_pct": 99.99999988823284,
+          "min_voltage_pu": 0.9991912341925995,
+          "max_voltage_pu": 1.099999994347581,
+          "thermal_dispatch_cost_units_per_hour": 2254.912232244354,
+          "objective_units": 2254.9122343866975
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 1.213811279399124e-05,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 6.751377665015212e-05,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 2.0130361821912857e-09,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 5.843844519404229e-09,
+          "max_voltage_difference_pu": 2.0130361821912857e-09,
+          "max_angle_difference_deg": 1.2148040822874343e-06,
+          "function_evaluations": 29
+        },
+        "balance_residuals": {
+          "p_mw": [
+            3.694822225952521e-13,
+            9.154167656788559e-06,
+            1.8319030203883813e-07,
+            2.0298426384005137e-13,
+            -2.1316282072803006e-13,
+            -2.0583573530075228e-06,
+            -1.213811279399124e-05,
+            -1.3427917213417653e-06,
+            -5.968558980384842e-13
+          ],
+          "q_mvar": [
+            3.979039320256561e-13,
+            -6.751377665015212e-05,
+            -1.8539649152771176e-05,
+            -1.9462054468162132e-13,
+            2.3803181647963356e-13,
+            5.605197175247144e-08,
+            -1.0492681212781463e-07,
+            -9.102700975626227e-07,
+            -7.105427357601002e-14
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.0834740288822142,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.099025067560981,
+            "angle_deg": 11.433703254977772,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0948226113998187,
+            "angle_deg": 13.565091920973142,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.051740180794787,
+            "angle_deg": -2.161406958555094,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0446390011262696,
+            "angle_deg": 0.5090847447027074,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.099999994347581,
+            "angle_deg": 12.978959431642702,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0877032746635578,
+            "angle_deg": 9.586194214629062,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0974193104348513,
+            "angle_deg": 10.558148361208065,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 0.9991912341925995,
+            "angle_deg": -7.738383658737502,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 96.43814899258572,
+            "to_mva": 93.61357407119084,
+            "loading_pct": 38.57525959703429
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 53.131443039084196,
+            "to_mva": 58.280155518674114,
+            "loading_pct": 23.312062207469644
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 142.6792393522682,
+            "to_mva": 149.99999983234926,
+            "loading_pct": 99.99999988823284
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 23.09723803291307,
+            "to_mva": 23.206464171546717,
+            "loading_pct": 7.7354880571822395
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 71.30012961458172,
+            "to_mva": 72.20506292452313,
+            "loading_pct": 48.136708616348756
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 35.44914465465285,
+            "to_mva": 29.601805187056332,
+            "loading_pct": 14.17965786186114
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 29.601803769658282,
+            "to_mva": 29.64511748475101,
+            "loading_pct": 11.858046993900405
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": false,
+            "rating_mva": 250.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 134.629120178362,
+            "to_mva": 134.9033704816329,
+            "loading_pct": 53.961348192653155
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 74.61315264427289,
+            "q_mvar": 61.09986934191186,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 29.48792126485741,
+            "q_mvar": 3.0488716520524406,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 21.023470830111965,
+            "q_mvar": -9.565377221218242,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.99999999785766,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.5413957309974649,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_8_9"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_8_9"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.99999999785766,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_7",
+      "candidate": {
+        "action_id": "outage_9_4",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "id": "outage_9_4",
+        "action_id": "outage_9_4",
+        "label": "Line 9\u20134 unavailable",
+        "profile": "reference_9bus",
+        "status": "verified",
+        "eligible": true,
+        "metrics": {
+          "available_wind_mw": 200.0,
+          "accepted_wind_mw": 199.9999999685901,
+          "curtailed_wind_mw": 3.1409911116497824e-08,
+          "load_mw": 315.0,
+          "load_mvar": 115.0,
+          "losses_mw": 10.61197554997979,
+          "thermal_generation_mw": 125.6119754916354,
+          "max_branch_loading_pct": 99.99999702775018,
+          "min_voltage_pu": 0.9427406625079964,
+          "max_voltage_pu": 1.099999933682203,
+          "thermal_dispatch_cost_units_per_hour": 1997.2204011572248,
+          "objective_units": 1997.220432567136
+        },
+        "checks": [
+          {
+            "id": "finite",
+            "label": "Finite solution values",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "converged",
+            "label": "AC solver converged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "connected",
+            "label": "One connected network; no islands",
+            "passed": true,
+            "value": 1,
+            "limit": 1,
+            "unit": null
+          },
+          {
+            "id": "load_unchanged",
+            "label": "Consumer active and reactive demand unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "limits_unchanged",
+            "label": "Declared network and generator limits unchanged",
+            "passed": true,
+            "value": null,
+            "limit": null,
+            "unit": null
+          },
+          {
+            "id": "p_balance",
+            "label": "Independent active-power balance at all buses",
+            "passed": true,
+            "value": 2.4530812936518487e-07,
+            "limit": 0.0001,
+            "unit": "MW"
+          },
+          {
+            "id": "q_balance",
+            "label": "Independent reactive-power balance at all buses",
+            "passed": true,
+            "value": 5.46057203010264e-07,
+            "limit": 0.0001,
+            "unit": "MVAr"
+          },
+          {
+            "id": "voltage",
+            "label": "All bus voltage bounds",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "p.u. violation"
+          },
+          {
+            "id": "thermal",
+            "label": "Apparent power at both ends of every rated line",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVA violation"
+          },
+          {
+            "id": "generator_p",
+            "label": "Every online generator active-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MW violation"
+          },
+          {
+            "id": "generator_q",
+            "label": "Every online generator reactive-power bound",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0.0001,
+            "unit": "MVAr violation"
+          },
+          {
+            "id": "angle",
+            "label": "Declared branch angle limits",
+            "passed": true,
+            "value": 0.0,
+            "limit": 1e-06,
+            "unit": "degrees violation"
+          },
+          {
+            "id": "independent_pf",
+            "label": "Independent flat-start AC power-flow agreement",
+            "passed": true,
+            "value": 5.019673565698213e-11,
+            "limit": 1e-05,
+            "unit": "p.u. difference"
+          }
+        ],
+        "independent_validation": {
+          "passed": true,
+          "solver_success": true,
+          "method": "SciPy root/hybr with separately implemented branch-current equations; flat start",
+          "max_solved_equation_residual_mw_mvar": 1.3503680817104917e-09,
+          "max_voltage_difference_pu": 5.019673565698213e-11,
+          "max_angle_difference_deg": 2.2351740834225234e-08,
+          "function_evaluations": 29
+        },
+        "balance_residuals": {
+          "p_mw": [
+            1.1108290109973495e-07,
+            1.0631708846631227e-09,
+            9.656677235625466e-09,
+            3.664108476669856e-08,
+            -2.4530812936518487e-07,
+            6.335753255370946e-08,
+            -5.018013382596109e-08,
+            -5.337176221231686e-09,
+            -1.0730232702371723e-08
+          ],
+          "q_mvar": [
+            -5.46057203010264e-07,
+            3.6711611528517096e-09,
+            7.48210222667467e-08,
+            -2.3924714570793277e-08,
+            -1.0945051087674074e-08,
+            -7.00874171753765e-09,
+            1.576772490352596e-09,
+            -1.567711835089777e-10,
+            -1.1363781027284858e-09
+          ]
+        },
+        "buses": [
+          {
+            "bus": 1,
+            "voltage_pu": 1.070952636441227,
+            "angle_deg": 0.0,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 2,
+            "voltage_pu": 1.099999933682203,
+            "angle_deg": -1.0963013845698153,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 3,
+            "voltage_pu": 1.0840571707800102,
+            "angle_deg": 6.282072479389728,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 4,
+            "voltage_pu": 1.0720174834437572,
+            "angle_deg": -0.4088379868147458,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 5,
+            "voltage_pu": 1.0637728058317197,
+            "angle_deg": -1.0060718164854288,
+            "load_mw": 90.0,
+            "load_mvar": 30.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 6,
+            "voltage_pu": 1.088926764829431,
+            "angle_deg": 5.499383086483655,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 7,
+            "voltage_pu": 1.0612286604074825,
+            "angle_deg": -1.8748480062558717,
+            "load_mw": 100.0,
+            "load_mvar": 35.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 8,
+            "voltage_pu": 1.0664721391080574,
+            "angle_deg": -3.657380573754009,
+            "load_mw": 0.0,
+            "load_mvar": 0.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          },
+          {
+            "bus": 9,
+            "voltage_pu": 0.9427406625079964,
+            "angle_deg": -14.527410223058407,
+            "load_mw": 125.0,
+            "load_mvar": 50.0,
+            "vmin_pu": 0.9,
+            "vmax_pu": 1.1
+          }
+        ],
+        "branches": [
+          {
+            "from": 1,
+            "to": 4,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 14.35269075538627,
+            "to_mva": 14.366961619670152,
+            "loading_pct": 5.74678464786806
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 14.366961580012848,
+            "to_mva": 21.22180101399529,
+            "loading_pct": 8.488720405598116
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 77.1360533784579,
+            "to_mva": 79.9949398288031,
+            "loading_pct": 53.329959885868725
+          },
+          {
+            "from": 3,
+            "to": 6,
+            "in_service": true,
+            "rating_mva": 300.0,
+            "from_mva": 28.89644461958145,
+            "to_mva": 29.026247695066566,
+            "loading_pct": 9.67541589835552
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "in_service": true,
+            "rating_mva": 150.0,
+            "from_mva": 149.99999554162528,
+            "to_mva": 148.07986140334586,
+            "loading_pct": 99.99999702775018
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 51.83682668381329,
+            "to_mva": 47.56510211042883,
+            "loading_pct": 20.734730673525316
+          },
+          {
+            "from": 8,
+            "to": 2,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 100.48164095477534,
+            "to_mva": 103.64058687831572,
+            "loading_pct": 41.456234751326285
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "in_service": true,
+            "rating_mva": 250.0,
+            "from_mva": 140.20922926706731,
+            "to_mva": 134.6291201679778,
+            "loading_pct": 56.08369170682692
+          },
+          {
+            "from": 9,
+            "to": 4,
+            "in_service": false,
+            "rating_mva": 250.0,
+            "from_mva": 0.0,
+            "to_mva": 0.0,
+            "loading_pct": 0.0
+          }
+        ],
+        "generators": [
+          {
+            "bus": 1,
+            "kind": "reference conventional generator",
+            "p_mw": 14.222455244120088,
+            "q_mvar": -1.929120010604365,
+            "pmin_mw": 10.0,
+            "pmax_mw": 250.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 2,
+            "kind": "reference conventional generator",
+            "p_mw": 83.87217380069048,
+            "q_mvar": 60.88373929920737,
+            "pmin_mw": 10.0,
+            "pmax_mw": 300.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 3,
+            "kind": "reference conventional generator",
+            "p_mw": 27.51734644682485,
+            "q_mvar": -8.820439636973736,
+            "pmin_mw": 10.0,
+            "pmax_mw": 270.0,
+            "qmin_mvar": -300.0,
+            "qmax_mvar": 300.0
+          },
+          {
+            "bus": 6,
+            "kind": "synthetic wind",
+            "p_mw": 199.9999999685901,
+            "q_mvar": 0.0,
+            "pmin_mw": 0.0,
+            "pmax_mw": 200.0,
+            "qmin_mvar": 0.0,
+            "qmax_mvar": 0.0
+          }
+        ],
+        "solver": {
+          "name": "PYPOWER AC OPF / PIPS",
+          "success": true,
+          "elapsed_seconds": 0.5195465059987328,
+          "message": "Converged"
+        },
+        "limitations": [
+          "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+          "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+          "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+          "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+          "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+          "Snapshot MW, not MWh or a share of Irish annual curtailment."
+        ],
+        "request": {
+          "profile": "reference_9bus",
+          "wind_mw": 200.0,
+          "load_scale": 1.0,
+          "action_id": "outage_9_4"
+        },
+        "trace": [
+          {
+            "step": "load_source",
+            "detail": "case9 SHA256 44a26bfc866bdb7cf4501ce3700e863d9ff6a901c6571ab5a91fe49dec677ba4"
+          },
+          {
+            "step": "declare_scenario",
+            "detail": {
+              "profile": "reference_9bus",
+              "wind_mw": 200.0,
+              "load_scale": 1.0,
+              "action_id": "outage_9_4"
+            }
+          },
+          {
+            "step": "solve",
+            "detail": "AC OPF with unchanged published limits and synthetic wind-curtailment objective"
+          },
+          {
+            "step": "independent_check",
+            "detail": "Direct branch-current equations and flat-start SciPy root"
+          }
+        ],
+        "accepted_wind_mw": 199.9999999685901,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    }
+  ]
+}

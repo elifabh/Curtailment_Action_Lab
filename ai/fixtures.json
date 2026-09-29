@@ -1,0 +1,18 @@
+{
+  "description": "Authored extraction examples, not field data or measured model performance.",
+  "scenario_allowlist": ["winter_peak", "windy_weekend", "maintenance_window"],
+  "cases": [
+    {"id": "cost", "input": "Find the lowest operating cost for winter_peak.", "expected": {"objective": "min_cost", "max_extra_cost_eur": null, "scenario_name": "winter_peak"}},
+    {"id": "spill_budget", "input": "Minimise wasted wind in windy_weekend. Allow up to EUR 250 extra total cost relative to the least-cost plan.", "expected": {"objective": "min_spill", "max_extra_cost_eur": 250, "scenario_name": "windy_weekend"}},
+    {"id": "compare", "input": "Compare the available plans for maintenance_window.", "expected": {"objective": "compare", "max_extra_cost_eur": null, "scenario_name": "maintenance_window"}},
+    {"id": "zero_budget", "input": "Reduce wind spill for winter_peak with EUR 0 extra total cost.", "expected": {"objective": "min_spill", "max_extra_cost_eur": 0, "scenario_name": "winter_peak"}},
+    {"id": "fractional", "input": "Compare windy_weekend plans with at most €12.50 extra total cost.", "expected": {"objective": "compare", "max_extra_cost_eur": 12.5, "scenario_name": "windy_weekend"}},
+    {"id": "missing_scenario", "input": "Please find the least-cost plan.", "expected": null},
+    {"id": "unknown_scenario", "input": "Minimise spill for south_coast.", "expected": null},
+    {"id": "no_currency", "input": "Minimise spill in windy_weekend with up to 300 extra total cost.", "expected": null},
+    {"id": "other_currency", "input": "Minimise spill in winter_peak with an extra budget of GBP 50.", "expected": null},
+    {"id": "negative_budget", "input": "Compare maintenance_window with an extra budget of EUR -20.", "expected": null},
+    {"id": "percentage_budget", "input": "Minimise spill in winter_peak but spend at most 5% more.", "expected": null},
+    {"id": "missing_objective", "input": "Look at windy_weekend.", "expected": null}
+  ]
+}

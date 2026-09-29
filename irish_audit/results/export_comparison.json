@@ -1,0 +1,100 @@
+{
+  "buses": {
+    "counts": [
+      2025,
+      2025
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {
+      "VM": {
+        "changed_count": 1876,
+        "max_abs_delta": 0.14545999999999992
+      },
+      "VA": {
+        "changed_count": 2018,
+        "max_abs_delta": 1.2876000000000012
+      }
+    },
+    "unavailable_fields": []
+  },
+  "loads": {
+    "counts": [
+      266,
+      266
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {},
+    "unavailable_fields": []
+  },
+  "generators": {
+    "counts": [
+      597,
+      597
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {
+      "PG": {
+        "changed_count": 4,
+        "max_abs_delta": 1.7389999999999972
+      },
+      "QG": {
+        "changed_count": 54,
+        "max_abs_delta": 58.308
+      }
+    },
+    "unavailable_fields": []
+  },
+  "branches": {
+    "counts": [
+      1129,
+      1129
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {},
+    "unavailable_fields": []
+  },
+  "transformers": {
+    "counts": [
+      1310,
+      1310
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {
+      "R1_2": {
+        "changed_count": 2,
+        "max_abs_delta": 2.9999999999388155e-10
+      }
+    },
+    "unavailable_fields": []
+  },
+  "switched_shunts": {
+    "counts": [
+      68,
+      68
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {
+      "BINIT": {
+        "changed_count": 26,
+        "max_abs_delta": 40.0
+      }
+    },
+    "unavailable_fields": []
+  },
+  "fixed_shunts": {
+    "counts": [
+      8,
+      8
+    ],
+    "only_v33": [],
+    "only_v35": [],
+    "changed_fields": {},
+    "unavailable_fields": []
+  }
+}

@@ -1,0 +1,18 @@
+test_job_identifier_cannot_select_arbitrary_files (test_extension.ExtensionContracts.test_job_identifier_cannot_select_arbitrary_files) ... ok
+test_missing_dependencies_cannot_silently_return_recorded_result (test_extension.ExtensionContracts.test_missing_dependencies_cannot_silently_return_recorded_result) ... ok
+test_no_passing_interval_is_not_zero_saving (test_extension.ExtensionContracts.test_no_passing_interval_is_not_zero_saving) ... ok
+test_one_failed_comparison_blocks_full_period_total (test_extension.ExtensionContracts.test_one_failed_comparison_blocks_full_period_total) ... ok
+test_pilot_cannot_claim_an_unimplemented_dispatch_mode (test_extension.ExtensionContracts.test_pilot_cannot_claim_an_unimplemented_dispatch_mode) ... ok
+test_profile_keeps_real_and_assumed_values_separate (test_extension.ExtensionContracts.test_profile_keeps_real_and_assumed_values_separate) ... ok
+test_signed_energy_retains_adverse_intervals (test_extension.ExtensionContracts.test_signed_energy_retains_adverse_intervals) ... ok
+test_unknown_inputs_and_unbounded_values_are_rejected (test_extension.ExtensionContracts.test_unknown_inputs_and_unbounded_values_are_rejected) ... ok
+test_valid_snapshot_retains_exact_requested_inputs (test_extension.ExtensionContracts.test_valid_snapshot_retains_exact_requested_inputs) ... ok
+test_config_and_saved_example_are_distinct_from_new_calculation (test_extension.ExtensionRoutes.test_config_and_saved_example_are_distinct_from_new_calculation) ... ok
+test_cross_origin_cannot_start_fresh_calculation (test_extension.ExtensionRoutes.test_cross_origin_cannot_start_fresh_calculation) ... ok
+test_fresh_page_and_javascript_routes_exist (test_extension.ExtensionRoutes.test_fresh_page_and_javascript_routes_exist) ... ok
+test_same_origin_request_calls_fresh_service (test_extension.ExtensionRoutes.test_same_origin_request_calls_fresh_service) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.027s
+
+OK

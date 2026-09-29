@@ -1,0 +1,6604 @@
+{
+  "sources": [
+    {
+      "name": "TYTFS2024_WP2024_V33.raw",
+      "sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24"
+    },
+    {
+      "name": "TYTFS2024_WP2024_V35.raw",
+      "sha256": "d36a0da878b5a725064534b027cbb87e8c92bb2000a810256cf24408e2696c27"
+    }
+  ],
+  "bus_counts": [
+    2025,
+    2025
+  ],
+  "bus_record_difference_count": 2018,
+  "common_bus_records_identical": false,
+  "common_bus_numeric_field_max_differences": {
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.14545999999999992,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0
+  },
+  "active_bus_uniform_phase_rotation_deg": -0.23419999999999952,
+  "max_angle_difference_after_rotation_deg": 1.0534000000000017,
+  "bus_data_equivalent_up_to_angle_reference_and_printed_precision": false,
+  "v35_solution_settings": {
+    "GENERAL": {
+      "THRSHZ": "0.0001",
+      "PQBRAK": "0.7",
+      "BLOWUP": "5.0",
+      "MaxIsolLvls": "4",
+      "CAMaxReptSln": "20",
+      "ChkDupCntLbl": "0"
+    },
+    "GAUSS": {
+      "ITMX": "100",
+      "ACCP": "1.6",
+      "ACCQ": "1.6",
+      "ACCM": "1.0",
+      "TOL": "0.0001"
+    },
+    "NEWTON": {
+      "ITMXN": "20",
+      "ACCN": "1.0",
+      "TOLN": "0.1",
+      "VCTOLQ": "0.1",
+      "VCTOLV": "0.00001",
+      "DVLIM": "0.99",
+      "NDVFCT": "0.99"
+    },
+    "ADJUST": {
+      "ADJTHR": "0.005",
+      "ACCTAP": "1.0",
+      "TAPLIM": "0.05",
+      "SWVBND": "100.0",
+      "MXTPSS": "99",
+      "MXSWIM": "10"
+    },
+    "TYSL": {
+      "ITMXTY": "20",
+      "ACCTY": "1.0",
+      "TOLTY": "0.00001"
+    },
+    "SOLVER": {
+      "ACTAPS": "0",
+      "AREAIN": "0",
+      "PHSHFT": "0",
+      "DCTAPS": "0",
+      "SWSHNT": "0",
+      "FLATST": "0",
+      "VARLIM": "0",
+      "NONDIV": "0",
+      "algorithm": "FDNS"
+    }
+  },
+  "source_voltage_violations": [
+    {
+      "id": 10602,
+      "name": "ARIGNA",
+      "base_kv": 20.0,
+      "vm": 1.10593,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 10671,
+      "name": "W_CORRIEM",
+      "base_kv": 0.69,
+      "vm": 1.10593,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 10672,
+      "name": "W_KILRONAN",
+      "base_kv": 0.69,
+      "vm": 1.10593,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 10673,
+      "name": "W_SPIONKO",
+      "base_kv": 0.69,
+      "vm": 1.10593,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 10674,
+      "name": "W_SELTANAV",
+      "base_kv": 0.4,
+      "vm": 1.10593,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 12574,
+      "name": "W_LISSYCASEY",
+      "base_kv": 0.69,
+      "vm": 1.11841,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 12582,
+      "name": "BOOLT 1 20",
+      "base_kv": 20.0,
+      "vm": 1.11839,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 12592,
+      "name": "LISSYWF 20",
+      "base_kv": 20.0,
+      "vm": 1.11841,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13102,
+      "name": "SCARTAGLEN",
+      "base_kv": 20.0,
+      "vm": 1.10213,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13112,
+      "name": "COOLEGREAN 2",
+      "base_kv": 20.0,
+      "vm": 1.10161,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13114,
+      "name": "CORDAL",
+      "base_kv": 38.0,
+      "vm": 1.10161,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13124,
+      "name": "CORDAL",
+      "base_kv": 38.0,
+      "vm": 1.10268,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13134,
+      "name": "CORDAL",
+      "base_kv": 38.0,
+      "vm": 1.10213,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13170,
+      "name": "W_SCARTAGLEN",
+      "base_kv": 0.4,
+      "vm": 1.10213,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13171,
+      "name": "W_COOLEGREAN",
+      "base_kv": 0.69,
+      "vm": 1.10161,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 13172,
+      "name": "W_SCARTAGLEN",
+      "base_kv": 0.69,
+      "vm": 1.10213,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 14602,
+      "name": "BARRANAF",
+      "base_kv": 20.0,
+      "vm": 1.19139,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21802,
+      "name": "SLANE",
+      "base_kv": 20.0,
+      "vm": 1.11505,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21804,
+      "name": "DRYBRIDGE",
+      "base_kv": 38.0,
+      "vm": 1.12284,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21812,
+      "name": "DUNMORE",
+      "base_kv": 20.0,
+      "vm": 1.11509,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21814,
+      "name": "RATHMULLEN",
+      "base_kv": 38.0,
+      "vm": 1.12322,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21821,
+      "name": "SLANE",
+      "base_kv": 10.0,
+      "vm": 1.12324,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21822,
+      "name": "DULEEK",
+      "base_kv": 20.0,
+      "vm": 1.12407,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21824,
+      "name": "SLANE",
+      "base_kv": 38.0,
+      "vm": 1.12323,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21831,
+      "name": "GRANGEGEETH",
+      "base_kv": 10.0,
+      "vm": 1.12325,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21834,
+      "name": "J21",
+      "base_kv": 38.0,
+      "vm": 1.12293,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21842,
+      "name": "RATHDRINAGH",
+      "base_kv": 20.0,
+      "vm": 1.12437,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21844,
+      "name": "DULEEK",
+      "base_kv": 38.0,
+      "vm": 1.12312,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21854,
+      "name": "MEATH WASTE",
+      "base_kv": 38.0,
+      "vm": 1.12335,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21864,
+      "name": "DUNLEER",
+      "base_kv": 38.0,
+      "vm": 1.12298,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21871,
+      "name": "W_DUNMORE",
+      "base_kv": 0.69,
+      "vm": 1.11509,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21872,
+      "name": "W_DUNMORE",
+      "base_kv": 0.4,
+      "vm": 1.11509,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 21874,
+      "name": "W_BURTONSTOW",
+      "base_kv": 0.69,
+      "vm": 1.12413,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 22231,
+      "name": "DUNMANWAY",
+      "base_kv": 10.0,
+      "vm": 1.18203,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 22279,
+      "name": "W_KNOCKEENBU",
+      "base_kv": 20.0,
+      "vm": 1.18231,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23604,
+      "name": "ENNIS",
+      "base_kv": 38.0,
+      "vm": 1.17879,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23611,
+      "name": "ENNIS NRTH",
+      "base_kv": 10.0,
+      "vm": 1.12884,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23612,
+      "name": "COROFIN",
+      "base_kv": 20.0,
+      "vm": 1.12884,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23614,
+      "name": "ENNIS NRTH",
+      "base_kv": 38.0,
+      "vm": 1.17884,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23621,
+      "name": "COROFIN",
+      "base_kv": 10.0,
+      "vm": 1.12884,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 23685,
+      "name": "LISSANE WEST",
+      "base_kv": 20.0,
+      "vm": 1.17879,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 32404,
+      "name": "KILTEEL",
+      "base_kv": 38.0,
+      "vm": 1.15481,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 32405,
+      "name": "KILTEEL",
+      "base_kv": 38.0,
+      "vm": 1.15481,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35802,
+      "name": "MEENANILTA S",
+      "base_kv": 20.0,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35804,
+      "name": "LETTERKENNY",
+      "base_kv": 38.0,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35813,
+      "name": "LETTERKENNY",
+      "base_kv": 20.0,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35814,
+      "name": "MILFORD",
+      "base_kv": 38.0,
+      "vm": 1.13325,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35815,
+      "name": "LETTERKENNY",
+      "base_kv": 20.0,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35822,
+      "name": "MILFORD",
+      "base_kv": 20.0,
+      "vm": 1.13325,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35832,
+      "name": "CULLIAGH",
+      "base_kv": 20.0,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35871,
+      "name": "W_MEENANIL",
+      "base_kv": 0.69,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35872,
+      "name": "W_MEENANIL",
+      "base_kv": 0.69,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35873,
+      "name": "W_MEENANIL",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35875,
+      "name": "W_CARK(1)",
+      "base_kv": 0.69,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35876,
+      "name": "W_CULLIAGH",
+      "base_kv": 0.69,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35877,
+      "name": "W_LURGANBO",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35878,
+      "name": "MEENBANEWF",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35879,
+      "name": "MEENBANEWP",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 35880,
+      "name": "W_FINNRENEW",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 40004,
+      "name": "MULLINGAR",
+      "base_kv": 38.0,
+      "vm": 1.1656,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 40014,
+      "name": "PV_TULLYNALL",
+      "base_kv": 38.0,
+      "vm": 1.16576,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42001,
+      "name": "ATHGARVAN",
+      "base_kv": 10.0,
+      "vm": 1.16655,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42004,
+      "name": "BIO_NEWBRIDG",
+      "base_kv": 38.0,
+      "vm": 1.16655,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42011,
+      "name": "MORRISTOWN",
+      "base_kv": 10.0,
+      "vm": 1.16661,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42014,
+      "name": "MORRISTOWN",
+      "base_kv": 38.0,
+      "vm": 1.16657,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42021,
+      "name": "POLLARDSTOWN",
+      "base_kv": 10.0,
+      "vm": 1.16664,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42201,
+      "name": "ATHBOY",
+      "base_kv": 10.0,
+      "vm": 1.14123,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42204,
+      "name": "HY_NAVAN",
+      "base_kv": 38.0,
+      "vm": 1.14096,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42214,
+      "name": "ATHBOY",
+      "base_kv": 38.0,
+      "vm": 1.14123,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42224,
+      "name": "J28",
+      "base_kv": 38.0,
+      "vm": 1.14107,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42234,
+      "name": "KELLS",
+      "base_kv": 38.0,
+      "vm": 1.14119,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42244,
+      "name": "KELLS",
+      "base_kv": 38.0,
+      "vm": 1.14124,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 42272,
+      "name": "PV_FRIARSPAR",
+      "base_kv": 0.4,
+      "vm": 1.14096,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44804,
+      "name": "PORTLAOISE",
+      "base_kv": 38.0,
+      "vm": 1.11715,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44805,
+      "name": "BIO_PORTLAO",
+      "base_kv": 38.0,
+      "vm": 1.11715,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44811,
+      "name": "PORTARLINGTO",
+      "base_kv": 10.0,
+      "vm": 1.11758,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44812,
+      "name": "LISDOWNEY",
+      "base_kv": 20.0,
+      "vm": 1.11738,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44814,
+      "name": "BALLYCONRA",
+      "base_kv": 38.0,
+      "vm": 1.11717,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44821,
+      "name": "SHANDERRY",
+      "base_kv": 10.0,
+      "vm": 1.11759,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 44834,
+      "name": "PORTARLINGTO",
+      "base_kv": 38.0,
+      "vm": 1.11754,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47002,
+      "name": "CLEGGILL",
+      "base_kv": 20.0,
+      "vm": 1.13709,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47004,
+      "name": "RICHMOND",
+      "base_kv": 38.0,
+      "vm": 1.13702,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47014,
+      "name": "LONGFORD",
+      "base_kv": 38.0,
+      "vm": 1.13709,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47024,
+      "name": "EDGEWORTHSTO",
+      "base_kv": 38.0,
+      "vm": 1.13713,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47034,
+      "name": "LISNAGEERAGH",
+      "base_kv": 38.0,
+      "vm": 1.13713,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 47072,
+      "name": "PV_CLEGGILL",
+      "base_kv": 0.4,
+      "vm": 1.13709,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49602,
+      "name": "CARRICKALLEN",
+      "base_kv": 20.0,
+      "vm": 1.16344,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49604,
+      "name": "SHANKILL",
+      "base_kv": 38.0,
+      "vm": 1.16307,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49605,
+      "name": "W_HY_SHANKIL",
+      "base_kv": 38.0,
+      "vm": 1.16307,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49608,
+      "name": "W_CARRICKALL",
+      "base_kv": 0.69,
+      "vm": 1.16344,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49613,
+      "name": "MOUNTAIN",
+      "base_kv": 20.0,
+      "vm": 1.16307,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49614,
+      "name": "CARRICKALLEN",
+      "base_kv": 38.0,
+      "vm": 1.16344,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49672,
+      "name": "W_MOUNTAIN",
+      "base_kv": 0.69,
+      "vm": 1.16307,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49683,
+      "name": "DRUMMAN",
+      "base_kv": 20.0,
+      "vm": 1.21844,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49802,
+      "name": "MANORHAMILTO",
+      "base_kv": 20.0,
+      "vm": 1.14146,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49804,
+      "name": "HY_SLIGO",
+      "base_kv": 38.0,
+      "vm": 1.14895,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49812,
+      "name": "FAUGHARY",
+      "base_kv": 20.0,
+      "vm": 1.14162,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49814,
+      "name": "SLIGO38B",
+      "base_kv": 38.0,
+      "vm": 1.14976,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49832,
+      "name": "MANORHAMILTO",
+      "base_kv": 20.0,
+      "vm": 1.14155,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 49842,
+      "name": "CARRIC PH1",
+      "base_kv": 20.0,
+      "vm": 1.14157,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50004,
+      "name": "SOMERSET",
+      "base_kv": 38.0,
+      "vm": 1.11614,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50012,
+      "name": "SOMERSET 20",
+      "base_kv": 20.0,
+      "vm": 1.12113,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50014,
+      "name": "SONNAGHOLD",
+      "base_kv": 38.0,
+      "vm": 1.12113,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50022,
+      "name": "SOMERSET",
+      "base_kv": 20.0,
+      "vm": 1.12544,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50032,
+      "name": "LISBEG",
+      "base_kv": 20.0,
+      "vm": 1.12651,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 50071,
+      "name": "W_SONNAGH",
+      "base_kv": 0.69,
+      "vm": 1.12113,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52201,
+      "name": "KILKEE 10",
+      "base_kv": 10.0,
+      "vm": 1.21873,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52202,
+      "name": "TULLAWF 20",
+      "base_kv": 20.0,
+      "vm": 1.22651,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52204,
+      "name": "TULABRACK",
+      "base_kv": 38.0,
+      "vm": 1.15782,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52211,
+      "name": "CARROWNA 10",
+      "base_kv": 10.0,
+      "vm": 1.2188,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52212,
+      "name": "MOANMORE",
+      "base_kv": 20.0,
+      "vm": 1.15782,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52214,
+      "name": "TULLAWF 38",
+      "base_kv": 38.0,
+      "vm": 1.15782,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52224,
+      "name": "KILRUSH 38",
+      "base_kv": 38.0,
+      "vm": 1.15837,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52232,
+      "name": "WESTWAVE KIL",
+      "base_kv": 20.0,
+      "vm": 1.15782,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52234,
+      "name": "KILKEE 38",
+      "base_kv": 38.0,
+      "vm": 1.15947,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52271,
+      "name": "W_MOANMORE",
+      "base_kv": 0.4,
+      "vm": 1.15782,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52614,
+      "name": "TRIEN",
+      "base_kv": 38.0,
+      "vm": 1.10646,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52624,
+      "name": "TRIEN",
+      "base_kv": 38.0,
+      "vm": 1.11016,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52632,
+      "name": "TOURNAFULLA",
+      "base_kv": 20.0,
+      "vm": 1.10194,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52634,
+      "name": "TOURNAFULLA",
+      "base_kv": 38.0,
+      "vm": 1.11025,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52642,
+      "name": "KNOCKAWARRIG",
+      "base_kv": 20.0,
+      "vm": 1.10194,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52644,
+      "name": "KNOCKAWARRIG",
+      "base_kv": 38.0,
+      "vm": 1.11025,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52675,
+      "name": "W_KNOCKAWA",
+      "base_kv": 0.66,
+      "vm": 1.10194,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 52676,
+      "name": "W_TOURNAFU",
+      "base_kv": 0.69,
+      "vm": 1.10194,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53032,
+      "name": "TULLAROAN",
+      "base_kv": 20.0,
+      "vm": 1.16419,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53042,
+      "name": "TULLAROAN",
+      "base_kv": 20.0,
+      "vm": 1.18923,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53052,
+      "name": "TULLAROAN",
+      "base_kv": 20.0,
+      "vm": 1.16423,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53062,
+      "name": "HOMESHILL",
+      "base_kv": 20.0,
+      "vm": 1.18946,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53072,
+      "name": "ANCNOC",
+      "base_kv": 20.0,
+      "vm": 1.16424,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53604,
+      "name": "TRILLICK",
+      "base_kv": 38.0,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53612,
+      "name": "DRUMLOUG",
+      "base_kv": 20.0,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53615,
+      "name": "CROCKAHENNY",
+      "base_kv": 20.0,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53616,
+      "name": "DRUMLOUG",
+      "base_kv": 20.0,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53671,
+      "name": "W_CROCKAHE",
+      "base_kv": 0.4,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53672,
+      "name": "W_DRUMLOUG",
+      "base_kv": 0.69,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 53674,
+      "name": "W_DRUMLOUG",
+      "base_kv": 0.69,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 64813,
+      "name": "W_LISKERAN",
+      "base_kv": 0.4,
+      "vm": 1.13156,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 67213,
+      "name": "W_AN_CNOC",
+      "base_kv": 0.69,
+      "vm": 1.16424,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68087,
+      "name": "W_CARRICKEEN",
+      "base_kv": 0.4,
+      "vm": 1.14157,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68101,
+      "name": "W_FAUGHA_PH1",
+      "base_kv": 0.4,
+      "vm": 1.14162,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68125,
+      "name": "COOMLEAGH",
+      "base_kv": 10.0,
+      "vm": 1.18231,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68128,
+      "name": "W_CARROWNA_P",
+      "base_kv": 20.0,
+      "vm": 1.2188,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68131,
+      "name": "W_BALLYBEAGH",
+      "base_kv": 0.69,
+      "vm": 1.16419,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68134,
+      "name": "W_BARRANAF_P",
+      "base_kv": 0.69,
+      "vm": 1.19139,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68157,
+      "name": "W_HOLMES_H_P",
+      "base_kv": 0.69,
+      "vm": 1.18946,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68195,
+      "name": "W_COOLY_PH1",
+      "base_kv": 38.0,
+      "vm": 1.12313,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68230,
+      "name": "MEATH_WASTE",
+      "base_kv": 10.0,
+      "vm": 1.12376,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68241,
+      "name": "W_DUNMORE_PH",
+      "base_kv": 0.4,
+      "vm": 1.11509,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68285,
+      "name": "W_LISDOWNE_P",
+      "base_kv": 20.0,
+      "vm": 1.11743,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68311,
+      "name": "W_TULLABRA_P",
+      "base_kv": 20.0,
+      "vm": 1.22651,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68313,
+      "name": "KNOCKHARLEY_",
+      "base_kv": 20.0,
+      "vm": 1.12413,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68314,
+      "name": "KNOCKHARLEY_",
+      "base_kv": 20.0,
+      "vm": 1.12413,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 68554,
+      "name": "BIO_FARRELLY",
+      "base_kv": 38.0,
+      "vm": 1.14124,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 74561,
+      "name": "CAST6P",
+      "base_kv": 22.0,
+      "vm": 1.10087,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 74564,
+      "name": "CAST6S",
+      "base_kv": 22.0,
+      "vm": 1.10946,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75030,
+      "name": "COLE3-",
+      "base_kv": 33.0,
+      "vm": 1.12628,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75031,
+      "name": "BMNY3-",
+      "base_kv": 33.0,
+      "vm": 1.12704,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75032,
+      "name": "GRVN3-",
+      "base_kv": 33.0,
+      "vm": 1.12699,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75080,
+      "name": "COLE3_DU",
+      "base_kv": 33.0,
+      "vm": 1.12683,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75090,
+      "name": "RENEW_CO",
+      "base_kv": 33.0,
+      "vm": 1.12628,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75091,
+      "name": "WIND_RIG",
+      "base_kv": 33.0,
+      "vm": 1.12688,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75092,
+      "name": "WIND_GRU",
+      "base_kv": 33.0,
+      "vm": 1.12753,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75093,
+      "name": "WIND_GAR",
+      "base_kv": 33.0,
+      "vm": 1.12724,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75094,
+      "name": "WIND_DNM",
+      "base_kv": 33.0,
+      "vm": 1.12692,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 75095,
+      "name": "WIND_DUN",
+      "base_kv": 33.0,
+      "vm": 1.12682,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77030,
+      "name": "DRUM3-",
+      "base_kv": 33.0,
+      "vm": 1.10049,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77090,
+      "name": "RENEW_DR",
+      "base_kv": 33.0,
+      "vm": 1.10049,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77530,
+      "name": "DUNG3-",
+      "base_kv": 33.0,
+      "vm": 1.12042,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77531,
+      "name": "TULY3-",
+      "base_kv": 33.0,
+      "vm": 1.12074,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77590,
+      "name": "PV_RENEW_DU",
+      "base_kv": 33.0,
+      "vm": 1.12042,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 77591,
+      "name": "WIND_CRO",
+      "base_kv": 33.0,
+      "vm": 1.1212,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 84530,
+      "name": "LOGE3-",
+      "base_kv": 33.0,
+      "vm": 1.11595,
+      "vmin": 0.9,
+      "vmax": 1.1
+    },
+    {
+      "id": 84590,
+      "name": "RENEW_LO",
+      "base_kv": 33.0,
+      "vm": 1.11681,
+      "vmin": 0.9,
+      "vmax": 1.1
+    }
+  ],
+  "source_voltage_violation_count": 173,
+  "source_voltage_violations_ge_100kv": 0,
+  "voltage_violations_by_export": {
+    "33": {
+      "total": 173,
+      "ge_100kv": 0,
+      "records": [
+        {
+          "id": 10602,
+          "name": "ARIGNA",
+          "base_kv": 20.0,
+          "vm": 1.10593,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10671,
+          "name": "W_CORRIEM",
+          "base_kv": 0.69,
+          "vm": 1.10593,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10672,
+          "name": "W_KILRONAN",
+          "base_kv": 0.69,
+          "vm": 1.10593,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10673,
+          "name": "W_SPIONKO",
+          "base_kv": 0.69,
+          "vm": 1.10593,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10674,
+          "name": "W_SELTANAV",
+          "base_kv": 0.4,
+          "vm": 1.10593,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12574,
+          "name": "W_LISSYCASEY",
+          "base_kv": 0.69,
+          "vm": 1.11841,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12582,
+          "name": "BOOLT 1 20",
+          "base_kv": 20.0,
+          "vm": 1.11839,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12592,
+          "name": "LISSYWF 20",
+          "base_kv": 20.0,
+          "vm": 1.11841,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13102,
+          "name": "SCARTAGLEN",
+          "base_kv": 20.0,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13112,
+          "name": "COOLEGREAN 2",
+          "base_kv": 20.0,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13114,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13124,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13134,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13170,
+          "name": "W_SCARTAGLEN",
+          "base_kv": 0.4,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13171,
+          "name": "W_COOLEGREAN",
+          "base_kv": 0.69,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13172,
+          "name": "W_SCARTAGLEN",
+          "base_kv": 0.69,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14602,
+          "name": "BARRANAF",
+          "base_kv": 20.0,
+          "vm": 1.19139,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21802,
+          "name": "SLANE",
+          "base_kv": 20.0,
+          "vm": 1.11505,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21804,
+          "name": "DRYBRIDGE",
+          "base_kv": 38.0,
+          "vm": 1.12284,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21812,
+          "name": "DUNMORE",
+          "base_kv": 20.0,
+          "vm": 1.11509,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21814,
+          "name": "RATHMULLEN",
+          "base_kv": 38.0,
+          "vm": 1.12322,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21821,
+          "name": "SLANE",
+          "base_kv": 10.0,
+          "vm": 1.12324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21822,
+          "name": "DULEEK",
+          "base_kv": 20.0,
+          "vm": 1.12407,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21824,
+          "name": "SLANE",
+          "base_kv": 38.0,
+          "vm": 1.12323,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21831,
+          "name": "GRANGEGEETH",
+          "base_kv": 10.0,
+          "vm": 1.12325,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21834,
+          "name": "J21",
+          "base_kv": 38.0,
+          "vm": 1.12293,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21842,
+          "name": "RATHDRINAGH",
+          "base_kv": 20.0,
+          "vm": 1.12437,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21844,
+          "name": "DULEEK",
+          "base_kv": 38.0,
+          "vm": 1.12312,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21854,
+          "name": "MEATH WASTE",
+          "base_kv": 38.0,
+          "vm": 1.12335,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21864,
+          "name": "DUNLEER",
+          "base_kv": 38.0,
+          "vm": 1.12298,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21871,
+          "name": "W_DUNMORE",
+          "base_kv": 0.69,
+          "vm": 1.11509,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21872,
+          "name": "W_DUNMORE",
+          "base_kv": 0.4,
+          "vm": 1.11509,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21874,
+          "name": "W_BURTONSTOW",
+          "base_kv": 0.69,
+          "vm": 1.12413,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22231,
+          "name": "DUNMANWAY",
+          "base_kv": 10.0,
+          "vm": 1.18203,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22279,
+          "name": "W_KNOCKEENBU",
+          "base_kv": 20.0,
+          "vm": 1.18231,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23604,
+          "name": "ENNIS",
+          "base_kv": 38.0,
+          "vm": 1.17879,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23611,
+          "name": "ENNIS NRTH",
+          "base_kv": 10.0,
+          "vm": 1.12884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23612,
+          "name": "COROFIN",
+          "base_kv": 20.0,
+          "vm": 1.12884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23614,
+          "name": "ENNIS NRTH",
+          "base_kv": 38.0,
+          "vm": 1.17884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23621,
+          "name": "COROFIN",
+          "base_kv": 10.0,
+          "vm": 1.12884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23685,
+          "name": "LISSANE WEST",
+          "base_kv": 20.0,
+          "vm": 1.17879,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32404,
+          "name": "KILTEEL",
+          "base_kv": 38.0,
+          "vm": 1.15481,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32405,
+          "name": "KILTEEL",
+          "base_kv": 38.0,
+          "vm": 1.15481,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35802,
+          "name": "MEENANILTA S",
+          "base_kv": 20.0,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35804,
+          "name": "LETTERKENNY",
+          "base_kv": 38.0,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35813,
+          "name": "LETTERKENNY",
+          "base_kv": 20.0,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35814,
+          "name": "MILFORD",
+          "base_kv": 38.0,
+          "vm": 1.13325,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35815,
+          "name": "LETTERKENNY",
+          "base_kv": 20.0,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35822,
+          "name": "MILFORD",
+          "base_kv": 20.0,
+          "vm": 1.13325,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35832,
+          "name": "CULLIAGH",
+          "base_kv": 20.0,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35871,
+          "name": "W_MEENANIL",
+          "base_kv": 0.69,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35872,
+          "name": "W_MEENANIL",
+          "base_kv": 0.69,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35873,
+          "name": "W_MEENANIL",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35875,
+          "name": "W_CARK(1)",
+          "base_kv": 0.69,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35876,
+          "name": "W_CULLIAGH",
+          "base_kv": 0.69,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35877,
+          "name": "W_LURGANBO",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35878,
+          "name": "MEENBANEWF",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35879,
+          "name": "MEENBANEWP",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35880,
+          "name": "W_FINNRENEW",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40004,
+          "name": "MULLINGAR",
+          "base_kv": 38.0,
+          "vm": 1.1656,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40014,
+          "name": "PV_TULLYNALL",
+          "base_kv": 38.0,
+          "vm": 1.16576,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42001,
+          "name": "ATHGARVAN",
+          "base_kv": 10.0,
+          "vm": 1.16655,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42004,
+          "name": "BIO_NEWBRIDG",
+          "base_kv": 38.0,
+          "vm": 1.16655,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42011,
+          "name": "MORRISTOWN",
+          "base_kv": 10.0,
+          "vm": 1.16661,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42014,
+          "name": "MORRISTOWN",
+          "base_kv": 38.0,
+          "vm": 1.16657,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42021,
+          "name": "POLLARDSTOWN",
+          "base_kv": 10.0,
+          "vm": 1.16664,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42201,
+          "name": "ATHBOY",
+          "base_kv": 10.0,
+          "vm": 1.14123,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42204,
+          "name": "HY_NAVAN",
+          "base_kv": 38.0,
+          "vm": 1.14096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42214,
+          "name": "ATHBOY",
+          "base_kv": 38.0,
+          "vm": 1.14123,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42224,
+          "name": "J28",
+          "base_kv": 38.0,
+          "vm": 1.14107,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42234,
+          "name": "KELLS",
+          "base_kv": 38.0,
+          "vm": 1.14119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42244,
+          "name": "KELLS",
+          "base_kv": 38.0,
+          "vm": 1.14124,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42272,
+          "name": "PV_FRIARSPAR",
+          "base_kv": 0.4,
+          "vm": 1.14096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44804,
+          "name": "PORTLAOISE",
+          "base_kv": 38.0,
+          "vm": 1.11715,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44805,
+          "name": "BIO_PORTLAO",
+          "base_kv": 38.0,
+          "vm": 1.11715,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44811,
+          "name": "PORTARLINGTO",
+          "base_kv": 10.0,
+          "vm": 1.11758,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44812,
+          "name": "LISDOWNEY",
+          "base_kv": 20.0,
+          "vm": 1.11738,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44814,
+          "name": "BALLYCONRA",
+          "base_kv": 38.0,
+          "vm": 1.11717,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44821,
+          "name": "SHANDERRY",
+          "base_kv": 10.0,
+          "vm": 1.11759,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44834,
+          "name": "PORTARLINGTO",
+          "base_kv": 38.0,
+          "vm": 1.11754,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47002,
+          "name": "CLEGGILL",
+          "base_kv": 20.0,
+          "vm": 1.13709,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47004,
+          "name": "RICHMOND",
+          "base_kv": 38.0,
+          "vm": 1.13702,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47014,
+          "name": "LONGFORD",
+          "base_kv": 38.0,
+          "vm": 1.13709,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47024,
+          "name": "EDGEWORTHSTO",
+          "base_kv": 38.0,
+          "vm": 1.13713,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47034,
+          "name": "LISNAGEERAGH",
+          "base_kv": 38.0,
+          "vm": 1.13713,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47072,
+          "name": "PV_CLEGGILL",
+          "base_kv": 0.4,
+          "vm": 1.13709,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49602,
+          "name": "CARRICKALLEN",
+          "base_kv": 20.0,
+          "vm": 1.16344,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49604,
+          "name": "SHANKILL",
+          "base_kv": 38.0,
+          "vm": 1.16307,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49605,
+          "name": "W_HY_SHANKIL",
+          "base_kv": 38.0,
+          "vm": 1.16307,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49608,
+          "name": "W_CARRICKALL",
+          "base_kv": 0.69,
+          "vm": 1.16344,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49613,
+          "name": "MOUNTAIN",
+          "base_kv": 20.0,
+          "vm": 1.16307,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49614,
+          "name": "CARRICKALLEN",
+          "base_kv": 38.0,
+          "vm": 1.16344,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49672,
+          "name": "W_MOUNTAIN",
+          "base_kv": 0.69,
+          "vm": 1.16307,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49683,
+          "name": "DRUMMAN",
+          "base_kv": 20.0,
+          "vm": 1.21844,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49802,
+          "name": "MANORHAMILTO",
+          "base_kv": 20.0,
+          "vm": 1.14146,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49804,
+          "name": "HY_SLIGO",
+          "base_kv": 38.0,
+          "vm": 1.14895,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49812,
+          "name": "FAUGHARY",
+          "base_kv": 20.0,
+          "vm": 1.14162,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49814,
+          "name": "SLIGO38B",
+          "base_kv": 38.0,
+          "vm": 1.14976,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49832,
+          "name": "MANORHAMILTO",
+          "base_kv": 20.0,
+          "vm": 1.14155,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49842,
+          "name": "CARRIC PH1",
+          "base_kv": 20.0,
+          "vm": 1.14157,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50004,
+          "name": "SOMERSET",
+          "base_kv": 38.0,
+          "vm": 1.11614,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50012,
+          "name": "SOMERSET 20",
+          "base_kv": 20.0,
+          "vm": 1.12113,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50014,
+          "name": "SONNAGHOLD",
+          "base_kv": 38.0,
+          "vm": 1.12113,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50022,
+          "name": "SOMERSET",
+          "base_kv": 20.0,
+          "vm": 1.12544,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50032,
+          "name": "LISBEG",
+          "base_kv": 20.0,
+          "vm": 1.12651,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50071,
+          "name": "W_SONNAGH",
+          "base_kv": 0.69,
+          "vm": 1.12113,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52201,
+          "name": "KILKEE 10",
+          "base_kv": 10.0,
+          "vm": 1.21873,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52202,
+          "name": "TULLAWF 20",
+          "base_kv": 20.0,
+          "vm": 1.22651,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52204,
+          "name": "TULABRACK",
+          "base_kv": 38.0,
+          "vm": 1.15782,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52211,
+          "name": "CARROWNA 10",
+          "base_kv": 10.0,
+          "vm": 1.2188,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52212,
+          "name": "MOANMORE",
+          "base_kv": 20.0,
+          "vm": 1.15782,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52214,
+          "name": "TULLAWF 38",
+          "base_kv": 38.0,
+          "vm": 1.15782,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52224,
+          "name": "KILRUSH 38",
+          "base_kv": 38.0,
+          "vm": 1.15837,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52232,
+          "name": "WESTWAVE KIL",
+          "base_kv": 20.0,
+          "vm": 1.15782,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52234,
+          "name": "KILKEE 38",
+          "base_kv": 38.0,
+          "vm": 1.15947,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52271,
+          "name": "W_MOANMORE",
+          "base_kv": 0.4,
+          "vm": 1.15782,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52614,
+          "name": "TRIEN",
+          "base_kv": 38.0,
+          "vm": 1.10646,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52624,
+          "name": "TRIEN",
+          "base_kv": 38.0,
+          "vm": 1.11016,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52632,
+          "name": "TOURNAFULLA",
+          "base_kv": 20.0,
+          "vm": 1.10194,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52634,
+          "name": "TOURNAFULLA",
+          "base_kv": 38.0,
+          "vm": 1.11025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52642,
+          "name": "KNOCKAWARRIG",
+          "base_kv": 20.0,
+          "vm": 1.10194,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52644,
+          "name": "KNOCKAWARRIG",
+          "base_kv": 38.0,
+          "vm": 1.11025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52675,
+          "name": "W_KNOCKAWA",
+          "base_kv": 0.66,
+          "vm": 1.10194,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52676,
+          "name": "W_TOURNAFU",
+          "base_kv": 0.69,
+          "vm": 1.10194,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53032,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.16419,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53042,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.18923,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53052,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.16423,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53062,
+          "name": "HOMESHILL",
+          "base_kv": 20.0,
+          "vm": 1.18946,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53072,
+          "name": "ANCNOC",
+          "base_kv": 20.0,
+          "vm": 1.16424,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53604,
+          "name": "TRILLICK",
+          "base_kv": 38.0,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53612,
+          "name": "DRUMLOUG",
+          "base_kv": 20.0,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53615,
+          "name": "CROCKAHENNY",
+          "base_kv": 20.0,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53616,
+          "name": "DRUMLOUG",
+          "base_kv": 20.0,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53671,
+          "name": "W_CROCKAHE",
+          "base_kv": 0.4,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53672,
+          "name": "W_DRUMLOUG",
+          "base_kv": 0.69,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53674,
+          "name": "W_DRUMLOUG",
+          "base_kv": 0.69,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 64813,
+          "name": "W_LISKERAN",
+          "base_kv": 0.4,
+          "vm": 1.13156,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67213,
+          "name": "W_AN_CNOC",
+          "base_kv": 0.69,
+          "vm": 1.16424,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68087,
+          "name": "W_CARRICKEEN",
+          "base_kv": 0.4,
+          "vm": 1.14157,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68101,
+          "name": "W_FAUGHA_PH1",
+          "base_kv": 0.4,
+          "vm": 1.14162,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68125,
+          "name": "COOMLEAGH",
+          "base_kv": 10.0,
+          "vm": 1.18231,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68128,
+          "name": "W_CARROWNA_P",
+          "base_kv": 20.0,
+          "vm": 1.2188,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68131,
+          "name": "W_BALLYBEAGH",
+          "base_kv": 0.69,
+          "vm": 1.16419,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68134,
+          "name": "W_BARRANAF_P",
+          "base_kv": 0.69,
+          "vm": 1.19139,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68157,
+          "name": "W_HOLMES_H_P",
+          "base_kv": 0.69,
+          "vm": 1.18946,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68195,
+          "name": "W_COOLY_PH1",
+          "base_kv": 38.0,
+          "vm": 1.12313,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68230,
+          "name": "MEATH_WASTE",
+          "base_kv": 10.0,
+          "vm": 1.12376,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68241,
+          "name": "W_DUNMORE_PH",
+          "base_kv": 0.4,
+          "vm": 1.11509,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68285,
+          "name": "W_LISDOWNE_P",
+          "base_kv": 20.0,
+          "vm": 1.11743,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68311,
+          "name": "W_TULLABRA_P",
+          "base_kv": 20.0,
+          "vm": 1.22651,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68313,
+          "name": "KNOCKHARLEY_",
+          "base_kv": 20.0,
+          "vm": 1.12413,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68314,
+          "name": "KNOCKHARLEY_",
+          "base_kv": 20.0,
+          "vm": 1.12413,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68554,
+          "name": "BIO_FARRELLY",
+          "base_kv": 38.0,
+          "vm": 1.14124,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 74561,
+          "name": "CAST6P",
+          "base_kv": 22.0,
+          "vm": 1.10087,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 74564,
+          "name": "CAST6S",
+          "base_kv": 22.0,
+          "vm": 1.10946,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75030,
+          "name": "COLE3-",
+          "base_kv": 33.0,
+          "vm": 1.12628,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75031,
+          "name": "BMNY3-",
+          "base_kv": 33.0,
+          "vm": 1.12704,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75032,
+          "name": "GRVN3-",
+          "base_kv": 33.0,
+          "vm": 1.12699,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75080,
+          "name": "COLE3_DU",
+          "base_kv": 33.0,
+          "vm": 1.12683,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75090,
+          "name": "RENEW_CO",
+          "base_kv": 33.0,
+          "vm": 1.12628,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75091,
+          "name": "WIND_RIG",
+          "base_kv": 33.0,
+          "vm": 1.12688,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75092,
+          "name": "WIND_GRU",
+          "base_kv": 33.0,
+          "vm": 1.12753,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75093,
+          "name": "WIND_GAR",
+          "base_kv": 33.0,
+          "vm": 1.12724,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75094,
+          "name": "WIND_DNM",
+          "base_kv": 33.0,
+          "vm": 1.12692,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75095,
+          "name": "WIND_DUN",
+          "base_kv": 33.0,
+          "vm": 1.12682,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77030,
+          "name": "DRUM3-",
+          "base_kv": 33.0,
+          "vm": 1.10049,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77090,
+          "name": "RENEW_DR",
+          "base_kv": 33.0,
+          "vm": 1.10049,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77530,
+          "name": "DUNG3-",
+          "base_kv": 33.0,
+          "vm": 1.12042,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77531,
+          "name": "TULY3-",
+          "base_kv": 33.0,
+          "vm": 1.12074,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77590,
+          "name": "PV_RENEW_DU",
+          "base_kv": 33.0,
+          "vm": 1.12042,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77591,
+          "name": "WIND_CRO",
+          "base_kv": 33.0,
+          "vm": 1.1212,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84530,
+          "name": "LOGE3-",
+          "base_kv": 33.0,
+          "vm": 1.11595,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84590,
+          "name": "RENEW_LO",
+          "base_kv": 33.0,
+          "vm": 1.11681,
+          "vmin": 0.9,
+          "vmax": 1.1
+        }
+      ]
+    },
+    "35": {
+      "total": 466,
+      "ge_100kv": 43,
+      "records": [
+        {
+          "id": 1061,
+          "name": "ARIGNA",
+          "base_kv": 110.0,
+          "vm": 1.11127,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1141,
+          "name": "ATHLONE",
+          "base_kv": 110.0,
+          "vm": 1.11155,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1401,
+          "name": "BELLACORICK",
+          "base_kv": 110.0,
+          "vm": 1.17834,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1631,
+          "name": "CORDERRY",
+          "base_kv": 110.0,
+          "vm": 1.11803,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1641,
+          "name": "CASHLA",
+          "base_kv": 110.0,
+          "vm": 1.12804,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1661,
+          "name": "CASTLEBAR",
+          "base_kv": 110.0,
+          "vm": 1.17227,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1821,
+          "name": "CLOON",
+          "base_kv": 110.0,
+          "vm": 1.13359,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1831,
+          "name": "SCREEB",
+          "base_kv": 110.0,
+          "vm": 1.13152,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1861,
+          "name": "CARRICK ON S",
+          "base_kv": 110.0,
+          "vm": 1.102,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1931,
+          "name": "CUNGHILL",
+          "base_kv": 110.0,
+          "vm": 1.14543,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 1951,
+          "name": "CARROWBEG",
+          "base_kv": 110.0,
+          "vm": 1.16821,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2090,
+          "name": "KNOCKRANNY A",
+          "base_kv": 110.0,
+          "vm": 1.13548,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2091,
+          "name": "KNOCKRANNY",
+          "base_kv": 110.0,
+          "vm": 1.13643,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2111,
+          "name": "UGGOOL",
+          "base_kv": 110.0,
+          "vm": 1.13557,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2171,
+          "name": "KNOCKALOUGH",
+          "base_kv": 110.0,
+          "vm": 1.13734,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2281,
+          "name": "DALTON_A1",
+          "base_kv": 110.0,
+          "vm": 1.16061,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2521,
+          "name": "FLAGFORD",
+          "base_kv": 110.0,
+          "vm": 1.1034,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2671,
+          "name": "GARVAGH",
+          "base_kv": 110.0,
+          "vm": 1.12199,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2681,
+          "name": "GILRA",
+          "base_kv": 110.0,
+          "vm": 1.10573,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 2781,
+          "name": "GALWAY",
+          "base_kv": 110.0,
+          "vm": 1.12741,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 4041,
+          "name": "MOY",
+          "base_kv": 110.0,
+          "vm": 1.18204,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 4371,
+          "name": "GLENREE",
+          "base_kv": 110.0,
+          "vm": 1.16973,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 4951,
+          "name": "SALTHILL",
+          "base_kv": 110.0,
+          "vm": 1.12715,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 4981,
+          "name": "SLIGO",
+          "base_kv": 110.0,
+          "vm": 1.11691,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 5041,
+          "name": "SRANANAGH",
+          "base_kv": 110.0,
+          "vm": 1.11267,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 5241,
+          "name": "TAWNAGHMORE",
+          "base_kv": 110.0,
+          "vm": 1.18212,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 5251,
+          "name": "TAWN_B",
+          "base_kv": 110.0,
+          "vm": 1.18211,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10602,
+          "name": "ARIGNA",
+          "base_kv": 20.0,
+          "vm": 1.1617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10619,
+          "name": "ARIGNA_T",
+          "base_kv": 110.0,
+          "vm": 1.11128,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10671,
+          "name": "W_CORRIEM",
+          "base_kv": 0.69,
+          "vm": 1.1617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10672,
+          "name": "W_KILRONAN",
+          "base_kv": 0.69,
+          "vm": 1.1617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10673,
+          "name": "W_SPIONKO",
+          "base_kv": 0.69,
+          "vm": 1.1617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 10674,
+          "name": "W_SELTANAV",
+          "base_kv": 0.4,
+          "vm": 1.1617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11303,
+          "name": "BS_TOBERTORE",
+          "base_kv": 33.0,
+          "vm": 1.10006,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11372,
+          "name": "W_TOBERTOREE",
+          "base_kv": 0.69,
+          "vm": 1.10006,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11402,
+          "name": "CONNAUGHT RE",
+          "base_kv": 20.0,
+          "vm": 1.10268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11404,
+          "name": "ATHLONE",
+          "base_kv": 38.0,
+          "vm": 1.10268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11414,
+          "name": "MOATE",
+          "base_kv": 38.0,
+          "vm": 1.10499,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 11461,
+          "name": "ATH_CAP",
+          "base_kv": 110.0,
+          "vm": 1.11155,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12503,
+          "name": "BOOLY1WF 20",
+          "base_kv": 20.0,
+          "vm": 1.10286,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12504,
+          "name": "BOOLT 2 38",
+          "base_kv": 38.0,
+          "vm": 1.10283,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12512,
+          "name": "CAHERMURWF 2",
+          "base_kv": 20.0,
+          "vm": 1.11024,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12522,
+          "name": "KILTUMPERWF",
+          "base_kv": 20.0,
+          "vm": 1.11024,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12532,
+          "name": "GLENMORE 20",
+          "base_kv": 20.0,
+          "vm": 1.11024,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12534,
+          "name": "BOOLY1WF 38",
+          "base_kv": 38.0,
+          "vm": 1.10286,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12542,
+          "name": "GLENMOREWF 2",
+          "base_kv": 20.0,
+          "vm": 1.10347,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12574,
+          "name": "W_LISSYCASEY",
+          "base_kv": 0.69,
+          "vm": 1.14117,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12582,
+          "name": "BOOLT 1 20",
+          "base_kv": 20.0,
+          "vm": 1.14114,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 12592,
+          "name": "LISSYWF 20",
+          "base_kv": 20.0,
+          "vm": 1.14117,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13102,
+          "name": "SCARTAGLEN",
+          "base_kv": 20.0,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13112,
+          "name": "COOLEGREAN 2",
+          "base_kv": 20.0,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13114,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13124,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13134,
+          "name": "CORDAL",
+          "base_kv": 38.0,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13170,
+          "name": "W_SCARTAGLEN",
+          "base_kv": 0.4,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13171,
+          "name": "W_COOLEGREAN",
+          "base_kv": 0.69,
+          "vm": 1.10161,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 13172,
+          "name": "W_SCARTAGLEN",
+          "base_kv": 0.69,
+          "vm": 1.10213,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14001,
+          "name": "BELLACORICK",
+          "base_kv": 10.0,
+          "vm": 1.13617,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14002,
+          "name": "BELLACORICK",
+          "base_kv": 20.0,
+          "vm": 1.2341,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14004,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18586,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14006,
+          "name": "BUNNAHOW10",
+          "base_kv": 10.0,
+          "vm": 1.13627,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14010,
+          "name": "BELLACORICK",
+          "base_kv": 110.0,
+          "vm": 1.17834,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14013,
+          "name": "SRAHNAKILLY",
+          "base_kv": 110.0,
+          "vm": 1.17846,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14014,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18705,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14016,
+          "name": "CROAGHAUN",
+          "base_kv": 110.0,
+          "vm": 1.17835,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14024,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18634,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14034,
+          "name": "BELMULLET",
+          "base_kv": 38.0,
+          "vm": 1.18657,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14042,
+          "name": "OWENINNEY PH",
+          "base_kv": 33.0,
+          "vm": 1.17846,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14052,
+          "name": "OWENINNEY PH",
+          "base_kv": 33.0,
+          "vm": 1.17846,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14054,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18708,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14064,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18713,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14073,
+          "name": "W_BELLACORIC",
+          "base_kv": 0.69,
+          "vm": 1.2341,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14074,
+          "name": "BELLACORICK",
+          "base_kv": 38.0,
+          "vm": 1.18717,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 14602,
+          "name": "BARRANAF",
+          "base_kv": 20.0,
+          "vm": 1.19933,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16302,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.14947,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16312,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.12062,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16351,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.15039,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16354,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.12089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16361,
+          "name": "CARANNE HILL",
+          "base_kv": 20.0,
+          "vm": 1.15041,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16362,
+          "name": "BLACK BANKS",
+          "base_kv": 20.0,
+          "vm": 1.1495,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16364,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.12089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16365,
+          "name": "CORDERRY",
+          "base_kv": 20.0,
+          "vm": 1.12089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16366,
+          "name": "GEEVAGH",
+          "base_kv": 20.0,
+          "vm": 1.15038,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16367,
+          "name": "TULLYNAMOYLA",
+          "base_kv": 20.0,
+          "vm": 1.12065,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16371,
+          "name": "W_CARANNE_HI",
+          "base_kv": 0.69,
+          "vm": 1.15041,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16372,
+          "name": "W_BLACK_BANK",
+          "base_kv": 0.69,
+          "vm": 1.1495,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16373,
+          "name": "W_BLACK_BANK",
+          "base_kv": 0.69,
+          "vm": 1.1495,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16374,
+          "name": "W_ALTAGOWLAN",
+          "base_kv": 0.69,
+          "vm": 1.12089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16375,
+          "name": "W_MONEENATIE",
+          "base_kv": 0.69,
+          "vm": 1.12089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16376,
+          "name": "W_GEEVAGH",
+          "base_kv": 0.69,
+          "vm": 1.15038,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16377,
+          "name": "W_TULLYNAMOY",
+          "base_kv": 0.4,
+          "vm": 1.12065,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16378,
+          "name": "W_CARANNE_HI",
+          "base_kv": 0.69,
+          "vm": 1.15041,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16379,
+          "name": "W_MONEENATIE",
+          "base_kv": 0.69,
+          "vm": 1.15041,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16382,
+          "name": "W_TULLYNAMOY",
+          "base_kv": 0.4,
+          "vm": 1.12096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16384,
+          "name": "TULLYNAMOYLA",
+          "base_kv": 20.0,
+          "vm": 1.12096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16392,
+          "name": "W_TULLYNAMOY",
+          "base_kv": 0.4,
+          "vm": 1.12096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16394,
+          "name": "TULLYNAMOYLA",
+          "base_kv": 20.0,
+          "vm": 1.12096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16411,
+          "name": "CASHLA",
+          "base_kv": 110.0,
+          "vm": 1.12804,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16421,
+          "name": "CASH",
+          "base_kv": 10.5,
+          "vm": 1.12212,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16422,
+          "name": "CASHLA",
+          "base_kv": 10.5,
+          "vm": 1.12212,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16424,
+          "name": "CASH",
+          "base_kv": 10.5,
+          "vm": 1.12516,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16461,
+          "name": "CASH_CAP",
+          "base_kv": 110.0,
+          "vm": 1.12804,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16601,
+          "name": "KILTIMAGH",
+          "base_kv": 10.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16602,
+          "name": "CUILLALEA",
+          "base_kv": 20.0,
+          "vm": 1.1445,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16604,
+          "name": "CASTLEBAR",
+          "base_kv": 38.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16612,
+          "name": "RAHEEN BAR1",
+          "base_kv": 20.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16614,
+          "name": "CBAR T142 HO",
+          "base_kv": 38.0,
+          "vm": 1.16143,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16622,
+          "name": "LENANAVEA 1",
+          "base_kv": 20.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16632,
+          "name": "WINDSOR - LE",
+          "base_kv": 20.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16642,
+          "name": "RAHEEN BAR2",
+          "base_kv": 20.0,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16661,
+          "name": "CBAR_CAP",
+          "base_kv": 110.0,
+          "vm": 1.17227,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16662,
+          "name": "CBAR_SVC",
+          "base_kv": 110.0,
+          "vm": 1.17344,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16670,
+          "name": "W_LENENEVEA_",
+          "base_kv": 0.4,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16671,
+          "name": "W_CUILLALEA1",
+          "base_kv": 0.69,
+          "vm": 1.1445,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16672,
+          "name": "W_CUILLALEA2",
+          "base_kv": 0.69,
+          "vm": 1.1445,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16674,
+          "name": "W_RAHEEN_BAR",
+          "base_kv": 0.69,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16675,
+          "name": "W_RAHEEN_BAR",
+          "base_kv": 0.4,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16676,
+          "name": "W_LENANAVEA_",
+          "base_kv": 0.4,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 16679,
+          "name": "W_LENENEVA_3",
+          "base_kv": 0.69,
+          "vm": 1.15214,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18202,
+          "name": "CLOON2",
+          "base_kv": 20.0,
+          "vm": 1.1248,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18204,
+          "name": "CLOON",
+          "base_kv": 38.0,
+          "vm": 1.13347,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18271,
+          "name": "W_CLOONLUSK",
+          "base_kv": 0.69,
+          "vm": 1.1248,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18304,
+          "name": "SCREEB",
+          "base_kv": 38.0,
+          "vm": 1.13581,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18312,
+          "name": "CLIFDEN",
+          "base_kv": 20.0,
+          "vm": 1.1316,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18322,
+          "name": "ROSSAVEEL",
+          "base_kv": 20.0,
+          "vm": 1.13169,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18372,
+          "name": "W_ROSSAVEEL",
+          "base_kv": 0.69,
+          "vm": 1.13169,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18602,
+          "name": "MOHILL",
+          "base_kv": 20.0,
+          "vm": 1.10654,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18604,
+          "name": "CARRICK ON S",
+          "base_kv": 38.0,
+          "vm": 1.10572,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18611,
+          "name": "CASTLEREA",
+          "base_kv": 10.0,
+          "vm": 1.10638,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18614,
+          "name": "BOYLE",
+          "base_kv": 38.0,
+          "vm": 1.10587,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18624,
+          "name": "CASTLEREA",
+          "base_kv": 38.0,
+          "vm": 1.10638,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 18634,
+          "name": "MOHILL",
+          "base_kv": 38.0,
+          "vm": 1.10654,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19302,
+          "name": "CUNGHILL",
+          "base_kv": 20.0,
+          "vm": 1.19354,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19312,
+          "name": "CUNGHILL",
+          "base_kv": 20.0,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19317,
+          "name": "CUNG_SCOM",
+          "base_kv": 2.0,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19318,
+          "name": "CUNG_SCOM",
+          "base_kv": 20.0,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19322,
+          "name": "CUNGHILL",
+          "base_kv": 20.0,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19371,
+          "name": "W_KINGSMOUNT",
+          "base_kv": 0.66,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19372,
+          "name": "W_KINGSMOUNT",
+          "base_kv": 0.69,
+          "vm": 1.19598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 19504,
+          "name": "CARROWBEG",
+          "base_kv": 38.0,
+          "vm": 1.16793,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 20900,
+          "name": "BUFFY",
+          "base_kv": 110.0,
+          "vm": 1.13643,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 20903,
+          "name": "SEECON",
+          "base_kv": 33.0,
+          "vm": 1.13557,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 20913,
+          "name": "BUFFY",
+          "base_kv": 33.0,
+          "vm": 1.13643,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21004,
+          "name": "DUNDALK",
+          "base_kv": 38.0,
+          "vm": 1.11631,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21014,
+          "name": "BUSH",
+          "base_kv": 38.0,
+          "vm": 1.11664,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21022,
+          "name": "JENKINSTOWN",
+          "base_kv": 20.0,
+          "vm": 1.10823,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21024,
+          "name": "JENKINSTOWN",
+          "base_kv": 38.0,
+          "vm": 1.11659,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21034,
+          "name": "CASTLEBLANEY",
+          "base_kv": 38.0,
+          "vm": 1.12008,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21071,
+          "name": "W_DUNDALK",
+          "base_kv": 0.69,
+          "vm": 1.11631,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21103,
+          "name": "UGGOOL",
+          "base_kv": 33.0,
+          "vm": 1.13557,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21702,
+          "name": "KNOCKALOUGH",
+          "base_kv": 20.0,
+          "vm": 1.13734,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21791,
+          "name": "W_KNOCKALOUG",
+          "base_kv": 0.69,
+          "vm": 1.13734,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21802,
+          "name": "SLANE",
+          "base_kv": 20.0,
+          "vm": 1.13114,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21804,
+          "name": "DRYBRIDGE",
+          "base_kv": 38.0,
+          "vm": 1.13905,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21812,
+          "name": "DUNMORE",
+          "base_kv": 20.0,
+          "vm": 1.13119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21814,
+          "name": "RATHMULLEN",
+          "base_kv": 38.0,
+          "vm": 1.13943,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21821,
+          "name": "SLANE",
+          "base_kv": 10.0,
+          "vm": 1.13945,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21822,
+          "name": "DULEEK",
+          "base_kv": 20.0,
+          "vm": 1.14029,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21824,
+          "name": "SLANE",
+          "base_kv": 38.0,
+          "vm": 1.13945,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21831,
+          "name": "GRANGEGEETH",
+          "base_kv": 10.0,
+          "vm": 1.13946,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21834,
+          "name": "J21",
+          "base_kv": 38.0,
+          "vm": 1.13914,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21842,
+          "name": "RATHDRINAGH",
+          "base_kv": 20.0,
+          "vm": 1.1406,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21844,
+          "name": "DULEEK",
+          "base_kv": 38.0,
+          "vm": 1.13933,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21854,
+          "name": "MEATH WASTE",
+          "base_kv": 38.0,
+          "vm": 1.13956,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21864,
+          "name": "DUNLEER",
+          "base_kv": 38.0,
+          "vm": 1.13919,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21871,
+          "name": "W_DUNMORE",
+          "base_kv": 0.69,
+          "vm": 1.13119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21872,
+          "name": "W_DUNMORE",
+          "base_kv": 0.4,
+          "vm": 1.13119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 21874,
+          "name": "W_BURTONSTOW",
+          "base_kv": 0.69,
+          "vm": 1.14036,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22231,
+          "name": "DUNMANWAY",
+          "base_kv": 10.0,
+          "vm": 1.18803,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22279,
+          "name": "W_KNOCKEENBU",
+          "base_kv": 20.0,
+          "vm": 1.18831,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22404,
+          "name": "DALLOW",
+          "base_kv": 38.0,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22412,
+          "name": "SKEHANAG",
+          "base_kv": 20.0,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22422,
+          "name": "CARRIG",
+          "base_kv": 20.0,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22432,
+          "name": "LEABEG",
+          "base_kv": 20.0,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22442,
+          "name": "MEENWAUN",
+          "base_kv": 20.0,
+          "vm": 1.12211,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22452,
+          "name": "MEENWAUN",
+          "base_kv": 20.0,
+          "vm": 1.12245,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22471,
+          "name": "W_CARRIG",
+          "base_kv": 0.69,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22472,
+          "name": "W_SKEHANAG",
+          "base_kv": 0.69,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22473,
+          "name": "W_LEABEG",
+          "base_kv": 0.69,
+          "vm": 1.11915,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22474,
+          "name": "W_MEENWAUN",
+          "base_kv": 0.69,
+          "vm": 1.12245,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22802,
+          "name": "MACE UPPER",
+          "base_kv": 20.0,
+          "vm": 1.15099,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22804,
+          "name": "HY_DALTON",
+          "base_kv": 38.0,
+          "vm": 1.15099,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22811,
+          "name": "DALTON_A2",
+          "base_kv": 110.0,
+          "vm": 1.16061,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22812,
+          "name": "LISDUFF",
+          "base_kv": 20.0,
+          "vm": 1.17487,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22814,
+          "name": "DALTON",
+          "base_kv": 38.0,
+          "vm": 1.17423,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22824,
+          "name": "DALTON",
+          "base_kv": 38.0,
+          "vm": 1.17487,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22861,
+          "name": "DALT_CAP",
+          "base_kv": 110.0,
+          "vm": 1.16061,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22871,
+          "name": "W_MACEUPP",
+          "base_kv": 0.4,
+          "vm": 1.15099,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22872,
+          "name": "W_MAGHERAMOR",
+          "base_kv": 0.69,
+          "vm": 1.17487,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 22873,
+          "name": "BS_CARROWBEG",
+          "base_kv": 0.69,
+          "vm": 1.15099,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23604,
+          "name": "ENNIS",
+          "base_kv": 38.0,
+          "vm": 1.211,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23611,
+          "name": "ENNIS NRTH",
+          "base_kv": 10.0,
+          "vm": 1.15969,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23612,
+          "name": "COROFIN",
+          "base_kv": 20.0,
+          "vm": 1.15969,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23614,
+          "name": "ENNIS NRTH",
+          "base_kv": 38.0,
+          "vm": 1.21106,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23621,
+          "name": "COROFIN",
+          "base_kv": 10.0,
+          "vm": 1.15969,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 23685,
+          "name": "LISSANE WEST",
+          "base_kv": 20.0,
+          "vm": 1.211,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 25221,
+          "name": "FLAG1",
+          "base_kv": 10.5,
+          "vm": 1.10222,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 25222,
+          "name": "FLAG2",
+          "base_kv": 10.5,
+          "vm": 1.10236,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26700,
+          "name": "GARVAGH",
+          "base_kv": 20.0,
+          "vm": 1.19133,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26701,
+          "name": "GARVAGH",
+          "base_kv": 11.0,
+          "vm": 1.18871,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26702,
+          "name": "GARVAGH",
+          "base_kv": 20.0,
+          "vm": 1.19133,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26703,
+          "name": "GARVAGH",
+          "base_kv": 20.0,
+          "vm": 1.19133,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26704,
+          "name": "GARVAGH",
+          "base_kv": 38.0,
+          "vm": 1.12521,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26705,
+          "name": "GARVAGH",
+          "base_kv": 20.0,
+          "vm": 1.19174,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26709,
+          "name": "GAR SCOM",
+          "base_kv": 20.0,
+          "vm": 1.19144,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26710,
+          "name": "SHUNT GARVAG",
+          "base_kv": 20.0,
+          "vm": 1.19178,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26711,
+          "name": "GAR SCOM",
+          "base_kv": 0.48,
+          "vm": 1.21546,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26712,
+          "name": "GARVAGH",
+          "base_kv": 20.0,
+          "vm": 1.19133,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26722,
+          "name": "SHUNT GARVAG",
+          "base_kv": 20.0,
+          "vm": 1.20342,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26732,
+          "name": "W_DERRYSALLA",
+          "base_kv": 20.0,
+          "vm": 1.12521,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26771,
+          "name": "W_GAR_GLEBE_",
+          "base_kv": 0.69,
+          "vm": 1.19174,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26773,
+          "name": "W_GAR_TULLIN",
+          "base_kv": 0.69,
+          "vm": 1.19133,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 26802,
+          "name": "GILRA",
+          "base_kv": 20.0,
+          "vm": 1.14308,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 27801,
+          "name": "GALWAY",
+          "base_kv": 10.0,
+          "vm": 1.13223,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 27804,
+          "name": "GALWAY",
+          "base_kv": 38.0,
+          "vm": 1.12121,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 27805,
+          "name": "GALWAY",
+          "base_kv": 38.0,
+          "vm": 1.11763,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 28002,
+          "name": "GOLAGH",
+          "base_kv": 22.0,
+          "vm": 1.10009,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 28071,
+          "name": "W_BS_GOLAGH",
+          "base_kv": 0.69,
+          "vm": 1.10009,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32404,
+          "name": "KILTEEL",
+          "base_kv": 38.0,
+          "vm": 1.15943,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32405,
+          "name": "KILTEEL",
+          "base_kv": 38.0,
+          "vm": 1.15943,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32524,
+          "name": "MUINGATLAUNL",
+          "base_kv": 38.0,
+          "vm": 1.10046,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 32542,
+          "name": "REAMORE",
+          "base_kv": 20.0,
+          "vm": 1.10046,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35802,
+          "name": "MEENANILTA S",
+          "base_kv": 20.0,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35804,
+          "name": "LETTERKENNY",
+          "base_kv": 38.0,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35813,
+          "name": "LETTERKENNY",
+          "base_kv": 20.0,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35814,
+          "name": "MILFORD",
+          "base_kv": 38.0,
+          "vm": 1.17976,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35815,
+          "name": "LETTERKENNY",
+          "base_kv": 20.0,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35822,
+          "name": "MILFORD",
+          "base_kv": 20.0,
+          "vm": 1.17976,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35832,
+          "name": "CULLIAGH",
+          "base_kv": 20.0,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35871,
+          "name": "W_MEENANIL",
+          "base_kv": 0.69,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35872,
+          "name": "W_MEENANIL",
+          "base_kv": 0.69,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35873,
+          "name": "W_MEENANIL",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35875,
+          "name": "W_CARK(1)",
+          "base_kv": 0.69,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35876,
+          "name": "W_CULLIAGH",
+          "base_kv": 0.69,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35877,
+          "name": "W_LURGANBO",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35878,
+          "name": "MEENBANEWF",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35879,
+          "name": "MEENBANEWP",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 35880,
+          "name": "W_FINNRENEW",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38201,
+          "name": "CARRICKMACRO",
+          "base_kv": 10.0,
+          "vm": 1.10819,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38202,
+          "name": "CREGG",
+          "base_kv": 20.0,
+          "vm": 1.11268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38203,
+          "name": "CREGG",
+          "base_kv": 38.0,
+          "vm": 1.10734,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38204,
+          "name": "MEATHHILL",
+          "base_kv": 38.0,
+          "vm": 1.10733,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38211,
+          "name": "BAILIEBORO",
+          "base_kv": 20.0,
+          "vm": 1.10877,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38212,
+          "name": "GARTNANE",
+          "base_kv": 20.0,
+          "vm": 1.1079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38213,
+          "name": "GARTNANE",
+          "base_kv": 20.0,
+          "vm": 1.1079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38214,
+          "name": "CARRICKMACRO",
+          "base_kv": 38.0,
+          "vm": 1.10819,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38215,
+          "name": "MULLANAN",
+          "base_kv": 20.0,
+          "vm": 1.10901,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38224,
+          "name": "J26",
+          "base_kv": 38.0,
+          "vm": 1.10754,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38232,
+          "name": "RARAGH",
+          "base_kv": 20.0,
+          "vm": 1.10756,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38233,
+          "name": "RARAGH",
+          "base_kv": 38.0,
+          "vm": 1.10756,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38234,
+          "name": "KINGSCOURT",
+          "base_kv": 38.0,
+          "vm": 1.10754,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38241,
+          "name": "TULLYNAMALRA",
+          "base_kv": 10.0,
+          "vm": 1.10884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38242,
+          "name": "TEEVURCHER",
+          "base_kv": 20.0,
+          "vm": 1.10886,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38244,
+          "name": "BAILIEBORO",
+          "base_kv": 38.0,
+          "vm": 1.10866,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38254,
+          "name": "GARTNANEANE",
+          "base_kv": 38.0,
+          "vm": 1.1079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38264,
+          "name": "TULLYNAMALRA",
+          "base_kv": 38.0,
+          "vm": 1.10884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38271,
+          "name": "W_GARTNANE",
+          "base_kv": 0.69,
+          "vm": 1.1079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38272,
+          "name": "W_GARTNANE",
+          "base_kv": 0.69,
+          "vm": 1.1079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38273,
+          "name": "W_MULLANAN",
+          "base_kv": 0.69,
+          "vm": 1.10901,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38274,
+          "name": "BIO_BAILLE F",
+          "base_kv": 0.4,
+          "vm": 1.10943,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 38284,
+          "name": "MULLINALT",
+          "base_kv": 38.0,
+          "vm": 1.10901,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40004,
+          "name": "MULLINGAR",
+          "base_kv": 38.0,
+          "vm": 1.18908,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40014,
+          "name": "PV_TULLYNALL",
+          "base_kv": 38.0,
+          "vm": 1.18925,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40404,
+          "name": "MOY",
+          "base_kv": 38.0,
+          "vm": 1.18759,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40412,
+          "name": "LACKAN 20",
+          "base_kv": 20.0,
+          "vm": 1.18759,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40461,
+          "name": "MOY_CAP",
+          "base_kv": 110.0,
+          "vm": 1.18204,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40462,
+          "name": "MOYCAP2",
+          "base_kv": 110.0,
+          "vm": 1.18204,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 40471,
+          "name": "W_LACKAN",
+          "base_kv": 0.4,
+          "vm": 1.18759,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42001,
+          "name": "ATHGARVAN",
+          "base_kv": 10.0,
+          "vm": 1.17079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42004,
+          "name": "BIO_NEWBRIDG",
+          "base_kv": 38.0,
+          "vm": 1.17079,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42011,
+          "name": "MORRISTOWN",
+          "base_kv": 10.0,
+          "vm": 1.17086,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42014,
+          "name": "MORRISTOWN",
+          "base_kv": 38.0,
+          "vm": 1.17081,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42021,
+          "name": "POLLARDSTOWN",
+          "base_kv": 10.0,
+          "vm": 1.17089,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42201,
+          "name": "ATHBOY",
+          "base_kv": 10.0,
+          "vm": 1.15858,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42204,
+          "name": "HY_NAVAN",
+          "base_kv": 38.0,
+          "vm": 1.1583,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42214,
+          "name": "ATHBOY",
+          "base_kv": 38.0,
+          "vm": 1.15858,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42224,
+          "name": "J28",
+          "base_kv": 38.0,
+          "vm": 1.15842,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42234,
+          "name": "KELLS",
+          "base_kv": 38.0,
+          "vm": 1.15854,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42244,
+          "name": "KELLS",
+          "base_kv": 38.0,
+          "vm": 1.15859,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 42272,
+          "name": "PV_FRIARSPAR",
+          "base_kv": 0.4,
+          "vm": 1.1583,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43602,
+          "name": "KNOCKANEDEN",
+          "base_kv": 20.0,
+          "vm": 1.12797,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43604,
+          "name": "HY_OUGHTRAGH",
+          "base_kv": 38.0,
+          "vm": 1.12797,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43671,
+          "name": "W_KNOCKANEDE",
+          "base_kv": 0.4,
+          "vm": 1.12797,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43704,
+          "name": "GLENREE",
+          "base_kv": 38.0,
+          "vm": 1.17936,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43712,
+          "name": "GLENREE",
+          "base_kv": 20.0,
+          "vm": 1.17939,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43714,
+          "name": "GLENREE",
+          "base_kv": 38.0,
+          "vm": 1.17937,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43722,
+          "name": "GLENREE",
+          "base_kv": 20.0,
+          "vm": 1.17937,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43724,
+          "name": "GLENREE",
+          "base_kv": 38.0,
+          "vm": 1.17939,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43742,
+          "name": "BLACKLOUGH",
+          "base_kv": 20.0,
+          "vm": 1.17361,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43752,
+          "name": "BLACKLOUGH",
+          "base_kv": 20.0,
+          "vm": 1.17436,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43771,
+          "name": "W_BUNNYCONNE",
+          "base_kv": 0.69,
+          "vm": 1.17937,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 43774,
+          "name": "W_CARROWLEAG",
+          "base_kv": 0.4,
+          "vm": 1.17939,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44804,
+          "name": "PORTLAOISE",
+          "base_kv": 38.0,
+          "vm": 1.12596,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44805,
+          "name": "BIO_PORTLAO",
+          "base_kv": 38.0,
+          "vm": 1.12596,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44811,
+          "name": "PORTARLINGTO",
+          "base_kv": 10.0,
+          "vm": 1.1264,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44812,
+          "name": "LISDOWNEY",
+          "base_kv": 20.0,
+          "vm": 1.12619,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44814,
+          "name": "BALLYCONRA",
+          "base_kv": 38.0,
+          "vm": 1.12598,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44821,
+          "name": "SHANDERRY",
+          "base_kv": 10.0,
+          "vm": 1.12641,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 44834,
+          "name": "PORTARLINGTO",
+          "base_kv": 38.0,
+          "vm": 1.12635,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 46801,
+          "name": "PFIZER_ASKEA",
+          "base_kv": 10.0,
+          "vm": 1.10223,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47002,
+          "name": "CLEGGILL",
+          "base_kv": 20.0,
+          "vm": 1.19096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47004,
+          "name": "RICHMOND",
+          "base_kv": 38.0,
+          "vm": 1.19088,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47014,
+          "name": "LONGFORD",
+          "base_kv": 38.0,
+          "vm": 1.19096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47024,
+          "name": "EDGEWORTHSTO",
+          "base_kv": 38.0,
+          "vm": 1.191,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47034,
+          "name": "LISNAGEERAGH",
+          "base_kv": 38.0,
+          "vm": 1.191,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 47072,
+          "name": "PV_CLEGGILL",
+          "base_kv": 0.4,
+          "vm": 1.19096,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49501,
+          "name": "SALTHILL",
+          "base_kv": 10.0,
+          "vm": 1.12926,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49502,
+          "name": "LEITIR G",
+          "base_kv": 20.0,
+          "vm": 1.14025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49504,
+          "name": "SALTHILL",
+          "base_kv": 38.0,
+          "vm": 1.12987,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49513,
+          "name": "INVERIN",
+          "base_kv": 20.0,
+          "vm": 1.12987,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49514,
+          "name": "LEITIR G",
+          "base_kv": 38.0,
+          "vm": 1.13036,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49571,
+          "name": "W_LEITIR_G",
+          "base_kv": 0.4,
+          "vm": 1.14025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49572,
+          "name": "W_INVERIN",
+          "base_kv": 0.69,
+          "vm": 1.12987,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49602,
+          "name": "CARRICKALLEN",
+          "base_kv": 20.0,
+          "vm": 1.19645,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49604,
+          "name": "SHANKILL",
+          "base_kv": 38.0,
+          "vm": 1.19606,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49605,
+          "name": "W_HY_SHANKIL",
+          "base_kv": 38.0,
+          "vm": 1.19606,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49608,
+          "name": "W_CARRICKALL",
+          "base_kv": 0.69,
+          "vm": 1.19645,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49613,
+          "name": "MOUNTAIN",
+          "base_kv": 20.0,
+          "vm": 1.19606,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49614,
+          "name": "CARRICKALLEN",
+          "base_kv": 38.0,
+          "vm": 1.19645,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49672,
+          "name": "W_MOUNTAIN",
+          "base_kv": 0.69,
+          "vm": 1.19606,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49683,
+          "name": "DRUMMAN",
+          "base_kv": 20.0,
+          "vm": 1.253,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49802,
+          "name": "MANORHAMILTO",
+          "base_kv": 20.0,
+          "vm": 1.21527,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49804,
+          "name": "HY_SLIGO",
+          "base_kv": 38.0,
+          "vm": 1.22324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49812,
+          "name": "FAUGHARY",
+          "base_kv": 20.0,
+          "vm": 1.21543,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49814,
+          "name": "SLIGO38B",
+          "base_kv": 38.0,
+          "vm": 1.22411,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49832,
+          "name": "MANORHAMILTO",
+          "base_kv": 20.0,
+          "vm": 1.21536,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49842,
+          "name": "CARRIC PH1",
+          "base_kv": 20.0,
+          "vm": 1.21539,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 49861,
+          "name": "SLIG_CAP",
+          "base_kv": 110.0,
+          "vm": 1.11691,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50004,
+          "name": "SOMERSET",
+          "base_kv": 38.0,
+          "vm": 1.15747,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50012,
+          "name": "SOMERSET 20",
+          "base_kv": 20.0,
+          "vm": 1.16265,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50014,
+          "name": "SONNAGHOLD",
+          "base_kv": 38.0,
+          "vm": 1.16265,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50022,
+          "name": "SOMERSET",
+          "base_kv": 20.0,
+          "vm": 1.16712,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50032,
+          "name": "LISBEG",
+          "base_kv": 20.0,
+          "vm": 1.16823,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50071,
+          "name": "W_SONNAGH",
+          "base_kv": 0.69,
+          "vm": 1.16265,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 50421,
+          "name": "SRANANAGH",
+          "base_kv": 10.5,
+          "vm": 1.10999,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52201,
+          "name": "KILKEE 10",
+          "base_kv": 10.0,
+          "vm": 1.23862,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52202,
+          "name": "TULLAWF 20",
+          "base_kv": 20.0,
+          "vm": 1.24652,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52204,
+          "name": "TULABRACK",
+          "base_kv": 38.0,
+          "vm": 1.17671,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52211,
+          "name": "CARROWNA 10",
+          "base_kv": 10.0,
+          "vm": 1.23868,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52212,
+          "name": "MOANMORE",
+          "base_kv": 20.0,
+          "vm": 1.17671,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52214,
+          "name": "TULLAWF 38",
+          "base_kv": 38.0,
+          "vm": 1.17671,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52224,
+          "name": "KILRUSH 38",
+          "base_kv": 38.0,
+          "vm": 1.17727,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52232,
+          "name": "WESTWAVE KIL",
+          "base_kv": 20.0,
+          "vm": 1.17671,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52234,
+          "name": "KILKEE 38",
+          "base_kv": 38.0,
+          "vm": 1.17838,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52271,
+          "name": "W_MOANMORE",
+          "base_kv": 0.4,
+          "vm": 1.17671,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52404,
+          "name": "TAWNAGHMORE",
+          "base_kv": 38.0,
+          "vm": 1.19074,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52414,
+          "name": "TAWNAGHMORE",
+          "base_kv": 38.0,
+          "vm": 1.19074,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52476,
+          "name": "TAW_PEAK",
+          "base_kv": 10.5,
+          "vm": 1.12891,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52477,
+          "name": "TAW_PEAK",
+          "base_kv": 10.5,
+          "vm": 1.13496,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52479,
+          "name": "BIO_MAYO_REN",
+          "base_kv": 13.8,
+          "vm": 1.18211,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52602,
+          "name": "TRIEN 20 B",
+          "base_kv": 20.0,
+          "vm": 1.10324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52604,
+          "name": "TRIEN",
+          "base_kv": 38.0,
+          "vm": 1.10324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52605,
+          "name": "ABBEYFEALEX",
+          "base_kv": 38.0,
+          "vm": 1.10378,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52612,
+          "name": "TOURNAFULLA",
+          "base_kv": 20.0,
+          "vm": 1.10379,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52614,
+          "name": "TRIEN",
+          "base_kv": 38.0,
+          "vm": 1.11518,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52615,
+          "name": "TOURNAFULLA1",
+          "base_kv": 38.0,
+          "vm": 1.10379,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52624,
+          "name": "TRIEN",
+          "base_kv": 38.0,
+          "vm": 1.11891,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52625,
+          "name": "CURRAGHDERRI",
+          "base_kv": 38.0,
+          "vm": 1.10378,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52632,
+          "name": "TOURNAFULLA",
+          "base_kv": 20.0,
+          "vm": 1.11062,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52634,
+          "name": "TOURNAFULLA",
+          "base_kv": 38.0,
+          "vm": 1.119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52642,
+          "name": "KNOCKAWARRIG",
+          "base_kv": 20.0,
+          "vm": 1.11062,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52644,
+          "name": "KNOCKAWARRIG",
+          "base_kv": 38.0,
+          "vm": 1.119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52654,
+          "name": "SMEARLA",
+          "base_kv": 38.0,
+          "vm": 1.1033,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52664,
+          "name": "BALLYBUNION",
+          "base_kv": 38.0,
+          "vm": 1.10374,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52671,
+          "name": "W_BEALEHI",
+          "base_kv": 0.69,
+          "vm": 1.10324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52672,
+          "name": "W_BEALEHI",
+          "base_kv": 0.69,
+          "vm": 1.10324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52673,
+          "name": "W_TOURNAFU",
+          "base_kv": 0.69,
+          "vm": 1.10379,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52674,
+          "name": "CURRAGHDERRI",
+          "base_kv": 38.0,
+          "vm": 1.10377,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52675,
+          "name": "W_KNOCKAWA",
+          "base_kv": 0.66,
+          "vm": 1.11062,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52676,
+          "name": "W_TOURNAFU",
+          "base_kv": 0.69,
+          "vm": 1.11062,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52677,
+          "name": "W_BEALE_HILL",
+          "base_kv": 0.69,
+          "vm": 1.10324,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52678,
+          "name": "PV_SHANACOOL",
+          "base_kv": 0.4,
+          "vm": 1.1033,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52694,
+          "name": "ABBEYFEALE",
+          "base_kv": 38.0,
+          "vm": 1.10369,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52700,
+          "name": "W_GARRACUMME",
+          "base_kv": 0.66,
+          "vm": 1.1057,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52702,
+          "name": "GARRACUMMER",
+          "base_kv": 20.0,
+          "vm": 1.1057,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52705,
+          "name": "CAUTEEN",
+          "base_kv": 38.0,
+          "vm": 1.1057,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52712,
+          "name": "HOLYFORD",
+          "base_kv": 20.0,
+          "vm": 1.1057,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52714,
+          "name": "CAUTEEN",
+          "base_kv": 38.0,
+          "vm": 1.10327,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52744,
+          "name": "CAPPAGH WHIT",
+          "base_kv": 38.0,
+          "vm": 1.10582,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52752,
+          "name": "CAUTEEN",
+          "base_kv": 20.0,
+          "vm": 1.10327,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 52778,
+          "name": "W_HOLYFORD",
+          "base_kv": 0.69,
+          "vm": 1.1057,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53032,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.17044,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53042,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.19562,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53052,
+          "name": "TULLAROAN",
+          "base_kv": 20.0,
+          "vm": 1.17048,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53062,
+          "name": "HOMESHILL",
+          "base_kv": 20.0,
+          "vm": 1.19585,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53072,
+          "name": "ANCNOC",
+          "base_kv": 20.0,
+          "vm": 1.17049,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53604,
+          "name": "TRILLICK",
+          "base_kv": 38.0,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53612,
+          "name": "DRUMLOUG",
+          "base_kv": 20.0,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53615,
+          "name": "CROCKAHENNY",
+          "base_kv": 20.0,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53616,
+          "name": "DRUMLOUG",
+          "base_kv": 20.0,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53671,
+          "name": "W_CROCKAHE",
+          "base_kv": 0.4,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53672,
+          "name": "W_DRUMLOUG",
+          "base_kv": 0.69,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 53674,
+          "name": "W_DRUMLOUG",
+          "base_kv": 0.69,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 64813,
+          "name": "W_LISKERAN",
+          "base_kv": 0.4,
+          "vm": 1.17801,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 66094,
+          "name": "SLIABH BAWN",
+          "base_kv": 110.0,
+          "vm": 1.10456,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 66095,
+          "name": "W_SLIABH_BAW",
+          "base_kv": 20.0,
+          "vm": 1.13872,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67025,
+          "name": "W_OWENINEY_P",
+          "base_kv": 0.69,
+          "vm": 1.17846,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67026,
+          "name": "W_OWENINEY_P",
+          "base_kv": 0.69,
+          "vm": 1.17846,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67030,
+          "name": "W_BOOLYNAG_P",
+          "base_kv": 0.69,
+          "vm": 1.10286,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67058,
+          "name": "W_SEECON_PH1",
+          "base_kv": 0.69,
+          "vm": 1.13557,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67059,
+          "name": "W_BS_KILLALA",
+          "base_kv": 20.0,
+          "vm": 1.19074,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67062,
+          "name": "W_BUFFY",
+          "base_kv": 0.69,
+          "vm": 1.13643,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67071,
+          "name": "W_OWENINEY_3",
+          "base_kv": 20.0,
+          "vm": 1.17835,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67073,
+          "name": "W_SORRELL IS",
+          "base_kv": 0.69,
+          "vm": 1.10347,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 67213,
+          "name": "W_AN_CNOC",
+          "base_kv": 0.69,
+          "vm": 1.17049,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68087,
+          "name": "W_CARRICKEEN",
+          "base_kv": 0.4,
+          "vm": 1.21539,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68092,
+          "name": "W_UGGOOL_PH1",
+          "base_kv": 0.69,
+          "vm": 1.13557,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68094,
+          "name": "W_LEITIR_PH1",
+          "base_kv": 0.4,
+          "vm": 1.14025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68101,
+          "name": "W_FAUGHA_PH1",
+          "base_kv": 0.4,
+          "vm": 1.21543,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68108,
+          "name": "W_LEALET_PH1",
+          "base_kv": 0.4,
+          "vm": 1.14025,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68125,
+          "name": "COOMLEAGH",
+          "base_kv": 10.0,
+          "vm": 1.18831,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68128,
+          "name": "W_CARROWNA_P",
+          "base_kv": 20.0,
+          "vm": 1.23868,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68131,
+          "name": "W_BALLYBEAGH",
+          "base_kv": 0.69,
+          "vm": 1.17044,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68134,
+          "name": "W_BARRANAF_P",
+          "base_kv": 0.69,
+          "vm": 1.19933,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68143,
+          "name": "W_BUNNAHOW_P",
+          "base_kv": 0.69,
+          "vm": 1.13627,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68148,
+          "name": "W_CAHERMUR_P",
+          "base_kv": 0.69,
+          "vm": 1.11024,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68157,
+          "name": "W_HOLMES_H_P",
+          "base_kv": 0.69,
+          "vm": 1.19585,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68175,
+          "name": "W_CREGG",
+          "base_kv": 0.69,
+          "vm": 1.11268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68195,
+          "name": "W_COOLY_PH1",
+          "base_kv": 38.0,
+          "vm": 1.16982,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68230,
+          "name": "MEATH_WASTE",
+          "base_kv": 10.0,
+          "vm": 1.13998,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68233,
+          "name": "W_GORTNACLOG",
+          "base_kv": 38.0,
+          "vm": 1.10383,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68240,
+          "name": "W_TULLYNAM_P",
+          "base_kv": 0.69,
+          "vm": 1.10884,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68241,
+          "name": "W_DUNMORE_PH",
+          "base_kv": 0.4,
+          "vm": 1.13119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68247,
+          "name": "W_CORVODERRY",
+          "base_kv": 20.0,
+          "vm": 1.17931,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68254,
+          "name": "W_CARROWLE_P",
+          "base_kv": 0.69,
+          "vm": 1.17939,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68262,
+          "name": "W_STACK_MOUN",
+          "base_kv": 0.69,
+          "vm": 1.10046,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68265,
+          "name": "W_TEEVURCH_P",
+          "base_kv": 0.69,
+          "vm": 1.10886,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68267,
+          "name": "W_KILTUMPER",
+          "base_kv": 0.66,
+          "vm": 1.11024,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68285,
+          "name": "W_LISDOWNE_P",
+          "base_kv": 20.0,
+          "vm": 1.12625,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68294,
+          "name": "W_RARAGH_PH2",
+          "base_kv": 0.69,
+          "vm": 1.10756,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68311,
+          "name": "W_TULLABRA_P",
+          "base_kv": 20.0,
+          "vm": 1.24652,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68312,
+          "name": "W_BLACKLOU_P",
+          "base_kv": 0.69,
+          "vm": 1.17436,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68313,
+          "name": "KNOCKHARLEY_",
+          "base_kv": 20.0,
+          "vm": 1.14036,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68314,
+          "name": "KNOCKHARLEY_",
+          "base_kv": 20.0,
+          "vm": 1.14036,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68404,
+          "name": "W_GROVE HILL",
+          "base_kv": 38.0,
+          "vm": 1.12022,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68534,
+          "name": "CONNAUGHT_RE",
+          "base_kv": 20.0,
+          "vm": 1.10268,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 68554,
+          "name": "BIO_FARRELLY",
+          "base_kv": 38.0,
+          "vm": 1.15859,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 74561,
+          "name": "CAST6P",
+          "base_kv": 22.0,
+          "vm": 1.10678,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 74564,
+          "name": "CAST6S",
+          "base_kv": 22.0,
+          "vm": 1.11575,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 74730,
+          "name": "CENT3-",
+          "base_kv": 33.0,
+          "vm": 1.10168,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75030,
+          "name": "COLE3-",
+          "base_kv": 33.0,
+          "vm": 1.13669,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75031,
+          "name": "BMNY3-",
+          "base_kv": 33.0,
+          "vm": 1.13746,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75032,
+          "name": "GRVN3-",
+          "base_kv": 33.0,
+          "vm": 1.13742,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75080,
+          "name": "COLE3_DU",
+          "base_kv": 33.0,
+          "vm": 1.13725,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75090,
+          "name": "RENEW_CO",
+          "base_kv": 33.0,
+          "vm": 1.13669,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75091,
+          "name": "WIND_RIG",
+          "base_kv": 33.0,
+          "vm": 1.1373,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75092,
+          "name": "WIND_GRU",
+          "base_kv": 33.0,
+          "vm": 1.13796,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75093,
+          "name": "WIND_GAR",
+          "base_kv": 33.0,
+          "vm": 1.13767,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75094,
+          "name": "WIND_DNM",
+          "base_kv": 33.0,
+          "vm": 1.13734,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75095,
+          "name": "WIND_DUN",
+          "base_kv": 33.0,
+          "vm": 1.13724,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 75830,
+          "name": "CREA3",
+          "base_kv": 33.0,
+          "vm": 1.10097,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77030,
+          "name": "DRUM3-",
+          "base_kv": 33.0,
+          "vm": 1.10941,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77090,
+          "name": "RENEW_DR",
+          "base_kv": 33.0,
+          "vm": 1.10941,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77530,
+          "name": "DUNG3-",
+          "base_kv": 33.0,
+          "vm": 1.13148,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77531,
+          "name": "TULY3-",
+          "base_kv": 33.0,
+          "vm": 1.1318,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77590,
+          "name": "PV_RENEW_DU",
+          "base_kv": 33.0,
+          "vm": 1.13148,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 77591,
+          "name": "WIND_CRO",
+          "base_kv": 33.0,
+          "vm": 1.13226,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84430,
+          "name": "LSMR3-",
+          "base_kv": 33.0,
+          "vm": 1.10023,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84490,
+          "name": "RENEW_LS",
+          "base_kv": 33.0,
+          "vm": 1.10023,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84491,
+          "name": "WIND_CUR",
+          "base_kv": 33.0,
+          "vm": 1.1006,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84530,
+          "name": "LOGE3-",
+          "base_kv": 33.0,
+          "vm": 1.12643,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 84590,
+          "name": "RENEW_LO",
+          "base_kv": 33.0,
+          "vm": 1.12729,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 89201,
+          "name": "SKRK2-",
+          "base_kv": 20.0,
+          "vm": 1.11375,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 89202,
+          "name": "WIND_SKR",
+          "base_kv": 20.0,
+          "vm": 1.12535,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 89231,
+          "name": "GLEN_ALT",
+          "base_kv": 33.0,
+          "vm": 1.12138,
+          "vmin": 0.9,
+          "vmax": 1.1
+        },
+        {
+          "id": 89232,
+          "name": "RENEW_SK",
+          "base_kv": 33.0,
+          "vm": 1.119,
+          "vmin": 0.9,
+          "vmax": 1.1
+        }
+      ]
+    }
+  },
+  "data_classification": {
+    "official_files": "Irish transmission planning models, not live or historical dispatch measurements",
+    "additional_wind": "Hypothetical injection in the earlier comparison",
+    "reference_60mw": "Separate synthetic nine-bus experiment, not obtained from these Irish exports"
+  },
+  "correction_to_v2": "The V33 export omits system solution settings; its official V35 companion includes them. THRSHZ=0.0001 is documented for V35. The saved states differ; V35 settings cannot certify the V33 reconstruction.",
+  "export_interchangeable": false
+}

@@ -1,0 +1,23 @@
+{
+  "package": "VeraGridEngine",
+  "version": "6.7.1",
+  "raw_version": "33",
+  "controls": "fixed",
+  "status": "EXPLORATORY_COVERAGE_NOT_YET_VALIDATED",
+  "device_counts": {
+    "buses": 2134,
+    "lines": 1129,
+    "transformers2w": 1201,
+    "transformers3w": 109,
+    "generators": 597,
+    "loads": 266,
+    "shunts": 8,
+    "hvdc_lines": 2
+  },
+  "converged": true,
+  "error": 1.1777807245108574e-11,
+  "elapsed_s": 26.664560498000355,
+  "voltage_violations": 1203,
+  "voltage_violations_ge_100kv": 325,
+  "max_absolute_loading": 46043173958.83057
+}

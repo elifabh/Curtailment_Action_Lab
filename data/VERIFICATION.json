@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "local_AI_tests": {
+    "passed": 19,
+    "live_provider_calls": 0
+  },
+  "http_integration": {
+    "recorded_comparisons": "pass",
+    "offline_AI_status": "pass",
+    "invalid_simulation_inputs": "rejected",
+    "live_200MW_outage": "reproduced four thermal violations and118.7196% loading"
+  },
+  "source_reconstruction_gate": "FAIL",
+  "operational_recommendation": false,
+  "browser_visual_QA": "Not performed; browser download unavailable",
+  "forecast": "separate exploratory appendix; not causal curtailment saving",
+  "UI_functional_integration": "Actual local server + DOM runtime: four metrics,ten checks,export,and offlinecontrolgating pass"
+}

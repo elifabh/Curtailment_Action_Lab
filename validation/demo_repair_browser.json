@@ -1,0 +1,252 @@
+{
+  "checked_at_utc": "2026-09-29T13:42:54.419351+00:00",
+  "passed": true,
+  "browser_version": "153.0.8010.0",
+  "checks": [
+    {
+      "name": "Desktop Overview: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Local app: four tabs and selected state",
+      "passed": true
+    },
+    {
+      "name": "Default numerical comparison populates metrics and checks",
+      "passed": true
+    },
+    {
+      "name": "Out-of-range wind blocked before solver call",
+      "passed": true
+    },
+    {
+      "name": "Sensitivity returns a table of actual model results",
+      "passed": true
+    },
+    {
+      "name": "Comparison JSON export parses",
+      "passed": true
+    },
+    {
+      "name": "AI is explicitly unavailable without Azure credentials",
+      "passed": true
+    },
+    {
+      "name": "Deterministic search remains usable without AI",
+      "passed": true
+    },
+    {
+      "name": "Evidence JSON export parses",
+      "passed": true
+    },
+    {
+      "name": "Presentation opens, advances and closes",
+      "passed": true
+    },
+    {
+      "name": "Desktop robustness: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop offers: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop: offer decision, actual export and blocked-baseline withdrawal",
+      "passed": true
+    },
+    {
+      "name": "Mobile overview: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile lab: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile analyst: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile evidence: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile offer decisions: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Offline demo: four tabs and selected state",
+      "passed": true
+    },
+    {
+      "name": "Offline recorded comparison works without network access",
+      "passed": true
+    },
+    {
+      "name": "Offline rejects unrecorded input instead of substituting another result",
+      "passed": true
+    },
+    {
+      "name": "offline offers: no page-level horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "offline: offer decision, actual export and blocked-baseline withdrawal",
+      "passed": true
+    },
+    {
+      "name": "No unhandled browser JavaScript exceptions",
+      "passed": true
+    },
+    {
+      "name": "Offer comparison and four-read rule audit work with real HTTP",
+      "passed": true
+    },
+    {
+      "name": "Interrupted Azure fixture preserves partial checks, diagnosis, both runs, and readable export",
+      "passed": true
+    },
+    {
+      "name": "Successful rerun replaces the partial AI result and preserves the rule result",
+      "passed": true
+    },
+    {
+      "name": "Changed offer inputs invalidate prior audits",
+      "passed": true
+    },
+    {
+      "name": "All three saved Irish experiments open and export JSON/readable reports",
+      "passed": true
+    },
+    {
+      "name": "Fresh Irish default reproduces 20.703125 MW and survives a dropped status request",
+      "passed": true
+    },
+    {
+      "name": "Fresh six-hour fixed-demand pilot completes all twelve intervals",
+      "passed": true
+    },
+    {
+      "name": "Fresh six-hour observed-demand pilot completes all twelve intervals",
+      "passed": true
+    },
+    {
+      "name": "snapshot_example: no page overflow at 320px",
+      "passed": true
+    },
+    {
+      "name": "snapshot_example: no page overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "snapshot_example: no page overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "snapshot_example: no page overflow at 1440px",
+      "passed": true
+    },
+    {
+      "name": "pilot_fixed_demand: no page overflow at 320px",
+      "passed": true
+    },
+    {
+      "name": "pilot_fixed_demand: no page overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "pilot_fixed_demand: no page overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "pilot_fixed_demand: no page overflow at 1440px",
+      "passed": true
+    },
+    {
+      "name": "pilot_observed_demand: no page overflow at 320px",
+      "passed": true
+    },
+    {
+      "name": "pilot_observed_demand: no page overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "pilot_observed_demand: no page overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "pilot_observed_demand: no page overflow at 1440px",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "remaining_errors": [],
+  "resolved_regressions": [
+    {
+      "issue": "Extension page exceeded mobile viewport width because the grid track retained its intrinsic minimum.",
+      "original_failure": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(dim.scroll<=dim.width+1)\n\n    at run (/workspace/scratch/0822fa43a200/work/Curtailment_Action_Lab/tests/demo_browser.js:76:160)\n    at async withBrowser (/workspace/scratch/0822fa43a200/work/Curtailment_Action_Lab/tests/browser_harness.js:54:5)",
+      "fix": "Zero-minimum grid track and shrinkable grid children/inputs.",
+      "verification": "Three saved result layouts passed at 320, 390, 768 and 1440px; no JavaScript errors.",
+      "followup_checks": [
+        {
+          "name": "snapshot_example: no page overflow at 320px",
+          "passed": true
+        },
+        {
+          "name": "snapshot_example: no page overflow at 390px",
+          "passed": true
+        },
+        {
+          "name": "snapshot_example: no page overflow at 768px",
+          "passed": true
+        },
+        {
+          "name": "snapshot_example: no page overflow at 1440px",
+          "passed": true
+        },
+        {
+          "name": "pilot_fixed_demand: no page overflow at 320px",
+          "passed": true
+        },
+        {
+          "name": "pilot_fixed_demand: no page overflow at 390px",
+          "passed": true
+        },
+        {
+          "name": "pilot_fixed_demand: no page overflow at 768px",
+          "passed": true
+        },
+        {
+          "name": "pilot_fixed_demand: no page overflow at 1440px",
+          "passed": true
+        },
+        {
+          "name": "pilot_observed_demand: no page overflow at 320px",
+          "passed": true
+        },
+        {
+          "name": "pilot_observed_demand: no page overflow at 390px",
+          "passed": true
+        },
+        {
+          "name": "pilot_observed_demand: no page overflow at 768px",
+          "passed": true
+        },
+        {
+          "name": "pilot_observed_demand: no page overflow at 1440px",
+          "passed": true
+        },
+        {
+          "name": "No browser JavaScript exceptions",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "live_azure_tested": false,
+  "azure_ui_source": "scripted response fixtures; numerical fresh runs use the actual local engine"
+}

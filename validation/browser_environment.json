@@ -1,0 +1,15 @@
+{
+  "url": "https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.35/linux64/chrome-headless-shell-linux64.zip",
+  "sha256": "c4276806e70a2c31a0b7b0e5d8db5c08c8fb0b58699a34b9a861a0d76d4f93cb",
+  "bytes": 114199332,
+  "execution_status": "failed_before_page_creation",
+  "launch_exit_signal": "SIGTRAP",
+  "linux_proc_available": false,
+  "visual_qa_performed": false,
+  "test": "Playwright Chromium launch",
+  "rendered_browser_started": false,
+  "rendered_browser_checks_run": 0,
+  "screenshots_produced": 0,
+  "dom_test_is_separate": true,
+  "reproduction": "See docs/BROWSER_QA.md and tests/browser_smoke.js"
+}

@@ -1,0 +1,6 @@
+{
+  "disconnect_shunts": [
+    74564
+  ],
+  "scope": "Enumerate explicit hypothetical capacitor disconnections after tap adjustment.\n\nThe two named devices are locked in the source. Changing their state is a new\nplanning scenario with an assumed permission, NOT a reconstruction fix.\nSelect the passing alternative with the fewest disconnections, then bus ID.\n"
+}

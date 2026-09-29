@@ -1,0 +1,73 @@
+{
+  "method": "DOM, local HTTP and captured provider response fixtures",
+  "live_provider_test": false,
+  "visual_qa": false,
+  "checks": [
+    {
+      "name": "Readable report controls exist for all five export types and both decision positions",
+      "passed": true
+    },
+    {
+      "name": "Captured investigation shows four correctly labelled bars, matching numbers and collapsed technical records",
+      "passed": true
+    },
+    {
+      "name": "Live connection completion and comparative AI performance have distinct labels",
+      "passed": true
+    },
+    {
+      "name": "Investigation downloads a standalone readable HTML report with all inspected options",
+      "passed": true
+    },
+    {
+      "name": "Evidence export uses the selected Irish benchmark and keeps captured live-session evidence separate",
+      "passed": true
+    },
+    {
+      "name": "Evidence report includes the selected benchmark, source references and readable investigation",
+      "passed": true
+    },
+    {
+      "name": "Comparison report preserves baseline, selected value and difference",
+      "passed": true
+    },
+    {
+      "name": "Offer report and on-screen chart distinguish optional tests, minimum required gain and absent audit",
+      "passed": true
+    },
+    {
+      "name": "Withdrawn offer report never presents a retained final offer",
+      "passed": true
+    },
+    {
+      "name": "A switched decision identifies the final offer and its own required-condition results",
+      "passed": true
+    },
+    {
+      "name": "Changed inputs cannot export a stale human-readable decision",
+      "passed": true
+    },
+    {
+      "name": "Study export represents a missing cost calculation explicitly",
+      "passed": true
+    },
+    {
+      "name": "A failed new investigation cannot export the previous successful run",
+      "passed": true
+    },
+    {
+      "name": "Negative values retain their sign and missing results are never rendered as zero",
+      "passed": true
+    },
+    {
+      "name": "Untrusted text is escaped in downloaded reports",
+      "passed": true
+    },
+    {
+      "name": "Switching models also changes the exported benchmark profile",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

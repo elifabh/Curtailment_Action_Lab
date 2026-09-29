@@ -1,0 +1,28 @@
+test_application_disables_ai_without_credentials_and_returns_no_fake_trace (test_agent_integration.AgentIntegrationTests.test_application_disables_ai_without_credentials_and_returns_no_fake_trace) ... ok
+test_cli_adapter_connects_to_same_physical_engine (test_agent_integration.AgentIntegrationTests.test_cli_adapter_connects_to_same_physical_engine) ... ok
+test_irish_automatic_search_is_blocked_before_model_or_engine (test_agent_integration.AgentIntegrationTests.test_irish_automatic_search_is_blocked_before_model_or_engine) ... ok
+test_real_baseline_respects_budget_and_fixed_conditions (test_agent_integration.AgentIntegrationTests.test_real_baseline_respects_budget_and_fixed_conditions) ... ok
+test_scripted_tool_request_uses_real_engine_not_scripted_engine_results (test_agent_integration.AgentIntegrationTests.test_scripted_tool_request_uses_real_engine_not_scripted_engine_results) ... ok
+test_azure_endpoint_must_not_leak_key_to_arbitrary_host (test_agent_runner.AgentContractTests.test_azure_endpoint_must_not_leak_key_to_arbitrary_host) ... ok
+test_baseline_is_not_ai_and_uses_same_cap (test_agent_runner.AgentContractTests.test_baseline_is_not_ai_and_uses_same_cap) ... ok
+test_benchmark_oracle_calls_separate_and_test_provider_not_live (test_agent_runner.AgentContractTests.test_benchmark_oracle_calls_separate_and_test_provider_not_live) ... ok
+test_budget_is_hard_bound (test_agent_runner.AgentContractTests.test_budget_is_hard_bound) ... ok
+test_disabled_without_credentials_never_calls_engine (test_agent_runner.AgentContractTests.test_disabled_without_credentials_never_calls_engine) ... ok
+test_duplicate_candidate_is_not_evaluated_again (test_agent_runner.AgentContractTests.test_duplicate_candidate_is_not_evaluated_again) ... ok
+test_engine_exception_is_sanitized_and_counts_budget (test_agent_runner.AgentContractTests.test_engine_exception_is_sanitized_and_counts_budget) ... ok
+test_explicit_prompt_conflict_requires_clarification (test_agent_runner.AgentContractTests.test_explicit_prompt_conflict_requires_clarification) ... ok
+test_extra_parameter_cannot_override_limit (test_agent_runner.AgentContractTests.test_extra_parameter_cannot_override_limit) ... ok
+test_failed_checks_never_best_even_if_engine_eligible_true (test_agent_runner.AgentContractTests.test_failed_checks_never_best_even_if_engine_eligible_true) ... ok
+test_fixed_conditions_cannot_be_changed (test_agent_runner.AgentContractTests.test_fixed_conditions_cannot_be_changed) ... ok
+test_iterative_protocol_has_tool_id_and_returns_new_evidence (test_agent_runner.AgentContractTests.test_iterative_protocol_has_tool_id_and_returns_new_evidence) ... ok
+test_nonfinite_duplicate_and_bool_arguments_rejected (test_agent_runner.AgentContractTests.test_nonfinite_duplicate_and_bool_arguments_rejected) ... ok
+test_parallel_batch_rejected_even_if_provider_ignores_flag (test_agent_runner.AgentContractTests.test_parallel_batch_rejected_even_if_provider_ignores_flag) ... ok
+test_refusal_and_truncated_call_do_not_execute (test_agent_runner.AgentContractTests.test_refusal_and_truncated_call_do_not_execute) ... ok
+test_timeout_is_reported_without_fake_result (test_agent_runner.AgentContractTests.test_timeout_is_reported_without_fake_result) ... ok
+test_unknown_tool_never_executes (test_agent_runner.AgentContractTests.test_unknown_tool_never_executes) ... ok
+test_unvalidated_profile_never_recommended (test_agent_runner.AgentContractTests.test_unvalidated_profile_never_recommended) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 3.451s
+
+OK

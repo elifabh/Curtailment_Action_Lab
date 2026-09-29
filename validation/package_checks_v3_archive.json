@@ -1,0 +1,65 @@
+{
+  "version": "3.0",
+  "status": "passed_with_declared_unverified_integrations",
+  "software_tests": {
+    "run": 43,
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "log": "validation/v3_test_results.txt",
+    "meaning": "Software and model checks, not field trials."
+  },
+  "irish_numerical_tests": {
+    "run": 6,
+    "passed": 6,
+    "failed": 0,
+    "log": "irish_audit/results/verification_tests.txt",
+    "scope": "Conditional mathematical states and deliberate corruption tests."
+  },
+  "reference_confirmation": {
+    "source_passed": true,
+    "cases": 21,
+    "passed": 21,
+    "checks_per_case": 13,
+    "scope": "Declared steady-state reference-network checks"
+  },
+  "azure_live": {
+    "status": "not_run",
+    "reason": "No Azure credentials available. Scripted provider tests do not establish live model quality."
+  },
+  "browser_visual": {
+    "status": "not_run",
+    "reason": "Chromium cannot launch in this sandbox. DOM/HTTP checks reported separately."
+  },
+  "presentation": {
+    "status": "unchanged_from_v2",
+    "revised_for_irish_study": false,
+    "note": "Presentation preparation deferred by request."
+  },
+  "physical_actions_executed": false,
+  "ui_behaviour": {
+    "status": "passed",
+    "checks": 26,
+    "errors": 0,
+    "method": "jsdom + actual local HTTP API",
+    "visual_browser_validation": false,
+    "report": "validation/ui_checks.json"
+  },
+  "installation": {
+    "status": "same_pinned_dependencies_as_v2",
+    "prior_isolated_installation_report": "validation/package_checks_v2_archive.json",
+    "current_clean_extraction_tests": "43 application tests passed in the existing isolated Python 3.12 environment with the pinned simulator dependencies."
+  },
+  "package_portability": {
+    "status": "passed_preflight",
+    "archive_crc": "passed",
+    "clean_extraction_manifest": "passed",
+    "application_tests": 43,
+    "irish_verifier_tests": 6,
+    "bare_python_recorded_mode": "passed",
+    "azure_absent_behavior": "disabled",
+    "archive_root": "Curtailment_Action_Lab/",
+    "note": "Windows/macOS launchers were supplied but not executed on those operating systems. Final ZIP integrity is checked separately after metadata bundling."
+  },
+  "generated_at_utc": "2026-09-27T05:10:06.926624+00:00"
+}

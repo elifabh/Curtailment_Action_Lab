@@ -1,0 +1,161 @@
+{
+  "method": "jsdom and actual local HTTP API",
+  "visual_qa": false,
+  "checks": [
+    {
+      "name": "HTTP: Overview start button opens the offer workflow",
+      "passed": true
+    },
+    {
+      "name": "HTTP: third Scenario Lab view, eight offers and preserved four main tabs",
+      "passed": true
+    },
+    {
+      "name": "HTTP: default retains checked nominal offer with actual half-delivery result",
+      "passed": true
+    },
+    {
+      "name": "HTTP: next-step buttons focus audit and editable assumptions",
+      "passed": true
+    },
+    {
+      "name": "HTTP: bounded rule audit makes four record reads; live AI stays disabled",
+      "passed": true
+    },
+    {
+      "name": "HTTP: export beneath audit contains the same decision and current audit as the top export",
+      "passed": true
+    },
+    {
+      "name": "HTTP: higher-demand unresolved baseline withdraws and identifies data priority",
+      "passed": true
+    },
+    {
+      "name": "HTTP: actual differentiated quotes switch the recommendation",
+      "passed": true
+    },
+    {
+      "name": "HTTP: insufficient energy cannot be rescued by budget",
+      "passed": true
+    },
+    {
+      "name": "HTTP: zero budget blocks paid offers and zero-benefit free offer",
+      "passed": true
+    },
+    {
+      "name": "HTTP: negative wind value does not become profit",
+      "passed": true
+    },
+    {
+      "name": "HTTP: editing invalidates stale exported decisions",
+      "passed": true
+    },
+    {
+      "name": "HTTP: all Scenario Lab view switches remain consistent",
+      "passed": true
+    },
+    {
+      "name": "HTTP: Presentation button uses current PDF and separate window contract",
+      "passed": true
+    },
+    {
+      "name": "HTTP: externally designed PDF is selected locally without upload",
+      "passed": true
+    },
+    {
+      "name": "HTTP: invalid PDF keeps the prior presentation",
+      "passed": true
+    },
+    {
+      "name": "HTTP: v5 physical and decision evidence is visible",
+      "passed": true
+    },
+    {
+      "name": "HTTP: provider failure is visibly incomplete, not a successful audit",
+      "passed": true
+    },
+    {
+      "name": "HTTP: network loss clears stale audit and leaves usable controls",
+      "passed": true
+    },
+    {
+      "name": "Local route serves actual PDF bytes",
+      "passed": true
+    },
+    {
+      "name": "Offline: Overview start button opens the offer workflow",
+      "passed": true
+    },
+    {
+      "name": "Offline: third Scenario Lab view, eight offers and preserved four main tabs",
+      "passed": true
+    },
+    {
+      "name": "Offline: default retains checked nominal offer with actual half-delivery result",
+      "passed": true
+    },
+    {
+      "name": "Offline: next-step buttons focus audit and editable assumptions",
+      "passed": true
+    },
+    {
+      "name": "Offline: bounded rule audit makes four record reads; live AI stays disabled",
+      "passed": true
+    },
+    {
+      "name": "Offline: export beneath audit contains the same decision and current audit as the top export",
+      "passed": true
+    },
+    {
+      "name": "Offline: higher-demand unresolved baseline withdraws and identifies data priority",
+      "passed": true
+    },
+    {
+      "name": "Offline: actual differentiated quotes switch the recommendation",
+      "passed": true
+    },
+    {
+      "name": "Offline: insufficient energy cannot be rescued by budget",
+      "passed": true
+    },
+    {
+      "name": "Offline: zero budget blocks paid offers and zero-benefit free offer",
+      "passed": true
+    },
+    {
+      "name": "Offline: negative wind value does not become profit",
+      "passed": true
+    },
+    {
+      "name": "Offline: editing invalidates stale exported decisions",
+      "passed": true
+    },
+    {
+      "name": "Offline: all Scenario Lab view switches remain consistent",
+      "passed": true
+    },
+    {
+      "name": "Offline: Presentation button uses current PDF and separate window contract",
+      "passed": true
+    },
+    {
+      "name": "Offline: externally designed PDF is selected locally without upload",
+      "passed": true
+    },
+    {
+      "name": "Offline: invalid PDF keeps the prior presentation",
+      "passed": true
+    },
+    {
+      "name": "Offline: v5 physical and decision evidence is visible",
+      "passed": true
+    },
+    {
+      "name": "Standalone embeds physical records and PDF; no HTTP calls during offline flows",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "created_at_utc": "2026-09-29T13:16:38.679Z",
+  "passed": true
+}

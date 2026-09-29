@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "slides": 8,
+  "pdf_pages": 8,
+  "layout_warnings": 0,
+  "native_editable_chart": true,
+  "native_editable_table": true,
+  "rendered_slides_inspected": 8,
+  "native_powerpoint_execution_tested": false,
+  "files": [
+    "presentation/Presentation_EN_Reviewed.pptx",
+    "presentation/Presentation_EN_Reviewed.pdf"
+  ]
+}

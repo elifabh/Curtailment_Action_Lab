@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "concurrent_job_rejected",
+    "novel_inputs_reached_worker",
+    "new_physical_solves_executed",
+    "both_best_points_pass",
+    "availability_bound_preserved",
+    "paired_energy_balance_reconciles",
+    "result_published_only_after_completion",
+    "same_site_placebo_has_zero_difference",
+    "identical_reuse_not_counted_as_new_solve"
+  ],
+  "passed": 9,
+  "integration": "actual service functions and subprocess worker; no browser session or cloud provider used",
+  "novel_result": {
+    "wind_available_MW": 55.125,
+    "flex_MW": 12.5,
+    "difference_MW": 9.6171875,
+    "calls": 15
+  },
+  "placebo_difference_MW": 0.0
+}

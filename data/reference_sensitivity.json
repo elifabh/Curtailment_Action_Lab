@@ -1,0 +1,73 @@
+{
+  "request": {
+    "profile": "reference_9bus",
+    "wind_mw": 200.0,
+    "load_scale": 1.0,
+    "action_id": "all_in_service"
+  },
+  "rows": [
+    {
+      "available_wind_mw": 0.0,
+      "baseline_accepted_mw": 0.0,
+      "selected_accepted_mw": 0.0,
+      "baseline_curtailed_mw": 0.0,
+      "selected_curtailed_mw": 0.0,
+      "additional_wind_mw": 0.0,
+      "eligible": true
+    },
+    {
+      "available_wind_mw": 50.0,
+      "baseline_accepted_mw": 49.99999997428441,
+      "selected_accepted_mw": 49.999999983445555,
+      "baseline_curtailed_mw": 2.571559321040695e-08,
+      "selected_curtailed_mw": 1.65544449259869e-08,
+      "additional_wind_mw": 9.161148284420051e-09,
+      "eligible": true
+    },
+    {
+      "available_wind_mw": 100.0,
+      "baseline_accepted_mw": 99.99999989489329,
+      "selected_accepted_mw": 99.99999992293365,
+      "baseline_curtailed_mw": 1.0510670733765437e-07,
+      "selected_curtailed_mw": 7.706634619353281e-08,
+      "additional_wind_mw": 2.8040361144121562e-08,
+      "eligible": true
+    },
+    {
+      "available_wind_mw": 150.0,
+      "baseline_accepted_mw": 139.99998409108252,
+      "selected_accepted_mw": 149.999999977704,
+      "baseline_curtailed_mw": 10.000015908917476,
+      "selected_curtailed_mw": 2.2296006818578462e-08,
+      "additional_wind_mw": 10.000015886621469,
+      "eligible": true
+    },
+    {
+      "available_wind_mw": 200.0,
+      "baseline_accepted_mw": 139.99998382241796,
+      "selected_accepted_mw": 199.99999999034893,
+      "baseline_curtailed_mw": 60.00001617758204,
+      "selected_curtailed_mw": 9.651074606153998e-09,
+      "additional_wind_mw": 60.000016167930966,
+      "eligible": true
+    },
+    {
+      "available_wind_mw": 240.0,
+      "baseline_accepted_mw": 139.999984418559,
+      "selected_accepted_mw": 239.99999999780096,
+      "baseline_curtailed_mw": 100.000015581441,
+      "selected_curtailed_mw": 2.199044502049219e-09,
+      "additional_wind_mw": 100.00001557924196,
+      "eligible": true
+    }
+  ],
+  "limitations": [
+    "Synthetic wind in the public nine-bus reference network; not Irish operational data.",
+    "Steady-state AC feasibility only; no N\u22121, transient, frequency, ramping or maintenance scheduling checks.",
+    "Topology alternatives are hypothetical availability states, not approved switching instructions.",
+    "The declared dispatch policy is an AC OPF local solution, not a certified global optimum.",
+    "Objective units are synthetic cost units, not EUR; no profit or CO\u2082 claim.",
+    "Snapshot MW, not MWh or a share of Irish annual curtailment."
+  ],
+  "scope": "Synthetic wind sensitivity; not a weather forecast or time series"
+}

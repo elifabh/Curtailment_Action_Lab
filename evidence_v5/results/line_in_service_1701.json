@@ -1,0 +1,673 @@
+{
+  "name": "line_in_service_1701",
+  "flex_allocation_MW": {
+    "1701": 20.0
+  },
+  "line_outage": false,
+  "source_load_factor": 1.0,
+  "points": [
+    {
+      "id": "pf_0193",
+      "wind_MW": 0.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7428.215761147113,
+      "network_losses_MW": 164.03598539992072,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 1,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8801522026337067,
+      "direct_balance_max_MVA": 1.0195701975062292e-09,
+      "direct_flow_difference_MVA": 4.238360907367089e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 0.6400412109996978,
+      "solver_seconds": 0.6375100839995866,
+      "direct_check_seconds": 0.002506310000171652,
+      "verification_seconds": 2.5268000172218308e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0194",
+      "wind_MW": 25.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7398.525092465149,
+      "network_losses_MW": 159.34531671795685,
+      "passes_declared_snapshot_checks": true,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.880499819447096,
+      "direct_balance_max_MVA": 1.3435952839352266e-09,
+      "direct_flow_difference_MVA": 4.734339475787106e-10,
+      "raw_equations": {
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 4.734339475744057e-10,
+        "max_grouped_KCL_residual_MVA": 1.3435952841383096e-09,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true
+      },
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 1.7525277381628986e-10,
+        "max_group_residual_MVA": 1.7525277381628988e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      },
+      "elapsed_seconds": 0.719192638000095,
+      "solver_seconds": 0.6437469400007103,
+      "direct_check_seconds": 0.0025512980009807507,
+      "verification_seconds": 0.07289477999984229,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0195",
+      "wind_MW": 50.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7369.465502996286,
+      "network_losses_MW": 155.28572724909372,
+      "passes_declared_snapshot_checks": true,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8807933027450746,
+      "direct_balance_max_MVA": 8.442701998585847e-10,
+      "direct_flow_difference_MVA": 2.9530333289431096e-10,
+      "raw_equations": {
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.953033328250947e-10,
+        "max_grouped_KCL_residual_MVA": 8.442701998530352e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true
+      },
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 2.1271621211749328e-10,
+        "max_group_residual_MVA": 2.127162121174933e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      },
+      "elapsed_seconds": 1.3633972280003945,
+      "solver_seconds": 1.2844028179988527,
+      "direct_check_seconds": 0.002622875999804819,
+      "verification_seconds": 0.07637188400076411,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0196",
+      "wind_MW": 75.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7340.965134505604,
+      "network_losses_MW": 151.78535875841135,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8810564048043076,
+      "direct_balance_max_MVA": 7.605610775044635e-09,
+      "direct_flow_difference_MVA": 2.8237183820134084e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.285791201000393,
+      "solver_seconds": 1.283071910000217,
+      "direct_check_seconds": 0.0026932210002996726,
+      "verification_seconds": 2.6589999833959155e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0197",
+      "wind_MW": 100.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7313.055348079629,
+      "network_losses_MW": 148.8755723324366,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 10,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8812629923963838,
+      "direct_balance_max_MVA": 4.3514510875421913e-10,
+      "direct_flow_difference_MVA": 3.281183945343984e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.5286049360001925,
+      "solver_seconds": 1.5257543269999587,
+      "direct_check_seconds": 0.0028216259997861926,
+      "verification_seconds": 2.9423999876598828e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0198",
+      "wind_MW": 125.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7285.714792699028,
+      "network_losses_MW": 146.53501695183604,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 11,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8814123532728887,
+      "direct_balance_max_MVA": 6.120845383019533e-10,
+      "direct_flow_difference_MVA": 4.170717319166681e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.5553115470011107,
+      "solver_seconds": 1.5528370250012813,
+      "direct_check_seconds": 0.002451466998536489,
+      "verification_seconds": 2.3706001229584217e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0199",
+      "wind_MW": 150.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7258.923440126443,
+      "network_losses_MW": 144.74366437925073,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 18,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.881510425881139,
+      "direct_balance_max_MVA": 5.270095234962997e-10,
+      "direct_flow_difference_MVA": 4.3745873582713616e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.9567305859982298,
+      "solver_seconds": 1.9533309279995592,
+      "direct_check_seconds": 0.00337477999892144,
+      "verification_seconds": 2.529800076445099e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0200",
+      "wind_MW": 175.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7232.666539208004,
+      "network_losses_MW": 143.48676346081174,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 24,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8815583834704116,
+      "direct_balance_max_MVA": 6.580797118859569e-10,
+      "direct_flow_difference_MVA": 4.494650255300881e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.4846026110008097,
+      "solver_seconds": 1.4818676560007589,
+      "direct_check_seconds": 0.0027091459996881895,
+      "verification_seconds": 2.646000029926654e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0201",
+      "wind_MW": 200.0,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7206.938285050651,
+      "network_losses_MW": 142.7585093034586,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 27,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8815483504777853,
+      "direct_balance_max_MVA": 7.827932770321954e-10,
+      "direct_flow_difference_MVA": 3.91859822980611e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.5250483139989228,
+      "solver_seconds": 1.5224797199989553,
+      "direct_check_seconds": 0.002542214000641252,
+      "verification_seconds": 2.6809999326360412e-05,
+      "phase": "coarse",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0202",
+      "wind_MW": 62.5,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7355.140736723638,
+      "network_losses_MW": 153.46096097644568,
+      "passes_declared_snapshot_checks": true,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809309044776782,
+      "direct_balance_max_MVA": 6.023503853306653e-10,
+      "direct_flow_difference_MVA": 2.455191453228653e-10,
+      "raw_equations": {
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.4551914532286536e-10,
+        "max_grouped_KCL_residual_MVA": 6.023503853306142e-10,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true
+      },
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 3.1015716556966753e-10,
+        "max_group_residual_MVA": 3.1015716556966753e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      },
+      "elapsed_seconds": 1.75016135199985,
+      "solver_seconds": 1.6727641460001905,
+      "direct_check_seconds": 0.0029537239988712827,
+      "verification_seconds": 0.0744441030001326,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0203",
+      "wind_MW": 68.75,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7348.034198789305,
+      "network_losses_MW": 152.604423042113,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809955412565456,
+      "direct_balance_max_MVA": 3.0138300366606883e-09,
+      "direct_flow_difference_MVA": 2.3574516260494254e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.3319774079991475,
+      "solver_seconds": 1.329169472999638,
+      "direct_check_seconds": 0.002780102999167866,
+      "verification_seconds": 2.8403001124388538e-05,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0204",
+      "wind_MW": 65.625,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7351.582755630138,
+      "network_losses_MW": 153.02797988294606,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809636974709051,
+      "direct_balance_max_MVA": 1.7012800027861728e-09,
+      "direct_flow_difference_MVA": 6.536370505511043e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.3856745779994526,
+      "solver_seconds": 1.3830953979995684,
+      "direct_check_seconds": 0.00255159799962712,
+      "verification_seconds": 2.83030003629392e-05,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0205",
+      "wind_MW": 64.0625,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7353.3605645675425,
+      "network_losses_MW": 153.24328882035024,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809474200042107,
+      "direct_balance_max_MVA": 1.2365708257338211e-09,
+      "direct_flow_difference_MVA": 4.323297654137275e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.2971880539989797,
+      "solver_seconds": 1.2943999389990495,
+      "direct_check_seconds": 0.0027607330011960585,
+      "verification_seconds": 2.7671998395817354e-05,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0206",
+      "wind_MW": 63.28125,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7354.250354790564,
+      "network_losses_MW": 153.35182904337216,
+      "passes_declared_snapshot_checks": true,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809391920464437,
+      "direct_balance_max_MVA": 1.035412377893194e-09,
+      "direct_flow_difference_MVA": 2.7229417028470457e-10,
+      "raw_equations": {
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 2.7229417028461053e-10,
+        "max_grouped_KCL_residual_MVA": 1.0353340093142223e-09,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true
+      },
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 1.8001017743923053e-10,
+        "max_group_residual_MVA": 1.8001017743923055e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      },
+      "elapsed_seconds": 1.3438969499984523,
+      "solver_seconds": 1.2710224189995643,
+      "direct_check_seconds": 0.002873993998946389,
+      "verification_seconds": 0.0700010979999206,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0207",
+      "wind_MW": 63.671875,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7353.805385772058,
+      "network_losses_MW": 153.29748502486564,
+      "passes_declared_snapshot_checks": false,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 2,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809433134706601,
+      "direct_balance_max_MVA": 1.1305402556087744e-09,
+      "direct_flow_difference_MVA": 3.7541710485941544e-10,
+      "raw_equations": null,
+      "ideal_ties": null,
+      "elapsed_seconds": 1.2528827730002376,
+      "solver_seconds": 1.2503662269991764,
+      "direct_check_seconds": 0.0024918180006352486,
+      "verification_seconds": 2.5287999960710295e-05,
+      "phase": "refinement",
+      "operationally_validated": false
+    },
+    {
+      "id": "pf_0208",
+      "wind_MW": 63.4765625,
+      "line_outage": false,
+      "flex_allocation_MW": {
+        "1701": 20.0
+      },
+      "source_load_factor": 1.0,
+      "total_consumer_demand_MW": 7344.51,
+      "other_generation_MW": 7354.027851797057,
+      "network_losses_MW": 153.32463854986509,
+      "passes_declared_snapshot_checks": true,
+      "solver_converged": true,
+      "violations": {
+        "original_bus_groups_voltage": 0,
+        "voltage_ge_100kv": 0,
+        "rated_branch_thermal": 0,
+        "generator_P": 0,
+        "generator_Q": 0
+      },
+      "max_rated_branch_loading": 0.8809412546206351,
+      "direct_balance_max_MVA": 1.0836319362510502e-09,
+      "direct_flow_difference_MVA": 3.417056997731916e-10,
+      "raw_equations": {
+        "direct_raw_branch_count": 2507,
+        "compared_branch_count": 2507,
+        "two_winding_transformers": 1201,
+        "three_winding_transformers": 109,
+        "merged_ideal_ties": 148,
+        "max_branch_flow_difference_MVA": 3.4170569977195564e-10,
+        "max_grouped_KCL_residual_MVA": 1.0837086166956323e-09,
+        "max_source_rating_difference": 0.0,
+        "max_source_bus_generator_bound_or_status_difference": 0.0,
+        "passed": true
+      },
+      "ideal_ties": {
+        "max_nodal_balance_residual_MVA": 2.2003371058739307e-10,
+        "max_group_residual_MVA": 2.2003371058739307e-10,
+        "tree_edges": 144,
+        "cyclic_group_edges": 4,
+        "tree_overloads": 0,
+        "cyclic_allocation_overloads": 0,
+        "all_internal_tie_limits_certified": false
+      },
+      "elapsed_seconds": 1.3177078739990975,
+      "solver_seconds": 1.2463007759997708,
+      "direct_check_seconds": 0.002657498000189662,
+      "verification_seconds": 0.0687499099985871,
+      "phase": "refinement",
+      "operationally_validated": false
+    }
+  ],
+  "best_tested": {
+    "id": "pf_0208",
+    "wind_MW": 63.4765625,
+    "line_outage": false,
+    "flex_allocation_MW": {
+      "1701": 20.0
+    },
+    "source_load_factor": 1.0,
+    "total_consumer_demand_MW": 7344.51,
+    "other_generation_MW": 7354.027851797057,
+    "network_losses_MW": 153.32463854986509,
+    "passes_declared_snapshot_checks": true,
+    "solver_converged": true,
+    "violations": {
+      "original_bus_groups_voltage": 0,
+      "voltage_ge_100kv": 0,
+      "rated_branch_thermal": 0,
+      "generator_P": 0,
+      "generator_Q": 0
+    },
+    "max_rated_branch_loading": 0.8809412546206351,
+    "direct_balance_max_MVA": 1.0836319362510502e-09,
+    "direct_flow_difference_MVA": 3.417056997731916e-10,
+    "raw_equations": {
+      "direct_raw_branch_count": 2507,
+      "compared_branch_count": 2507,
+      "two_winding_transformers": 1201,
+      "three_winding_transformers": 109,
+      "merged_ideal_ties": 148,
+      "max_branch_flow_difference_MVA": 3.4170569977195564e-10,
+      "max_grouped_KCL_residual_MVA": 1.0837086166956323e-09,
+      "max_source_rating_difference": 0.0,
+      "max_source_bus_generator_bound_or_status_difference": 0.0,
+      "passed": true
+    },
+    "ideal_ties": {
+      "max_nodal_balance_residual_MVA": 2.2003371058739307e-10,
+      "max_group_residual_MVA": 2.2003371058739307e-10,
+      "tree_edges": 144,
+      "cyclic_group_edges": 4,
+      "tree_overloads": 0,
+      "cyclic_allocation_overloads": 0,
+      "all_internal_tie_limits_certified": false
+    },
+    "elapsed_seconds": 1.3177078739990975,
+    "solver_seconds": 1.2463007759997708,
+    "direct_check_seconds": 0.002657498000189662,
+    "verification_seconds": 0.0687499099985871,
+    "phase": "refinement",
+    "operationally_validated": false
+  },
+  "calls": 16,
+  "elapsed_seconds": 21.74240219499916,
+  "reused_exact_inputs": false,
+  "state_file": "line_in_service_1701_best.npz",
+  "state_sha256": "c96d1089c80a3d97217ffcfdc741534073801a1a12859db8e1906534bde5e690"
+}

@@ -1,0 +1,16 @@
+test_default_benefit_respects_all_limits (test_reference_engine.ReferenceEngineTests.test_default_benefit_respects_all_limits) ... ok
+test_generator_p_and_q_violations_are_rejected (test_reference_engine.ReferenceEngineTests.test_generator_p_and_q_violations_are_rejected) ... ok
+test_hidden_load_shedding_is_rejected (test_reference_engine.ReferenceEngineTests.test_hidden_load_shedding_is_rejected) ... ok
+test_invalid_requests_rejected_before_solver (test_reference_engine.ReferenceEngineTests.test_invalid_requests_rejected_before_solver) ... ok
+test_island_is_rejected (test_reference_engine.ReferenceEngineTests.test_island_is_rejected) ... ok
+test_low_wind_no_material_benefit (test_reference_engine.ReferenceEngineTests.test_low_wind_no_material_benefit) ... ok
+test_no_available_wind_cannot_produce_wind (test_reference_engine.ReferenceEngineTests.test_no_available_wind_cannot_produce_wind) ... ok
+test_rating_tampering_and_overload_are_rejected (test_reference_engine.ReferenceEngineTests.test_rating_tampering_and_overload_are_rejected) ... ok
+test_same_action_has_exactly_zero_benefit (test_reference_engine.ReferenceEngineTests.test_same_action_has_exactly_zero_benefit) ... ok
+test_unmodified_source_matches_independent_solver (test_reference_engine.ReferenceEngineTests.test_unmodified_source_matches_independent_solver) ... ok
+test_voltage_corruption_is_rejected (test_reference_engine.ReferenceEngineTests.test_voltage_corruption_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.644s
+
+OK

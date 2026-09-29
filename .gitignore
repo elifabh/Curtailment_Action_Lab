@@ -1,0 +1,39 @@
+# Secrets — keep only the configuration template
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# JavaScript dependencies
+node_modules/
+
+# Temporary calculation and test outputs
+extension_runs/
+engine/scenario_audit/
+browser-qa-results/
+readability-qa-results/
+dom-qa-results/
+tests/browser-results/
+DEMO_CHECK_RESULT.json
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local delivery archives and recordings
+/*.zip
+/*.mp4
+/*.mov

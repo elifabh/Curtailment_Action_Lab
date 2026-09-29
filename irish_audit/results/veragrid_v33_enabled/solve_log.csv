@@ -1,0 +1,25 @@
+Severity,Message,Class,Property,Device,Value,Expected value
+Information,Elapsed total (s),,Started,,,
+Error,Different control voltage set points,,,TEG_NWALL_4-,1.05,1.06
+Error,Different control voltage set points,,,TEG_NWALL_4-,1.05,1.06
+Error,Different control voltage set points,,,TEG_NWALL_4-,1.05,1.06
+Information,Using the complete support power flow method,,,,,
+Error,"Controlled bus index outside of the island, skipping control",,,0b8ce3da0c0348818c9a606b7d6d3660,,
+Error,"Jacobian not square, check the controls!",,,Newton-Raphson,4206,4231
+Information,Tried solution is garbage,,,Newton Raphson,2.6710e+02,0.1
+Error,"Did not converge, even after retry!",,,Error,1.0000e+200,<1e-08
+Warning,"Control-aware power flow did not converge; falling back to the limited-support solver, which does NOT enforce branch/VSC/HVDC controls (tap module, phase shift, converter set-points). The returned solution may not honour those control targets.",,,PowerFlow,control-aware solver failed,converged solution with controls enforced
+Information,Using the limited support power flow method,,,,,
+Error,Jacobian and residuals have different sizes!,,,Newton-Raphson,4195,4218
+Error,"Did not converge, even after retry!",,,Error,2.6710e+02,<1e-08
+Information,Using the limited support power flow method,,,,,
+Error,Not solving power flow because there is no slack bus,,,,,
+Information,Elapsed total (s),,Ended (s),,66.0188,
+Information,Method Newton Raphson,,Converged,,False,True
+Information,Method Newton Raphson,,Elapsed (s),,2.1925,
+Information,Method Newton Raphson,,Error (p.u.),,2.6710e+02,<1e-08
+Information,Method Newton Raphson,,Iterations,,1,<50
+Information,Method No Solver,,Converged,,True,True
+Information,Method No Solver,,Elapsed (s),,0.0000,
+Information,Method No Solver,,Error (p.u.),,0.0000e+00,<1e-08
+Information,Method No Solver,,Iterations,,0,<50

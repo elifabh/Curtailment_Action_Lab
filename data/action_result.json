@@ -1,0 +1,230 @@
+{
+  "title": "Irish planning-case transmission screening: hypothetical wind and outage options",
+  "overall_status": "ENGINEERING_REVIEW_REQUIRED",
+  "operational_recommendation": false,
+  "source_case": "TYTFS2024_WP2024_V33.raw",
+  "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+  "scope": "Fixed-controls approximate all-island planning case. Source includes Northern Ireland; not a2026operational replay.",
+  "available_wind_MW": 200,
+  "wind_injection": {
+    "bus": 1341,
+    "name": "Binbane110kV",
+    "type": "hypothetical additional unity-power-factor generation; not measured or forecast"
+  },
+  "redispatch_rule": {
+    "generator_bus": 10470,
+    "name": "Aghada",
+    "rule": "Reduce source456MW schedule by accepted addedwindMW. Original online slackgenerators absorb changedAC losses."
+  },
+  "line_comparison": {
+    "branch": "line:1341:1701:1",
+    "states": [
+      "hypothetical outage",
+      "in service"
+    ],
+    "not_an_actual_2026_outage": true
+  },
+  "result": {
+    "additional_wind_accepted_by_screen_MW": 36.71875,
+    "outage_screen_limit_bracket_MW": [
+      163.28125,
+      164.0625
+    ],
+    "search_resolution_MW": 0.78125,
+    "interpretation": "Potential accepted-wind difference under one fixedredispatchrule and partialnetworkscreen, not an operating recommendation,globaloptimum or actual preventedcurtailment."
+  },
+  "checked_limits": [
+    "AC convergence/balance",
+    "All modeled branch RATEA thermal limits",
+    "Physical buses >=100kV source voltage limits",
+    "Onlinegenerator P limits",
+    "Onlinegenerator Q limits with0.02Mvar tolerance; PV-to-PQ switching"
+  ],
+  "unresolved": [
+    "Collector/generator bus voltage limits below100kV fail in source and both screenedcases. Some exceedances worsen.",
+    "Original strict source residual validation gate FAIL; approximate reconstructed voltages agree closely, but full PSSEcontrols not reproduced.",
+    "HVDC boundary injections inferred from sourcevoltage, not independently measured.",
+    "No dynamicstability,reserve,N-1fullset,protectionoroperationalfeasibility certification.",
+    "Q-limit handling changes PV busmode for counterfactuals; tap,remote voltage andshuntcontrollers heldfixed."
+  ],
+  "model_consistency": {
+    "zero_impedance_tie_count": 148,
+    "source_grouped_max_P_MW": 4.312455378715553,
+    "source_grouped_max_PQ_Q_Mvar": 4.922443817799717,
+    "excluded_isolated_buses": [
+      {
+        "bus_index": 1929,
+        "bus_id": 86221,
+        "P_load": 0.0,
+        "Q_load": 0.0
+      }
+    ],
+    "source": "TYTFS2024_WP2024_V33.raw",
+    "source_sha256": "006db9ce2ff20a7bf2a67ffbd9988735a1b3d3dc8abbd6309395e7139b66cb24",
+    "original_buses": 2025,
+    "included_original_buses": 2023,
+    "star_buses": 109,
+    "active_lines_and_transformer_windings": 2606,
+    "fixed_tap_correction_count": 97,
+    "hvdc_terminal_boundary_injections": [
+      {
+        "bus": 86220,
+        "P_MW": 80.3302242528081,
+        "Q_Mvar": -29.83583061802363,
+        "basis": "inferred from source voltages; not independently validated"
+      },
+      {
+        "bus": 86221,
+        "P_MW": 0.0,
+        "Q_Mvar": 0.0,
+        "basis": "inferred from source voltages; not independently validated"
+      }
+    ],
+    "remote_voltage_control": "held at source local bus Vm, not reproduced",
+    "switch_shunt_control": "held at Binit",
+    "tap_control": "held at source ratio/phase",
+    "FACTS_modes": [
+      0,
+      0,
+      0
+    ],
+    "source_residual_nonHVDC_max_P_MW": 334.8118058304074,
+    "source_residual_nonHVDC_max_PQ_Q_Mvar": 90.28766788277437,
+    "worst_P_bus": {
+      "id": 3082,
+      "name": "INCHICORE",
+      "mismatch_MW": -334.8118058304074
+    },
+    "source_residual_nonHVDC_P_MW_percentiles": [
+      0.00025545338488836,
+      0.6945366560388643,
+      76.35159190217146,
+      334.8118058304074
+    ],
+    "power_flow_converged": true,
+    "Vm_abs_error_pu_percentiles": [
+      8.543203894539886e-06,
+      2.4238149955302343e-05,
+      3.9307674331230396e-05,
+      9.865703913414237e-05
+    ],
+    "Va_abs_error_deg_percentiles": [
+      0.020350003684613593,
+      0.028001183793307415,
+      0.02902215745621988,
+      0.03682284946561398
+    ],
+    "validation_gate": "FAIL"
+  },
+  "cases": {
+    "source_reconstruction": {
+      "added_wind_MW": 0,
+      "outage": false,
+      "converged": true,
+      "screen_pass": true,
+      "max_loading_pct": 95.5014936026437,
+      "limiting_branch": "trafo3:74511:74520:74562:1:3",
+      "max_transmission_voltage_pu": 1.085805968582424,
+      "min_transmission_voltage_pu": 1.022661541037547,
+      "thermal_violations": 0,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 173,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 0,
+      "AC_balance_residual_MVA": 8.056628454548313e-07,
+      "balancing_generator_MW": 456.0,
+      "total_served_demand_MW": 7324.51,
+      "losses_MW": 160.0004814166526,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "max_collector_voltage_pu": 1.2265294585622328,
+      "max_collector_voltage_limit_exceedance_pu": 0.12652945856223274,
+      "collector_total_voltage_exceedance_pu": 6.3594885835790445,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_0_outage_0.npz",
+      "wind_withheld_under_tested_policy_MW": null
+    },
+    "line_outage_screened": {
+      "added_wind_MW": 163.28125,
+      "outage": true,
+      "converged": true,
+      "screen_pass": true,
+      "max_loading_pct": 99.99643652928721,
+      "limiting_branch": "line:3581:89516:1",
+      "max_transmission_voltage_pu": 1.0956143349899263,
+      "min_transmission_voltage_pu": 1.0243249258510503,
+      "thermal_violations": 0,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 221,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 32,
+      "AC_balance_residual_MVA": 1.8558782388864108e-09,
+      "balancing_generator_MW": 292.71875,
+      "total_served_demand_MW": 7324.51,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "losses_MW": 150.57467567328175,
+      "max_collector_voltage_pu": 1.2327192466482229,
+      "max_collector_voltage_limit_exceedance_pu": 0.13271924664822277,
+      "collector_total_voltage_exceedance_pu": 7.474651238241847,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_163.28125_outage_1.npz",
+      "wind_withheld_under_tested_policy_MW": 36.71875
+    },
+    "line_in_service_screened": {
+      "added_wind_MW": 200,
+      "outage": false,
+      "converged": true,
+      "screen_pass": true,
+      "max_loading_pct": 95.74878025408844,
+      "limiting_branch": "trafo3:74511:74520:74562:1:3",
+      "max_transmission_voltage_pu": 1.0916995962717844,
+      "min_transmission_voltage_pu": 1.029054994379836,
+      "thermal_violations": 0,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 219,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 34,
+      "AC_balance_residual_MVA": 6.196262437103558e-09,
+      "balancing_generator_MW": 256.0,
+      "total_served_demand_MW": 7324.51,
+      "losses_MW": 142.2780086549353,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "max_collector_voltage_pu": 1.2344433237276073,
+      "max_collector_voltage_limit_exceedance_pu": 0.13444332372760726,
+      "collector_total_voltage_exceedance_pu": 8.052971308724517,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_200_outage_0.npz",
+      "wind_withheld_under_tested_policy_MW": 0
+    },
+    "line_outage_full_wind_rejected": {
+      "added_wind_MW": 200,
+      "outage": true,
+      "converged": true,
+      "screen_pass": false,
+      "max_loading_pct": 118.71956759297251,
+      "limiting_branch": "line:3581:89516:1",
+      "max_transmission_voltage_pu": 1.0910423457749445,
+      "min_transmission_voltage_pu": 1.0168094196498252,
+      "thermal_violations": 4,
+      "transmission_voltage_violations": 0,
+      "collector_voltage_violations": 189,
+      "generator_P_violations": 0,
+      "generator_Q_violations": 0,
+      "Q_clamped_generator_count": 32,
+      "AC_balance_residual_MVA": 1.5138126619620737e-09,
+      "balancing_generator_MW": 256.0,
+      "total_served_demand_MW": 7324.51,
+      "losses_MW": 156.27364252931392,
+      "net_bus_demand_including_fixed_HVDC_MW": 7244.179775747196,
+      "max_collector_voltage_pu": 1.2333588764280505,
+      "max_collector_voltage_limit_exceedance_pu": 0.13335887642805044,
+      "collector_total_voltage_exceedance_pu": 6.705948683496083,
+      "overall_decision": "Requires engineering review: downstream voltage limits fail; not an approved dispatch plan.",
+      "audit_file": "scenario_audit/wind_200_outage_1.npz",
+      "wind_withheld_under_tested_policy_MW": 0
+    }
+  },
+  "reproduce": "OPENBLAS_NUM_THREADS=1 python scenario_screen.py; see bound_search.py for the bounded outage search."
+}

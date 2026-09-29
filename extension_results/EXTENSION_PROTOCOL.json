@@ -1,0 +1,24 @@
+{
+  "fixed_before_extension_outcomes": true,
+  "snapshot_reproduction": {
+    "B_wind_MW": 47.65625,
+    "C_wind_MW": 68.359375,
+    "tolerance_MW": 0.25
+  },
+  "new_snapshot": {
+    "wind_available_MW": 55.125,
+    "flex_MW": 12.5
+  },
+  "pilot_period": "2025-01-01T00:00Z/2025-01-01T06:00Z",
+  "pilot_modes": [
+    "wind_shape_fixed_demand",
+    "observed_demand_assumed_redispatch"
+  ],
+  "baseline_bus": 2072,
+  "selected_bus": 1701,
+  "same_service_MW": 20,
+  "energy_each_MWh": 120,
+  "failure_handling": "No annual or full-period total unless all requested intervals pass both alternatives. Signed changes retained; partial subtotals labelled.",
+  "source_limits": "unchanged",
+  "annualisation": "not performed"
+}

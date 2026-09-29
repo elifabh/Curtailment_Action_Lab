@@ -1,0 +1,192 @@
+{
+  "method": "jsdom + actual local HTTP API",
+  "visual_qa": false,
+  "browser_rendering": false,
+  "date_utc": "2026-09-27T05:07:01.963Z",
+  "checks": [
+    {
+      "name": "Application configuration populated profiles from actual HTTP API",
+      "passed": true
+    },
+    {
+      "name": "Local application: four tabs and accessible selected state",
+      "passed": true
+    },
+    {
+      "name": "Default comparison displays solver metrics and checks",
+      "passed": true
+    },
+    {
+      "name": "Invalid wind input prevented a new solver request",
+      "passed": true
+    },
+    {
+      "name": "Wind sensitivity renders returned model points",
+      "passed": true
+    },
+    {
+      "name": "Comparison export contains parseable result JSON",
+      "passed": true
+    },
+    {
+      "name": "Cloud AI visibly disabled when Azure credentials are absent",
+      "passed": true
+    },
+    {
+      "name": "Deterministic search returned a calculation trail without AI credentials",
+      "passed": true
+    },
+    {
+      "name": "Evidence export contains parseable JSON",
+      "passed": true
+    },
+    {
+      "name": "Presentation state opens, advances and closes (dialog API emulated)",
+      "passed": true
+    },
+    {
+      "name": "Local application: conditional Irish result, 14.06 MW difference, 16 scoped checks and fixed controls",
+      "passed": true
+    },
+    {
+      "name": "Local application: no invented sensitivity curve for the stored Irish pair",
+      "passed": true
+    },
+    {
+      "name": "Local application: deterministic study lookup and profile-specific benchmark are labelled",
+      "passed": true
+    },
+    {
+      "name": "Local application: new Irish assumptions and source audit available in Evidence",
+      "passed": true
+    },
+    {
+      "name": "Local application: superseded Irish calculation disabled",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: four tabs and accessible selected state",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML displays recorded results without network calls",
+      "passed": true
+    },
+    {
+      "name": "Offline rejects unrecorded inputs instead of substituting another result",
+      "passed": true
+    },
+    {
+      "name": "Offline wind sensitivity uses saved model points",
+      "passed": true
+    },
+    {
+      "name": "Offline deterministic search shows a saved calculation trail without network calls",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: conditional Irish result, 14.06 MW difference, 16 scoped checks and fixed controls",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: no invented sensitivity curve for the stored Irish pair",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: deterministic study lookup and profile-specific benchmark are labelled",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: new Irish assumptions and source audit available in Evidence",
+      "passed": true
+    },
+    {
+      "name": "Offline HTML: superseded Irish calculation disabled",
+      "passed": true
+    },
+    {
+      "name": "No unhandled JavaScript exceptions in tested DOM flows",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandled_errors": [],
+  "passed": true,
+  "ui_error": "",
+  "profile_state": {
+    "options": 3,
+    "disabled": false
+  },
+  "http_calls": [
+    {
+      "url": "http://127.0.0.1:8878/api/config",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evidence",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluation",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluate",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/sensitivity",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/search",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluation",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluation",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluate",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/sensitivity",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/search",
+      "method": "POST"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluation",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8878/api/evaluation",
+      "method": "GET"
+    }
+  ],
+  "download_names": [
+    "actionlab-comparison.json",
+    "actionlab-evidence.json"
+  ],
+  "check_count": 26,
+  "scope": "JavaScript DOM execution with real local HTTP API and offline replay, including Irish study controls, scope labels, benchmark selection and disabled legacy calculations. Not rendered-browser visual verification.",
+  "emulated_browser_apis": [
+    "HTML dialog open/close",
+    "download Blob capture",
+    "scrollIntoView",
+    "matchMedia"
+  ],
+  "tested_assets_sha256": {
+    "web/index.html": "79e037da18bf2ee52a118407db23098e0f9848c981af850b0a35990e217b4db9",
+    "web/style.css": "65d6273ff4be01da5a508952c08cb70d77ba4bea25ffa54272e56cc339ff3e06",
+    "web/app.js": "777837e09940a2d7412666f78446982e81623e720cd92dec9352ab2f23dd1953",
+    "OPEN_DEMO.html": "fe9a8e38e5bb517d69ff4cf0662df49e182288a45a37e1351e15aeeeb9714be7"
+  }
+}

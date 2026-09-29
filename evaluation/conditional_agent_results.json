@@ -1,0 +1,2962 @@
+{
+  "generated_at_utc": "2026-09-27T06:06:31.951062+00:00",
+  "profile_id": "irish_conditional_flex",
+  "fixed_conditions": {
+    "wind_mw": 200.0,
+    "load_scale": 1.0
+  },
+  "budget_per_search": 4,
+  "live_ai_benchmark_status": "not_run",
+  "benchmark_provider_kind": "none",
+  "performance_claim": "No superiority claim. A live run is a single descriptive comparison, not a statistical guarantee.",
+  "baseline_metrics": {
+    "status": "completed",
+    "best_valid_accepted_wind_mw": 68.359375,
+    "regret_to_declared_candidate_oracle_mw": 0.0,
+    "fraction_of_declared_candidate_oracle": 1.0,
+    "candidate_calls": 4,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": 0.020521,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "agent_metrics": {
+    "status": "not_run",
+    "best_valid_accepted_wind_mw": null,
+    "regret_to_declared_candidate_oracle_mw": null,
+    "fraction_of_declared_candidate_oracle": null,
+    "candidate_calls": 0,
+    "declared_budget": 4,
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "wall_seconds": null,
+    "provider_calls": 0,
+    "provider_usage": {}
+  },
+  "oracle": {
+    "definition": "Best eligible result in the finite declared candidate set only.",
+    "complete": true,
+    "best_valid_accepted_wind_mw": 68.359375,
+    "separate_candidate_calls": 8
+  },
+  "limitations": [
+    "Model snapshot comparisons, not measured field curtailment or Ireland-wide percentages.",
+    "Both search methods have the same maximum candidate-call budget; early stops are reported.",
+    "The oracle's extra calls are for evaluation only and are not part of either search budget.",
+    "Accepted wind is compared only under fixed available wind and load conditions.",
+    "Wall times include provider latency and may be affected by engine caching; no speed superiority claim.",
+    "The deterministic baseline can match exhaustive search when the budget covers the action set."
+  ],
+  "agent": {
+    "status": "not_run",
+    "mode": "azure_agent",
+    "budget": 4,
+    "message": "Live Azure benchmark was not requested.",
+    "best_valid": null,
+    "records": [],
+    "solver_calls": 0,
+    "precomputed_evidence_reads": 0,
+    "candidate_evaluation_mode": "precomputed_verified_study"
+  },
+  "baseline": {
+    "status": "completed",
+    "mode": "deterministic_baseline",
+    "budget": 4,
+    "budget_used": 4,
+    "records": [
+      {
+        "id": "evaluation_1",
+        "candidate": {
+          "action_id": "flex_at_1341",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "eligible": true,
+          "accepted_wind_mw": 61.71875,
+          "status": "conditional_snapshot_checked",
+          "mode": "precomputed_verified_study",
+          "checks": [
+            {
+              "id": "original_bus_groups_voltage",
+              "label": "Original bus groups voltage",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "voltage_ge_100kv",
+              "label": "Voltage ge 100kv",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "rated_branch_thermal",
+              "label": "Rated branch thermal",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_P",
+              "label": "Generator p",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_Q",
+              "label": "Generator q",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "direct_balance_max_MVA",
+              "label": "Direct balance max mva",
+              "passed": true,
+              "value": 4.2403636155650176e-10,
+              "limit": 0.0001,
+              "detail": "4.24e-10 MVA; tolerance 0.0001 MVA."
+            },
+            {
+              "id": "direct_branch_flow_difference_MVA",
+              "label": "Direct branch flow difference mva",
+              "passed": true,
+              "value": 3.1966281363369816e-10,
+              "limit": 1e-06,
+              "detail": "3.2e-10 MVA; tolerance 1e-06 MVA."
+            },
+            {
+              "id": "raw_source_crosscheck",
+              "label": "Independent RAW electrical equations and unchanged source limits",
+              "passed": true,
+              "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+            },
+            {
+              "id": "ideal_tie_recovery",
+              "label": "Recovered ideal-tie flows under declared allocation",
+              "passed": true,
+              "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+            }
+          ],
+          "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+          "assumptions": [
+            "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+            "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+            "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+            "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+          ],
+          "preparation": {
+            "tap_changes": {
+              "trafo:1061:10602:1": 1.04,
+              "trafo:1311:13114:1": 1.0130666666666668,
+              "trafo:2181:21804:1": 1.0130666666666668,
+              "trafo:2181:21804:2": 1.0130666666666668,
+              "trafo:2361:23604:1": 0.972,
+              "trafo:2361:23604:2": 0.972,
+              "trafo:3241:32404:1": 0.9929999999999999,
+              "trafo:3241:32404:2": 0.9824999999999999,
+              "trafo:3581:35804:1": 0.95022,
+              "trafo:3581:35804:2": 0.9481133333333333,
+              "trafo:4001:40004:1": 0.9929999999999999,
+              "trafo:4001:40004:2": 0.9929999999999999,
+              "trafo:4201:42004:1": 0.972,
+              "trafo:4201:42004:2": 0.972,
+              "trafo:4221:42204:1": 0.9502666666666667,
+              "trafo:4221:42204:2": 0.9502666666666667,
+              "trafo:4481:44804:1": 1.035,
+              "trafo:4481:44804:2": 1.035,
+              "trafo:4701:47004:1": 0.972,
+              "trafo:4701:47004:2": 0.972,
+              "trafo:4961:49604:1": 1.034,
+              "trafo:4961:49604:2": 1.034,
+              "trafo:4981:49804:1": 1.034,
+              "trafo:4981:49804:2": 1.034,
+              "trafo:5001:50004:1": 1.035,
+              "trafo:5221:52204:2": 1.035,
+              "trafo:5361:53604:1": 0.951,
+              "trafo:12504:12582:1": 1.1,
+              "trafo:14614:14602:1": 1.08155,
+              "trafo:21824:21802:1": 1.1,
+              "trafo:21844:21822:1": 1.1,
+              "trafo:21854:68230:1": 1.099,
+              "trafo:22204:22231:1": 1.06,
+              "trafo:23604:23685:1": 1.1,
+              "trafo:23614:23611:1": 1.1,
+              "trafo:23614:23611:2": 1.1,
+              "trafo:35804:35832:1": 1.1,
+              "trafo:42004:42001:1": 1.1,
+              "trafo:42214:42201:1": 1.1,
+              "trafo:42204:42272:1": 1.1,
+              "trafo:49614:49602:1": 0.9857142857142858,
+              "trafo:49604:49613:1": 0.9875,
+              "trafo:49604:49683:1": 0.990909090909091,
+              "trafo:49814:49802:1": 1.1,
+              "trafo:50014:50012:1": 1.1,
+              "trafo:52234:52201:1": 1.1,
+              "trafo:52610:52614:3": 1.034,
+              "trafo:52634:52632:1": 1.1,
+              "trafo:52644:52642:1": 1.1,
+              "trafo:53034:53032:1": 1.0630142857142857,
+              "trafo:53034:53042:1": 1.0630142857142857,
+              "trafo:53034:53052:1": 1.0630142857142857,
+              "trafo:75010:75030:1": 1.0166666666666668,
+              "trafo:75010:75030:2": 1.0166666666666668,
+              "trafo:77010:77030:1": 1.0333333333333334,
+              "trafo:77010:77030:2": 1.0333333333333334,
+              "trafo:77511:77530:1": 1.0166666666666668,
+              "trafo:77511:77530:2": 1.0166666666666668,
+              "trafo:84511:84530:1": 1.0,
+              "trafo:84512:84530:1": 1.0
+            },
+            "disconnected_shunt_buses": [
+              74564
+            ]
+          },
+          "limitations": [
+            "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+            "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+            "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+            "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+            "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+            "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+            "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+          ],
+          "evidence": {
+            "id": "pf_0110",
+            "wind_MW": 61.71875,
+            "line_outage": true,
+            "flex_allocation_MW": {
+              "1341": 20.0
+            },
+            "source_load_factor": 1.0,
+            "total_consumer_demand_MW": 7344.51,
+            "other_generation_MW": 7355.684420300694,
+            "network_losses_MW": 153.22339455350175,
+            "passes_declared_snapshot_checks": true,
+            "solver_converged": true,
+            "violations": {
+              "original_bus_groups_voltage": 0,
+              "voltage_ge_100kv": 0,
+              "rated_branch_thermal": 0,
+              "generator_P": 0,
+              "generator_Q": 0
+            },
+            "max_rated_branch_loading": 0.8809714797419281,
+            "direct_balance_max_MVA": 4.2403636155650176e-10,
+            "direct_flow_difference_MVA": 3.1966281363369816e-10,
+            "raw_equations": {
+              "direct_raw_branch_count": 2507,
+              "compared_branch_count": 2507,
+              "two_winding_transformers": 1201,
+              "three_winding_transformers": 109,
+              "merged_ideal_ties": 148,
+              "max_branch_flow_difference_MVA": 3.1966281363287894e-10,
+              "max_grouped_KCL_residual_MVA": 4.240363388955399e-10,
+              "max_source_rating_difference": 0.0,
+              "max_source_bus_generator_bound_or_status_difference": 0.0,
+              "passed": true
+            },
+            "ideal_ties": {
+              "max_nodal_balance_residual_MVA": 2.141020633306477e-10,
+              "max_group_residual_MVA": 2.14087926141103e-10,
+              "tree_edges": 144,
+              "cyclic_group_edges": 4,
+              "tree_overloads": 0,
+              "cyclic_allocation_overloads": 0,
+              "all_internal_tie_limits_certified": false
+            },
+            "elapsed_seconds": 4.864964379998128,
+            "solver_seconds": 4.692061261997878,
+            "direct_check_seconds": 0.0061746510000375565,
+            "verification_seconds": 0.16672926200044458,
+            "phase": "refinement",
+            "operationally_validated": false
+          },
+          "operationally_validated": false,
+          "physical_actions_executed": false,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_2",
+        "candidate": {
+          "action_id": "flex_at_1701",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "eligible": true,
+          "accepted_wind_mw": 68.359375,
+          "status": "conditional_snapshot_checked",
+          "mode": "precomputed_verified_study",
+          "checks": [
+            {
+              "id": "original_bus_groups_voltage",
+              "label": "Original bus groups voltage",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "voltage_ge_100kv",
+              "label": "Voltage ge 100kv",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "rated_branch_thermal",
+              "label": "Rated branch thermal",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_P",
+              "label": "Generator p",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_Q",
+              "label": "Generator q",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "direct_balance_max_MVA",
+              "label": "Direct balance max mva",
+              "passed": true,
+              "value": 1.8548710533390932e-09,
+              "limit": 0.0001,
+              "detail": "1.85e-09 MVA; tolerance 0.0001 MVA."
+            },
+            {
+              "id": "direct_branch_flow_difference_MVA",
+              "label": "Direct branch flow difference mva",
+              "passed": true,
+              "value": 4.484672953099334e-10,
+              "limit": 1e-06,
+              "detail": "4.48e-10 MVA; tolerance 1e-06 MVA."
+            },
+            {
+              "id": "raw_source_crosscheck",
+              "label": "Independent RAW electrical equations and unchanged source limits",
+              "passed": true,
+              "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+            },
+            {
+              "id": "ideal_tie_recovery",
+              "label": "Recovered ideal-tie flows under declared allocation",
+              "passed": true,
+              "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+            }
+          ],
+          "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+          "assumptions": [
+            "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+            "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+            "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+            "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+          ],
+          "preparation": {
+            "tap_changes": {
+              "trafo:1061:10602:1": 1.04,
+              "trafo:1311:13114:1": 1.0130666666666668,
+              "trafo:2181:21804:1": 1.0130666666666668,
+              "trafo:2181:21804:2": 1.0130666666666668,
+              "trafo:2361:23604:1": 0.972,
+              "trafo:2361:23604:2": 0.972,
+              "trafo:3241:32404:1": 0.9929999999999999,
+              "trafo:3241:32404:2": 0.9824999999999999,
+              "trafo:3581:35804:1": 0.95022,
+              "trafo:3581:35804:2": 0.9481133333333333,
+              "trafo:4001:40004:1": 0.9929999999999999,
+              "trafo:4001:40004:2": 0.9929999999999999,
+              "trafo:4201:42004:1": 0.972,
+              "trafo:4201:42004:2": 0.972,
+              "trafo:4221:42204:1": 0.9502666666666667,
+              "trafo:4221:42204:2": 0.9502666666666667,
+              "trafo:4481:44804:1": 1.035,
+              "trafo:4481:44804:2": 1.035,
+              "trafo:4701:47004:1": 0.972,
+              "trafo:4701:47004:2": 0.972,
+              "trafo:4961:49604:1": 1.034,
+              "trafo:4961:49604:2": 1.034,
+              "trafo:4981:49804:1": 1.034,
+              "trafo:4981:49804:2": 1.034,
+              "trafo:5001:50004:1": 1.035,
+              "trafo:5221:52204:2": 1.035,
+              "trafo:5361:53604:1": 0.951,
+              "trafo:12504:12582:1": 1.1,
+              "trafo:14614:14602:1": 1.08155,
+              "trafo:21824:21802:1": 1.1,
+              "trafo:21844:21822:1": 1.1,
+              "trafo:21854:68230:1": 1.099,
+              "trafo:22204:22231:1": 1.06,
+              "trafo:23604:23685:1": 1.1,
+              "trafo:23614:23611:1": 1.1,
+              "trafo:23614:23611:2": 1.1,
+              "trafo:35804:35832:1": 1.1,
+              "trafo:42004:42001:1": 1.1,
+              "trafo:42214:42201:1": 1.1,
+              "trafo:42204:42272:1": 1.1,
+              "trafo:49614:49602:1": 0.9857142857142858,
+              "trafo:49604:49613:1": 0.9875,
+              "trafo:49604:49683:1": 0.990909090909091,
+              "trafo:49814:49802:1": 1.1,
+              "trafo:50014:50012:1": 1.1,
+              "trafo:52234:52201:1": 1.1,
+              "trafo:52610:52614:3": 1.034,
+              "trafo:52634:52632:1": 1.1,
+              "trafo:52644:52642:1": 1.1,
+              "trafo:53034:53032:1": 1.0630142857142857,
+              "trafo:53034:53042:1": 1.0630142857142857,
+              "trafo:53034:53052:1": 1.0630142857142857,
+              "trafo:75010:75030:1": 1.0166666666666668,
+              "trafo:75010:75030:2": 1.0166666666666668,
+              "trafo:77010:77030:1": 1.0333333333333334,
+              "trafo:77010:77030:2": 1.0333333333333334,
+              "trafo:77511:77530:1": 1.0166666666666668,
+              "trafo:77511:77530:2": 1.0166666666666668,
+              "trafo:84511:84530:1": 1.0,
+              "trafo:84512:84530:1": 1.0
+            },
+            "disconnected_shunt_buses": [
+              74564
+            ]
+          },
+          "limitations": [
+            "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+            "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+            "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+            "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+            "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+            "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+            "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+          ],
+          "evidence": {
+            "id": "pf_0360",
+            "wind_MW": 68.359375,
+            "line_outage": true,
+            "flex_allocation_MW": {
+              "1701": 20.0
+            },
+            "source_load_factor": 1.0,
+            "total_consumer_demand_MW": 7344.51,
+            "other_generation_MW": 7348.573485969545,
+            "network_losses_MW": 152.75308522235264,
+            "passes_declared_snapshot_checks": true,
+            "solver_converged": true,
+            "violations": {
+              "original_bus_groups_voltage": 0,
+              "voltage_ge_100kv": 0,
+              "rated_branch_thermal": 0,
+              "generator_P": 0,
+              "generator_Q": 0
+            },
+            "max_rated_branch_loading": 0.8810013915595007,
+            "direct_balance_max_MVA": 1.8548710533390932e-09,
+            "direct_flow_difference_MVA": 4.484672953099334e-10,
+            "raw_equations": {
+              "direct_raw_branch_count": 2507,
+              "compared_branch_count": 2507,
+              "two_winding_transformers": 1201,
+              "three_winding_transformers": 109,
+              "merged_ideal_ties": 148,
+              "max_branch_flow_difference_MVA": 4.4847920862566933e-10,
+              "max_grouped_KCL_residual_MVA": 1.8547317943768028e-09,
+              "max_source_rating_difference": 0.0,
+              "max_source_bus_generator_bound_or_status_difference": 0.0,
+              "passed": true
+            },
+            "ideal_ties": {
+              "max_nodal_balance_residual_MVA": 3.2092403439856974e-10,
+              "max_group_residual_MVA": 3.2092480952263447e-10,
+              "tree_edges": 144,
+              "cyclic_group_edges": 4,
+              "tree_overloads": 0,
+              "cyclic_allocation_overloads": 0,
+              "all_internal_tie_limits_certified": false
+            },
+            "elapsed_seconds": 3.8203362870008277,
+            "solver_seconds": 3.6407690930027456,
+            "direct_check_seconds": 0.0057395910007471684,
+            "verification_seconds": 0.17382832799921744,
+            "phase": "refinement",
+            "operationally_validated": false
+          },
+          "operationally_validated": false,
+          "physical_actions_executed": false,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_3",
+        "candidate": {
+          "action_id": "flex_at_2072",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "eligible": true,
+          "accepted_wind_mw": 47.65625,
+          "status": "conditional_snapshot_checked",
+          "mode": "precomputed_verified_study",
+          "checks": [
+            {
+              "id": "original_bus_groups_voltage",
+              "label": "Original bus groups voltage",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "voltage_ge_100kv",
+              "label": "Voltage ge 100kv",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "rated_branch_thermal",
+              "label": "Rated branch thermal",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_P",
+              "label": "Generator p",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_Q",
+              "label": "Generator q",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "direct_balance_max_MVA",
+              "label": "Direct balance max mva",
+              "passed": true,
+              "value": 7.166753294584815e-10,
+              "limit": 0.0001,
+              "detail": "7.17e-10 MVA; tolerance 0.0001 MVA."
+            },
+            {
+              "id": "direct_branch_flow_difference_MVA",
+              "label": "Direct branch flow difference mva",
+              "passed": true,
+              "value": 2.847923650797654e-10,
+              "limit": 1e-06,
+              "detail": "2.85e-10 MVA; tolerance 1e-06 MVA."
+            },
+            {
+              "id": "raw_source_crosscheck",
+              "label": "Independent RAW electrical equations and unchanged source limits",
+              "passed": true,
+              "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+            },
+            {
+              "id": "ideal_tie_recovery",
+              "label": "Recovered ideal-tie flows under declared allocation",
+              "passed": true,
+              "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+            }
+          ],
+          "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+          "assumptions": [
+            "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+            "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+            "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+            "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+          ],
+          "preparation": {
+            "tap_changes": {
+              "trafo:1061:10602:1": 1.04,
+              "trafo:1311:13114:1": 1.0130666666666668,
+              "trafo:2181:21804:1": 1.0130666666666668,
+              "trafo:2181:21804:2": 1.0130666666666668,
+              "trafo:2361:23604:1": 0.972,
+              "trafo:2361:23604:2": 0.972,
+              "trafo:3241:32404:1": 0.9929999999999999,
+              "trafo:3241:32404:2": 0.9824999999999999,
+              "trafo:3581:35804:1": 0.95022,
+              "trafo:3581:35804:2": 0.9481133333333333,
+              "trafo:4001:40004:1": 0.9929999999999999,
+              "trafo:4001:40004:2": 0.9929999999999999,
+              "trafo:4201:42004:1": 0.972,
+              "trafo:4201:42004:2": 0.972,
+              "trafo:4221:42204:1": 0.9502666666666667,
+              "trafo:4221:42204:2": 0.9502666666666667,
+              "trafo:4481:44804:1": 1.035,
+              "trafo:4481:44804:2": 1.035,
+              "trafo:4701:47004:1": 0.972,
+              "trafo:4701:47004:2": 0.972,
+              "trafo:4961:49604:1": 1.034,
+              "trafo:4961:49604:2": 1.034,
+              "trafo:4981:49804:1": 1.034,
+              "trafo:4981:49804:2": 1.034,
+              "trafo:5001:50004:1": 1.035,
+              "trafo:5221:52204:2": 1.035,
+              "trafo:5361:53604:1": 0.951,
+              "trafo:12504:12582:1": 1.1,
+              "trafo:14614:14602:1": 1.08155,
+              "trafo:21824:21802:1": 1.1,
+              "trafo:21844:21822:1": 1.1,
+              "trafo:21854:68230:1": 1.099,
+              "trafo:22204:22231:1": 1.06,
+              "trafo:23604:23685:1": 1.1,
+              "trafo:23614:23611:1": 1.1,
+              "trafo:23614:23611:2": 1.1,
+              "trafo:35804:35832:1": 1.1,
+              "trafo:42004:42001:1": 1.1,
+              "trafo:42214:42201:1": 1.1,
+              "trafo:42204:42272:1": 1.1,
+              "trafo:49614:49602:1": 0.9857142857142858,
+              "trafo:49604:49613:1": 0.9875,
+              "trafo:49604:49683:1": 0.990909090909091,
+              "trafo:49814:49802:1": 1.1,
+              "trafo:50014:50012:1": 1.1,
+              "trafo:52234:52201:1": 1.1,
+              "trafo:52610:52614:3": 1.034,
+              "trafo:52634:52632:1": 1.1,
+              "trafo:52644:52642:1": 1.1,
+              "trafo:53034:53032:1": 1.0630142857142857,
+              "trafo:53034:53042:1": 1.0630142857142857,
+              "trafo:53034:53052:1": 1.0630142857142857,
+              "trafo:75010:75030:1": 1.0166666666666668,
+              "trafo:75010:75030:2": 1.0166666666666668,
+              "trafo:77010:77030:1": 1.0333333333333334,
+              "trafo:77010:77030:2": 1.0333333333333334,
+              "trafo:77511:77530:1": 1.0166666666666668,
+              "trafo:77511:77530:2": 1.0166666666666668,
+              "trafo:84511:84530:1": 1.0,
+              "trafo:84512:84530:1": 1.0
+            },
+            "disconnected_shunt_buses": [
+              74564
+            ]
+          },
+          "limitations": [
+            "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+            "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+            "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+            "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+            "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+            "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+            "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+          ],
+          "evidence": {
+            "id": "pf_0094",
+            "wind_MW": 47.65625,
+            "line_outage": true,
+            "flex_allocation_MW": {
+              "2072": 20.0
+            },
+            "source_load_factor": 1.0,
+            "total_consumer_demand_MW": 7344.51,
+            "other_generation_MW": 7370.925527815393,
+            "network_losses_MW": 154.402002068201,
+            "passes_declared_snapshot_checks": true,
+            "solver_converged": true,
+            "violations": {
+              "original_bus_groups_voltage": 0,
+              "voltage_ge_100kv": 0,
+              "rated_branch_thermal": 0,
+              "generator_P": 0,
+              "generator_Q": 0
+            },
+            "max_rated_branch_loading": 0.880958050465113,
+            "direct_balance_max_MVA": 7.166753294584815e-10,
+            "direct_flow_difference_MVA": 2.847923650797654e-10,
+            "raw_equations": {
+              "direct_raw_branch_count": 2507,
+              "compared_branch_count": 2507,
+              "two_winding_transformers": 1201,
+              "three_winding_transformers": 109,
+              "merged_ideal_ties": 148,
+              "max_branch_flow_difference_MVA": 2.8479753061487855e-10,
+              "max_grouped_KCL_residual_MVA": 7.167187075800671e-10,
+              "max_source_rating_difference": 0.0,
+              "max_source_bus_generator_bound_or_status_difference": 0.0,
+              "passed": true
+            },
+            "ideal_ties": {
+              "max_nodal_balance_residual_MVA": 1.7231824600553003e-10,
+              "max_group_residual_MVA": 1.723040372822643e-10,
+              "tree_edges": 144,
+              "cyclic_group_edges": 4,
+              "tree_overloads": 0,
+              "cyclic_allocation_overloads": 0,
+              "all_internal_tie_limits_certified": false
+            },
+            "elapsed_seconds": 3.367898499000148,
+            "solver_seconds": 3.198943348001194,
+            "direct_check_seconds": 0.006128564000391634,
+            "verification_seconds": 0.1628275469993241,
+            "phase": "refinement",
+            "operationally_validated": false
+          },
+          "operationally_validated": false,
+          "physical_actions_executed": false,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      },
+      {
+        "id": "evaluation_4",
+        "candidate": {
+          "action_id": "flex_at_5191",
+          "wind_mw": 200.0,
+          "load_scale": 1.0
+        },
+        "result": {
+          "eligible": true,
+          "accepted_wind_mw": 63.28125,
+          "status": "conditional_snapshot_checked",
+          "mode": "precomputed_verified_study",
+          "checks": [
+            {
+              "id": "original_bus_groups_voltage",
+              "label": "Original bus groups voltage",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "voltage_ge_100kv",
+              "label": "Voltage ge 100kv",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "rated_branch_thermal",
+              "label": "Rated branch thermal",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_P",
+              "label": "Generator p",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "generator_Q",
+              "label": "Generator q",
+              "passed": true,
+              "value": 0,
+              "limit": 0,
+              "detail": "0 violations under the declared model limits."
+            },
+            {
+              "id": "direct_balance_max_MVA",
+              "label": "Direct balance max mva",
+              "passed": true,
+              "value": 7.021907958583215e-10,
+              "limit": 0.0001,
+              "detail": "7.02e-10 MVA; tolerance 0.0001 MVA."
+            },
+            {
+              "id": "direct_branch_flow_difference_MVA",
+              "label": "Direct branch flow difference mva",
+              "passed": true,
+              "value": 2.9903990273396345e-10,
+              "limit": 1e-06,
+              "detail": "2.99e-10 MVA; tolerance 1e-06 MVA."
+            },
+            {
+              "id": "raw_source_crosscheck",
+              "label": "Independent RAW electrical equations and unchanged source limits",
+              "passed": true,
+              "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+            },
+            {
+              "id": "ideal_tie_recovery",
+              "label": "Recovered ideal-tie flows under declared allocation",
+              "passed": true,
+              "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+            }
+          ],
+          "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+          "assumptions": [
+            "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+            "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+            "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+            "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+          ],
+          "preparation": {
+            "tap_changes": {
+              "trafo:1061:10602:1": 1.04,
+              "trafo:1311:13114:1": 1.0130666666666668,
+              "trafo:2181:21804:1": 1.0130666666666668,
+              "trafo:2181:21804:2": 1.0130666666666668,
+              "trafo:2361:23604:1": 0.972,
+              "trafo:2361:23604:2": 0.972,
+              "trafo:3241:32404:1": 0.9929999999999999,
+              "trafo:3241:32404:2": 0.9824999999999999,
+              "trafo:3581:35804:1": 0.95022,
+              "trafo:3581:35804:2": 0.9481133333333333,
+              "trafo:4001:40004:1": 0.9929999999999999,
+              "trafo:4001:40004:2": 0.9929999999999999,
+              "trafo:4201:42004:1": 0.972,
+              "trafo:4201:42004:2": 0.972,
+              "trafo:4221:42204:1": 0.9502666666666667,
+              "trafo:4221:42204:2": 0.9502666666666667,
+              "trafo:4481:44804:1": 1.035,
+              "trafo:4481:44804:2": 1.035,
+              "trafo:4701:47004:1": 0.972,
+              "trafo:4701:47004:2": 0.972,
+              "trafo:4961:49604:1": 1.034,
+              "trafo:4961:49604:2": 1.034,
+              "trafo:4981:49804:1": 1.034,
+              "trafo:4981:49804:2": 1.034,
+              "trafo:5001:50004:1": 1.035,
+              "trafo:5221:52204:2": 1.035,
+              "trafo:5361:53604:1": 0.951,
+              "trafo:12504:12582:1": 1.1,
+              "trafo:14614:14602:1": 1.08155,
+              "trafo:21824:21802:1": 1.1,
+              "trafo:21844:21822:1": 1.1,
+              "trafo:21854:68230:1": 1.099,
+              "trafo:22204:22231:1": 1.06,
+              "trafo:23604:23685:1": 1.1,
+              "trafo:23614:23611:1": 1.1,
+              "trafo:23614:23611:2": 1.1,
+              "trafo:35804:35832:1": 1.1,
+              "trafo:42004:42001:1": 1.1,
+              "trafo:42214:42201:1": 1.1,
+              "trafo:42204:42272:1": 1.1,
+              "trafo:49614:49602:1": 0.9857142857142858,
+              "trafo:49604:49613:1": 0.9875,
+              "trafo:49604:49683:1": 0.990909090909091,
+              "trafo:49814:49802:1": 1.1,
+              "trafo:50014:50012:1": 1.1,
+              "trafo:52234:52201:1": 1.1,
+              "trafo:52610:52614:3": 1.034,
+              "trafo:52634:52632:1": 1.1,
+              "trafo:52644:52642:1": 1.1,
+              "trafo:53034:53032:1": 1.0630142857142857,
+              "trafo:53034:53042:1": 1.0630142857142857,
+              "trafo:53034:53052:1": 1.0630142857142857,
+              "trafo:75010:75030:1": 1.0166666666666668,
+              "trafo:75010:75030:2": 1.0166666666666668,
+              "trafo:77010:77030:1": 1.0333333333333334,
+              "trafo:77010:77030:2": 1.0333333333333334,
+              "trafo:77511:77530:1": 1.0166666666666668,
+              "trafo:77511:77530:2": 1.0166666666666668,
+              "trafo:84511:84530:1": 1.0,
+              "trafo:84512:84530:1": 1.0
+            },
+            "disconnected_shunt_buses": [
+              74564
+            ]
+          },
+          "limitations": [
+            "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+            "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+            "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+            "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+            "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+            "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+            "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+          ],
+          "evidence": {
+            "id": "pf_0375",
+            "wind_MW": 63.28125,
+            "line_outage": true,
+            "flex_allocation_MW": {
+              "5191": 20.0
+            },
+            "source_load_factor": 1.0,
+            "total_consumer_demand_MW": 7344.51,
+            "other_generation_MW": 7354.270624655014,
+            "network_losses_MW": 153.37209890782196,
+            "passes_declared_snapshot_checks": true,
+            "solver_converged": true,
+            "violations": {
+              "original_bus_groups_voltage": 0,
+              "voltage_ge_100kv": 0,
+              "rated_branch_thermal": 0,
+              "generator_P": 0,
+              "generator_Q": 0
+            },
+            "max_rated_branch_loading": 0.8809503651516581,
+            "direct_balance_max_MVA": 7.021907958583215e-10,
+            "direct_flow_difference_MVA": 2.9903990273396345e-10,
+            "raw_equations": {
+              "direct_raw_branch_count": 2507,
+              "compared_branch_count": 2507,
+              "two_winding_transformers": 1201,
+              "three_winding_transformers": 109,
+              "merged_ideal_ties": 148,
+              "max_branch_flow_difference_MVA": 2.9903990251884236e-10,
+              "max_grouped_KCL_residual_MVA": 7.02190795641246e-10,
+              "max_source_rating_difference": 0.0,
+              "max_source_bus_generator_bound_or_status_difference": 0.0,
+              "passed": true
+            },
+            "ideal_ties": {
+              "max_nodal_balance_residual_MVA": 2.676915092248367e-10,
+              "max_group_residual_MVA": 2.6769150922483663e-10,
+              "tree_edges": 144,
+              "cyclic_group_edges": 4,
+              "tree_overloads": 0,
+              "cyclic_allocation_overloads": 0,
+              "all_internal_tie_limits_certified": false
+            },
+            "elapsed_seconds": 4.9032094279973535,
+            "solver_seconds": 4.720789441998932,
+            "direct_check_seconds": 0.0063989660011429805,
+            "verification_seconds": 0.17602205900038825,
+            "phase": "refinement",
+            "operationally_validated": false
+          },
+          "operationally_validated": false,
+          "physical_actions_executed": false,
+          "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+        }
+      }
+    ],
+    "rejected": [],
+    "provider_calls": 0,
+    "usage": {},
+    "live_ai_benchmark": false,
+    "summary_source": "deterministic_engine_records",
+    "elapsed_seconds": 0.020521,
+    "best_valid": {
+      "id": "evaluation_2",
+      "candidate": {
+        "action_id": "flex_at_1701",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 68.359375,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.8548710533390932e-09,
+            "limit": 0.0001,
+            "detail": "1.85e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 4.484672953099334e-10,
+            "limit": 1e-06,
+            "detail": "4.48e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0360",
+          "wind_MW": 68.359375,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1701": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7348.573485969545,
+          "network_losses_MW": 152.75308522235264,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8810013915595007,
+          "direct_balance_max_MVA": 1.8548710533390932e-09,
+          "direct_flow_difference_MVA": 4.484672953099334e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 4.4847920862566933e-10,
+            "max_grouped_KCL_residual_MVA": 1.8547317943768028e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 3.2092403439856974e-10,
+            "max_group_residual_MVA": 3.2092480952263447e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 3.8203362870008277,
+          "solver_seconds": 3.6407690930027456,
+          "direct_check_seconds": 0.0057395910007471684,
+          "verification_seconds": 0.17382832799921744,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    "violations_rejected": 0,
+    "invalid_requests_rejected": 0,
+    "solver_calls": 0,
+    "physical_actions_executed": false,
+    "summary": "Evaluated 4 scenario(s). Among the evaluated scenarios, flex_at_1701 accepted 68.36 MW and passed the declared model checks. This is a model result, not a field result or an operational approval.",
+    "precomputed_evidence_reads": 4,
+    "candidate_evaluation_mode": "precomputed_verified_study"
+  },
+  "oracle_records": [
+    {
+      "id": "evaluation_1",
+      "candidate": {
+        "action_id": "flex_at_1341",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 61.71875,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 4.2403636155650176e-10,
+            "limit": 0.0001,
+            "detail": "4.24e-10 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 3.1966281363369816e-10,
+            "limit": 1e-06,
+            "detail": "3.2e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0110",
+          "wind_MW": 61.71875,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1341": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7355.684420300694,
+          "network_losses_MW": 153.22339455350175,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8809714797419281,
+          "direct_balance_max_MVA": 4.2403636155650176e-10,
+          "direct_flow_difference_MVA": 3.1966281363369816e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 3.1966281363287894e-10,
+            "max_grouped_KCL_residual_MVA": 4.240363388955399e-10,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 2.141020633306477e-10,
+            "max_group_residual_MVA": 2.14087926141103e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 4.864964379998128,
+          "solver_seconds": 4.692061261997878,
+          "direct_check_seconds": 0.0061746510000375565,
+          "verification_seconds": 0.16672926200044458,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_2",
+      "candidate": {
+        "action_id": "flex_at_1571",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 64.84375,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.132981020425415e-09,
+            "limit": 0.0001,
+            "detail": "1.13e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 5.279263715122164e-10,
+            "limit": 1e-06,
+            "detail": "5.28e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0391",
+          "wind_MW": 64.84375,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1571": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7352.962961851351,
+          "network_losses_MW": 153.62693610415863,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8809303872908757,
+          "direct_balance_max_MVA": 1.132981020425415e-09,
+          "direct_flow_difference_MVA": 5.279263715122164e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 5.279263715133613e-10,
+            "max_grouped_KCL_residual_MVA": 1.13295019572785e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 1.971864575503066e-10,
+            "max_group_residual_MVA": 1.9717260902793048e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 4.251053805997799,
+          "solver_seconds": 4.06486188299823,
+          "direct_check_seconds": 0.00709826100137434,
+          "verification_seconds": 0.17909522999980254,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_3",
+      "candidate": {
+        "action_id": "flex_at_1701",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 68.359375,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.8548710533390932e-09,
+            "limit": 0.0001,
+            "detail": "1.85e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 4.484672953099334e-10,
+            "limit": 1e-06,
+            "detail": "4.48e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0360",
+          "wind_MW": 68.359375,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1701": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7348.573485969545,
+          "network_losses_MW": 152.75308522235264,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8810013915595007,
+          "direct_balance_max_MVA": 1.8548710533390932e-09,
+          "direct_flow_difference_MVA": 4.484672953099334e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 4.4847920862566933e-10,
+            "max_grouped_KCL_residual_MVA": 1.8547317943768028e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 3.2092403439856974e-10,
+            "max_group_residual_MVA": 3.2092480952263447e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 3.8203362870008277,
+          "solver_seconds": 3.6407690930027456,
+          "direct_check_seconds": 0.0057395910007471684,
+          "verification_seconds": 0.17382832799921744,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_4",
+      "candidate": {
+        "action_id": "flex_at_1761",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 67.578125,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.721537716502195e-09,
+            "limit": 0.0001,
+            "detail": "1.72e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 4.1077069185679863e-10,
+            "limit": 1e-06,
+            "detail": "4.11e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0408",
+          "wind_MW": 67.578125,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1761": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7349.413005797825,
+          "network_losses_MW": 152.8113550506323,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8810045729781348,
+          "direct_balance_max_MVA": 1.721537716502195e-09,
+          "direct_flow_difference_MVA": 4.1077069185679863e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 4.107706916407464e-10,
+            "max_grouped_KCL_residual_MVA": 1.7214662662583238e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 2.988074586273718e-10,
+            "max_group_residual_MVA": 2.987936159280814e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 3.934107958997629,
+          "solver_seconds": 3.7628471449970675,
+          "direct_check_seconds": 0.006207321999681881,
+          "verification_seconds": 0.16505417700318503,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_5",
+      "candidate": {
+        "action_id": "flex_at_1981",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 64.84375,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.0014269162813453e-09,
+            "limit": 0.0001,
+            "detail": "1e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 2.888201367942813e-10,
+            "limit": 1e-06,
+            "detail": "2.89e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0423",
+          "wind_MW": 64.84375,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "1981": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7353.24773652931,
+          "network_losses_MW": 153.91171078211755,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8808022533877734,
+          "direct_balance_max_MVA": 1.0014269162813453e-09,
+          "direct_flow_difference_MVA": 2.888201367942813e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 2.888203008623805e-10,
+            "max_grouped_KCL_residual_MVA": 1.0014269160625126e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 1.294527662416762e-10,
+            "max_group_residual_MVA": 1.2945276624167623e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 4.089805218001857,
+          "solver_seconds": 3.902335185000993,
+          "direct_check_seconds": 0.006350789000862278,
+          "verification_seconds": 0.18111983999915537,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_6",
+      "candidate": {
+        "action_id": "flex_at_2072",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 47.65625,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 7.166753294584815e-10,
+            "limit": 0.0001,
+            "detail": "7.17e-10 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 2.847923650797654e-10,
+            "limit": 1e-06,
+            "detail": "2.85e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0094",
+          "wind_MW": 47.65625,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "2072": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7370.925527815393,
+          "network_losses_MW": 154.402002068201,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.880958050465113,
+          "direct_balance_max_MVA": 7.166753294584815e-10,
+          "direct_flow_difference_MVA": 2.847923650797654e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 2.8479753061487855e-10,
+            "max_grouped_KCL_residual_MVA": 7.167187075800671e-10,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 1.7231824600553003e-10,
+            "max_group_residual_MVA": 1.723040372822643e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 3.367898499000148,
+          "solver_seconds": 3.198943348001194,
+          "direct_check_seconds": 0.006128564000391634,
+          "verification_seconds": 0.1628275469993241,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_7",
+      "candidate": {
+        "action_id": "flex_at_2870",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 67.96875,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 1.7188832331243547e-09,
+            "limit": 0.0001,
+            "detail": "1.72e-09 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 2.843345996662881e-10,
+            "limit": 1e-06,
+            "detail": "2.84e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0439",
+          "wind_MW": 67.96875,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "2870": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7349.127087563039,
+          "network_losses_MW": 152.91606181584666,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8809817411997197,
+          "direct_balance_max_MVA": 1.7188832331243547e-09,
+          "direct_flow_difference_MVA": 2.843345996662881e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 2.8433696920275843e-10,
+            "max_grouped_KCL_residual_MVA": 1.718967932547832e-09,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 2.982029880268655e-10,
+            "max_group_residual_MVA": 2.981891369067406e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 4.200454084999365,
+          "solver_seconds": 3.997379845000978,
+          "direct_check_seconds": 0.014939685999706853,
+          "verification_seconds": 0.18813550800041412,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    },
+    {
+      "id": "evaluation_8",
+      "candidate": {
+        "action_id": "flex_at_5191",
+        "wind_mw": 200.0,
+        "load_scale": 1.0
+      },
+      "result": {
+        "eligible": true,
+        "accepted_wind_mw": 63.28125,
+        "status": "conditional_snapshot_checked",
+        "mode": "precomputed_verified_study",
+        "checks": [
+          {
+            "id": "original_bus_groups_voltage",
+            "label": "Original bus groups voltage",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "voltage_ge_100kv",
+            "label": "Voltage ge 100kv",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "rated_branch_thermal",
+            "label": "Rated branch thermal",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_P",
+            "label": "Generator p",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "generator_Q",
+            "label": "Generator q",
+            "passed": true,
+            "value": 0,
+            "limit": 0,
+            "detail": "0 violations under the declared model limits."
+          },
+          {
+            "id": "direct_balance_max_MVA",
+            "label": "Direct balance max mva",
+            "passed": true,
+            "value": 7.021907958583215e-10,
+            "limit": 0.0001,
+            "detail": "7.02e-10 MVA; tolerance 0.0001 MVA."
+          },
+          {
+            "id": "direct_branch_flow_difference_MVA",
+            "label": "Direct branch flow difference mva",
+            "passed": true,
+            "value": 2.9903990273396345e-10,
+            "limit": 1e-06,
+            "detail": "2.99e-10 MVA; tolerance 1e-06 MVA."
+          },
+          {
+            "id": "raw_source_crosscheck",
+            "label": "Independent RAW electrical equations and unchanged source limits",
+            "passed": true,
+            "detail": "Separate direct-text parsing and winding-voltage equations reproduce the solved state. HVDC remains a declared fixed boundary."
+          },
+          {
+            "id": "ideal_tie_recovery",
+            "label": "Recovered ideal-tie flows under declared allocation",
+            "passed": true,
+            "detail": "Tree tie flows are unique. Four cyclic tie edges use the declared inverse-reactance allocation; alternative cycle-flow splits are not certified."
+          }
+        ],
+        "summary": "Verified stored mathematical scenario. Eligibility applies only to comparison within the declared study; it grants no operating permission.",
+        "assumptions": [
+          "Hypothetical controllable loads at the two named buses. No real data-centre capacity or permission was supplied.",
+          "Both alternatives use a derived planning case with declared tap changes and a capacitor disconnection. The original RAW case is not feasible under all its own limits.",
+          "The source file is a public transmission planning model, not a measured dispatch-down time series.",
+          "Aghada bus 10470 balances changes. HVDC import remains a calibrated fixed boundary; source local voltage targets are held fixed."
+        ],
+        "preparation": {
+          "tap_changes": {
+            "trafo:1061:10602:1": 1.04,
+            "trafo:1311:13114:1": 1.0130666666666668,
+            "trafo:2181:21804:1": 1.0130666666666668,
+            "trafo:2181:21804:2": 1.0130666666666668,
+            "trafo:2361:23604:1": 0.972,
+            "trafo:2361:23604:2": 0.972,
+            "trafo:3241:32404:1": 0.9929999999999999,
+            "trafo:3241:32404:2": 0.9824999999999999,
+            "trafo:3581:35804:1": 0.95022,
+            "trafo:3581:35804:2": 0.9481133333333333,
+            "trafo:4001:40004:1": 0.9929999999999999,
+            "trafo:4001:40004:2": 0.9929999999999999,
+            "trafo:4201:42004:1": 0.972,
+            "trafo:4201:42004:2": 0.972,
+            "trafo:4221:42204:1": 0.9502666666666667,
+            "trafo:4221:42204:2": 0.9502666666666667,
+            "trafo:4481:44804:1": 1.035,
+            "trafo:4481:44804:2": 1.035,
+            "trafo:4701:47004:1": 0.972,
+            "trafo:4701:47004:2": 0.972,
+            "trafo:4961:49604:1": 1.034,
+            "trafo:4961:49604:2": 1.034,
+            "trafo:4981:49804:1": 1.034,
+            "trafo:4981:49804:2": 1.034,
+            "trafo:5001:50004:1": 1.035,
+            "trafo:5221:52204:2": 1.035,
+            "trafo:5361:53604:1": 0.951,
+            "trafo:12504:12582:1": 1.1,
+            "trafo:14614:14602:1": 1.08155,
+            "trafo:21824:21802:1": 1.1,
+            "trafo:21844:21822:1": 1.1,
+            "trafo:21854:68230:1": 1.099,
+            "trafo:22204:22231:1": 1.06,
+            "trafo:23604:23685:1": 1.1,
+            "trafo:23614:23611:1": 1.1,
+            "trafo:23614:23611:2": 1.1,
+            "trafo:35804:35832:1": 1.1,
+            "trafo:42004:42001:1": 1.1,
+            "trafo:42214:42201:1": 1.1,
+            "trafo:42204:42272:1": 1.1,
+            "trafo:49614:49602:1": 0.9857142857142858,
+            "trafo:49604:49613:1": 0.9875,
+            "trafo:49604:49683:1": 0.990909090909091,
+            "trafo:49814:49802:1": 1.1,
+            "trafo:50014:50012:1": 1.1,
+            "trafo:52234:52201:1": 1.1,
+            "trafo:52610:52614:3": 1.034,
+            "trafo:52634:52632:1": 1.1,
+            "trafo:52644:52642:1": 1.1,
+            "trafo:53034:53032:1": 1.0630142857142857,
+            "trafo:53034:53042:1": 1.0630142857142857,
+            "trafo:53034:53052:1": 1.0630142857142857,
+            "trafo:75010:75030:1": 1.0166666666666668,
+            "trafo:75010:75030:2": 1.0166666666666668,
+            "trafo:77010:77030:1": 1.0333333333333334,
+            "trafo:77010:77030:2": 1.0333333333333334,
+            "trafo:77511:77530:1": 1.0166666666666668,
+            "trafo:77511:77530:2": 1.0166666666666668,
+            "trafo:84511:84530:1": 1.0,
+            "trafo:84512:84530:1": 1.0
+          },
+          "disconnected_shunt_buses": [
+            74564
+          ]
+        },
+        "limitations": [
+          "This is a conditional model experiment, not measured Irish savings or an instruction to move a real load.",
+          "Best tested points within 0\u2013200 MW; search is not certified globally optimal. Refinement interval is at most 0.25 MW.",
+          "The original ratings are preserved, including zero and very large placeholder-like ratings. Actual equipment capability still needs confirmation.",
+          "144 ideal tree-tie flows pass the recovery check; four cyclic tie flows use an explicit inverse-reactance allocation, not a unique measured split.",
+          "No N-1, dynamics, inertia/SNSP, protection, switching permission, tariff, site SLA or intertemporal device feasibility was established.",
+          "The snapshot cannot establish avoided MWh, profit, or a percentage of Ireland-wide curtailment.",
+          "AI did not produce this result. Deterministic calculations and verification produced it. Live Microsoft AI remains untested."
+        ],
+        "evidence": {
+          "id": "pf_0375",
+          "wind_MW": 63.28125,
+          "line_outage": true,
+          "flex_allocation_MW": {
+            "5191": 20.0
+          },
+          "source_load_factor": 1.0,
+          "total_consumer_demand_MW": 7344.51,
+          "other_generation_MW": 7354.270624655014,
+          "network_losses_MW": 153.37209890782196,
+          "passes_declared_snapshot_checks": true,
+          "solver_converged": true,
+          "violations": {
+            "original_bus_groups_voltage": 0,
+            "voltage_ge_100kv": 0,
+            "rated_branch_thermal": 0,
+            "generator_P": 0,
+            "generator_Q": 0
+          },
+          "max_rated_branch_loading": 0.8809503651516581,
+          "direct_balance_max_MVA": 7.021907958583215e-10,
+          "direct_flow_difference_MVA": 2.9903990273396345e-10,
+          "raw_equations": {
+            "direct_raw_branch_count": 2507,
+            "compared_branch_count": 2507,
+            "two_winding_transformers": 1201,
+            "three_winding_transformers": 109,
+            "merged_ideal_ties": 148,
+            "max_branch_flow_difference_MVA": 2.9903990251884236e-10,
+            "max_grouped_KCL_residual_MVA": 7.02190795641246e-10,
+            "max_source_rating_difference": 0.0,
+            "max_source_bus_generator_bound_or_status_difference": 0.0,
+            "passed": true
+          },
+          "ideal_ties": {
+            "max_nodal_balance_residual_MVA": 2.676915092248367e-10,
+            "max_group_residual_MVA": 2.6769150922483663e-10,
+            "tree_edges": 144,
+            "cyclic_group_edges": 4,
+            "tree_overloads": 0,
+            "cyclic_allocation_overloads": 0,
+            "all_internal_tie_limits_certified": false
+          },
+          "elapsed_seconds": 4.9032094279973535,
+          "solver_seconds": 4.720789441998932,
+          "direct_check_seconds": 0.0063989660011429805,
+          "verification_seconds": 0.17602205900038825,
+          "phase": "refinement",
+          "operationally_validated": false
+        },
+        "operationally_validated": false,
+        "physical_actions_executed": false,
+        "eligibility_note": "Passed the declared model checks; not an operational safety approval."
+      }
+    }
+  ],
+  "evaluation_scope": "Compare optional Azure tool use against the verified stored study alternatives.\n\nDefault: no Azure request. This measures retrieval/selection, not new power-flow\noptimisation. Physical wind-acceptance values come from the prior offline study.\n",
+  "new_power_flows_run": 0,
+  "physical_AI_improvement_claimed": false
+}

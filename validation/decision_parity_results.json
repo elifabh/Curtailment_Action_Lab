@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "cases": 288,
+  "method": "Node strict deep equality against Python outputs; elapsed time excluded",
+  "command": "node tests/decision_parity.js"
+}
