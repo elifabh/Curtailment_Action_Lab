@@ -30,7 +30,7 @@ def main():
 
     def assets():
         required = ['web/index.html', 'web/app.js', 'web/decision.js', 'web/reporting.js',
-                    'web/extension.html', 'web/extension.js', 'OPEN_DEMO.html',
+                    'web/extension.html', 'web/extension.js',
                     'evidence_v5/results/challenge_matrix.json']
         missing = [f for f in required if not (ROOT/f).is_file()]
         return not missing, 'Required demo files found.' if not missing else 'Missing: ' + ', '.join(missing)

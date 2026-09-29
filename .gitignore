@@ -37,3 +37,16 @@ Thumbs.db
 /*.zip
 /*.mp4
 /*.mov
+# Presentation assets and personal preparation notes
+/presentation/
+/OPEN_DEMO.html
+/START_HERE_TR.md
+/START_EXTENSION_TR.html
+/DEMO_FIX_TR.md
+/MANIFEST.sha256
+/docs/archive_v4/
+/docs/CRITERIA_STATUS_EN.md
+/docs/DEMO_SCRIPT_EN.md
+/docs/JUDGE_QA_EN.md
+/docs/PITCH_EN.md
+/docs/SPONSOR_FIT_EN.md

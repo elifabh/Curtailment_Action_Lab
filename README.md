@@ -33,7 +33,6 @@ On Windows, run these files in order, waiting for each installation to finish:
 
 Open http://127.0.0.1:8765 and keep the server window open.
 
-`OPEN_DEMO.html` provides an offline view of saved scenarios. Live AI and fresh calculations require the local server.
 
 ## Configure Microsoft AI
 
